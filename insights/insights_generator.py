@@ -1,5 +1,5 @@
-from typing import Dict, Any
-from insights.ai_client import get_ai_response
+from typing import Dict, Any, Generator
+from insights.ai_client import get_ai_response, get_ai_response_stream
 import json
 
 SYSTEM_PROMPT = """You are a senior product analyst and revenue strategist for a commuter/transportation application.
@@ -93,3 +93,12 @@ FORMAT: Use markdown with tables where appropriate. Keep response under 1000 wor
 def generate_insights_safe(payload: Dict[str, Any], api_key: str = None) -> Dict[str, Any]:
     prompt = f"{SYSTEM_PROMPT}\n\nUSER EVENT DATA:\n{json.dumps(payload, indent=2)}"
     return get_ai_response(prompt)
+
+
+def generate_insights_stream(payload: Dict[str, Any]) -> Generator[str, None, None]:
+    prompt = f"{SYSTEM_PROMPT}\n\nUSER EVENT DATA:\n{json.dumps(payload, indent=2)}"
+    for chunk in get_ai_response_stream(prompt):
+        if chunk.get("success"):
+            yield chunk["chunk"]
+        elif chunk.get("error"):
+            yield f"\n\n**Error:** {chunk['error']}"
