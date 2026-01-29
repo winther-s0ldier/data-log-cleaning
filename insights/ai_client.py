@@ -1,7 +1,6 @@
 import streamlit as st
 import os
 from google import genai
-from google.genai import types
 from openai import OpenAI
 from typing import Dict, Any, Generator
 
@@ -83,4 +82,3 @@ def get_ai_response_stream(prompt: str) -> Generator[Dict[str, Any], None, None]
             return
 
     yield {"success": False, "error": "No API keys configured in st.secrets"}
-
