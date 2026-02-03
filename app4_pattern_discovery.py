@@ -80,11 +80,20 @@ def render_pattern_discovery():
 
             # Insights
             with st.expander("📊 Pattern Insights"):
-                insights = seq_patterns.get('pattern_insights', {})
-                for pattern, insight in list(insights.items())[:10]:
-                    st.markdown(f"**{pattern}**")
-                    st.markdown(f"└─ {insight}")
-                    st.markdown("")
+                # Support both new LLM insights and legacy pattern insights
+                insights = seq_patterns.get('llm_insights', seq_patterns.get('pattern_insights', {}))
+                
+                if isinstance(insights, str):
+                    # LLM output is a single string
+                    st.markdown(insights)
+                elif isinstance(insights, dict):
+                    # Legacy or structured format
+                    for pattern, insight in list(insights.items())[:10]:
+                        st.markdown(f"**{pattern}**")
+                        st.markdown(f"└─ {insight}")
+                        st.markdown("")
+                else:
+                    st.info("No insights available for this section.")
 
         with col2:
             st.subheader("Repetition Patterns")
@@ -219,6 +228,12 @@ def render_pattern_discovery():
                 elif seg_name == 'quick_bookers':
                     st.success("✅ Target segment - optimize for them")
 
+        # LLM Insights for Segments
+        if 'llm_insights' in patterns.get('user_segments', {}):
+            st.divider()
+            with st.expander("🤖 AI Segment Analysis", expanded=True):
+                st.markdown(patterns['user_segments']['llm_insights'])
+
     with tab3:
         st.header("🔥 Friction Analysis")
         st.markdown("**Events causing user hesitation** - where users get stuck")
@@ -280,8 +295,12 @@ def render_pattern_discovery():
 
             # Summary
             st.subheader("📊 Friction Summary")
-            if friction.get('friction_summary'):
-                st.markdown(friction['friction_summary'])
+            
+            # Support both new LLM insights and legacy summary
+            friction_summary = friction.get('llm_insights', friction.get('friction_summary'))
+            
+            if friction_summary:
+                st.markdown(friction_summary)
 
     with tab4:
         st.header("📉 Survival Analysis")
@@ -417,6 +436,12 @@ def render_pattern_discovery():
 
         else:
             st.info("No intervention triggers discovered. Run pattern discovery with more data.")
+
+        # LLM Insights for Interventions
+        if 'llm_insights' in rules:
+            st.divider()
+            with st.expander("🤖 AI Strategy Recommendations", expanded=True):
+                st.markdown(rules['llm_insights'])
 
     # ============================================================================
     # FOOTER
