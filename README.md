@@ -34,18 +34,10 @@ Builds on the cleaned data from the deduplication pipeline and orders events str
 
 ## Streamlit Applications
 
-### Event & Audit Dashboard
+### Event & Audit Dashboard (app1.py)(Streamlit is running on this)
 
 Link: [https://datalog.streamlit.app/](https://datalog.streamlit.app/)
 
 This application provides a read-only interface to explore cleaned, deduplicated events. Users can select a user ID and event type to inspect event data and review which duplicate events were removed during cleaning.
-
----
-
-### User Event Timeline Explorer
-
-Link: [https://timeline-log.streamlit.app/](https://timeline-log.streamlit.app/)
-
-This application focuses on time-ordered user behaviour. It allows users to view the exact sequence of events performed by a user over time, supporting journey and behavioural analysis.
 
 ---
