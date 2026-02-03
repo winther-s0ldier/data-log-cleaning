@@ -1,0 +1,857 @@
+{
+  "metadata": {
+    "total_events": 546095,
+    "unique_users": 3958,
+    "total_sessions": 37055,
+    "discovery_config": {
+      "min_support": 0.03,
+      "min_confidence": 0.6
+    }
+  },
+  "sequential_patterns": {
+    "total_sequences": 37055,
+    "frequent_patterns": {
+      "_location_elastic-town-search \u2192 _location_elastic-town-search": 148037,
+      "_location_elastic-town-search \u2192 _location_elastic-town-search \u2192 _location_elastic-town-search": 132621,
+      "_location_elastic-town-search \u2192 _location_elastic-town-search \u2192 _location_elastic-town-search \u2192 _location_elastic-town-search": 118361,
+      "_location_elastic-town-search \u2192 _location_elastic-town-search \u2192 _location_elastic-town-search \u2192 _location_elastic-town-search \u2192 _location_elastic-town-search": 105350,
+      "_location_special-town-search \u2192 _location_elastic-town-search": 16017,
+      "select_seat \u2192 select_seat": 15506,
+      "_location_special-town-search \u2192 _location_elastic-town-search \u2192 _location_elastic-town-search": 14256,
+      "_location_special-town-search \u2192 _location_elastic-town-search \u2192 _location_elastic-town-search \u2192 _location_elastic-town-search": 13265,
+      "_location_special-town-search \u2192 _location_elastic-town-search \u2192 _location_elastic-town-search \u2192 _location_elastic-town-search \u2192 _location_elastic-town-search": 12127,
+      "select_seat \u2192 select_seat \u2192 select_seat": 11766,
+      "bus_search \u2192 bus_result": 11657,
+      "_bus-search_list \u2192 _rewards_best-V2": 11259,
+      "Buslist_date change \u2192 bus_search": 10723,
+      "_rewards_best-V2 \u2192 Buslist_date change": 10712,
+      "Buslist_date change \u2192 bus_search \u2192 bus_result": 10545,
+      "_rewards_best-V2 \u2192 Buslist_date change \u2192 bus_search": 10448,
+      "_rewards_best-V2 \u2192 Buslist_date change \u2192 bus_search \u2192 bus_result": 10355,
+      "_bus-search_list \u2192 _rewards_best-V2 \u2192 Buslist_date change": 10295,
+      "_bus-search_list \u2192 _rewards_best-V2 \u2192 Buslist_date change \u2192 bus_search": 10158,
+      "_bus-search_list \u2192 _rewards_best-V2 \u2192 Buslist_date change \u2192 bus_search \u2192 bus_result": 10080,
+      "Buslist_date change \u2192 _user": 9672,
+      "select_seat \u2192 select_seat \u2192 select_seat \u2192 select_seat": 9315,
+      "pageview_seat_selection \u2192 SeatSelection_Click On Back": 8972,
+      "Buslist_bus_selection \u2192 bus_detail": 8331,
+      "bus_detail \u2192 pageview_seat_selection": 8197,
+      "bus_detail \u2192 pageview_seat_selection \u2192 SeatSelection_Click On Back": 7997,
+      "Buslist_bus_selection \u2192 bus_detail \u2192 pageview_seat_selection": 7970,
+      "Buslist_bus_selection \u2192 bus_detail \u2192 pageview_seat_selection \u2192 SeatSelection_Click On Back": 7897,
+      "select_seat \u2192 select_seat \u2192 select_seat \u2192 select_seat \u2192 select_seat": 7666,
+      "_location_elastic-town-search \u2192 _location_special-town-search": 7661,
+      "_user \u2192 pageview_bus_list": 7500,
+      "_location_elastic-town-search \u2192 Buslist_date change": 7216,
+      "choose_language \u2192 Onboarding_Language": 7119,
+      "_location_elastic-town-search \u2192 _location_special-town-search \u2192 _location_elastic-town-search": 7096,
+      "_bus-search_user-bus-search \u2192 _bus-search_list": 6964,
+      "_location_elastic-town-search \u2192 _location_elastic-town-search \u2192 _location_special-town-search": 6931,
+      "_user \u2192 _location_from-town": 6733,
+      "_location_elastic-town-search \u2192 Buslist_date change \u2192 _user": 6716,
+      "_location_elastic-town-search \u2192 _location_elastic-town-search \u2192 _location_elastic-town-search \u2192 _location_special-town-search": 6675,
+      "_location_elastic-town-search \u2192 _location_elastic-town-search \u2192 Buslist_date change": 6629,
+      "_bus-search_user-bus-search \u2192 _bus-search_list \u2192 _rewards_best-V2": 6512,
+      "_location_elastic-town-search \u2192 _location_elastic-town-search \u2192 _location_special-town-search \u2192 _location_elastic-town-search": 6474,
+      "_location_elastic-town-search \u2192 _location_special-town-search \u2192 _location_elastic-town-search \u2192 _location_elastic-town-search": 6422,
+      "_ticket \u2192 _location_special-town-search": 6379,
+      "pageview_bus_list \u2192 _bus-search_user-bus-search": 6327,
+      "_location_elastic-town-search \u2192 _location_elastic-town-search \u2192 _location_elastic-town-search \u2192 _location_elastic-town-search \u2192 _location_special-town-search": 6317,
+      "_location_elastic-town-search \u2192 _location_elastic-town-search \u2192 _location_elastic-town-search \u2192 _location_special-town-search \u2192 _location_elastic-town-search": 6254,
+      "_user \u2192 pageview_bus_list \u2192 _bus-search_user-bus-search": 6221,
+      "Buslist_date change \u2192 _user \u2192 pageview_bus_list": 6218,
+      "_location_elastic-town-search \u2192 _location_elastic-town-search \u2192 Buslist_date change \u2192 _user": 6207
+    },
+    "repetition_patterns": {
+      "_location_elastic-town-search": {
+        "sessions_with_repetition": 15416,
+        "avg_repetitions": 10.602815256875973,
+        "max_repetitions": 188,
+        "total_repeated_events": 148037
+      },
+      "select_seat": {
+        "sessions_with_repetition": 3740,
+        "avg_repetitions": 5.145989304812834,
+        "max_repetitions": 100,
+        "total_repeated_events": 15506
+      },
+      "_user": {
+        "sessions_with_repetition": 3678,
+        "avg_repetitions": 2.15905383360522,
+        "max_repetitions": 34,
+        "total_repeated_events": 4263
+      },
+      "_location_special-town-search": {
+        "sessions_with_repetition": 2797,
+        "avg_repetitions": 2.021809081158384,
+        "max_repetitions": 5,
+        "total_repeated_events": 2858
+      },
+      "booking_page_dropoff": {
+        "sessions_with_repetition": 564,
+        "avg_repetitions": 2.0124113475177303,
+        "max_repetitions": 4,
+        "total_repeated_events": 571
+      },
+      "Onboarding_backpressed": {
+        "sessions_with_repetition": 401,
+        "avg_repetitions": 4.478802992518704,
+        "max_repetitions": 57,
+        "total_repeated_events": 1395
+      },
+      "passenger_card_clicked": {
+        "sessions_with_repetition": 302,
+        "avg_repetitions": 2.748344370860927,
+        "max_repetitions": 30,
+        "total_repeated_events": 528
+      },
+      "_ticket_v2": {
+        "sessions_with_repetition": 239,
+        "avg_repetitions": 2.292887029288703,
+        "max_repetitions": 10,
+        "total_repeated_events": 309
+      },
+      "_ticket": {
+        "sessions_with_repetition": 199,
+        "avg_repetitions": 2.090452261306533,
+        "max_repetitions": 6,
+        "total_repeated_events": 217
+      },
+      "Onboarding_Profile Saved": {
+        "sessions_with_repetition": 166,
+        "avg_repetitions": 2.8734939759036147,
+        "max_repetitions": 28,
+        "total_repeated_events": 311
+      },
+      "view_all_discount_coupon": {
+        "sessions_with_repetition": 154,
+        "avg_repetitions": 2.064935064935065,
+        "max_repetitions": 6,
+        "total_repeated_events": 164
+      },
+      "Buslist_date change": {
+        "sessions_with_repetition": 154,
+        "avg_repetitions": 2.064935064935065,
+        "max_repetitions": 6,
+        "total_repeated_events": 164
+      },
+      "_location_town-search": {
+        "sessions_with_repetition": 111,
+        "avg_repetitions": 2.81981981981982,
+        "max_repetitions": 7,
+        "total_repeated_events": 202
+      },
+      "_location_from-town": {
+        "sessions_with_repetition": 101,
+        "avg_repetitions": 2.0297029702970297,
+        "max_repetitions": 4,
+        "total_repeated_events": 104
+      },
+      "boarding_change_pickup": {
+        "sessions_with_repetition": 97,
+        "avg_repetitions": 2.195876288659794,
+        "max_repetitions": 6,
+        "total_repeated_events": 116
+      },
+      "choose_language": {
+        "sessions_with_repetition": 88,
+        "avg_repetitions": 2.0681818181818183,
+        "max_repetitions": 3,
+        "total_repeated_events": 94
+      },
+      "Onboarding_Language": {
+        "sessions_with_repetition": 80,
+        "avg_repetitions": 2.0875,
+        "max_repetitions": 3,
+        "total_repeated_events": 87
+      },
+      "_bus-search_list": {
+        "sessions_with_repetition": 54,
+        "avg_repetitions": 2.1296296296296298,
+        "max_repetitions": 5,
+        "total_repeated_events": 61
+      },
+      "_profile": {
+        "sessions_with_repetition": 54,
+        "avg_repetitions": 2.037037037037037,
+        "max_repetitions": 3,
+        "total_repeated_events": 56
+      },
+      "bus_result": {
+        "sessions_with_repetition": 53,
+        "avg_repetitions": 2.018867924528302,
+        "max_repetitions": 3,
+        "total_repeated_events": 54
+      }
+    },
+    "dropout_sequences": {
+      "bus_search \u2192 bus_result": 4805,
+      "Buslist_date change \u2192 bus_search \u2192 bus_result": 4472,
+      "_auth_verify-otp \u2192 enter_otp": 3840,
+      "verify_otp \u2192 _auth_verify-otp \u2192 enter_otp": 3796,
+      "_profile \u2192 _bus-search_v2_layout": 2666,
+      "SeatSelection_Click On Back \u2192 _profile \u2192 _bus-search_v2_layout": 2511,
+      "generate_otp \u2192 Onboarding_get_otp": 1822,
+      "Onboarding_Language \u2192 generate_otp \u2192 Onboarding_get_otp": 1635,
+      "choose_language \u2192 Onboarding_Language": 1623,
+      "_location_elastic-town-search \u2192 _location_elastic-town-search": 1553,
+      "pageview_seat_selection \u2192 SeatSelection_Click On Back": 1383,
+      "_location_elastic-town-search \u2192 _location_elastic-town-search \u2192 _location_elastic-town-search": 1327,
+      "Onboarding_Language \u2192 choose_language \u2192 Onboarding_Language": 1196,
+      "bus_detail \u2192 pageview_seat_selection \u2192 SeatSelection_Click On Back": 1182,
+      "get_otp \u2192 Onboarding_signup_": 945,
+      "_auth_generate-otp \u2192 get_otp \u2192 Onboarding_signup_": 944,
+      "_bus-search_v2_layout \u2192 _profile": 937,
+      "SeatSelection_Click On Back \u2192 _profile": 925,
+      "pageview_seat_selection \u2192 SeatSelection_Click On Back \u2192 _profile": 917,
+      "SeatSelection_Click On Back \u2192 _bus-search_v2_layout \u2192 _profile": 850,
+      "SeatSelection_Click On Back \u2192 _bus-search_v2_layout": 707,
+      "pageview_seat_selection \u2192 SeatSelection_Click On Back \u2192 _bus-search_v2_layout": 705,
+      "select_seat \u2192 select_seat": 598,
+      "_location_special-town-search \u2192 _location_elastic-town-search": 521,
+      "Buslist_Live Chat Icon \u2192 enquire_now": 433,
+      "select_seat \u2192 select_seat \u2192 select_seat": 399,
+      "_location_special-town-search \u2192 _ticket": 386,
+      "_user \u2192 _location_special-town-search \u2192 _ticket": 364,
+      "payment_initiate \u2192 _ticket": 333,
+      "_ticket \u2192 _location_special-town-search": 332
+    },
+    "pattern_insights": {
+      "_location_elastic-town-search \u2192 _location_elastic-town-search": "Users frequently search multiple times - possible discovery issues",
+      "_location_elastic-town-search \u2192 _location_elastic-town-search \u2192 _location_elastic-town-search": "Users frequently search multiple times - possible discovery issues",
+      "_location_elastic-town-search \u2192 _location_elastic-town-search \u2192 _location_elastic-town-search \u2192 _location_elastic-town-search": "Users frequently search multiple times - possible discovery issues",
+      "_location_elastic-town-search \u2192 _location_elastic-town-search \u2192 _location_elastic-town-search \u2192 _location_elastic-town-search \u2192 _location_elastic-town-search": "Users frequently search multiple times - possible discovery issues",
+      "_location_special-town-search \u2192 _location_elastic-town-search": "Users frequently search multiple times - possible discovery issues",
+      "select_seat \u2192 select_seat": "Seat selection appears in common journeys - critical conversion point",
+      "_location_special-town-search \u2192 _location_elastic-town-search \u2192 _location_elastic-town-search": "Users frequently search multiple times - possible discovery issues",
+      "_location_special-town-search \u2192 _location_elastic-town-search \u2192 _location_elastic-town-search \u2192 _location_elastic-town-search": "Users frequently search multiple times - possible discovery issues",
+      "_location_special-town-search \u2192 _location_elastic-town-search \u2192 _location_elastic-town-search \u2192 _location_elastic-town-search \u2192 _location_elastic-town-search": "Users frequently search multiple times - possible discovery issues",
+      "select_seat \u2192 select_seat \u2192 select_seat": "Seat selection appears in common journeys - critical conversion point",
+      "FRICTION: _location_elastic-town-search": "Users repeat this 10.6x on average - major friction point",
+      "FRICTION: select_seat": "Users repeat this 5.1x on average - major friction point"
+    }
+  },
+  "user_segments": {
+    "total_users": 3958,
+    "segments": {
+      "cluster_0": {
+        "count": 3378,
+        "percentage": 85.34613441131886,
+        "characteristics": {
+          "avg_events": 96.56187092954411,
+          "avg_diversity": 0.39475212852847635,
+          "avg_repetition": 0.31241023623562436
+        },
+        "description": "Users with distinct behavior patterns"
+      },
+      "others": {
+        "count": 580,
+        "percentage": 14.653865588681153,
+        "characteristics": {
+          "avg_events": 379.15344827586205,
+          "avg_diversity": 0.1966784195703799,
+          "avg_repetition": 0.30147958322769475
+        },
+        "description": "Outliers with unique behavior patterns"
+      },
+      "strugglers": {
+        "count": 990,
+        "percentage": 25.012632642748862,
+        "characteristics": {
+          "avg_events": 137.81313131313132,
+          "avg_diversity": 0.2599194565865607,
+          "avg_repetition": 0.5373538534106559
+        },
+        "description": "Users facing friction - high repetition and stuck patterns"
+      },
+      "quick_bookers": {
+        "count": 1237,
+        "percentage": 31.253158160687217,
+        "characteristics": {
+          "avg_events": 47.854486661277285,
+          "avg_diversity": 0.5662892569349771,
+          "avg_repetition": 0.22581868395991078
+        },
+        "description": "Users who know what they want and book quickly"
+      }
+    },
+    "feature_summary": {
+      "total_events": {
+        "count": 3958.0,
+        "mean": 137.97246083880748,
+        "std": 206.78159431595265,
+        "min": 3.0,
+        "25%": 61.0,
+        "50%": 89.0,
+        "75%": 144.0,
+        "max": 7668.0
+      },
+      "unique_events": {
+        "count": 3958.0,
+        "mean": 32.19984840828701,
+        "std": 10.016601331099928,
+        "min": 3.0,
+        "25%": 27.0,
+        "50%": 30.0,
+        "75%": 35.0,
+        "max": 68.0
+      },
+      "event_diversity": {
+        "count": 3958.0,
+        "mean": 0.3657266734512414,
+        "std": 0.18287308981905512,
+        "min": 0.008346374543557642,
+        "25%": 0.22727272727272727,
+        "50%": 0.3411764705882353,
+        "75%": 0.4807692307692308,
+        "max": 1.0
+      },
+      "time_span_hours": {
+        "count": 3958.0,
+        "mean": 23.63427799793667,
+        "std": 69.51023607609167,
+        "min": 1.0833333333333334e-05,
+        "25%": 0.0397325,
+        "50%": 0.08003083333333333,
+        "75%": 2.569717916666667,
+        "max": 677.2728536111111
+      },
+      "repetition_ratio": {
+        "count": 3958.0,
+        "mean": 0.31080847303587716,
+        "std": 0.16714546825750637,
+        "min": 0.0,
+        "25%": 0.18803418803418803,
+        "50%": 0.2962962962962963,
+        "75%": 0.4157746895328208,
+        "max": 0.8826291079812206
+      },
+      "session_count": {
+        "count": 3958.0,
+        "mean": 9.362051541182415,
+        "std": 11.526810888309964,
+        "min": 1.0,
+        "25%": 5.0,
+        "50%": 6.0,
+        "75%": 9.0,
+        "max": 387.0
+      },
+      "avg_session_length": {
+        "count": 3958.0,
+        "mean": 14.334701062616144,
+        "std": 6.41363583762421,
+        "min": 3.0,
+        "25%": 10.170454545454545,
+        "50%": 13.0,
+        "75%": 17.0,
+        "max": 73.71428571428571
+      },
+      "cluster": {
+        "count": 3958.0,
+        "mean": -0.14653865588681153,
+        "std": 0.3536900963444165,
+        "min": -1.0,
+        "25%": 0.0,
+        "50%": 0.0,
+        "75%": 0.0,
+        "max": 0.0
+      }
+    }
+  },
+  "survival_analysis": {
+    "survival_curve": [
+      {
+        "step": 1,
+        "surviving_sessions": "37055",
+        "survival_rate": 1.0,
+        "dropout_rate": 0.0
+      },
+      {
+        "step": 2,
+        "surviving_sessions": "31398",
+        "survival_rate": 0.8473350425043854,
+        "dropout_rate": 0.1526649574956146
+      },
+      {
+        "step": 3,
+        "surviving_sessions": "30450",
+        "survival_rate": 0.8217514505464849,
+        "dropout_rate": 0.1782485494535151
+      },
+      {
+        "step": 4,
+        "surviving_sessions": "28987",
+        "survival_rate": 0.7822695992443665,
+        "dropout_rate": 0.21773040075563355
+      },
+      {
+        "step": 5,
+        "surviving_sessions": "27085",
+        "survival_rate": 0.7309404938604777,
+        "dropout_rate": 0.26905950613952234
+      },
+      {
+        "step": 6,
+        "surviving_sessions": "24102",
+        "survival_rate": 0.6504385373094049,
+        "dropout_rate": 0.34956146269059507
+      },
+      {
+        "step": 7,
+        "surviving_sessions": "20503",
+        "survival_rate": 0.5533126433679665,
+        "dropout_rate": 0.4466873566320335
+      },
+      {
+        "step": 8,
+        "surviving_sessions": "18138",
+        "survival_rate": 0.4894885980299555,
+        "dropout_rate": 0.5105114019700445
+      },
+      {
+        "step": 9,
+        "surviving_sessions": "15913",
+        "survival_rate": 0.4294427202806639,
+        "dropout_rate": 0.5705572797193361
+      },
+      {
+        "step": 10,
+        "surviving_sessions": "14713",
+        "survival_rate": 0.3970584266630684,
+        "dropout_rate": 0.6029415733369317
+      },
+      {
+        "step": 11,
+        "surviving_sessions": "13809",
+        "survival_rate": 0.37266225880447984,
+        "dropout_rate": 0.6273377411955201
+      },
+      {
+        "step": 12,
+        "surviving_sessions": "12964",
+        "survival_rate": 0.349858318715423,
+        "dropout_rate": 0.650141681284577
+      },
+      {
+        "step": 13,
+        "surviving_sessions": "12138",
+        "survival_rate": 0.3275671299419781,
+        "dropout_rate": 0.6724328700580219
+      },
+      {
+        "step": 14,
+        "surviving_sessions": "11485",
+        "survival_rate": 0.3099446768317366,
+        "dropout_rate": 0.6900553231682633
+      },
+      {
+        "step": 15,
+        "surviving_sessions": "10920",
+        "survival_rate": 0.29469707192011874,
+        "dropout_rate": 0.7053029280798813
+      },
+      {
+        "step": 16,
+        "surviving_sessions": "10407",
+        "survival_rate": 0.2808527863985967,
+        "dropout_rate": 0.7191472136014033
+      },
+      {
+        "step": 17,
+        "surviving_sessions": "9991",
+        "survival_rate": 0.26962623127783025,
+        "dropout_rate": 0.7303737687221697
+      },
+      {
+        "step": 18,
+        "surviving_sessions": "9648",
+        "survival_rate": 0.26036972068546754,
+        "dropout_rate": 0.7396302793145324
+      },
+      {
+        "step": 19,
+        "surviving_sessions": "9314",
+        "survival_rate": 0.2513560922952368,
+        "dropout_rate": 0.7486439077047632
+      },
+      {
+        "step": 20,
+        "surviving_sessions": "8994",
+        "survival_rate": 0.24272028066387802,
+        "dropout_rate": 0.757279719336122
+      },
+      {
+        "step": 21,
+        "surviving_sessions": "8645",
+        "survival_rate": 0.23330184860342734,
+        "dropout_rate": 0.7666981513965727
+      },
+      {
+        "step": 22,
+        "surviving_sessions": "8367",
+        "survival_rate": 0.2257994872486844,
+        "dropout_rate": 0.7742005127513156
+      },
+      {
+        "step": 23,
+        "surviving_sessions": "8056",
+        "survival_rate": 0.21740655781945756,
+        "dropout_rate": 0.7825934421805425
+      },
+      {
+        "step": 24,
+        "surviving_sessions": "7782",
+        "survival_rate": 0.2100121441101066,
+        "dropout_rate": 0.7899878558898934
+      },
+      {
+        "step": 25,
+        "surviving_sessions": "7474",
+        "survival_rate": 0.20170017541492377,
+        "dropout_rate": 0.7982998245850762
+      },
+      {
+        "step": 26,
+        "surviving_sessions": "7166",
+        "survival_rate": 0.1933882067197409,
+        "dropout_rate": 0.8066117932802591
+      },
+      {
+        "step": 27,
+        "surviving_sessions": "6852",
+        "survival_rate": 0.18491431655647012,
+        "dropout_rate": 0.8150856834435298
+      },
+      {
+        "step": 28,
+        "surviving_sessions": "6594",
+        "survival_rate": 0.17795169342868708,
+        "dropout_rate": 0.8220483065713129
+      },
+      {
+        "step": 29,
+        "surviving_sessions": "6349",
+        "survival_rate": 0.171339900148428,
+        "dropout_rate": 0.828660099851572
+      },
+      {
+        "step": 30,
+        "surviving_sessions": "6071",
+        "survival_rate": 0.16383753879368507,
+        "dropout_rate": 0.836162461206315
+      }
+    ],
+    "critical_dropoffs": [
+      {
+        "step": 2,
+        "drop_percentage": 15.266495749561459,
+        "survival_before": 1.0,
+        "survival_after": 0.8473350425043854
+      },
+      {
+        "step": 7,
+        "drop_percentage": 9.712589394143844,
+        "survival_before": 0.6504385373094049,
+        "survival_after": 0.5533126433679665
+      },
+      {
+        "step": 6,
+        "drop_percentage": 8.050195655107274,
+        "survival_before": 0.7309404938604777,
+        "survival_after": 0.6504385373094049
+      },
+      {
+        "step": 8,
+        "drop_percentage": 6.3824045338011,
+        "survival_before": 0.5533126433679665,
+        "survival_after": 0.4894885980299555
+      },
+      {
+        "step": 9,
+        "drop_percentage": 6.00458777492916,
+        "survival_before": 0.4894885980299555,
+        "survival_after": 0.4294427202806639
+      },
+      {
+        "step": 5,
+        "drop_percentage": 5.132910538388879,
+        "survival_before": 0.7822695992443665,
+        "survival_after": 0.7309404938604777
+      }
+    ],
+    "median_session_length": 7,
+    "sessions_reaching_step_10": "14713",
+    "sessions_reaching_step_20": "8994"
+  },
+  "friction_points": {
+    "high_friction_events": {
+      "_location_elastic-town-search": {
+        "repetition_rate": 0.9775613580172465,
+        "avg_time_gap_seconds": 0.4,
+        "friction_score": 97.75613580172465,
+        "total_occurrences": 165830,
+        "users_affected": 3721
+      },
+      "_location_town-search": {
+        "repetition_rate": 0.9591474245115453,
+        "avg_time_gap_seconds": 0.384,
+        "friction_score": 95.91474245115454,
+        "total_occurrences": 563,
+        "users_affected": 23
+      },
+      "select_seat": {
+        "repetition_rate": 0.9448659993542138,
+        "avg_time_gap_seconds": 1.563,
+        "friction_score": 94.48659993542138,
+        "total_occurrences": 24776,
+        "users_affected": 1366
+      },
+      "_user": {
+        "repetition_rate": 0.8926079756766295,
+        "avg_time_gap_seconds": 4.7405,
+        "friction_score": 89.26079756766295,
+        "total_occurrences": 36837,
+        "users_affected": 3956
+      },
+      "apply_filter": {
+        "repetition_rate": 0.8701298701298701,
+        "avg_time_gap_seconds": 4.511,
+        "friction_score": 87.01298701298701,
+        "total_occurrences": 154,
+        "users_affected": 20
+      },
+      "sort_bus": {
+        "repetition_rate": 0.8701298701298701,
+        "avg_time_gap_seconds": 4.499,
+        "friction_score": 87.01298701298701,
+        "total_occurrences": 154,
+        "users_affected": 20
+      },
+      "Buslist_date change": {
+        "repetition_rate": 0.8672547784078976,
+        "avg_time_gap_seconds": 5.426,
+        "friction_score": 86.72547784078975,
+        "total_occurrences": 23805,
+        "users_affected": 3160
+      },
+      "_auth_token": {
+        "repetition_rate": 0.8648648648648649,
+        "avg_time_gap_seconds": 14.896,
+        "friction_score": 86.48648648648648,
+        "total_occurrences": 37,
+        "users_affected": 5
+      },
+      "_location_special-town-search": {
+        "repetition_rate": 0.852744054230018,
+        "avg_time_gap_seconds": 8.532,
+        "friction_score": 85.2744054230018,
+        "total_occurrences": 26111,
+        "users_affected": 3845
+      },
+      "_profile": {
+        "repetition_rate": 0.8445322793148881,
+        "avg_time_gap_seconds": 18.29,
+        "friction_score": 84.45322793148881,
+        "total_occurrences": 10626,
+        "users_affected": 1652
+      },
+      "SeatSelection_Click On Back": {
+        "repetition_rate": 0.8325595478401292,
+        "avg_time_gap_seconds": 15.562,
+        "friction_score": 83.25595478401291,
+        "total_occurrences": 9908,
+        "users_affected": 1659
+      },
+      "pageview_seat_selection": {
+        "repetition_rate": 0.8325595478401292,
+        "avg_time_gap_seconds": 15.218,
+        "friction_score": 83.25595478401291,
+        "total_occurrences": 9908,
+        "users_affected": 1659
+      },
+      "Buslist_bus_selection": {
+        "repetition_rate": 0.8207649092480553,
+        "avg_time_gap_seconds": 14.57,
+        "friction_score": 82.07649092480554,
+        "total_occurrences": 9256,
+        "users_affected": 1659
+      },
+      "bus_detail": {
+        "repetition_rate": 0.8207261724659607,
+        "avg_time_gap_seconds": 14.7795,
+        "friction_score": 82.07261724659607,
+        "total_occurrences": 9254,
+        "users_affected": 1659
+      },
+      "_bus-search_v2_layout": {
+        "repetition_rate": 0.8185771632471008,
+        "avg_time_gap_seconds": 16.5895,
+        "friction_score": 81.85771632471008,
+        "total_occurrences": 8968,
+        "users_affected": 1627
+      },
+      "booking_page_dropoff": {
+        "repetition_rate": 0.8180293501048218,
+        "avg_time_gap_seconds": 1.197,
+        "friction_score": 81.80293501048219,
+        "total_occurrences": 2385,
+        "users_affected": 434
+      },
+      "from_town_select": {
+        "repetition_rate": 0.7727272727272727,
+        "avg_time_gap_seconds": 13.635,
+        "friction_score": 77.27272727272727,
+        "total_occurrences": 88,
+        "users_affected": 20
+      },
+      "to_town_select": {
+        "repetition_rate": 0.7727272727272727,
+        "avg_time_gap_seconds": 13.651,
+        "friction_score": 77.27272727272727,
+        "total_occurrences": 88,
+        "users_affected": 20
+      },
+      "_bus-search_user-bus-search": {
+        "repetition_rate": 0.7670341052008581,
+        "avg_time_gap_seconds": 19.628,
+        "friction_score": 76.70341052008581,
+        "total_occurrences": 13517,
+        "users_affected": 3149
+      },
+      "remove_apnibus_pass": {
+        "repetition_rate": 0.7571428571428571,
+        "avg_time_gap_seconds": 10.479,
+        "friction_score": 75.71428571428571,
+        "total_occurrences": 70,
+        "users_affected": 17
+      }
+    },
+    "friction_summary": "Highest friction: '_location_elastic-town-search' with 97.8% repetition rate. 3,721 users affected. CRITICAL: More than half of occurrences are repeats - major UX issue."
+  },
+  "intervention_rules": {
+    "total_rules": 15,
+    "intervention_triggers": [
+      {
+        "condition": "choose_language AND app_start",
+        "outcome": "dropout_likely",
+        "confidence": 0.9987927565392353,
+        "support": 2481,
+        "lift": 1.2159629921990132,
+        "recommendation": "Intervene when user triggers: choose_language AND app_start"
+      },
+      {
+        "condition": "Onboarding_Language AND app_start",
+        "outcome": "dropout_likely",
+        "confidence": 0.9987922705314011,
+        "support": 2481,
+        "lift": 1.2159624005171688,
+        "recommendation": "Intervene when user triggers: Onboarding_Language AND app_start"
+      },
+      {
+        "condition": "app_start",
+        "outcome": "dropout_likely",
+        "confidence": 0.9979188345473464,
+        "support": 3836,
+        "lift": 1.2148990509627073,
+        "recommendation": "Intervene when user triggers: app_start"
+      },
+      {
+        "condition": "generate_otp AND app_start",
+        "outcome": "dropout_likely",
+        "confidence": 0.9957446808510639,
+        "support": 1638,
+        "lift": 1.2122521650930176,
+        "recommendation": "Intervene when user triggers: generate_otp AND app_start"
+      },
+      {
+        "condition": "Onboarding_get_otp AND app_start",
+        "outcome": "dropout_likely",
+        "confidence": 0.9955527318932657,
+        "support": 1567,
+        "lift": 1.2120184801493235,
+        "recommendation": "Intervene when user triggers: Onboarding_get_otp AND app_start"
+      },
+      {
+        "condition": "DeviceInfo",
+        "outcome": "dropout_likely",
+        "confidence": 0.9929257200606367,
+        "support": 3930,
+        "lift": 1.2088202699624435,
+        "recommendation": "Intervene when user triggers: DeviceInfo"
+      },
+      {
+        "condition": "Onboarding_Language",
+        "outcome": "dropout_likely",
+        "confidence": 0.9926519706078825,
+        "support": 4458,
+        "lift": 1.208486998418868,
+        "recommendation": "Intervene when user triggers: Onboarding_Language"
+      },
+      {
+        "condition": "Onboarding_Language AND choose_language",
+        "outcome": "dropout_likely",
+        "confidence": 0.9925457420374971,
+        "support": 4394,
+        "lift": 1.2083576722804303,
+        "recommendation": "Intervene when user triggers: Onboarding_Language AND choose_language"
+      },
+      {
+        "condition": "Onboarding_Language AND generate_otp",
+        "outcome": "dropout_likely",
+        "confidence": 0.9922068721218562,
+        "support": 2801,
+        "lift": 1.2079451209539502,
+        "recommendation": "Intervene when user triggers: Onboarding_Language AND generate_otp"
+      },
+      {
+        "condition": "Onboarding_Language AND Onboarding_get_otp",
+        "outcome": "dropout_likely",
+        "confidence": 0.9919620021921812,
+        "support": 2715,
+        "lift": 1.2076470082869952,
+        "recommendation": "Intervene when user triggers: Onboarding_Language AND Onboarding_get_otp"
+      },
+      {
+        "condition": "choose_language AND generate_otp",
+        "outcome": "dropout_likely",
+        "confidence": 0.991759226083841,
+        "support": 2768,
+        "lift": 1.20740014201586,
+        "recommendation": "Intervene when user triggers: choose_language AND generate_otp"
+      },
+      {
+        "condition": "Onboarding_get_otp AND choose_language",
+        "outcome": "dropout_likely",
+        "confidence": 0.9914972273567467,
+        "support": 2682,
+        "lift": 1.2070811761903029,
+        "recommendation": "Intervene when user triggers: Onboarding_get_otp AND choose_language"
+      },
+      {
+        "condition": "choose_language",
+        "outcome": "dropout_likely",
+        "confidence": 0.9888108819657745,
+        "support": 4507,
+        "lift": 1.2038107313875144,
+        "recommendation": "Intervene when user triggers: choose_language"
+      },
+      {
+        "condition": "generate_otp",
+        "outcome": "dropout_likely",
+        "confidence": 0.9883000688231246,
+        "support": 4308,
+        "lift": 1.2031888507487887,
+        "recommendation": "Intervene when user triggers: generate_otp"
+      },
+      {
+        "condition": "Onboarding_get_otp",
+        "outcome": "dropout_likely",
+        "confidence": 0.9882596685082874,
+        "support": 4293,
+        "lift": 1.2031396660832077,
+        "recommendation": "Intervene when user triggers: Onboarding_get_otp"
+      }
+    ],
+    "algorithm": "Apriori"
+  }
+}
