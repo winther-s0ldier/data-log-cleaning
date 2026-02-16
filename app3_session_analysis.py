@@ -36,7 +36,7 @@ def render_session_analysis():
     stats = profile['basic_stats']
 
     # Header
-    st.title("Session Analysis Dashboard")
+    st.title("🎯 Session Analysis Dashboard")
     st.markdown("*Based on system-event-marked sessions (ground truth)*")
     st.markdown(f"**Detection Method**: {sessions['session_detection_method'].replace('_', ' ').title()}")
 
@@ -153,7 +153,7 @@ def render_session_analysis():
         st.plotly_chart(fig, use_container_width=True)
 
     with col2:
-        st.markdown("### Critical Drop-offs")
+        st.markdown("### 🎯 Critical Drop-offs")
 
         critical = [
             ('select_seat', exit_events.get('select_seat', 0)),
@@ -350,7 +350,7 @@ def render_session_analysis():
                 st.markdown("**📊 Problem**")
                 st.markdown(f"{rec['sessions']:,} users ({rec['pct']:.1f}% of all sessions) drop off at this point")
 
-                st.markdown("**Recommended Actions**")
+                st.markdown("**🎯 Recommended Actions**")
                 st.markdown(rec['intervention'])
 
             with col_b:
@@ -382,7 +382,7 @@ def render_session_analysis():
 if __name__ == "__main__":
     st.set_page_config(
         page_title="Session Analysis",
-        page_icon=None,
+        page_icon="🎯",
         layout="wide"
     )
     render_session_analysis()
