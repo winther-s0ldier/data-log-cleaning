@@ -10,18 +10,18 @@ import numpy as np
 
 # Load pattern discovery data
 @st.cache_data
-def load_pattern_data():
+def load_pattern_data(pattern_json='pattern_discovery_report.json'):
     """Load pattern discovery report"""
     try:
-        with open('pattern_discovery_report.json', 'r') as f:
+        with open(pattern_json, 'r') as f:
             patterns = json.load(f)
         return patterns
     except FileNotFoundError:
-        st.error("Pattern discovery report not found. Run: python run_pattern_discovery.py")
+        st.error(f"Pattern discovery report not found: {pattern_json}")
         st.stop()
 
-def render_pattern_discovery():
-    patterns = load_pattern_data()
+def render_pattern_discovery(pattern_json='pattern_discovery_report.json'):
+    patterns = load_pattern_data(pattern_json)
 
     # Header
     st.title("🔍 Pattern Discovery Dashboard")

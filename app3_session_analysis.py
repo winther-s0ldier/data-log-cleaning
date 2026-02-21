@@ -8,17 +8,21 @@ from datetime import datetime
 
 # Load data
 @st.cache_data
-def load_session_data():
+def load_session_data(profile_json='data_profile_report.json', events_csv='Commuter Users Event data.csv'):
     """Load session profile and raw events"""
     try:
-        with open('data_profile_report.json', 'r') as f:
+        with open(profile_json, 'r') as f:
             profile = json.load(f)
 
-        events_df = pd.read_csv('Commuter Users Event data.csv')
-        events_df = events_df.rename(columns={
-            'user_uuid': 'user_id',
-            'event_time': 'timestamp'
-        })
+        events_df = pd.read_csv(events_csv)
+        # Standardize column names — handle both commuter (user_uuid) and business (id) columns
+        if 'user_uuid' in events_df.columns:
+            events_df = events_df.rename(columns={'user_uuid': 'user_id', 'event_time': 'timestamp'})
+        elif 'id' in events_df.columns:
+            events_df = events_df.rename(columns={'id': 'user_id', 'event_time': 'timestamp'})
+            events_df = events_df.drop(columns=['external_event_id', 'source'], errors='ignore')
+        else:
+            events_df = events_df.rename(columns={'event_time': 'timestamp'})
         events_df['timestamp'] = pd.to_datetime(events_df['timestamp'])
 
         return profile, events_df
@@ -26,8 +30,8 @@ def load_session_data():
         st.error(f"Required file not found: {e}")
         return None, None
 
-def render_session_analysis():
-    profile, events_df = load_session_data()
+def render_session_analysis(profile_json='data_profile_report.json', events_csv='Commuter Users Event data.csv'):
+    profile, events_df = load_session_data(profile_json, events_csv)
     
     if profile is None:
         return
@@ -373,10 +377,11 @@ def render_session_analysis():
     col2.metric("Unique Users", f"{stats['unique_users']:,}")
     col3.metric("Date Range", f"{stats['date_range']['span_days']} days")
 
+    data_source_label = 'Business Events Data' if 'business' in events_csv.lower() else 'Commuter Users Event Data'
     st.caption(f"""
     **Detection Method**: System events only (Session Started, Journey Started, App Installed, User Login, Push Click)
     **Last Updated**: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}
-    **Data Source**: Commuter Users Event Data
+    **Data Source**: {data_source_label}
     """)
 
 if __name__ == "__main__":

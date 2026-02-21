@@ -1,0 +1,242 @@
+{
+  "basic_stats": {
+    "total_events": 1166245,
+    "unique_events": 181,
+    "unique_users": 1166245,
+    "date_range": {
+      "start": "2025-11-27T07:27:08.342000+05:30",
+      "end": "2026-02-19T23:57:42.809000+05:30",
+      "span_days": 84
+    },
+    "avg_events_per_user": 1.0,
+    "median_events_per_user": 1.0,
+    "events_per_user_distribution": {
+      "p25": 1.0,
+      "p50": 1.0,
+      "p75": 1.0,
+      "p90": 1.0,
+      "p95": 1.0
+    }
+  },
+  "sessions": {
+    "total_sessions": 1166245,
+    "avg_session_length": 1.0,
+    "median_session_length": 1.0,
+    "avg_session_duration_minutes": 0.0,
+    "median_session_duration_minutes": 0.0,
+    "bounce_rate": 1.0,
+    "session_length_distribution": {
+      "p25": 1.0,
+      "p50": 1.0,
+      "p75": 1.0,
+      "p90": 1.0,
+      "p95": 1.0
+    },
+    "common_start_events": {
+      "viewed_hisab_page": 526687,
+      "viewed_hisab_bus_detail": 230423,
+      "viewed_dashboard_page": 97491,
+      "viewed_hisab_trip_detail": 71880,
+      "clicked_hisab_trip_detail_card": 70723,
+      "clicked_hisab_bus_detail_card": 70592,
+      "home_page_load_error": 16282,
+      "clicked_hisab_yestarday_btn": 8179,
+      "clicked_nav_drawer_menu": 7615,
+      "clicked_hisab_coustom_date_btn": 5302
+    },
+    "common_end_events": {
+      "viewed_hisab_page": 526687,
+      "viewed_hisab_bus_detail": 230423,
+      "viewed_dashboard_page": 97491,
+      "viewed_hisab_trip_detail": 71880,
+      "clicked_hisab_trip_detail_card": 70723,
+      "clicked_hisab_bus_detail_card": 70592,
+      "home_page_load_error": 16282,
+      "clicked_hisab_yestarday_btn": 8179,
+      "clicked_nav_drawer_menu": 7615,
+      "clicked_hisab_coustom_date_btn": 5302
+    },
+    "session_detection_method": "system_events_only",
+    "session_markers_used": 139343,
+    "total_session_boundaries": 1358178
+  },
+  "time_patterns": {
+    "hourly_activity": {
+      "0": 2416,
+      "1": 1034,
+      "2": 549,
+      "3": 489,
+      "4": 818,
+      "5": 2123,
+      "6": 9560,
+      "7": 42778,
+      "8": 81566,
+      "9": 89795,
+      "10": 86486,
+      "11": 93887,
+      "12": 93562,
+      "13": 91145,
+      "14": 97045,
+      "15": 105705,
+      "16": 97869,
+      "17": 87485,
+      "18": 78244,
+      "19": 47100,
+      "20": 25532,
+      "21": 17377,
+      "22": 8545,
+      "23": 5135
+    },
+    "peak_hours": [
+      15,
+      16,
+      14
+    ],
+    "daily_activity": {
+      "Friday": 176301,
+      "Monday": 181854,
+      "Saturday": 169685,
+      "Sunday": 142525,
+      "Thursday": 169840,
+      "Tuesday": 161922,
+      "Wednesday": 164118
+    },
+    "avg_events_per_day": 14398.086419753086,
+    "median_events_per_day": 13394.0,
+    "avg_active_days_per_user": 1.0
+  },
+  "transitions": {
+    "transition_probabilities": {},
+    "most_common_transitions": [],
+    "high_exit_events": [
+      [
+        "viewed_hisab_page",
+        1.0
+      ],
+      [
+        "viewed_hisab_bus_detail",
+        1.0
+      ],
+      [
+        "viewed_dashboard_page",
+        1.0
+      ],
+      [
+        "viewed_hisab_trip_detail",
+        1.0
+      ],
+      [
+        "clicked_hisab_trip_detail_card",
+        1.0
+      ],
+      [
+        "clicked_hisab_bus_detail_card",
+        1.0
+      ],
+      [
+        "home_page_load_error",
+        1.0
+      ],
+      [
+        "clicked_hisab_yestarday_btn",
+        1.0
+      ],
+      [
+        "clicked_nav_drawer_menu",
+        1.0
+      ],
+      [
+        "clicked_hisab_coustom_date_btn",
+        1.0
+      ]
+    ]
+  },
+  "event_classification": {
+    "authentication": {
+      "event_count": 17872,
+      "unique_events": 20,
+      "examples": [
+        "login_verify_otp_success",
+        "clicked_login_verify_otp",
+        "viewed_login_otp_verify_page",
+        "clicked_login_send_otp_btn",
+        "viewed_login_page"
+      ]
+    },
+    "search": {
+      "event_count": 1733,
+      "unique_events": 9,
+      "examples": [
+        "_location_special-town-search",
+        "_bus-search_get-distance",
+        "_bus-search_v2_layout",
+        "_bus-search_list",
+        "bus_search"
+      ]
+    },
+    "selection": {
+      "event_count": 483,
+      "unique_events": 13,
+      "examples": [
+        "select_seat",
+        "boarding_change_pickup",
+        "SeatSelection_Click On Back",
+        "pageview_seat_selection",
+        "Buslist_bus_selection"
+      ]
+    },
+    "transaction": {
+      "event_count": 7061,
+      "unique_events": 17,
+      "examples": [
+        "viewed_setting_ticketing_machine_page",
+        "viewed_online_payment_history_page",
+        "_ticket",
+        "booking_dropoff_popup",
+        "booking_page_dropoff"
+      ]
+    },
+    "navigation": {
+      "event_count": 186392,
+      "unique_events": 62,
+      "examples": [
+        "clicked_hisab_download_btn",
+        "clicked_hisab_bus_detail_card",
+        "clicked_hisab_trip_detail_card",
+        "dashboard_clicked_gps_vistar_se_dekhe_bus_card",
+        "clicked_hisab_today_btn"
+      ]
+    },
+    "onboarding": {
+      "event_count": 142,
+      "unique_events": 3,
+      "examples": [
+        "Onboarding_Profile Saved",
+        "Onboarding_signup_",
+        "Onboarding_Language"
+      ]
+    },
+    "api_calls": {
+      "event_count": 1082,
+      "unique_events": 11,
+      "examples": [
+        "_location_from-town",
+        "_user",
+        "_user_device",
+        "_history_recommended-journey",
+        "_coupon"
+      ]
+    },
+    "other": {
+      "event_count": 951480,
+      "unique_events": 46,
+      "examples": [
+        "viewed_hisab_page",
+        "viewed_hisab_bus_detail",
+        "viewed_hisab_trip_detail",
+        "viewed_dashboard_page",
+        "viewed_null_page"
+      ]
+    }
+  }
+}
