@@ -1,66 +1,4 @@
 event_name,category,event_date,start_time,end_time,frequency,user_uuid,repetitions_removed,event_day
-App Installed,system,2025-12-06,10:17:37.251000,10:17:37.251000,1,,1,Saturday
-App Installed,system,2025-12-17,15:14:25.451000,15:14:25.451000,1,,1,Wednesday
-App Installed,system,2025-12-18,08:27:14.263000,08:27:14.263000,1,,1,Thursday
-App Installed,system,2025-12-19,09:12:01.184000,09:12:01.184000,1,,1,Friday
-App Installed,system,2025-12-20,22:51:40.437000,22:51:40.437000,1,,1,Saturday
-App Installed,system,2025-12-21,19:11:54.969000,19:11:54.969000,3,,3,Sunday
-App Installed,system,2025-12-25,16:19:58.590000,16:19:58.590000,1,,1,Thursday
-App Installed,system,2025-12-27,01:05:27.275000,01:05:27.275000,1,,1,Saturday
-App Installed,system,2025-12-28,18:38:51.797000,18:38:51.797000,4,,4,Sunday
-App Installed,system,2025-12-29,13:04:43.025000,13:04:43.025000,1,,1,Monday
-App Installed,system,2025-12-30,07:21:42.427000,07:21:42.427000,1,,1,Tuesday
-App Installed,system,2026-01-04,16:01:16.062000,20:50:13.020000,4,,4,Sunday
-App Installed,system,2026-01-05,08:31:12.289000,21:25:46.232000,8,,8,Monday
-App Installed,system,2026-01-16,13:14:30.523000,13:14:30.523000,1,,1,Friday
-App Installed,system,2026-02-16,18:21:21.358000,18:21:21.358000,1,,1,Monday
-App Installed,system,2026-02-18,15:21:04.534000,15:21:04.534000,1,,1,Wednesday
-App Uninstalled,system,2025-12-13,16:32:35.729000,16:32:35.729000,1,,1,Saturday
-App Upgraded,system,2025-12-09,04:36:02.521000,04:36:02.521000,1,,1,Tuesday
-App Upgraded,system,2025-12-11,12:07:37.466000,16:02:28.673000,2,,2,Thursday
-App Upgraded,system,2025-12-12,09:30:34.027000,09:30:34.027000,1,,1,Friday
-App Upgraded,system,2025-12-13,10:25:33.594000,23:56:08.150000,2,,2,Saturday
-App Upgraded,system,2025-12-15,17:56:15.557000,17:56:15.557000,1,,1,Monday
-App Upgraded,system,2025-12-18,04:10:09.201000,04:10:09.201000,1,,1,Thursday
-App Upgraded,system,2025-12-19,04:57:27.017000,12:25:17.465000,8,,8,Friday
-App Upgraded,system,2025-12-20,08:14:36.809000,18:10:23.034000,10,,10,Saturday
-App Upgraded,system,2025-12-21,01:01:09.470000,19:09:42.151000,6,,6,Sunday
-App Upgraded,system,2025-12-22,09:34:29.616000,09:34:29.616000,1,,1,Monday
-App Upgraded,system,2025-12-23,02:10:54.703000,02:20:21.656000,2,,2,Tuesday
-App Upgraded,system,2025-12-24,04:17:32.837000,07:09:56.684000,2,,2,Wednesday
-App Upgraded,system,2025-12-30,10:19:47.768000,12:09:41.237000,2,,2,Tuesday
-App Upgraded,system,2025-12-31,05:31:02.681000,23:54:45.455000,7,,7,Wednesday
-App Upgraded,system,2026-01-01,08:41:20.393000,19:25:09.713000,3,,3,Thursday
-App Upgraded,system,2026-01-02,12:53:14.811000,12:59:23.888000,2,,2,Friday
-App Upgraded,system,2026-01-03,07:39:44.419000,12:37:09.384000,2,,2,Saturday
-App Upgraded,system,2026-01-04,14:30:56.267000,14:30:56.267000,1,,1,Sunday
-App Upgraded,system,2026-01-05,15:25:31.081000,15:25:31.081000,1,,1,Monday
-App Upgraded,system,2026-01-07,15:23:02.641000,15:23:02.641000,1,,1,Wednesday
-App Upgraded,system,2026-01-09,13:33:40.578000,19:37:00.683000,2,,2,Friday
-App Upgraded,system,2026-01-10,08:17:00.059000,08:17:00.059000,1,,1,Saturday
-App Upgraded,system,2026-01-12,13:49:16.703000,22:16:43.338000,2,,2,Monday
-App Upgraded,system,2026-01-13,08:04:50.989000,16:13:04.654000,6,,6,Tuesday
-App Upgraded,system,2026-01-14,05:53:35.614000,15:54:59.632000,8,,8,Wednesday
-App Upgraded,system,2026-01-15,19:28:26.656000,19:28:26.656000,1,,1,Thursday
-App Upgraded,system,2026-01-16,18:30:21.022000,22:31:43.006000,3,,3,Friday
-App Upgraded,system,2026-01-17,08:00:54.872000,19:59:49.356000,3,,3,Saturday
-App Upgraded,system,2026-01-23,10:22:44.533000,10:22:44.533000,1,,1,Friday
-App Upgraded,system,2026-01-25,21:33:42.636000,21:33:42.636000,1,,1,Sunday
-App Upgraded,system,2026-01-26,16:11:12.558000,16:11:12.558000,1,,1,Monday
-App Upgraded,system,2026-01-28,17:49:04.230000,17:49:04.230000,2,,2,Wednesday
-App Upgraded,system,2026-01-29,08:35:09.526000,23:30:47.168000,7,,7,Thursday
-App Upgraded,system,2026-01-30,08:20:12.278000,20:23:27.227000,13,,13,Friday
-App Upgraded,system,2026-01-31,09:42:32.085000,16:29:05.315000,8,,8,Saturday
-App Upgraded,system,2026-02-01,08:06:05.524000,18:07:08.877000,12,,12,Sunday
-App Upgraded,system,2026-02-02,09:45:40.916000,18:31:20.619000,8,,8,Monday
-App Upgraded,system,2026-02-03,10:23:05.637000,14:06:14.043000,2,,2,Tuesday
-App Upgraded,system,2026-02-04,09:40:20.314000,21:15:39.147000,4,,4,Wednesday
-App Upgraded,system,2026-02-05,14:34:32.840000,14:34:32.840000,1,,1,Thursday
-App Upgraded,system,2026-02-08,01:16:59.644000,10:54:03.428000,2,,2,Sunday
-App Upgraded,system,2026-02-09,13:28:47.655000,13:28:47.655000,1,,1,Monday
-App Upgraded,system,2026-02-11,14:22:49.663000,14:22:49.663000,1,,1,Wednesday
-App Upgraded,system,2026-02-13,17:09:10.611000,17:09:10.611000,1,,1,Friday
-App Upgraded,system,2026-02-16,00:00:32.788000,09:27:33.844000,2,,2,Monday
 Buslist_date change,application,2025-12-02,13:09:20.845000,13:09:20.845000,1,,1,Tuesday
 Buslist_date change,application,2025-12-15,09:42:21.919000,09:42:23.887000,8,,8,Monday
 Buslist_date change,application,2026-02-09,17:29:40.232000,17:30:50.418000,3,,3,Monday
@@ -68,566 +6,14 @@ Buslist_date change,application,2026-02-10,00:37:58.357000,00:37:58.357000,1,,1,
 Buslist_date change,application,2026-02-12,18:19:36.215000,18:19:54.463000,3,,3,Thursday
 Buslist_date change,application,2026-02-18,00:06:21.175000,00:06:21.175000,1,,1,Wednesday
 Home_Faq,application,2026-01-03,15:47:03.637000,15:47:03.637000,1,,1,Saturday
-Journey Ended,system,2025-12-02,13:11:07.030000,13:15:03.227000,2,,2,Tuesday
-Journey Ended,system,2025-12-06,11:07:31.773000,11:07:31.773000,1,,1,Saturday
-Journey Ended,system,2025-12-09,10:15:57.982000,10:15:57.982000,1,,1,Tuesday
-Journey Ended,system,2025-12-10,18:05:22.791000,18:05:22.791000,1,,1,Wednesday
-Journey Ended,system,2025-12-11,18:54:48.840000,18:54:48.840000,1,,1,Thursday
-Journey Ended,system,2025-12-16,10:38:13.362000,10:38:13.362000,1,,1,Tuesday
-Journey Ended,system,2025-12-19,19:37:34.666000,19:37:34.666000,1,,1,Friday
-Journey Ended,system,2025-12-20,20:31:16.468000,20:31:16.468000,1,,1,Saturday
-Journey Ended,system,2025-12-25,16:35:23.615000,16:35:23.615000,2,,2,Thursday
-Journey Ended,system,2026-01-04,20:50:53.209000,20:50:53.209000,1,,1,Sunday
-Journey Ended,system,2026-01-05,08:34:01.431000,08:34:01.431000,1,,1,Monday
-Journey Ended,system,2026-01-25,19:47:00.899000,19:50:31.837000,2,,2,Sunday
-Journey Started,system,2025-12-06,11:07:00.060000,11:07:00.060000,1,,1,Saturday
-Journey Started,system,2025-12-09,10:15:57.862000,10:16:17.009000,2,,2,Tuesday
-Journey Started,system,2025-12-11,18:54:48.846000,18:54:48.846000,1,,1,Thursday
-Journey Started,system,2025-12-18,08:27:14.612000,08:27:14.612000,1,,1,Thursday
-Journey Started,system,2025-12-25,16:20:18.501000,16:20:18.501000,1,,1,Thursday
-Journey Started,system,2025-12-28,13:35:01.250000,13:35:01.250000,1,,1,Sunday
-Journey Started,system,2026-01-04,16:01:16.368000,20:50:13.169000,2,,2,Sunday
-Journey Started,system,2026-01-05,08:31:13.252000,21:25:46.596000,8,,8,Monday
 Onboarding_Language,application,2026-01-03,15:37:56.723000,15:37:56.723000,1,,1,Saturday
-Onboarding_backpressed,application,2025-12-09,10:15:34.916000,10:16:36.932000,6,,6,Tuesday
-Onboarding_backpressed,application,2025-12-22,13:03:30.010000,13:03:30.010000,1,,1,Monday
+Onboarding_backpressed,application,2025-12-09,10:15:34.916000,10:16:36.932000,8,,8,Tuesday
+Onboarding_backpressed,application,2025-12-22,13:03:29.061000,13:03:30.010000,2,,2,Monday
 Onboarding_backpressed,application,2025-12-25,11:49:36.815000,11:49:38.104000,8,,8,Thursday
 Onboarding_backpressed,application,2026-01-02,17:44:14.864000,17:44:14.864000,1,,1,Friday
 Onboarding_backpressed,application,2026-02-04,17:13:34.814000,17:13:55.047000,16,,16,Wednesday
 Onboarding_backpressed,application,2026-02-08,21:06:37.771000,21:06:37.771000,1,,1,Sunday
 Onboarding_backpressed,application,2026-02-09,23:53:40.268000,23:53:41.037000,2,,2,Monday
-Push Click,system,2025-12-24,18:07:28.310000,18:07:28.310000,1,,1,Wednesday
-Push Click,system,2026-01-04,11:11:42.862000,11:49:42.995000,3,,3,Sunday
-Push Click,system,2026-01-05,11:31:43.059000,11:31:43.059000,1,,1,Monday
-Push Click,system,2026-01-07,13:59:12.058000,13:59:12.058000,1,,1,Wednesday
-Push Delivered,system,2025-11-29,19:53:56.425000,19:53:56.425000,1,,1,Saturday
-Push Delivered,system,2025-12-01,17:59:14.187000,17:59:14.187000,1,,1,Monday
-Push Delivered,system,2025-12-02,10:56:44.670000,10:56:44.670000,1,,1,Tuesday
-Push Delivered,system,2025-12-03,10:59:46.204000,13:10:30.290000,3,,3,Wednesday
-Push Delivered,system,2025-12-05,13:11:59.912000,15:22:30.168000,2,,2,Friday
-Push Delivered,system,2025-12-06,11:00:50.569000,18:04:33.590000,3,,3,Saturday
-Push Delivered,system,2025-12-07,12:03:37.751000,13:43:29.613000,4,,4,Sunday
-Push Delivered,system,2025-12-08,09:54:28.089000,23:02:09.438000,4,,4,Monday
-Push Delivered,system,2025-12-10,18:05:33.896000,18:05:34.729000,3,,3,Wednesday
-Push Delivered,system,2025-12-13,13:12:57.135000,13:12:57.143000,2,,2,Saturday
-Push Delivered,system,2025-12-17,13:13:41.123000,13:13:41.123000,1,,1,Wednesday
-Push Delivered,system,2025-12-18,09:51:46.953000,09:51:46.953000,1,,1,Thursday
-Push Delivered,system,2025-12-19,08:27:47.195000,17:59:31.995000,6,,6,Friday
-Push Delivered,system,2025-12-20,06:53:29.939000,09:34:01.741000,5,,5,Saturday
-Push Delivered,system,2025-12-21,08:28:16.502000,14:49:50.704000,7,,7,Sunday
-Push Delivered,system,2025-12-22,08:28:43.230000,23:05:03.307000,9,,9,Monday
-Push Delivered,system,2025-12-23,08:29:15.063000,16:35:08.876000,6,,6,Tuesday
-Push Delivered,system,2025-12-24,09:34:46.570000,09:34:46.570000,1,,1,Wednesday
-Push Delivered,system,2025-12-25,07:30:13.296000,20:41:34.640000,6,,6,Thursday
-Push Delivered,system,2025-12-26,09:34:56.662000,09:34:56.662000,1,,1,Friday
-Push Delivered,system,2025-12-27,08:29:54.486000,14:51:25.522000,5,,5,Saturday
-Push Delivered,system,2025-12-28,11:22:36.235000,14:40:28.121000,2,,2,Sunday
-Push Delivered,system,2025-12-29,11:06:30.160000,11:06:30.414000,2,,2,Monday
-Push Delivered,system,2025-12-30,12:59:43.485000,12:59:43.485000,1,,1,Tuesday
-Push Delivered,system,2025-12-31,06:25:47.714000,14:52:30.247000,3,,3,Wednesday
-Push Delivered,system,2026-01-01,11:23:07.692000,12:59:33.121000,2,,2,Thursday
-Push Delivered,system,2026-01-02,17:41:51.283000,17:41:51.283000,1,,1,Friday
-Push Delivered,system,2026-01-04,08:31:23.737000,17:41:31.758000,26,,26,Sunday
-Push Delivered,system,2026-01-05,11:31:31.600000,22:40:24.025000,28,,28,Monday
-Push Delivered,system,2026-01-06,15:56:32.658000,17:59:15.362000,61,,61,Tuesday
-Push Delivered,system,2026-01-07,13:59:04.418000,18:00:31.011000,54,,54,Wednesday
-Push Delivered,system,2026-01-08,17:59:06.793000,17:59:12.744000,53,,53,Thursday
-Push Delivered,system,2026-01-09,13:59:07.154000,13:59:12.932000,63,,63,Friday
-Push Delivered,system,2026-01-10,17:42:46.461000,17:59:03.735000,63,,63,Saturday
-Push Delivered,system,2026-01-12,13:59:15.870000,13:59:30.084000,55,,55,Monday
-Push Delivered,system,2026-01-13,17:59:07.079000,18:08:25.088000,62,,62,Tuesday
-Push Delivered,system,2026-01-14,13:58:50.164000,13:59:11.448000,56,,56,Wednesday
-Push Delivered,system,2026-01-15,17:59:51.563000,18:01:04.904000,56,,56,Thursday
-Push Delivered,system,2026-01-16,13:59:06.686000,18:18:11.035000,81,,81,Friday
-Push Delivered,system,2026-01-17,10:26:28.439000,18:22:46.058000,143,,143,Saturday
-Push Delivered,system,2026-01-23,13:59:08.823000,14:00:33.062000,77,,77,Friday
-Push Delivered,system,2026-01-24,07:59:10.168000,17:59:17.013000,238,,238,Saturday
-Push Delivered,system,2026-01-25,07:59:09.352000,17:24:02.555000,166,,166,Sunday
-Push Delivered,system,2026-01-26,07:59:10.161000,16:59:20.789000,239,,239,Monday
-Push Delivered,system,2026-01-29,13:25:47.283000,16:29:55.608000,77,,77,Thursday
-Push Delivered,system,2026-01-30,12:10:44.856000,16:29:18.428000,85,,85,Friday
-Push Delivered,system,2026-01-31,11:49:16.413000,16:29:18.026000,95,,95,Saturday
-Push Delivered,system,2026-02-01,20:16:06.979000,20:16:06.979000,1,,1,Sunday
-Push Delivered,system,2026-02-03,18:32:04.109000,18:32:04.109000,1,,1,Tuesday
-Push Delivered,system,2026-02-05,19:20:25.957000,19:20:25.957000,1,,1,Thursday
-Push Delivered,system,2026-02-06,19:16:40.947000,19:16:40.947000,1,,1,Friday
-Push Delivered,system,2026-02-08,12:59:55.640000,19:16:41.494000,3,,3,Sunday
-Push Delivered,system,2026-02-10,12:59:20.725000,19:17:27.697000,3,,3,Tuesday
-Push Delivered,system,2026-02-12,19:17:39.279000,19:17:39.279000,1,,1,Thursday
-Push Delivered,system,2026-02-16,13:20:50.542000,13:20:50.542000,1,,1,Monday
-Push Delivered,system,2026-02-17,12:59:51.957000,19:12:50.067000,4,,4,Tuesday
-Push Dismiss,system,2025-11-29,16:52:02.739000,16:52:02.739000,1,,1,Saturday
-Push Dismiss,system,2025-11-30,17:34:09.031000,17:34:09.031000,1,,1,Sunday
-Push Dismiss,system,2025-12-01,18:35:33.879000,18:45:42.510000,2,,2,Monday
-Push Dismiss,system,2025-12-02,12:33:11.089000,18:35:25.180000,4,,4,Tuesday
-Push Dismiss,system,2025-12-06,11:00:55.130000,20:27:42.651000,6,,6,Saturday
-Push Dismiss,system,2025-12-08,18:32:03.439000,18:32:03.439000,1,,1,Monday
-Push Dismiss,system,2025-12-09,18:49:39.448000,21:01:00.846000,2,,2,Tuesday
-Push Dismiss,system,2025-12-10,18:08:26.774000,19:31:05.748000,2,,2,Wednesday
-Push Dismiss,system,2025-12-11,00:24:26.429000,20:39:09.590000,6,,6,Thursday
-Push Dismiss,system,2025-12-12,18:11:42.802000,18:11:56.671000,2,,2,Friday
-Push Dismiss,system,2025-12-14,14:13:08.354000,16:52:25.780000,2,,2,Sunday
-Push Dismiss,system,2025-12-15,15:29:42.495000,19:03:52.394000,4,,4,Monday
-Push Dismiss,system,2025-12-16,06:21:25.304000,19:54:55.757000,5,,5,Tuesday
-Push Dismiss,system,2025-12-17,11:15:49.921000,18:04:34.816000,3,,3,Wednesday
-Push Dismiss,system,2025-12-18,07:05:04.048000,21:10:14.556000,7,,7,Thursday
-Push Dismiss,system,2025-12-19,08:43:28.435000,21:24:58.336000,7,,7,Friday
-Push Dismiss,system,2025-12-20,07:42:39.058000,16:27:16.439000,9,,9,Saturday
-Push Dismiss,system,2025-12-21,08:04:05.681000,15:32:16.200000,6,,6,Sunday
-Push Dismiss,system,2025-12-22,08:47:06.052000,18:03:23.131000,8,,8,Monday
-Push Dismiss,system,2025-12-23,08:36:20.427000,23:45:19.229000,7,,7,Tuesday
-Push Dismiss,system,2025-12-24,13:30:39.921000,13:30:39.921000,1,,1,Wednesday
-Push Dismiss,system,2025-12-25,07:30:58.156000,22:45:14.675000,9,,9,Thursday
-Push Dismiss,system,2025-12-26,10:42:22.787000,11:13:32.758000,2,,2,Friday
-Push Dismiss,system,2025-12-27,08:30:05.152000,19:34:40.286000,6,,6,Saturday
-Push Dismiss,system,2025-12-28,13:14:34.908000,17:20:15.187000,3,,3,Sunday
-Push Dismiss,system,2025-12-29,00:59:44.832000,21:00:11.864000,3,,3,Monday
-Push Dismiss,system,2025-12-30,11:38:41.696000,13:00:41.130000,2,,2,Tuesday
-Push Dismiss,system,2025-12-31,08:46:44.603000,14:25:14.598000,3,,3,Wednesday
-Push Dismiss,system,2026-01-01,11:41:41.415000,20:37:43.275000,2,,2,Thursday
-Push Dismiss,system,2026-01-02,14:15:49.212000,17:03:44.435000,3,,3,Friday
-Push Dismiss,system,2026-01-03,08:19:33.299000,14:31:17.941000,4,,4,Saturday
-Push Dismiss,system,2026-01-04,10:22:28.574000,21:52:01.214000,19,,19,Sunday
-Push Dismiss,system,2026-01-05,06:25:42.042000,20:23:16.798000,25,,25,Monday
-Push Dismiss,system,2026-01-06,14:21:54.286000,20:43:13.151000,49,,49,Tuesday
-Push Dismiss,system,2026-01-07,10:35:34.882000,21:35:37.232000,38,,38,Wednesday
-Push Dismiss,system,2026-01-08,05:09:30.665000,19:53:45.362000,41,,41,Thursday
-Push Dismiss,system,2026-01-09,01:26:40.929000,20:32:42.648000,46,,46,Friday
-Push Dismiss,system,2026-01-10,07:20:16.479000,23:39:08.420000,49,,49,Saturday
-Push Dismiss,system,2026-01-11,03:13:29.814000,19:33:40.778000,9,,9,Sunday
-Push Dismiss,system,2026-01-12,13:59:32.516000,22:16:52.311000,50,,50,Monday
-Push Dismiss,system,2026-01-13,13:21:01.493000,23:39:03.799000,47,,47,Tuesday
-Push Dismiss,system,2026-01-14,08:53:32.383000,21:26:58.533000,48,,48,Wednesday
-Push Dismiss,system,2026-01-15,05:40:12.452000,23:24:15.834000,57,,57,Thursday
-Push Dismiss,system,2026-01-16,10:28:50.253000,23:08:01.667000,51,,51,Friday
-Push Dismiss,system,2026-01-17,08:39:43.114000,23:38:19.654000,125,,125,Saturday
-Push Dismiss,system,2026-01-18,09:28:30.512000,13:38:08.661000,3,,3,Sunday
-Push Dismiss,system,2026-01-23,00:07:55.577000,20:37:01.491000,58,,58,Friday
-Push Dismiss,system,2026-01-24,07:59:18.594000,23:51:45.352000,195,,195,Saturday
-Push Dismiss,system,2026-01-25,06:38:34.740000,20:43:11.292000,128,,128,Sunday
-Push Dismiss,system,2026-01-26,07:12:55.822000,23:22:39.684000,183,,183,Monday
-Push Dismiss,system,2026-01-27,01:49:25.754000,19:49:19.357000,33,,33,Tuesday
-Push Dismiss,system,2026-01-28,15:21:30.075000,23:19:40.973000,10,,10,Wednesday
-Push Dismiss,system,2026-01-29,12:07:58.779000,20:46:35.857000,48,,48,Thursday
-Push Dismiss,system,2026-01-30,07:14:24.529000,23:16:48.271000,47,,47,Friday
-Push Dismiss,system,2026-01-31,02:31:55.110000,21:59:28.912000,67,,67,Saturday
-Push Dismiss,system,2026-02-01,10:30:11.867000,23:41:54.623000,4,,4,Sunday
-Push Dismiss,system,2026-02-02,10:36:21.860000,20:29:06.150000,4,,4,Monday
-Push Dismiss,system,2026-02-03,13:08:47.779000,22:56:31.879000,6,,6,Tuesday
-Push Dismiss,system,2026-02-04,21:23:13.188000,21:23:13.188000,1,,1,Wednesday
-Push Dismiss,system,2026-02-05,22:23:32.280000,22:23:32.378000,2,,2,Thursday
-Push Dismiss,system,2026-02-06,10:21:11.019000,14:05:40.199000,2,,2,Friday
-Push Dismiss,system,2026-02-07,08:44:54.096000,20:00:47.810000,5,,5,Saturday
-Push Dismiss,system,2026-02-08,13:08:13.476000,22:07:00.230000,4,,4,Sunday
-Push Dismiss,system,2026-02-09,16:17:57.377000,18:35:31.270000,2,,2,Monday
-Push Dismiss,system,2026-02-10,10:12:28.001000,10:12:28.001000,1,,1,Tuesday
-Push Dismiss,system,2026-02-11,16:34:38.434000,16:34:38.434000,1,,1,Wednesday
-Push Dismiss,system,2026-02-12,13:02:03.603000,20:11:18.485000,3,,3,Thursday
-Push Dismiss,system,2026-02-13,17:36:14.323000,17:36:14.323000,1,,1,Friday
-Push Dismiss,system,2026-02-14,13:28:25.940000,21:45:50.138000,7,,7,Saturday
-Push Dismiss,system,2026-02-15,02:09:05.698000,16:56:39.321000,3,,3,Sunday
-Push Dismiss,system,2026-02-16,11:23:30.439000,13:24:43.790000,2,,2,Monday
-Push Dismiss,system,2026-02-17,23:48:14.013000,23:48:14.013000,1,,1,Tuesday
-Push Dismiss,system,2026-02-18,06:29:00.093000,14:13:19.011000,2,,2,Wednesday
-Push Dismiss,system,2026-02-19,10:47:15.884000,10:47:15.884000,1,,1,Thursday
-Push Failure,system,2025-12-02,09:44:52.473000,09:44:52.473000,1,,1,Tuesday
-Push Failure,system,2025-12-12,10:31:28.778000,10:31:28.778000,1,,1,Friday
-Push Failure,system,2025-12-13,16:32:35.727000,16:32:35.727000,1,,1,Saturday
-Push Failure,system,2025-12-20,14:31:03.932000,14:31:03.932000,1,,1,Saturday
-Push Failure,system,2025-12-21,19:38:17.224000,19:38:17.224000,1,,1,Sunday
-Push Failure,system,2025-12-23,19:38:47.870000,19:38:47.870000,1,,1,Tuesday
-Push Failure,system,2025-12-24,18:58:10.778000,18:58:10.778000,1,,1,Wednesday
-Push Failure,system,2025-12-25,16:35:23.889000,16:35:23.889000,2,,2,Thursday
-Push Failure,system,2025-12-28,19:39:52.642000,19:39:52.642000,1,,1,Sunday
-Push Failure,system,2026-01-03,19:40:42.455000,19:40:42.455000,1,,1,Saturday
-Push Failure,system,2026-01-04,13:37:23.773000,21:11:52.965000,3,,3,Sunday
-Push Failure,system,2026-01-05,13:19:37.911000,22:21:24.489000,4,,4,Monday
-Push Failure,system,2026-01-15,00:55:22.754000,00:55:22.754000,1,,1,Thursday
-Push Failure,system,2026-01-17,00:56:46.988000,00:56:46.988000,1,,1,Saturday
-Push Failure,system,2026-01-23,00:57:34.047000,00:57:34.047000,1,,1,Friday
-Push Failure,system,2026-01-27,00:58:32.267000,00:58:32.267000,1,,1,Tuesday
-Push Failure,system,2026-01-29,00:58:55.067000,00:58:55.067000,1,,1,Thursday
-Push Failure,system,2026-02-15,12:46:51.483000,12:46:51.483000,1,,1,Sunday
-Push Failure,system,2026-02-18,00:23:08.829000,00:23:08.829000,1,,1,Wednesday
-Push Impression,system,2025-11-29,12:59:29.471000,12:59:29.471000,1,,1,Saturday
-Push Impression,system,2025-11-30,12:59:24.898000,12:59:24.898000,1,,1,Sunday
-Push Impression,system,2025-12-01,17:59:14.229000,17:59:14.229000,1,,1,Monday
-Push Impression,system,2025-12-02,10:56:44.862000,10:56:44.862000,1,,1,Tuesday
-Push Impression,system,2025-12-03,10:59:46.354000,13:10:30.358000,3,,3,Wednesday
-Push Impression,system,2025-12-05,15:22:30.200000,15:22:30.200000,1,,1,Friday
-Push Impression,system,2025-12-06,11:00:50.648000,18:04:33.647000,3,,3,Saturday
-Push Impression,system,2025-12-07,12:07:04.922000,12:07:04.922000,1,,1,Sunday
-Push Impression,system,2025-12-08,09:54:28.134000,23:02:09.592000,4,,4,Monday
-Push Impression,system,2025-12-10,18:05:33.918000,18:05:34.779000,3,,3,Wednesday
-Push Impression,system,2025-12-13,13:12:57.175000,13:12:57.176000,2,,2,Saturday
-Push Impression,system,2025-12-15,09:06:34.991000,09:06:34.991000,1,,1,Monday
-Push Impression,system,2025-12-17,13:13:41.171000,13:13:41.171000,1,,1,Wednesday
-Push Impression,system,2025-12-19,08:27:47.245000,11:03:57.749000,5,,5,Friday
-Push Impression,system,2025-12-20,08:28:02.154000,09:34:01.770000,4,,4,Saturday
-Push Impression,system,2025-12-21,08:28:16.558000,14:49:50.760000,8,,8,Sunday
-Push Impression,system,2025-12-22,08:28:43.260000,23:05:03.470000,7,,7,Monday
-Push Impression,system,2025-12-23,08:29:15.119000,14:50:26.323000,5,,5,Tuesday
-Push Impression,system,2025-12-24,09:34:46.602000,09:34:46.602000,1,,1,Wednesday
-Push Impression,system,2025-12-25,07:30:13.445000,20:41:34.664000,5,,5,Thursday
-Push Impression,system,2025-12-26,09:34:56.730000,09:34:56.730000,1,,1,Friday
-Push Impression,system,2025-12-27,08:29:54.531000,14:51:25.555000,5,,5,Saturday
-Push Impression,system,2025-12-28,11:22:36.274000,11:22:36.274000,1,,1,Sunday
-Push Impression,system,2025-12-29,11:06:30.175000,11:39:34.652000,3,,3,Monday
-Push Impression,system,2025-12-30,12:59:43.588000,12:59:43.588000,1,,1,Tuesday
-Push Impression,system,2025-12-31,06:25:47.903000,14:52:30.350000,3,,3,Wednesday
-Push Impression,system,2026-01-01,11:23:10.070000,12:59:33.200000,2,,2,Thursday
-Push Impression,system,2026-01-04,08:31:23.780000,17:41:31.799000,28,,28,Sunday
-Push Impression,system,2026-01-05,11:31:31.689000,22:40:24.051000,28,,28,Monday
-Push Impression,system,2026-01-06,15:56:32.712000,17:59:15.432000,59,,59,Tuesday
-Push Impression,system,2026-01-07,13:59:04.452000,13:59:11.473000,52,,52,Wednesday
-Push Impression,system,2026-01-08,12:59:34.178000,18:00:40.145000,54,,54,Thursday
-Push Impression,system,2026-01-09,13:59:07.213000,13:59:12.890000,60,,60,Friday
-Push Impression,system,2026-01-10,17:42:46.492000,17:59:03.850000,61,,61,Saturday
-Push Impression,system,2026-01-12,13:59:15.895000,13:59:30.179000,54,,54,Monday
-Push Impression,system,2026-01-13,17:59:06.888000,17:59:12.995000,59,,59,Tuesday
-Push Impression,system,2026-01-14,13:58:50.408000,14:01:52.873000,54,,54,Wednesday
-Push Impression,system,2026-01-15,17:59:51.605000,18:02:09.562000,55,,55,Thursday
-Push Impression,system,2026-01-16,13:59:06.798000,13:59:14.418000,74,,74,Friday
-Push Impression,system,2026-01-17,10:26:28.481000,18:28:17.395000,135,,135,Saturday
-Push Impression,system,2026-01-23,13:20:13.088000,14:00:07.917000,73,,73,Friday
-Push Impression,system,2026-01-24,07:59:10.203000,17:59:17.053000,234,,234,Saturday
-Push Impression,system,2026-01-25,07:59:09.387000,17:24:02.592000,152,,152,Sunday
-Push Impression,system,2026-01-26,07:59:10.238000,16:59:20.884000,224,,224,Monday
-Push Impression,system,2026-01-29,13:25:47.441000,16:32:18.264000,80,,80,Thursday
-Push Impression,system,2026-01-30,16:29:06.794000,16:29:13.514000,76,,76,Friday
-Push Impression,system,2026-01-31,11:49:16.452000,16:30:27.266000,92,,92,Saturday
-Push Impression,system,2026-02-01,20:16:07.021000,20:16:07.021000,1,,1,Sunday
-Push Impression,system,2026-02-05,19:20:26.109000,19:20:26.109000,1,,1,Thursday
-Push Impression,system,2026-02-06,19:16:41.052000,19:16:41.052000,1,,1,Friday
-Push Impression,system,2026-02-07,13:00:20.863000,13:00:20.863000,1,,1,Saturday
-Push Impression,system,2026-02-08,12:59:55.677000,19:16:41.541000,3,,3,Sunday
-Push Impression,system,2026-02-10,12:59:20.847000,19:17:27.724000,2,,2,Tuesday
-Push Impression,system,2026-02-12,19:17:39.319000,19:17:39.319000,1,,1,Thursday
-Push Impression,system,2026-02-16,13:20:50.581000,13:20:50.581000,1,,1,Monday
-Push Impression,system,2026-02-17,12:59:52.050000,19:12:50.126000,4,,4,Tuesday
-Push Impression,system,2026-02-18,12:40:43.456000,12:40:43.456000,1,,1,Wednesday
-Push Notification Failed,system,2025-12-08,13:25:06.323000,13:25:06.323000,1,,1,Monday
-Push Notification Failed,system,2025-12-18,13:17:50.746000,13:17:50.746000,1,,1,Thursday
-Push Notification Failed,system,2025-12-23,16:35:08.921000,16:35:08.921000,1,,1,Tuesday
-Push Registered (Mobile),system,2026-02-02,09:48:24.080000,18:31:20.673000,11,,11,Monday
-Push Sent,system,2025-11-27,17:07:42.014000,17:07:42.014000,1,,1,Thursday
-Push Sent,system,2025-11-28,08:10:01.410000,21:51:45.514000,16,,16,Friday
-Push Sent,system,2025-11-29,10:47:02.546000,21:22:29.357000,46,,46,Saturday
-Push Sent,system,2025-11-30,08:10:29.969000,21:52:04.391000,54,,54,Sunday
-Push Sent,system,2025-12-01,10:47:28.821000,21:23:14.577000,51,,51,Monday
-Push Sent,system,2025-12-02,08:10:50.962000,21:52:15.638000,63,,63,Tuesday
-Push Sent,system,2025-12-03,10:57:13.222000,21:23:50.469000,49,,49,Wednesday
-Push Sent,system,2025-12-04,08:11:13.519000,21:52:24.748000,48,,48,Thursday
-Push Sent,system,2025-12-05,09:48:57.575000,21:23:58.285000,49,,49,Friday
-Push Sent,system,2025-12-06,08:11:31.476000,21:27:54.302000,45,,45,Saturday
-Push Sent,system,2025-12-07,11:47:56.284000,21:24:25.794000,49,,49,Sunday
-Push Sent,system,2025-12-08,08:11:55.370000,18:04:54.397000,54,,54,Monday
-Push Sent,system,2025-12-09,09:54:54.789000,21:25:23.591000,44,,44,Tuesday
-Push Sent,system,2025-12-10,08:12:24.115000,18:05:32.818000,49,,49,Wednesday
-Push Sent,system,2025-12-11,09:55:52.730000,21:24:56.387000,46,,46,Thursday
-Push Sent,system,2025-12-12,08:12:53.039000,23:01:55.847000,44,,44,Friday
-Push Sent,system,2025-12-13,10:32:01.365000,23:02:22.943000,48,,48,Saturday
-Push Sent,system,2025-12-14,07:43:45.221000,23:02:47.981000,53,,53,Sunday
-Push Sent,system,2025-12-15,07:44:16.314000,23:03:58.631000,53,,53,Monday
-Push Sent,system,2025-12-16,07:44:20.802000,23:04:35.373000,58,,58,Tuesday
-Push Sent,system,2025-12-17,07:44:49.646000,21:26:23.673000,47,,47,Wednesday
-Push Sent,system,2025-12-18,07:45:15.838000,23:04:17.169000,57,,57,Thursday
-Push Sent,system,2025-12-19,06:23:14.314000,20:39:52.203000,61,,61,Friday
-Push Sent,system,2025-12-20,06:23:29.656000,23:04:44.932000,80,,80,Saturday
-Push Sent,system,2025-12-21,06:23:42.940000,21:13:47.778000,70,,70,Sunday
-Push Sent,system,2025-12-22,06:23:57.680000,23:05:01.885000,75,,75,Monday
-Push Sent,system,2025-12-23,06:24:14.097000,21:14:26.440000,77,,77,Tuesday
-Push Sent,system,2025-12-24,07:46:29.018000,23:07:28.680000,51,,51,Wednesday
-Push Sent,system,2025-12-25,06:24:41.594000,22:39:10.015000,75,,75,Thursday
-Push Sent,system,2025-12-26,07:46:52.401000,23:08:44.455000,55,,55,Friday
-Push Sent,system,2025-12-27,06:24:52.198000,21:14:53.664000,71,,71,Saturday
-Push Sent,system,2025-12-28,07:47:22.870000,20:31:12.853000,34,,34,Sunday
-Push Sent,system,2025-12-29,06:25:21.494000,20:40:58.961000,54,,54,Monday
-Push Sent,system,2025-12-30,07:47:40.041000,20:31:45.390000,32,,32,Tuesday
-Push Sent,system,2025-12-31,06:25:45.763000,19:55:42.453000,68,,68,Wednesday
-Push Sent,system,2026-01-01,07:22:33.492000,22:40:02.415000,38,,38,Thursday
-Push Sent,system,2026-01-02,06:25:58.329000,19:56:31.118000,72,,72,Friday
-Push Sent,system,2026-01-03,07:23:28.735000,22:41:05.420000,39,,39,Saturday
-Push Sent,system,2026-01-04,06:26:08.857000,17:41:30.699000,86,,86,Sunday
-Push Sent,system,2026-01-05,11:19:41.000000,22:40:53.655000,63,,63,Monday
-Push Sent,system,2026-01-06,06:26:23.278000,17:59:07.412000,251,,251,Tuesday
-Push Sent,system,2026-01-07,11:19:57.239000,19:57:24.010000,219,,219,Wednesday
-Push Sent,system,2026-01-08,07:24:19.196000,17:59:06.707000,242,,242,Thursday
-Push Sent,system,2026-01-09,09:07:41.880000,19:57:55.532000,256,,256,Friday
-Push Sent,system,2026-01-10,07:24:43.637000,20:06:47.934000,265,,265,Saturday
-Push Sent,system,2026-01-11,00:47:57.847000,20:06:57.752000,37,,37,Sunday
-Push Sent,system,2026-01-12,00:04:19.048000,20:07:19.893000,261,,261,Monday
-Push Sent,system,2026-01-13,00:04:49.405000,20:07:55.416000,274,,274,Tuesday
-Push Sent,system,2026-01-14,00:05:19.407000,18:01:37.676000,219,,219,Wednesday
-Push Sent,system,2026-01-15,00:07:53.323000,19:59:11.199000,277,,277,Thursday
-Push Sent,system,2026-01-16,00:08:25.710000,20:14:01.662000,293,,293,Friday
-Push Sent,system,2026-01-17,08:14:08.227000,21:55:41.210000,560,,560,Saturday
-Push Sent,system,2026-01-18,00:08:42.809000,20:09:15.598000,4,,4,Sunday
-Push Sent,system,2026-01-23,10:21:51.274000,21:57:23.264000,307,,307,Friday
-Push Sent,system,2026-01-24,07:59:08.493000,23:20:34.492000,847,,847,Saturday
-Push Sent,system,2026-01-25,05:30:15.658000,21:57:37.147000,585,,585,Sunday
-Push Sent,system,2026-01-26,07:59:07.980000,20:15:06.611000,816,,816,Monday
-Push Sent,system,2026-01-27,10:05:50.667000,21:57:58.007000,54,,54,Tuesday
-Push Sent,system,2026-01-28,10:06:08.768000,20:15:27.164000,42,,42,Wednesday
-Push Sent,system,2026-01-29,10:32:48.943000,21:58:29.657000,289,,289,Thursday
-Push Sent,system,2026-01-30,10:06:41.333000,20:15:57.466000,316,,316,Friday
-Push Sent,system,2026-01-31,10:29:51.100000,21:58:15.532000,344,,344,Saturday
-Push Sent,system,2026-02-01,10:31:42.366000,20:56:32.965000,43,,43,Sunday
-Push Sent,system,2026-02-02,10:21:08.806000,21:58:31.713000,50,,50,Monday
-Push Sent,system,2026-02-03,09:50:25.780000,20:56:59.141000,52,,52,Tuesday
-Push Sent,system,2026-02-04,10:24:24.245000,21:58:38.852000,49,,49,Wednesday
-Push Sent,system,2026-02-05,10:22:12.360000,21:56:13.490000,51,,51,Thursday
-Push Sent,system,2026-02-06,09:31:15.383000,21:56:07.921000,56,,56,Friday
-Push Sent,system,2026-02-07,09:31:39.604000,23:56:12.434000,58,,58,Saturday
-Push Sent,system,2026-02-08,09:32:41.837000,21:57:06.246000,59,,59,Sunday
-Push Sent,system,2026-02-09,09:32:49.427000,21:57:18.158000,38,,38,Monday
-Push Sent,system,2026-02-10,09:33:05.257000,20:58:33.860000,50,,50,Tuesday
-Push Sent,system,2026-02-11,10:24:02.309000,21:57:41.435000,41,,41,Wednesday
-Push Sent,system,2026-02-12,09:33:30.519000,23:44:25.015000,52,,52,Thursday
-Push Sent,system,2026-02-13,10:26:34.633000,23:44:17.766000,39,,39,Friday
-Push Sent,system,2026-02-14,09:33:54.492000,20:58:48.342000,49,,49,Saturday
-Push Sent,system,2026-02-15,12:03:54.532000,21:58:20.349000,54,,54,Sunday
-Push Sent,system,2026-02-16,09:34:21.181000,20:59:18.744000,50,,50,Monday
-Push Sent,system,2026-02-17,12:43:24.187000,21:58:37.876000,48,,48,Tuesday
-Push Sent,system,2026-02-18,08:44:40.677000,20:59:41.751000,51,,51,Wednesday
-Push Sent,system,2026-02-19,08:45:08.487000,21:58:58.887000,35,,35,Thursday
-Push Subscribe Process - Device Registered (Push),system,2025-11-29,12:21:24.746000,12:21:24.746000,1,,1,Saturday
-Push Subscribe Process - Device Registered (Push),system,2025-12-06,10:17:38.295000,10:17:38.295000,1,,1,Saturday
-Push Subscribe Process - Device Registered (Push),system,2025-12-09,04:36:02.632000,04:36:02.632000,1,,1,Tuesday
-Push Subscribe Process - Device Registered (Push),system,2025-12-11,12:07:37.546000,22:49:47.161000,3,,3,Thursday
-Push Subscribe Process - Device Registered (Push),system,2025-12-12,09:30:45.199000,09:30:45.199000,1,,1,Friday
-Push Subscribe Process - Device Registered (Push),system,2025-12-13,10:25:33.801000,10:25:33.801000,1,,1,Saturday
-Push Subscribe Process - Device Registered (Push),system,2025-12-15,17:56:15.592000,17:56:15.592000,1,,1,Monday
-Push Subscribe Process - Device Registered (Push),system,2025-12-17,12:54:14.454000,15:14:25.550000,2,,2,Wednesday
-Push Subscribe Process - Device Registered (Push),system,2025-12-18,04:15:23.643000,22:50:58.310000,22,,22,Thursday
-Push Subscribe Process - Device Registered (Push),system,2025-12-19,04:57:27.126000,13:45:55.975000,25,,25,Friday
-Push Subscribe Process - Device Registered (Push),system,2025-12-20,02:43:53.218000,22:51:40.650000,34,,34,Saturday
-Push Subscribe Process - Device Registered (Push),system,2025-12-21,01:01:11.957000,22:17:36.480000,16,,16,Sunday
-Push Subscribe Process - Device Registered (Push),system,2025-12-22,09:23:09.136000,11:02:05.228000,5,,5,Monday
-Push Subscribe Process - Device Registered (Push),system,2025-12-23,02:10:55.011000,11:21:00.698000,5,,5,Tuesday
-Push Subscribe Process - Device Registered (Push),system,2025-12-24,07:09:56.840000,07:29:18.938000,2,,2,Wednesday
-Push Subscribe Process - Device Registered (Push),system,2025-12-25,09:37:23.995000,16:19:59.014000,4,,4,Thursday
-Push Subscribe Process - Device Registered (Push),system,2025-12-27,01:05:27.426000,01:05:27.426000,1,,1,Saturday
-Push Subscribe Process - Device Registered (Push),system,2025-12-28,18:35:03.848000,18:38:51.983000,4,,4,Sunday
-Push Subscribe Process - Device Registered (Push),system,2025-12-29,13:04:43.132000,19:00:37.262000,2,,2,Monday
-Push Subscribe Process - Device Registered (Push),system,2025-12-30,07:21:42.469000,12:09:41.275000,6,,6,Tuesday
-Push Subscribe Process - Device Registered (Push),system,2025-12-31,05:31:02.730000,23:54:45.511000,21,,21,Wednesday
-Push Subscribe Process - Device Registered (Push),system,2026-01-01,08:41:20.447000,19:25:09.779000,8,,8,Thursday
-Push Subscribe Process - Device Registered (Push),system,2026-01-02,12:53:14.975000,16:35:59.095000,7,,7,Friday
-Push Subscribe Process - Device Registered (Push),system,2026-01-03,07:39:44.481000,12:37:09.434000,5,,5,Saturday
-Push Subscribe Process - Device Registered (Push),system,2026-01-04,14:30:56.305000,20:50:19.429000,6,,6,Sunday
-Push Subscribe Process - Device Registered (Push),system,2026-01-05,08:31:14.969000,21:25:46.458000,17,,17,Monday
-Push Subscribe Process - Device Registered (Push),system,2026-01-06,19:38:56.171000,19:38:56.171000,3,,3,Tuesday
-Push Subscribe Process - Device Registered (Push),system,2026-01-07,15:23:02.702000,15:23:02.706000,3,,3,Wednesday
-Push Subscribe Process - Device Registered (Push),system,2026-01-08,11:31:04.271000,15:27:27.339000,2,,2,Thursday
-Push Subscribe Process - Device Registered (Push),system,2026-01-09,13:04:47.941000,19:37:00.738000,13,,13,Friday
-Push Subscribe Process - Device Registered (Push),system,2026-01-10,08:17:00.110000,14:06:54.237000,4,,4,Saturday
-Push Subscribe Process - Device Registered (Push),system,2026-01-12,13:49:16.741000,22:16:43.373000,5,,5,Monday
-Push Subscribe Process - Device Registered (Push),system,2026-01-13,08:04:51.037000,16:13:04.724000,16,,16,Tuesday
-Push Subscribe Process - Device Registered (Push),system,2026-01-14,05:53:35.677000,15:54:59.672000,20,,20,Wednesday
-Push Subscribe Process - Device Registered (Push),system,2026-01-15,16:32:27.649000,19:28:26.725000,5,,5,Thursday
-Push Subscribe Process - Device Registered (Push),system,2026-01-16,09:36:57.781000,22:31:43.063000,12,,12,Friday
-Push Subscribe Process - Device Registered (Push),system,2026-01-17,08:00:54.914000,19:59:49.409000,13,,13,Saturday
-Push Subscribe Process - Device Registered (Push),system,2026-01-23,10:22:44.571000,10:22:44.576000,2,,2,Friday
-Push Subscribe Process - Device Registered (Push),system,2026-01-25,21:33:42.816000,21:33:42.816000,1,,1,Sunday
-Push Subscribe Process - Device Registered (Push),system,2026-01-26,08:40:17.724000,16:11:12.607000,4,,4,Monday
-Push Subscribe Process - Device Registered (Push),system,2026-01-28,17:49:04.311000,17:49:04.320000,3,,3,Wednesday
-Push Subscribe Process - Device Registered (Push),system,2026-01-29,08:35:09.581000,23:34:36.801000,18,,18,Thursday
-Push Subscribe Process - Device Registered (Push),system,2026-01-30,08:20:12.187000,20:23:27.167000,31,,31,Friday
-Push Subscribe Process - Device Registered (Push),system,2026-01-31,08:37:52.920000,18:41:15.063000,16,,16,Saturday
-Push Subscribe Process - Device Registered (Push),system,2026-02-01,08:06:05.566000,18:07:08.919000,29,,29,Sunday
-Push Subscribe Process - Device Registered (Push),system,2026-02-02,09:45:40.971000,17:28:59.068000,11,,11,Monday
-Push Subscribe Process - Device Registered (Push),system,2026-02-03,12:41:51.447000,14:06:14.103000,4,,4,Tuesday
-Push Subscribe Process - Device Registered (Push),system,2026-02-04,09:40:20.364000,21:15:39.180000,12,,12,Wednesday
-Push Subscribe Process - Device Registered (Push),system,2026-02-05,14:34:32.916000,14:34:32.924000,3,,3,Thursday
-Push Subscribe Process - Device Registered (Push),system,2026-02-06,12:37:14.684000,12:37:14.684000,1,,1,Friday
-Push Subscribe Process - Device Registered (Push),system,2026-02-07,23:22:49.588000,23:22:49.588000,3,,3,Saturday
-Push Subscribe Process - Device Registered (Push),system,2026-02-08,01:16:59.712000,10:54:03.488000,6,,6,Sunday
-Push Subscribe Process - Device Registered (Push),system,2026-02-09,13:28:47.709000,13:28:47.709000,1,,1,Monday
-Push Subscribe Process - Device Registered (Push),system,2026-02-11,13:30:22.464000,15:14:19.309000,3,,3,Wednesday
-Push Subscribe Process - Device Registered (Push),system,2026-02-13,12:11:08.443000,17:09:10.653000,6,,6,Friday
-Push Subscribe Process - Device Registered (Push),system,2026-02-16,00:00:32.865000,18:21:21.623000,8,,8,Monday
-Push Subscribe Process - Device Registered (Push),system,2026-02-17,12:48:15.102000,16:55:42.347000,2,,2,Tuesday
-Push Subscribe Process - Device Registered (Push),system,2026-02-18,15:21:04.733000,15:21:04.733000,1,,1,Wednesday
-Push Subscribe Process - Device Registered (Push),system,2026-02-19,17:21:53.297000,17:21:53.297000,1,,1,Thursday
-Session Started,system,2025-11-27,09:18:02.937000,09:18:02.937000,1,,1,Thursday
-Session Started,system,2025-11-28,03:53:24.750000,23:56:48.517000,50,,50,Friday
-Session Started,system,2025-11-29,01:02:56.849000,23:31:45.880000,50,,50,Saturday
-Session Started,system,2025-11-30,00:16:17.457000,22:56:10.360000,55,,55,Sunday
-Session Started,system,2025-12-01,03:25:05.098000,23:26:01.739000,52,,52,Monday
-Session Started,system,2025-12-02,02:57:17.992000,21:47:06.195000,57,,57,Tuesday
-Session Started,system,2025-12-03,00:49:14.096000,22:57:55.455000,70,,70,Wednesday
-Session Started,system,2025-12-04,05:06:03.348000,23:25:41.932000,51,,51,Thursday
-Session Started,system,2025-12-05,07:17:10.316000,23:32:26.674000,91,,91,Friday
-Session Started,system,2025-12-06,05:21:41.720000,22:11:36.037000,69,,69,Saturday
-Session Started,system,2025-12-07,04:15:13.297000,22:56:39.347000,66,,66,Sunday
-Session Started,system,2025-12-08,00:01:48.765000,23:05:54.892000,67,,67,Monday
-Session Started,system,2025-12-09,00:56:32.617000,21:41:21.154000,65,,65,Tuesday
-Session Started,system,2025-12-10,07:12:19.086000,22:39:21.532000,63,,63,Wednesday
-Session Started,system,2025-12-11,06:05:09.301000,22:33:46.025000,77,,77,Thursday
-Session Started,system,2025-12-12,05:40:06.915000,22:37:16.626000,79,,79,Friday
-Session Started,system,2025-12-13,03:45:51.065000,22:51:23.015000,90,,90,Saturday
-Session Started,system,2025-12-14,05:05:15.342000,23:14:52.535000,68,,68,Sunday
-Session Started,system,2025-12-15,03:08:03.918000,23:29:57.177000,79,,79,Monday
-Session Started,system,2025-12-16,05:46:53.852000,23:32:11.094000,71,,71,Tuesday
-Session Started,system,2025-12-17,06:24:22.415000,22:19:00.998000,112,,112,Wednesday
-Session Started,system,2025-12-18,02:12:00.036000,23:59:28.247000,629,,629,Thursday
-Session Started,system,2025-12-19,04:14:16.062000,23:52:59.017000,778,,778,Friday
-Session Started,system,2025-12-20,00:47:30.653000,22:57:15.592000,813,,813,Saturday
-Session Started,system,2025-12-21,01:15:35.262000,23:15:01.498000,780,,780,Sunday
-Session Started,system,2025-12-22,06:34:54.492000,23:58:03.382000,1071,,1071,Monday
-Session Started,system,2025-12-23,00:02:50.283000,22:14:45.621000,902,,902,Tuesday
-Session Started,system,2025-12-24,05:03:15.624000,23:22:05.643000,898,,898,Wednesday
-Session Started,system,2025-12-25,00:24:00.015000,23:21:44.885000,1037,,1037,Thursday
-Session Started,system,2025-12-26,00:07:26.524000,23:45:07.182000,1096,,1096,Friday
-Session Started,system,2025-12-27,00:50:06.122000,22:29:07.249000,515,,515,Saturday
-Session Started,system,2025-12-28,07:08:17.550000,23:07:15.839000,480,,480,Sunday
-Session Started,system,2025-12-29,03:26:35.065000,23:41:28.604000,524,,524,Monday
-Session Started,system,2025-12-30,05:22:26.239000,23:36:56.229000,464,,464,Tuesday
-Session Started,system,2025-12-31,01:30:35.746000,23:54:45.508000,603,,603,Wednesday
-Session Started,system,2026-01-01,00:00:22.545000,21:14:55.578000,539,,539,Thursday
-Session Started,system,2026-01-02,06:13:02.911000,23:32:03.510000,495,,495,Friday
-Session Started,system,2026-01-03,00:19:53.855000,23:59:45.941000,475,,475,Saturday
-Session Started,system,2026-01-04,04:28:37.627000,23:53:17.750000,566,,566,Sunday
-Session Started,system,2026-01-05,00:00:29.382000,23:15:47.531000,1059,,1059,Monday
-Session Started,system,2026-01-06,04:25:49.187000,22:59:08.921000,490,,490,Tuesday
-Session Started,system,2026-01-07,05:33:48.018000,23:00:46.983000,569,,569,Wednesday
-Session Started,system,2026-01-08,00:17:51.423000,23:55:01.449000,561,,561,Thursday
-Session Started,system,2026-01-09,07:10:25.876000,23:57:39.557000,643,,643,Friday
-Session Started,system,2026-01-10,06:29:14.962000,23:22:36.787000,523,,523,Saturday
-Session Started,system,2026-01-11,04:06:05.822000,22:57:05.542000,477,,477,Sunday
-Session Started,system,2026-01-12,00:42:54.203000,23:53:19.497000,534,,534,Monday
-Session Started,system,2026-01-13,07:19:14.126000,22:35:55.175000,485,,485,Tuesday
-Session Started,system,2026-01-14,00:20:36.194000,23:14:34.909000,605,,605,Wednesday
-Session Started,system,2026-01-15,03:02:37.638000,22:42:04.238000,503,,503,Thursday
-Session Started,system,2026-01-16,06:30:33.992000,23:06:07.220000,627,,627,Friday
-Session Started,system,2026-01-17,00:46:42.035000,22:58:01.760000,582,,582,Saturday
-Session Started,system,2026-01-18,00:14:54.819000,23:05:41.152000,73,,73,Sunday
-Session Started,system,2026-01-23,03:16:36.408000,23:22:11.347000,498,,498,Friday
-Session Started,system,2026-01-24,01:19:24.870000,23:08:45.044000,522,,522,Saturday
-Session Started,system,2026-01-25,00:01:24.036000,22:34:36.845000,492,,492,Sunday
-Session Started,system,2026-01-26,06:34:36.628000,22:51:30.314000,591,,591,Monday
-Session Started,system,2026-01-27,00:29:47.118000,23:01:10.512000,612,,612,Tuesday
-Session Started,system,2026-01-28,00:17:40.976000,23:40:24.327000,702,,702,Wednesday
-Session Started,system,2026-01-29,00:27:26.041000,23:44:26.194000,714,,714,Thursday
-Session Started,system,2026-01-30,00:07:54.984000,23:06:16.795000,622,,622,Friday
-Session Started,system,2026-01-31,01:33:16.167000,23:24:22.839000,613,,613,Saturday
-Session Started,system,2026-02-01,01:08:22.025000,22:48:10.841000,618,,618,Sunday
-Session Started,system,2026-02-02,00:50:16.757000,23:57:40.768000,624,,624,Monday
-Session Started,system,2026-02-03,00:41:53.999000,23:41:36.173000,743,,743,Tuesday
-Session Started,system,2026-02-04,03:28:21.985000,22:53:14.729000,945,,945,Wednesday
-Session Started,system,2026-02-05,00:17:47.034000,22:51:25.719000,692,,692,Thursday
-Session Started,system,2026-02-06,00:08:07.625000,23:53:25.787000,829,,829,Friday
-Session Started,system,2026-02-07,00:11:00.117000,23:24:42.749000,879,,879,Saturday
-Session Started,system,2026-02-08,00:48:59.133000,23:45:47.765000,684,,684,Sunday
-Session Started,system,2026-02-09,00:48:53.856000,23:35:54.801000,890,,890,Monday
-Session Started,system,2026-02-10,04:59:18.843000,23:34:47.435000,740,,740,Tuesday
-Session Started,system,2026-02-11,00:03:50.262000,23:53:28.579000,776,,776,Wednesday
-Session Started,system,2026-02-12,04:32:43.784000,23:40:04.707000,1135,,1135,Thursday
-Session Started,system,2026-02-13,00:19:12.412000,22:34:32.154000,806,,806,Friday
-Session Started,system,2026-02-14,01:34:48.819000,23:52:23.827000,799,,799,Saturday
-Session Started,system,2026-02-15,00:30:05.234000,23:52:34.911000,909,,909,Sunday
-Session Started,system,2026-02-16,00:00:32.859000,23:52:41.658000,924,,924,Monday
-Session Started,system,2026-02-17,00:32:52.042000,23:59:39.030000,1058,,1058,Tuesday
-Session Started,system,2026-02-18,00:44:48.188000,23:58:31.617000,1163,,1163,Wednesday
-Session Started,system,2026-02-19,02:00:10.703000,23:57:40.445000,951,,951,Thursday
-User Login,system,2025-12-06,10:19:20.587000,10:19:20.587000,1,,1,Saturday
-User Login,system,2025-12-10,21:48:07.511000,21:48:07.511000,1,,1,Wednesday
-User Login,system,2025-12-13,14:37:40.333000,14:37:40.333000,1,,1,Saturday
-User Login,system,2025-12-17,12:55:26.782000,19:34:49.901000,3,,3,Wednesday
-User Login,system,2025-12-18,06:23:00.238000,22:51:17.913000,24,,24,Thursday
-User Login,system,2025-12-19,08:59:51.796000,13:46:14.465000,7,,7,Friday
-User Login,system,2025-12-20,02:44:15.139000,22:52:01.950000,8,,8,Saturday
-User Login,system,2025-12-21,11:20:13.310000,22:17:37.830000,4,,4,Sunday
-User Login,system,2025-12-22,09:23:10.775000,23:58:12.231000,6,,6,Monday
-User Login,system,2025-12-23,09:31:21.740000,17:01:39.189000,3,,3,Tuesday
-User Login,system,2025-12-24,07:51:11.520000,22:11:48.838000,3,,3,Wednesday
-User Login,system,2025-12-25,09:38:32.200000,16:25:18.315000,7,,7,Thursday
-User Login,system,2025-12-26,14:59:43.385000,14:59:43.385000,5,,5,Friday
-User Login,system,2025-12-27,14:18:28.538000,14:18:28.538000,1,,1,Saturday
-User Login,system,2025-12-28,18:36:26.852000,20:54:11.550000,2,,2,Sunday
-User Login,system,2025-12-29,10:57:55.856000,19:01:53.429000,5,,5,Monday
-User Login,system,2025-12-30,07:22:12.457000,21:09:08.760000,4,,4,Tuesday
-User Login,system,2025-12-31,15:33:45.500000,15:33:45.500000,1,,1,Wednesday
-User Login,system,2026-01-02,13:26:21.392000,13:26:21.392000,1,,1,Friday
-User Login,system,2026-01-03,11:36:20.572000,11:36:20.572000,1,,1,Saturday
-User Login,system,2026-01-04,12:08:29.760000,20:50:53.178000,7,,7,Sunday
-User Login,system,2026-01-05,08:34:00.477000,21:26:04.781000,37,,37,Monday
-User Login,system,2026-01-07,12:08:21.977000,20:27:00.283000,3,,3,Wednesday
-User Login,system,2026-01-08,11:34:32.962000,19:55:03.908000,3,,3,Thursday
-User Login,system,2026-01-09,13:01:33.180000,22:29:41.200000,16,,16,Friday
-User Login,system,2026-01-10,14:07:00.578000,17:09:34.044000,2,,2,Saturday
-User Login,system,2026-01-16,08:38:48.628000,11:36:40.180000,2,,2,Friday
-User Login,system,2026-01-17,09:46:24.689000,14:17:43.938000,4,,4,Saturday
-User Login,system,2026-01-23,12:47:59.154000,16:12:29.024000,2,,2,Friday
-User Login,system,2026-01-24,21:51:43.098000,21:51:43.098000,1,,1,Saturday
-User Login,system,2026-01-26,08:41:10.851000,08:41:10.851000,1,,1,Monday
-User Login,system,2026-01-27,10:25:26.657000,15:38:22.794000,3,,3,Tuesday
-User Login,system,2026-01-28,12:18:08.034000,17:49:14.214000,2,,2,Wednesday
-User Login,system,2026-01-29,12:37:39.329000,20:51:59.738000,3,,3,Thursday
-User Login,system,2026-01-30,19:23:43.134000,20:05:42.531000,2,,2,Friday
-User Login,system,2026-01-31,14:16:31.187000,18:42:15.268000,4,,4,Saturday
-User Login,system,2026-02-02,09:50:47.267000,23:57:51.641000,3,,3,Monday
-User Login,system,2026-02-03,12:43:26.246000,12:43:26.246000,1,,1,Tuesday
-User Login,system,2026-02-04,11:24:51.744000,12:30:29.264000,2,,2,Wednesday
-User Login,system,2026-02-05,20:10:12.552000,20:10:12.552000,1,,1,Thursday
-User Login,system,2026-02-06,12:30:50.508000,18:34:38.131000,4,,4,Friday
-User Login,system,2026-02-07,23:23:09.230000,23:23:09.230000,1,,1,Saturday
-User Login,system,2026-02-09,17:40:21.674000,17:40:21.674000,1,,1,Monday
-User Login,system,2026-02-10,11:01:07.967000,21:55:42.419000,10,,10,Tuesday
-User Login,system,2026-02-11,09:19:31.112000,20:16:37.074000,9,,9,Wednesday
-User Login,system,2026-02-12,12:48:58.255000,17:04:33.887000,2,,2,Thursday
-User Login,system,2026-02-13,12:11:45.660000,16:14:25.203000,4,,4,Friday
-User Login,system,2026-02-14,15:14:01.546000,15:14:40.621000,3,,3,Saturday
-User Login,system,2026-02-15,11:02:17.941000,11:02:17.941000,1,,1,Sunday
-User Login,system,2026-02-16,14:06:45.218000,19:28:14.376000,4,,4,Monday
-User Login,system,2026-02-17,08:41:29.038000,17:14:37.204000,4,,4,Tuesday
-User Login,system,2026-02-18,15:30:09.145000,17:24:52.134000,4,,4,Wednesday
-User Login,system,2026-02-19,16:02:20.449000,17:23:18.375000,2,,2,Thursday
-User Logout,system,2025-12-13,14:25:39.459000,14:25:39.459000,1,,1,Saturday
-User Logout,system,2025-12-17,13:22:21.669000,16:14:57.154000,2,,2,Wednesday
-User Logout,system,2025-12-18,18:35:41.629000,18:35:41.629000,1,,1,Thursday
-User Logout,system,2025-12-19,11:33:24.263000,16:46:45.321000,3,,3,Friday
-User Logout,system,2025-12-20,11:14:48.766000,19:08:41.875000,3,,3,Saturday
-User Logout,system,2025-12-22,17:38:18.183000,23:58:03.373000,2,,2,Monday
-User Logout,system,2025-12-23,10:34:24.985000,17:00:39.133000,4,,4,Tuesday
-User Logout,system,2025-12-24,11:47:23.969000,22:02:19.270000,5,,5,Wednesday
-User Logout,system,2025-12-25,12:21:59.031000,16:44:31.589000,6,,6,Thursday
-User Logout,system,2025-12-26,09:21:29.673000,16:07:54.087000,3,,3,Friday
-User Logout,system,2025-12-27,01:18:05.604000,17:35:13.260000,2,,2,Saturday
-User Logout,system,2025-12-28,11:18:41.159000,11:18:41.159000,1,,1,Sunday
-User Logout,system,2025-12-29,10:16:42.890000,18:35:06.425000,8,,8,Monday
-User Logout,system,2025-12-31,12:05:15.415000,12:05:15.415000,1,,1,Wednesday
-User Logout,system,2026-01-02,16:31:31.813000,16:31:31.813000,1,,1,Friday
-User Logout,system,2026-01-03,11:35:34.584000,11:35:34.584000,1,,1,Saturday
-User Logout,system,2026-01-04,18:15:49.070000,18:15:49.070000,1,,1,Sunday
-User Logout,system,2026-01-05,11:40:39.332000,20:42:36.127000,42,,42,Monday
-User Logout,system,2026-01-06,13:08:35.349000,13:08:35.349000,1,,1,Tuesday
-User Logout,system,2026-01-07,12:07:23.306000,17:06:33.746000,4,,4,Wednesday
-User Logout,system,2026-01-08,11:36:37.423000,19:54:49.902000,2,,2,Thursday
-User Logout,system,2026-01-09,13:52:33.673000,22:29:29.544000,4,,4,Friday
-User Logout,system,2026-01-10,15:36:55.693000,15:36:55.693000,1,,1,Saturday
-User Logout,system,2026-01-11,10:38:09.074000,10:38:09.074000,1,,1,Sunday
-User Logout,system,2026-01-16,21:15:58.825000,21:15:58.825000,1,,1,Friday
-User Logout,system,2026-01-23,14:17:35.816000,16:11:33.141000,2,,2,Friday
-User Logout,system,2026-01-26,11:57:44.356000,11:57:44.356000,1,,1,Monday
-User Logout,system,2026-01-27,14:03:23.033000,16:27:46.765000,2,,2,Tuesday
-User Logout,system,2026-01-28,12:16:31.006000,18:21:19.059000,2,,2,Wednesday
-User Logout,system,2026-01-29,18:16:34.036000,18:48:31.933000,3,,3,Thursday
-User Logout,system,2026-02-01,10:21:00.594000,10:21:00.594000,1,,1,Sunday
-User Logout,system,2026-02-02,16:01:25.886000,20:29:32.257000,2,,2,Monday
-User Logout,system,2026-02-03,00:02:17.201000,00:02:17.201000,1,,1,Tuesday
-User Logout,system,2026-02-04,11:24:30.332000,18:18:39.652000,5,,5,Wednesday
-User Logout,system,2026-02-06,12:09:31.391000,16:25:04.874000,2,,2,Friday
-User Logout,system,2026-02-09,12:52:54.766000,12:52:54.766000,1,,1,Monday
-User Logout,system,2026-02-10,11:01:27.135000,21:55:27.450000,5,,5,Tuesday
-User Logout,system,2026-02-11,09:19:14.431000,16:56:01.664000,8,,8,Wednesday
-User Logout,system,2026-02-13,11:51:18.278000,17:22:29.628000,2,,2,Friday
-User Logout,system,2026-02-14,11:14:32.759000,18:31:44.378000,6,,6,Saturday
-User Logout,system,2026-02-15,11:08:44.395000,11:08:44.395000,1,,1,Sunday
-User Logout,system,2026-02-16,18:15:11.373000,19:35:33.140000,3,,3,Monday
-User Logout,system,2026-02-17,12:39:32.099000,12:39:32.099000,1,,1,Tuesday
-User Logout,system,2026-02-18,08:45:36.210000,17:24:00.206000,4,,4,Wednesday
 _bus-search_list,application,2025-12-15,09:42:27.821000,09:42:29.820000,6,,6,Monday
 _bus-search_user-bus-search,application,2025-12-15,09:42:24.679000,09:42:26.060000,3,,3,Monday
 _history_recommended-journey,application,2025-12-30,15:44:32.713000,15:44:32.713000,1,,1,Tuesday
@@ -638,25 +24,25 @@ _history_recommended-journey,application,2026-02-08,21:07:36.738000,21:07:36.738
 _location_elastic-town-search,application,2025-12-01,09:46:16.228000,09:46:32.642000,30,,30,Monday
 _location_elastic-town-search,application,2025-12-02,13:08:57.513000,13:09:32.998000,14,,14,Tuesday
 _location_elastic-town-search,application,2025-12-05,13:30:18.788000,13:30:36.610000,14,,14,Friday
-_location_elastic-town-search,application,2025-12-09,10:17:17.981000,15:05:15.070000,40,,40,Tuesday
-_location_elastic-town-search,application,2025-12-10,09:09:44.837000,12:04:19.562000,96,,96,Wednesday
+_location_elastic-town-search,application,2025-12-09,10:17:17.981000,15:05:15.070000,42,,42,Tuesday
+_location_elastic-town-search,application,2025-12-10,09:09:23.332000,12:04:19.562000,97,,97,Wednesday
 _location_elastic-town-search,application,2025-12-12,16:56:08.273000,16:56:26.332000,20,,20,Friday
 _location_elastic-town-search,application,2025-12-15,14:49:23.766000,14:49:38.150000,17,,17,Monday
 _location_elastic-town-search,application,2025-12-20,14:07:53.073000,15:48:55.439000,56,,56,Saturday
 _location_elastic-town-search,application,2025-12-21,17:35:41.802000,17:38:46.679000,11,,11,Sunday
-_location_elastic-town-search,application,2025-12-22,12:48:30.890000,22:30:07.046000,52,,52,Monday
+_location_elastic-town-search,application,2025-12-22,12:48:30.890000,22:30:07.046000,53,,53,Monday
 _location_elastic-town-search,application,2025-12-24,12:51:36.944000,12:51:36.944000,1,,1,Wednesday
 _location_elastic-town-search,application,2025-12-25,11:51:01.033000,23:22:42.640000,13,,13,Thursday
 _location_elastic-town-search,application,2025-12-28,13:35:31.747000,13:36:23.330000,25,,25,Sunday
 _location_elastic-town-search,application,2025-12-31,00:22:09.180000,00:22:22.863000,12,,12,Wednesday
 _location_elastic-town-search,application,2026-01-03,15:38:46.224000,15:43:19.442000,56,,56,Saturday
-_location_elastic-town-search,application,2026-01-04,11:08:08.130000,11:09:34.562000,13,,13,Sunday
+_location_elastic-town-search,application,2026-01-04,11:08:08.130000,11:09:34.562000,15,,15,Sunday
 _location_elastic-town-search,application,2026-01-07,12:41:16.441000,12:41:31.829000,14,,14,Wednesday
 _location_elastic-town-search,application,2026-01-17,17:50:29.016000,17:52:05.212000,30,,30,Saturday
-_location_elastic-town-search,application,2026-01-25,19:44:16.297000,20:07:32.874000,44,,44,Sunday
+_location_elastic-town-search,application,2026-01-25,19:44:16.297000,20:07:33.201000,45,,45,Sunday
 _location_elastic-town-search,application,2026-02-08,20:56:45.927000,20:57:01.040000,11,,11,Sunday
 _location_elastic-town-search,application,2026-02-09,17:29:32.702000,17:32:18.404000,24,,24,Monday
-_location_elastic-town-search,application,2026-02-10,00:37:45.560000,00:37:45.911000,3,,3,Tuesday
+_location_elastic-town-search,application,2026-02-10,00:37:45.560000,00:37:45.911000,4,,4,Tuesday
 _location_elastic-town-search,application,2026-02-11,20:12:59.206000,20:18:23.058000,48,,48,Wednesday
 _location_elastic-town-search,application,2026-02-12,18:19:49.000000,18:20:20.519000,13,,13,Thursday
 _location_elastic-town-search,application,2026-02-16,10:57:59.503000,10:57:59.820000,2,,2,Monday
@@ -679,7 +65,7 @@ _location_special-town-search,application,2026-01-11,16:43:20.165000,16:43:20.16
 _location_special-town-search,application,2026-01-15,20:10:22.831000,20:10:22.831000,1,,1,Thursday
 _location_special-town-search,application,2026-02-04,23:56:15.040000,23:56:15.040000,1,,1,Wednesday
 _location_special-town-search,application,2026-02-08,20:44:10.527000,21:07:37.168000,4,,4,Sunday
-_location_special-town-search,application,2026-02-11,20:12:44.054000,20:17:43.038000,2,,2,Wednesday
+_location_special-town-search,application,2026-02-11,20:12:44.054000,20:17:43.038000,3,,3,Wednesday
 _location_town-search,application,2025-12-02,13:09:04.267000,13:09:32.688000,4,,4,Tuesday
 _location_town-search,application,2026-02-09,17:29:35.061000,17:32:10.996000,10,,10,Monday
 _location_town-search,application,2026-02-10,00:37:47.224000,00:37:48.169000,2,,2,Tuesday
@@ -715,6 +101,7 @@ camera_embedded_player_channel_switched,application,2025-12-17,12:41:25.217000,1
 camera_embedded_player_closed,application,2026-01-27,10:32:06.412000,10:32:06.412000,1,,1,Tuesday
 camera_embedded_player_opened,application,2026-01-27,10:32:03.995000,10:32:03.995000,1,,1,Tuesday
 chat_now_failed,application,2026-01-06,05:07:58.461000,05:07:58.461000,3,,3,Tuesday
+choose_language,application,2026-01-03,15:37:58.990000,15:37:58.990000,1,,1,Saturday
 choose_language,application,2026-02-05,07:38:27.651000,07:38:28.136000,2,,2,Thursday
 clicked_cash_settlement_bus_card,application,2025-12-06,10:32:39.591000,12:15:51.424000,8,,8,Saturday
 clicked_cash_settlement_bus_card,application,2025-12-07,12:49:44.134000,12:52:48.808000,4,,4,Sunday
@@ -894,7 +281,7 @@ clicked_hisab_bus_detail_card,application,2026-01-04,06:29:08.718000,22:33:17.94
 clicked_hisab_bus_detail_card,application,2026-01-05,00:00:40.482000,22:00:31.533000,277,,277,Monday
 clicked_hisab_bus_detail_card,application,2026-01-06,07:45:20.296000,22:40:57.538000,50,,50,Tuesday
 clicked_hisab_bus_detail_card,application,2026-01-07,07:38:25.548000,21:32:23.944000,100,,100,Wednesday
-clicked_hisab_bus_detail_card,application,2026-01-08,06:39:49.116000,19:45:45.866000,90,,90,Thursday
+clicked_hisab_bus_detail_card,application,2026-01-08,06:39:49.116000,19:45:45.866000,91,,91,Thursday
 clicked_hisab_bus_detail_card,application,2026-01-09,07:57:44.396000,23:25:56.231000,69,,69,Friday
 clicked_hisab_bus_detail_card,application,2026-01-10,07:15:57.131000,22:45:26.480000,103,,103,Saturday
 clicked_hisab_bus_detail_card,application,2026-01-11,07:13:17.377000,22:57:13.704000,85,,85,Sunday
@@ -921,7 +308,7 @@ clicked_hisab_bus_detail_card,application,2026-02-04,06:51:51.642000,21:39:30.49
 clicked_hisab_bus_detail_card,application,2026-02-05,02:33:33.290000,21:34:27.693000,59,,59,Thursday
 clicked_hisab_bus_detail_card,application,2026-02-06,06:07:39.504000,23:20:46.305000,101,,101,Friday
 clicked_hisab_bus_detail_card,application,2026-02-07,05:12:55.751000,23:29:21.033000,111,,111,Saturday
-clicked_hisab_bus_detail_card,application,2026-02-08,02:43:55.770000,22:53:20.540000,100,,100,Sunday
+clicked_hisab_bus_detail_card,application,2026-02-08,02:43:55.770000,22:53:20.540000,101,,101,Sunday
 clicked_hisab_bus_detail_card,application,2026-02-09,06:35:27.586000,21:31:35.894000,145,,145,Monday
 clicked_hisab_bus_detail_card,application,2026-02-10,06:02:30.352000,23:23:55.484000,101,,101,Tuesday
 clicked_hisab_bus_detail_card,application,2026-02-11,01:15:14.348000,21:58:53.493000,108,,108,Wednesday
@@ -1045,6 +432,7 @@ clicked_hisab_bus_detail_yeaterday_btn,application,2026-02-04,10:50:44.372000,17
 clicked_hisab_bus_detail_yeaterday_btn,application,2026-02-05,12:05:26.185000,17:34:59.605000,3,,3,Thursday
 clicked_hisab_bus_detail_yeaterday_btn,application,2026-02-06,14:19:28.378000,14:19:28.378000,1,,1,Friday
 clicked_hisab_bus_detail_yeaterday_btn,application,2026-02-07,08:19:38.106000,19:12:35.180000,13,,13,Saturday
+clicked_hisab_bus_detail_yeaterday_btn,application,2026-02-08,11:11:19.466000,11:11:19.466000,1,,1,Sunday
 clicked_hisab_bus_detail_yeaterday_btn,application,2026-02-09,07:02:57.791000,21:27:46.033000,7,,7,Monday
 clicked_hisab_bus_detail_yeaterday_btn,application,2026-02-10,09:11:11.509000,14:12:10.343000,7,,7,Tuesday
 clicked_hisab_bus_detail_yeaterday_btn,application,2026-02-11,20:38:11.272000,20:38:11.272000,1,,1,Wednesday
@@ -1053,88 +441,88 @@ clicked_hisab_bus_detail_yeaterday_btn,application,2026-02-13,08:20:33.051000,21
 clicked_hisab_bus_detail_yeaterday_btn,application,2026-02-14,12:08:21.861000,12:11:23.556000,5,,5,Saturday
 clicked_hisab_bus_detail_yeaterday_btn,application,2026-02-15,10:24:17.436000,20:58:13.752000,7,,7,Sunday
 clicked_hisab_bus_detail_yeaterday_btn,application,2026-02-16,09:04:06.758000,20:46:59.436000,11,,11,Monday
-clicked_hisab_bus_detail_yeaterday_btn,application,2026-02-17,07:50:03.714000,16:47:56.790000,5,,5,Tuesday
+clicked_hisab_bus_detail_yeaterday_btn,application,2026-02-17,07:50:03.714000,16:47:56.790000,6,,6,Tuesday
 clicked_hisab_bus_detail_yeaterday_btn,application,2026-02-18,07:46:58.114000,16:30:15.675000,12,,12,Wednesday
 clicked_hisab_bus_detail_yeaterday_btn,application,2026-02-19,09:28:29.388000,20:17:35.253000,6,,6,Thursday
 clicked_hisab_coustom_date_btn,application,2025-11-28,06:44:59.562000,19:17:07.370000,10,,10,Friday
-clicked_hisab_coustom_date_btn,application,2025-11-29,05:04:46.668000,22:25:29.123000,61,,61,Saturday
+clicked_hisab_coustom_date_btn,application,2025-11-29,05:04:46.668000,22:25:29.123000,62,,62,Saturday
 clicked_hisab_coustom_date_btn,application,2025-11-30,08:42:21.762000,22:12:01.887000,20,,20,Sunday
 clicked_hisab_coustom_date_btn,application,2025-12-01,07:57:01.448000,17:20:02.578000,5,,5,Monday
-clicked_hisab_coustom_date_btn,application,2025-12-02,08:13:04.461000,18:39:25.065000,13,,13,Tuesday
-clicked_hisab_coustom_date_btn,application,2025-12-03,11:32:29.036000,14:53:40.706000,25,,25,Wednesday
+clicked_hisab_coustom_date_btn,application,2025-12-02,08:13:04.461000,18:39:25.065000,14,,14,Tuesday
+clicked_hisab_coustom_date_btn,application,2025-12-03,11:32:29.036000,14:53:40.706000,26,,26,Wednesday
 clicked_hisab_coustom_date_btn,application,2025-12-05,14:54:52.352000,19:10:36.389000,5,,5,Friday
 clicked_hisab_coustom_date_btn,application,2025-12-06,11:14:30.191000,20:41:38.604000,29,,29,Saturday
-clicked_hisab_coustom_date_btn,application,2025-12-07,04:17:16.386000,19:53:07.785000,11,,11,Sunday
-clicked_hisab_coustom_date_btn,application,2025-12-08,06:35:05.974000,10:39:49.086000,18,,18,Monday
+clicked_hisab_coustom_date_btn,application,2025-12-07,04:17:16.386000,19:54:23.668000,12,,12,Sunday
+clicked_hisab_coustom_date_btn,application,2025-12-08,06:35:05.974000,15:24:00.745000,19,,19,Monday
 clicked_hisab_coustom_date_btn,application,2025-12-09,12:22:59.961000,20:08:52.588000,7,,7,Tuesday
 clicked_hisab_coustom_date_btn,application,2025-12-10,05:41:13.815000,05:46:49.008000,10,,10,Wednesday
 clicked_hisab_coustom_date_btn,application,2025-12-11,16:57:29.986000,16:57:29.986000,1,,1,Thursday
 clicked_hisab_coustom_date_btn,application,2025-12-12,10:38:47.394000,17:17:36.072000,7,,7,Friday
 clicked_hisab_coustom_date_btn,application,2025-12-13,09:56:48.096000,21:14:37.395000,29,,29,Saturday
 clicked_hisab_coustom_date_btn,application,2025-12-14,09:58:32.037000,17:01:16.807000,14,,14,Sunday
-clicked_hisab_coustom_date_btn,application,2025-12-15,03:11:11.438000,19:16:05.188000,19,,19,Monday
+clicked_hisab_coustom_date_btn,application,2025-12-15,03:11:11.438000,19:16:05.188000,21,,21,Monday
 clicked_hisab_coustom_date_btn,application,2025-12-16,07:54:31.426000,18:29:42.612000,26,,26,Tuesday
 clicked_hisab_coustom_date_btn,application,2025-12-17,00:40:12.320000,00:45:48.921000,27,,27,Wednesday
 clicked_hisab_coustom_date_btn,application,2025-12-18,06:54:17.518000,21:56:17.412000,11,,11,Thursday
-clicked_hisab_coustom_date_btn,application,2025-12-19,00:52:11.340000,18:52:44.046000,43,,43,Friday
-clicked_hisab_coustom_date_btn,application,2025-12-20,04:09:46.002000,19:17:23.317000,12,,12,Saturday
-clicked_hisab_coustom_date_btn,application,2025-12-21,14:21:16.110000,19:17:20.545000,19,,19,Sunday
+clicked_hisab_coustom_date_btn,application,2025-12-19,00:52:11.340000,18:52:44.046000,44,,44,Friday
+clicked_hisab_coustom_date_btn,application,2025-12-20,04:09:46.002000,19:17:23.317000,13,,13,Saturday
+clicked_hisab_coustom_date_btn,application,2025-12-21,14:21:16.110000,19:17:20.545000,20,,20,Sunday
 clicked_hisab_coustom_date_btn,application,2025-12-22,08:02:01.730000,17:46:32.596000,21,,21,Monday
-clicked_hisab_coustom_date_btn,application,2025-12-23,08:51:07.899000,18:11:27.529000,28,,28,Tuesday
+clicked_hisab_coustom_date_btn,application,2025-12-23,08:51:07.899000,18:11:27.529000,29,,29,Tuesday
 clicked_hisab_coustom_date_btn,application,2025-12-24,08:15:18.750000,21:26:39.979000,18,,18,Wednesday
 clicked_hisab_coustom_date_btn,application,2025-12-25,05:14:28.070000,16:02:07.576000,18,,18,Thursday
 clicked_hisab_coustom_date_btn,application,2025-12-26,06:40:46.608000,19:05:37.086000,37,,37,Friday
 clicked_hisab_coustom_date_btn,application,2025-12-27,00:23:39.164000,11:47:30.496000,13,,13,Saturday
-clicked_hisab_coustom_date_btn,application,2025-12-28,07:15:04.630000,17:54:54.339000,35,,35,Sunday
+clicked_hisab_coustom_date_btn,application,2025-12-28,07:15:04.630000,17:54:54.339000,36,,36,Sunday
 clicked_hisab_coustom_date_btn,application,2025-12-29,06:58:52.311000,16:58:40.796000,29,,29,Monday
-clicked_hisab_coustom_date_btn,application,2025-12-30,07:22:17.729000,13:58:14.175000,33,,33,Tuesday
-clicked_hisab_coustom_date_btn,application,2025-12-31,01:31:34.471000,23:10:25.803000,19,,19,Wednesday
+clicked_hisab_coustom_date_btn,application,2025-12-30,07:22:17.729000,13:58:14.175000,34,,34,Tuesday
+clicked_hisab_coustom_date_btn,application,2025-12-31,01:31:34.471000,23:10:25.803000,20,,20,Wednesday
 clicked_hisab_coustom_date_btn,application,2026-01-01,08:03:07.159000,15:19:11.687000,21,,21,Thursday
 clicked_hisab_coustom_date_btn,application,2026-01-02,08:48:22.106000,12:24:45.896000,3,,3,Friday
 clicked_hisab_coustom_date_btn,application,2026-01-03,12:47:37.472000,22:16:57.684000,18,,18,Saturday
-clicked_hisab_coustom_date_btn,application,2026-01-04,00:00:24.554000,22:38:28.060000,55,,55,Sunday
+clicked_hisab_coustom_date_btn,application,2026-01-04,00:00:24.554000,22:38:28.060000,56,,56,Sunday
 clicked_hisab_coustom_date_btn,application,2026-01-05,08:59:27.711000,22:02:39.563000,38,,38,Monday
 clicked_hisab_coustom_date_btn,application,2026-01-06,08:43:36.169000,18:54:28.822000,9,,9,Tuesday
 clicked_hisab_coustom_date_btn,application,2026-01-07,09:52:27.791000,21:23:49.826000,52,,52,Wednesday
 clicked_hisab_coustom_date_btn,application,2026-01-08,07:26:27.515000,13:28:52.666000,10,,10,Thursday
-clicked_hisab_coustom_date_btn,application,2026-01-09,09:48:42.409000,18:59:38.430000,19,,19,Friday
-clicked_hisab_coustom_date_btn,application,2026-01-10,06:18:01.066000,21:18:59.804000,55,,55,Saturday
+clicked_hisab_coustom_date_btn,application,2026-01-09,09:48:42.409000,18:59:38.430000,20,,20,Friday
+clicked_hisab_coustom_date_btn,application,2026-01-10,06:18:01.066000,21:18:59.804000,56,,56,Saturday
 clicked_hisab_coustom_date_btn,application,2026-01-11,07:07:59.011000,18:42:34.253000,22,,22,Sunday
-clicked_hisab_coustom_date_btn,application,2026-01-12,07:06:46.162000,22:20:38.237000,61,,61,Monday
-clicked_hisab_coustom_date_btn,application,2026-01-13,13:21:21.673000,21:35:57.714000,13,,13,Tuesday
-clicked_hisab_coustom_date_btn,application,2026-01-14,06:14:24.678000,18:54:37.798000,49,,49,Wednesday
+clicked_hisab_coustom_date_btn,application,2026-01-12,07:06:46.162000,22:20:38.237000,67,,67,Monday
+clicked_hisab_coustom_date_btn,application,2026-01-13,13:21:21.673000,21:35:57.714000,14,,14,Tuesday
+clicked_hisab_coustom_date_btn,application,2026-01-14,06:14:24.678000,18:54:37.798000,50,,50,Wednesday
 clicked_hisab_coustom_date_btn,application,2026-01-15,07:11:09.958000,20:15:05.215000,19,,19,Thursday
 clicked_hisab_coustom_date_btn,application,2026-01-16,09:06:40.668000,18:45:55.109000,16,,16,Friday
 clicked_hisab_coustom_date_btn,application,2026-01-17,07:26:28.566000,17:19:38.803000,18,,18,Saturday
 clicked_hisab_coustom_date_btn,application,2026-01-18,09:36:56.455000,09:37:13.949000,3,,3,Sunday
-clicked_hisab_coustom_date_btn,application,2026-01-23,10:11:58.403000,17:38:03.347000,27,,27,Friday
+clicked_hisab_coustom_date_btn,application,2026-01-23,10:11:58.403000,17:38:03.347000,29,,29,Friday
 clicked_hisab_coustom_date_btn,application,2026-01-24,13:14:07.405000,21:28:14.514000,7,,7,Saturday
 clicked_hisab_coustom_date_btn,application,2026-01-25,10:52:26.840000,17:28:25.253000,30,,30,Sunday
 clicked_hisab_coustom_date_btn,application,2026-01-26,09:04:03.130000,20:55:18.260000,86,,86,Monday
-clicked_hisab_coustom_date_btn,application,2026-01-27,07:47:48.613000,23:29:04.276000,81,,81,Tuesday
-clicked_hisab_coustom_date_btn,application,2026-01-28,09:31:43.538000,23:11:11.606000,29,,29,Wednesday
-clicked_hisab_coustom_date_btn,application,2026-01-29,08:19:55.633000,22:04:34.084000,38,,38,Thursday
+clicked_hisab_coustom_date_btn,application,2026-01-27,07:47:48.613000,23:29:04.276000,84,,84,Tuesday
+clicked_hisab_coustom_date_btn,application,2026-01-28,09:31:43.538000,23:11:11.606000,30,,30,Wednesday
+clicked_hisab_coustom_date_btn,application,2026-01-29,08:19:55.633000,22:04:34.084000,39,,39,Thursday
 clicked_hisab_coustom_date_btn,application,2026-01-30,07:12:39.332000,21:09:29.981000,15,,15,Friday
-clicked_hisab_coustom_date_btn,application,2026-01-31,09:09:10.036000,20:38:09.060000,53,,53,Saturday
+clicked_hisab_coustom_date_btn,application,2026-01-31,09:09:10.036000,20:38:09.060000,56,,56,Saturday
 clicked_hisab_coustom_date_btn,application,2026-02-01,14:33:07.785000,14:33:07.785000,1,,1,Sunday
 clicked_hisab_coustom_date_btn,application,2026-02-02,11:06:40.524000,19:27:49.132000,5,,5,Monday
 clicked_hisab_coustom_date_btn,application,2026-02-03,09:01:44.402000,21:34:35.909000,11,,11,Tuesday
 clicked_hisab_coustom_date_btn,application,2026-02-04,06:34:13.810000,14:43:23.202000,17,,17,Wednesday
 clicked_hisab_coustom_date_btn,application,2026-02-05,08:40:42.806000,17:32:26.823000,4,,4,Thursday
 clicked_hisab_coustom_date_btn,application,2026-02-06,09:14:49.762000,20:52:01.371000,39,,39,Friday
-clicked_hisab_coustom_date_btn,application,2026-02-07,07:09:11.692000,23:33:16.671000,68,,68,Saturday
-clicked_hisab_coustom_date_btn,application,2026-02-08,08:53:37.080000,21:06:58.526000,20,,20,Sunday
-clicked_hisab_coustom_date_btn,application,2026-02-09,06:11:44.653000,18:52:14.308000,47,,47,Monday
-clicked_hisab_coustom_date_btn,application,2026-02-10,06:01:32.436000,19:27:45.384000,4,,4,Tuesday
+clicked_hisab_coustom_date_btn,application,2026-02-07,07:09:11.692000,23:33:16.671000,71,,71,Saturday
+clicked_hisab_coustom_date_btn,application,2026-02-08,08:53:37.080000,21:06:58.526000,21,,21,Sunday
+clicked_hisab_coustom_date_btn,application,2026-02-09,06:11:44.653000,18:52:14.308000,48,,48,Monday
+clicked_hisab_coustom_date_btn,application,2026-02-10,06:01:32.436000,19:27:45.384000,5,,5,Tuesday
 clicked_hisab_coustom_date_btn,application,2026-02-11,06:19:56.644000,20:38:29.359000,21,,21,Wednesday
-clicked_hisab_coustom_date_btn,application,2026-02-12,09:06:28.611000,21:01:11.245000,48,,48,Thursday
+clicked_hisab_coustom_date_btn,application,2026-02-12,09:06:28.611000,21:01:11.245000,49,,49,Thursday
 clicked_hisab_coustom_date_btn,application,2026-02-13,09:12:36.503000,20:21:27.189000,44,,44,Friday
 clicked_hisab_coustom_date_btn,application,2026-02-14,07:38:23.072000,19:04:22.370000,18,,18,Saturday
 clicked_hisab_coustom_date_btn,application,2026-02-15,08:16:49.811000,22:23:38.387000,25,,25,Sunday
 clicked_hisab_coustom_date_btn,application,2026-02-16,07:16:26.001000,14:32:37.586000,24,,24,Monday
 clicked_hisab_coustom_date_btn,application,2026-02-17,07:56:06.271000,18:32:41.566000,32,,32,Tuesday
 clicked_hisab_coustom_date_btn,application,2026-02-18,05:31:14.726000,18:37:16.577000,33,,33,Wednesday
-clicked_hisab_coustom_date_btn,application,2026-02-19,06:18:32.979000,13:53:34.481000,28,,28,Thursday
+clicked_hisab_coustom_date_btn,application,2026-02-19,06:18:32.979000,13:53:34.481000,29,,29,Thursday
 clicked_hisab_download_btn,application,2025-12-07,08:55:58.122000,08:55:58.122000,1,,1,Sunday
 clicked_hisab_download_btn,application,2025-12-18,09:17:03.930000,09:17:03.930000,1,,1,Thursday
 clicked_hisab_download_btn,application,2025-12-23,04:48:54.160000,10:40:47.161000,3,,3,Tuesday
@@ -1175,7 +563,7 @@ clicked_hisab_today_btn,application,2025-11-29,07:46:55.124000,09:18:58.414000,3
 clicked_hisab_today_btn,application,2025-12-01,10:37:47.038000,20:53:13.312000,5,,5,Monday
 clicked_hisab_today_btn,application,2025-12-04,09:24:22.017000,09:58:25.316000,7,,7,Thursday
 clicked_hisab_today_btn,application,2025-12-05,17:09:26.937000,17:58:50.232000,3,,3,Friday
-clicked_hisab_today_btn,application,2025-12-06,14:47:10.492000,21:19:26.851000,2,,2,Saturday
+clicked_hisab_today_btn,application,2025-12-06,13:18:04.271000,21:19:26.851000,3,,3,Saturday
 clicked_hisab_today_btn,application,2025-12-08,09:40:09.558000,09:40:09.558000,1,,1,Monday
 clicked_hisab_today_btn,application,2025-12-09,10:55:58.409000,10:55:58.409000,1,,1,Tuesday
 clicked_hisab_today_btn,application,2025-12-10,05:40:45.959000,09:02:04.541000,4,,4,Wednesday
@@ -1233,7 +621,7 @@ clicked_hisab_today_btn,application,2026-02-08,02:41:53.572000,12:58:30.897000,3
 clicked_hisab_today_btn,application,2026-02-09,18:00:15.829000,18:00:15.829000,1,,1,Monday
 clicked_hisab_today_btn,application,2026-02-10,09:26:36.077000,15:10:42.854000,5,,5,Tuesday
 clicked_hisab_today_btn,application,2026-02-11,07:36:35.786000,22:57:06.819000,9,,9,Wednesday
-clicked_hisab_today_btn,application,2026-02-12,08:48:25.652000,18:43:12.890000,43,,43,Thursday
+clicked_hisab_today_btn,application,2026-02-12,08:48:25.652000,18:43:12.890000,45,,45,Thursday
 clicked_hisab_today_btn,application,2026-02-13,08:54:28.045000,22:03:44.453000,24,,24,Friday
 clicked_hisab_today_btn,application,2026-02-14,09:14:49.150000,14:05:50.984000,8,,8,Saturday
 clicked_hisab_today_btn,application,2026-02-15,09:45:49.972000,09:45:49.972000,1,,1,Sunday
@@ -1353,7 +741,7 @@ clicked_hisab_yestarday_btn,application,2025-11-30,12:17:42.876000,14:24:22.5730
 clicked_hisab_yestarday_btn,application,2025-12-01,05:38:32.334000,20:13:18.986000,7,,7,Monday
 clicked_hisab_yestarday_btn,application,2025-12-02,06:16:48.519000,14:03:33.266000,3,,3,Tuesday
 clicked_hisab_yestarday_btn,application,2025-12-03,00:53:22.708000,16:27:25.744000,6,,6,Wednesday
-clicked_hisab_yestarday_btn,application,2025-12-04,09:24:21.842000,17:39:09.685000,8,,8,Thursday
+clicked_hisab_yestarday_btn,application,2025-12-04,09:24:21.842000,17:39:09.685000,9,,9,Thursday
 clicked_hisab_yestarday_btn,application,2025-12-05,07:36:56.534000,14:05:21.054000,9,,9,Friday
 clicked_hisab_yestarday_btn,application,2025-12-06,07:09:34.010000,21:37:15.118000,24,,24,Saturday
 clicked_hisab_yestarday_btn,application,2025-12-07,08:24:58.540000,17:43:52.911000,4,,4,Sunday
@@ -1366,28 +754,28 @@ clicked_hisab_yestarday_btn,application,2025-12-13,11:29:16.466000,18:24:54.2490
 clicked_hisab_yestarday_btn,application,2025-12-14,06:13:20.262000,17:05:37.100000,6,,6,Sunday
 clicked_hisab_yestarday_btn,application,2025-12-15,03:09:10.531000,15:17:27.862000,5,,5,Monday
 clicked_hisab_yestarday_btn,application,2025-12-16,07:02:37.181000,21:25:34.667000,9,,9,Tuesday
-clicked_hisab_yestarday_btn,application,2025-12-17,05:26:46.052000,19:10:24.726000,5,,5,Wednesday
-clicked_hisab_yestarday_btn,application,2025-12-18,09:21:04.492000,19:34:25.296000,16,,16,Thursday
+clicked_hisab_yestarday_btn,application,2025-12-17,05:26:46.052000,19:19:03.871000,6,,6,Wednesday
+clicked_hisab_yestarday_btn,application,2025-12-18,09:21:04.492000,19:34:25.296000,18,,18,Thursday
 clicked_hisab_yestarday_btn,application,2025-12-19,05:02:36.972000,21:17:24.174000,25,,25,Friday
 clicked_hisab_yestarday_btn,application,2025-12-20,01:10:31.193000,20:01:27.580000,16,,16,Saturday
 clicked_hisab_yestarday_btn,application,2025-12-21,01:16:09.380000,18:04:35.079000,25,,25,Sunday
 clicked_hisab_yestarday_btn,application,2025-12-22,09:13:06.736000,20:43:12.901000,53,,53,Monday
 clicked_hisab_yestarday_btn,application,2025-12-23,02:11:07.789000,18:54:08.744000,30,,30,Tuesday
 clicked_hisab_yestarday_btn,application,2025-12-24,07:51:14.347000,20:44:54.173000,23,,23,Wednesday
-clicked_hisab_yestarday_btn,application,2025-12-25,07:46:38.180000,19:59:50.539000,60,,60,Thursday
+clicked_hisab_yestarday_btn,application,2025-12-25,07:46:38.180000,19:59:50.539000,62,,62,Thursday
 clicked_hisab_yestarday_btn,application,2025-12-26,07:57:21.455000,20:22:49.597000,34,,34,Friday
 clicked_hisab_yestarday_btn,application,2025-12-27,00:42:38.973000,22:29:26.833000,25,,25,Saturday
 clicked_hisab_yestarday_btn,application,2025-12-28,08:17:26.305000,21:17:40.191000,16,,16,Sunday
 clicked_hisab_yestarday_btn,application,2025-12-29,03:28:03.864000,17:37:20.912000,14,,14,Monday
 clicked_hisab_yestarday_btn,application,2025-12-30,05:22:31.862000,19:51:36.651000,19,,19,Tuesday
-clicked_hisab_yestarday_btn,application,2025-12-31,06:33:35.869000,14:15:36.058000,14,,14,Wednesday
+clicked_hisab_yestarday_btn,application,2025-12-31,06:33:35.869000,14:15:36.058000,15,,15,Wednesday
 clicked_hisab_yestarday_btn,application,2026-01-01,04:47:38.365000,19:31:04.280000,21,,21,Thursday
-clicked_hisab_yestarday_btn,application,2026-01-02,06:18:01.618000,17:00:50.625000,16,,16,Friday
+clicked_hisab_yestarday_btn,application,2026-01-02,06:18:01.618000,17:00:50.625000,17,,17,Friday
 clicked_hisab_yestarday_btn,application,2026-01-03,00:38:46.286000,16:24:03.388000,18,,18,Saturday
 clicked_hisab_yestarday_btn,application,2026-01-04,05:28:56.960000,22:35:47.422000,36,,36,Sunday
 clicked_hisab_yestarday_btn,application,2026-01-05,00:00:38.348000,17:37:40.621000,33,,33,Monday
 clicked_hisab_yestarday_btn,application,2026-01-06,09:46:04.257000,18:39:28.662000,15,,15,Tuesday
-clicked_hisab_yestarday_btn,application,2026-01-07,07:48:12.077000,21:29:59.334000,54,,54,Wednesday
+clicked_hisab_yestarday_btn,application,2026-01-07,07:48:12.077000,21:29:59.334000,55,,55,Wednesday
 clicked_hisab_yestarday_btn,application,2026-01-08,07:48:23.362000,17:32:43.423000,29,,29,Thursday
 clicked_hisab_yestarday_btn,application,2026-01-09,08:30:55.461000,20:37:16.007000,20,,20,Friday
 clicked_hisab_yestarday_btn,application,2026-01-10,11:35:50.431000,17:26:40.860000,6,,6,Saturday
@@ -1397,12 +785,12 @@ clicked_hisab_yestarday_btn,application,2026-01-13,07:37:04.029000,22:15:13.2820
 clicked_hisab_yestarday_btn,application,2026-01-14,06:15:09.817000,16:43:13.511000,19,,19,Wednesday
 clicked_hisab_yestarday_btn,application,2026-01-15,08:30:01.345000,18:22:01.612000,13,,13,Thursday
 clicked_hisab_yestarday_btn,application,2026-01-16,08:39:11.872000,16:22:57.691000,14,,14,Friday
-clicked_hisab_yestarday_btn,application,2026-01-17,05:57:39.279000,19:16:38.775000,18,,18,Saturday
+clicked_hisab_yestarday_btn,application,2026-01-17,05:57:39.279000,19:16:38.775000,19,,19,Saturday
 clicked_hisab_yestarday_btn,application,2026-01-23,07:26:12.409000,20:01:25.110000,28,,28,Friday
 clicked_hisab_yestarday_btn,application,2026-01-24,11:10:03.084000,20:59:15.427000,10,,10,Saturday
 clicked_hisab_yestarday_btn,application,2026-01-25,05:06:49.000000,18:03:33.658000,20,,20,Sunday
 clicked_hisab_yestarday_btn,application,2026-01-26,07:39:58.240000,19:48:38.673000,14,,14,Monday
-clicked_hisab_yestarday_btn,application,2026-01-27,07:25:22.275000,20:57:57.504000,18,,18,Tuesday
+clicked_hisab_yestarday_btn,application,2026-01-27,07:25:22.275000,20:57:57.504000,20,,20,Tuesday
 clicked_hisab_yestarday_btn,application,2026-01-28,02:29:07.250000,19:01:29.189000,8,,8,Wednesday
 clicked_hisab_yestarday_btn,application,2026-01-29,06:29:57.818000,21:13:57.928000,54,,54,Thursday
 clicked_hisab_yestarday_btn,application,2026-01-30,07:08:41.491000,20:43:23.629000,22,,22,Friday
@@ -1418,7 +806,7 @@ clicked_hisab_yestarday_btn,application,2026-02-08,02:41:51.739000,11:14:22.9770
 clicked_hisab_yestarday_btn,application,2026-02-09,06:24:58.346000,18:35:34.364000,13,,13,Monday
 clicked_hisab_yestarday_btn,application,2026-02-10,04:59:31.984000,21:24:23.792000,23,,23,Tuesday
 clicked_hisab_yestarday_btn,application,2026-02-11,01:15:10.749000,21:43:21.927000,25,,25,Wednesday
-clicked_hisab_yestarday_btn,application,2026-02-12,06:53:57.585000,18:42:27.793000,38,,38,Thursday
+clicked_hisab_yestarday_btn,application,2026-02-12,06:53:57.585000,18:42:27.793000,39,,39,Thursday
 clicked_hisab_yestarday_btn,application,2026-02-13,07:42:50.583000,21:57:42.379000,77,,77,Friday
 clicked_hisab_yestarday_btn,application,2026-02-14,10:34:08.721000,22:41:25.171000,21,,21,Saturday
 clicked_hisab_yestarday_btn,application,2026-02-15,00:35:14.608000,13:23:45.811000,5,,5,Sunday
@@ -1441,7 +829,8 @@ clicked_homepage_banner,application,2026-01-02,14:52:25.077000,14:52:25.077000,1
 clicked_homepage_banner,application,2026-01-09,17:22:51.252000,17:22:51.252000,1,,1,Friday
 clicked_homepage_banner,application,2026-01-10,13:03:46.285000,13:03:46.285000,1,,1,Saturday
 clicked_homepage_banner,application,2026-01-12,10:39:24.387000,12:00:23.230000,5,,5,Monday
-clicked_homepage_banner,application,2026-01-16,08:43:05.464000,19:37:11.910000,4,,4,Friday
+clicked_homepage_banner,application,2026-01-16,08:43:05.464000,19:37:11.910000,5,,5,Friday
+clicked_homepage_banner,application,2026-01-17,17:48:23.952000,17:48:23.952000,1,,1,Saturday
 clicked_homepage_banner,application,2026-01-23,04:18:20.017000,11:49:32.752000,2,,2,Friday
 clicked_homepage_banner,application,2026-02-07,19:08:05.786000,19:10:47.751000,2,,2,Saturday
 clicked_homepage_banner,application,2026-02-15,15:10:17.335000,15:10:17.335000,1,,1,Sunday
@@ -1770,6 +1159,7 @@ clicked_nav_drawer_logout,application,2026-01-10,14:04:39.560000,15:36:53.995000
 clicked_nav_drawer_logout,application,2026-01-15,11:11:39.750000,11:12:06.722000,2,,2,Thursday
 clicked_nav_drawer_logout,application,2026-01-16,21:15:57.559000,21:15:57.559000,1,,1,Friday
 clicked_nav_drawer_logout,application,2026-01-23,14:17:34.637000,16:11:32.033000,2,,2,Friday
+clicked_nav_drawer_logout,application,2026-01-24,14:49:44.350000,14:49:44.350000,1,,1,Saturday
 clicked_nav_drawer_logout,application,2026-01-26,11:57:43.604000,16:42:09.348000,4,,4,Monday
 clicked_nav_drawer_logout,application,2026-01-27,14:03:20.866000,16:27:45.756000,2,,2,Tuesday
 clicked_nav_drawer_logout,application,2026-01-28,18:21:18.311000,18:21:18.311000,1,,1,Wednesday
@@ -1783,7 +1173,7 @@ clicked_nav_drawer_logout,application,2026-02-06,12:09:30.656000,17:01:14.573000
 clicked_nav_drawer_logout,application,2026-02-09,12:52:53.849000,12:52:53.849000,1,,1,Monday
 clicked_nav_drawer_logout,application,2026-02-10,11:01:26.348000,21:55:26.709000,7,,7,Tuesday
 clicked_nav_drawer_logout,application,2026-02-11,13:03:37.448000,16:55:59.984000,5,,5,Wednesday
-clicked_nav_drawer_logout,application,2026-02-12,12:23:02.523000,17:02:36.901000,8,,8,Thursday
+clicked_nav_drawer_logout,application,2026-02-12,12:23:02.523000,17:07:46.961000,9,,9,Thursday
 clicked_nav_drawer_logout,application,2026-02-13,09:11:40.796000,17:22:28.873000,7,,7,Friday
 clicked_nav_drawer_logout,application,2026-02-14,11:14:31.300000,18:31:43.613000,5,,5,Saturday
 clicked_nav_drawer_logout,application,2026-02-15,11:08:43.592000,11:08:43.592000,1,,1,Sunday
@@ -1823,7 +1213,7 @@ clicked_nav_drawer_manage_route_pricing,application,2026-02-15,15:08:23.246000,1
 clicked_nav_drawer_manage_route_pricing,application,2026-02-16,15:18:59.790000,19:28:28.768000,5,,5,Monday
 clicked_nav_drawer_manage_route_pricing,application,2026-02-17,04:44:46.228000,17:03:57.885000,2,,2,Tuesday
 clicked_nav_drawer_manage_route_pricing,application,2026-02-18,10:56:02.636000,21:34:42.402000,3,,3,Wednesday
-clicked_nav_drawer_menu,application,2025-11-28,16:38:45.425000,19:40:20.088000,2,,2,Friday
+clicked_nav_drawer_menu,application,2025-11-28,16:38:45.425000,20:26:21.981000,3,,3,Friday
 clicked_nav_drawer_menu,application,2025-11-29,09:12:53.647000,20:52:44.696000,4,,4,Saturday
 clicked_nav_drawer_menu,application,2025-11-30,18:31:29.294000,18:31:29.294000,1,,1,Sunday
 clicked_nav_drawer_menu,application,2025-12-01,05:01:37.945000,19:46:55.061000,5,,5,Monday
@@ -1833,41 +1223,41 @@ clicked_nav_drawer_menu,application,2025-12-04,12:18:38.931000,16:47:49.654000,3
 clicked_nav_drawer_menu,application,2025-12-06,00:47:47.964000,17:58:00.013000,14,,14,Saturday
 clicked_nav_drawer_menu,application,2025-12-07,04:27:18.162000,17:47:30.749000,20,,20,Sunday
 clicked_nav_drawer_menu,application,2025-12-08,07:56:54.580000,16:01:03.257000,15,,15,Monday
-clicked_nav_drawer_menu,application,2025-12-09,11:43:59.564000,22:11:30.912000,9,,9,Tuesday
+clicked_nav_drawer_menu,application,2025-12-09,11:43:59.564000,22:11:30.912000,10,,10,Tuesday
 clicked_nav_drawer_menu,application,2025-12-10,05:42:02.053000,21:03:01.037000,12,,12,Wednesday
-clicked_nav_drawer_menu,application,2025-12-11,07:26:11.615000,18:49:13.966000,6,,6,Thursday
+clicked_nav_drawer_menu,application,2025-12-11,07:26:11.615000,20:53:46.421000,8,,8,Thursday
 clicked_nav_drawer_menu,application,2025-12-12,15:51:26.143000,19:39:47.773000,6,,6,Friday
 clicked_nav_drawer_menu,application,2025-12-13,03:46:41.192000,20:13:16.046000,27,,27,Saturday
 clicked_nav_drawer_menu,application,2025-12-14,08:57:41.919000,13:04:23.154000,5,,5,Sunday
 clicked_nav_drawer_menu,application,2025-12-15,09:16:25.962000,22:40:51.749000,4,,4,Monday
 clicked_nav_drawer_menu,application,2025-12-16,10:55:04.570000,16:55:22.580000,5,,5,Tuesday
-clicked_nav_drawer_menu,application,2025-12-17,08:40:33.868000,16:14:54.806000,9,,9,Wednesday
-clicked_nav_drawer_menu,application,2025-12-18,07:57:52.296000,21:00:46.609000,30,,30,Thursday
+clicked_nav_drawer_menu,application,2025-12-17,08:40:33.868000,20:48:23.558000,10,,10,Wednesday
+clicked_nav_drawer_menu,application,2025-12-18,07:57:52.296000,21:00:46.609000,31,,31,Thursday
 clicked_nav_drawer_menu,application,2025-12-19,10:04:22.511000,23:55:57.615000,30,,30,Friday
 clicked_nav_drawer_menu,application,2025-12-20,01:23:43.084000,22:52:20.266000,58,,58,Saturday
 clicked_nav_drawer_menu,application,2025-12-21,01:15:40.824000,16:47:29.297000,14,,14,Sunday
-clicked_nav_drawer_menu,application,2025-12-22,08:18:12.894000,23:58:01.621000,37,,37,Monday
-clicked_nav_drawer_menu,application,2025-12-23,07:26:21.063000,21:28:17.952000,29,,29,Tuesday
+clicked_nav_drawer_menu,application,2025-12-22,08:18:12.894000,23:58:01.621000,38,,38,Monday
+clicked_nav_drawer_menu,application,2025-12-23,07:26:21.063000,21:28:17.952000,30,,30,Tuesday
 clicked_nav_drawer_menu,application,2025-12-24,00:08:34.442000,23:03:42.120000,46,,46,Wednesday
 clicked_nav_drawer_menu,application,2025-12-25,11:01:29.438000,21:29:39.596000,22,,22,Thursday
 clicked_nav_drawer_menu,application,2025-12-26,07:56:22.445000,23:48:40.204000,36,,36,Friday
 clicked_nav_drawer_menu,application,2025-12-27,01:51:40.496000,17:35:10.355000,11,,11,Saturday
 clicked_nav_drawer_menu,application,2025-12-28,07:16:00.926000,19:57:34.032000,7,,7,Sunday
-clicked_nav_drawer_menu,application,2025-12-29,10:16:27.877000,21:03:32.675000,22,,22,Monday
+clicked_nav_drawer_menu,application,2025-12-29,10:16:27.877000,21:03:32.675000,23,,23,Monday
 clicked_nav_drawer_menu,application,2025-12-30,09:26:39.291000,18:36:11.969000,7,,7,Tuesday
 clicked_nav_drawer_menu,application,2025-12-31,04:48:53.471000,21:40:17.789000,13,,13,Wednesday
 clicked_nav_drawer_menu,application,2026-01-01,08:41:25.450000,18:30:26.057000,14,,14,Thursday
 clicked_nav_drawer_menu,application,2026-01-02,09:32:53.230000,20:31:24.381000,7,,7,Friday
 clicked_nav_drawer_menu,application,2026-01-03,10:19:12.198000,15:42:51.429000,8,,8,Saturday
 clicked_nav_drawer_menu,application,2026-01-04,04:28:54.511000,22:36:04.920000,30,,30,Sunday
-clicked_nav_drawer_menu,application,2026-01-05,07:29:22.955000,21:33:51.492000,141,,141,Monday
+clicked_nav_drawer_menu,application,2026-01-05,07:29:22.955000,21:33:51.492000,142,,142,Monday
 clicked_nav_drawer_menu,application,2026-01-06,05:07:30.506000,18:49:29.443000,10,,10,Tuesday
 clicked_nav_drawer_menu,application,2026-01-07,06:56:47.476000,21:32:51.931000,17,,17,Wednesday
-clicked_nav_drawer_menu,application,2026-01-08,07:45:09.478000,20:49:09.241000,10,,10,Thursday
-clicked_nav_drawer_menu,application,2026-01-09,07:58:13.917000,22:29:27.384000,16,,16,Friday
-clicked_nav_drawer_menu,application,2026-01-10,14:35:18.734000,21:21:12.228000,22,,22,Saturday
+clicked_nav_drawer_menu,application,2026-01-08,07:45:09.478000,20:49:09.241000,11,,11,Thursday
+clicked_nav_drawer_menu,application,2026-01-09,07:58:13.917000,22:29:27.384000,17,,17,Friday
+clicked_nav_drawer_menu,application,2026-01-10,14:35:18.734000,21:21:12.228000,23,,23,Saturday
 clicked_nav_drawer_menu,application,2026-01-11,09:37:38.858000,13:50:29.608000,6,,6,Sunday
-clicked_nav_drawer_menu,application,2026-01-12,11:53:01.948000,22:21:17.868000,19,,19,Monday
+clicked_nav_drawer_menu,application,2026-01-12,11:53:01.948000,22:21:17.868000,22,,22,Monday
 clicked_nav_drawer_menu,application,2026-01-13,07:49:21.886000,18:29:51.373000,13,,13,Tuesday
 clicked_nav_drawer_menu,application,2026-01-14,08:23:38.142000,23:55:49.465000,20,,20,Wednesday
 clicked_nav_drawer_menu,application,2026-01-15,07:13:40.250000,22:17:41.997000,13,,13,Thursday
@@ -1881,26 +1271,26 @@ clicked_nav_drawer_menu,application,2026-01-26,08:43:25.311000,16:11:26.320000,8
 clicked_nav_drawer_menu,application,2026-01-27,11:57:05.213000,20:24:08.749000,69,,69,Tuesday
 clicked_nav_drawer_menu,application,2026-01-28,00:23:14.589000,21:44:43.142000,19,,19,Wednesday
 clicked_nav_drawer_menu,application,2026-01-29,06:43:12.629000,22:32:47.115000,16,,16,Thursday
-clicked_nav_drawer_menu,application,2026-01-30,11:32:36.984000,19:27:05.194000,4,,4,Friday
-clicked_nav_drawer_menu,application,2026-01-31,10:26:00.441000,18:42:52.917000,12,,12,Saturday
+clicked_nav_drawer_menu,application,2026-01-30,11:32:36.984000,19:27:05.194000,5,,5,Friday
+clicked_nav_drawer_menu,application,2026-01-31,10:26:00.441000,18:42:52.917000,13,,13,Saturday
 clicked_nav_drawer_menu,application,2026-02-01,10:20:57.604000,23:05:34.754000,6,,6,Sunday
 clicked_nav_drawer_menu,application,2026-02-02,10:13:53.326000,20:34:54.436000,13,,13,Monday
 clicked_nav_drawer_menu,application,2026-02-03,00:02:15.210000,21:04:36.771000,19,,19,Tuesday
 clicked_nav_drawer_menu,application,2026-02-04,06:40:02.065000,20:21:25.983000,25,,25,Wednesday
 clicked_nav_drawer_menu,application,2026-02-05,07:11:38.717000,20:10:19.624000,6,,6,Thursday
-clicked_nav_drawer_menu,application,2026-02-06,11:33:34.028000,17:59:03.741000,17,,17,Friday
+clicked_nav_drawer_menu,application,2026-02-06,11:33:34.028000,17:59:03.741000,18,,18,Friday
 clicked_nav_drawer_menu,application,2026-02-07,08:27:54.115000,17:01:46.068000,9,,9,Saturday
 clicked_nav_drawer_menu,application,2026-02-08,02:02:20.965000,22:53:12.696000,17,,17,Sunday
-clicked_nav_drawer_menu,application,2026-02-09,07:11:15.705000,21:35:08.687000,15,,15,Monday
+clicked_nav_drawer_menu,application,2026-02-09,07:11:15.705000,21:35:08.687000,16,,16,Monday
 clicked_nav_drawer_menu,application,2026-02-10,04:29:40.108000,23:24:01.396000,34,,34,Tuesday
-clicked_nav_drawer_menu,application,2026-02-11,07:35:51.444000,18:48:24.428000,65,,65,Wednesday
-clicked_nav_drawer_menu,application,2026-02-12,12:22:56.904000,22:18:54.735000,17,,17,Thursday
+clicked_nav_drawer_menu,application,2026-02-11,07:35:51.444000,18:48:24.428000,66,,66,Wednesday
+clicked_nav_drawer_menu,application,2026-02-12,12:22:56.904000,22:18:54.735000,19,,19,Thursday
 clicked_nav_drawer_menu,application,2026-02-13,00:23:32.865000,22:14:24.754000,22,,22,Friday
 clicked_nav_drawer_menu,application,2026-02-14,05:46:41.435000,20:36:11.793000,22,,22,Saturday
 clicked_nav_drawer_menu,application,2026-02-15,11:08:42.583000,22:22:31.700000,7,,7,Sunday
 clicked_nav_drawer_menu,application,2026-02-16,00:05:58.868000,20:58:23.756000,38,,38,Monday
-clicked_nav_drawer_menu,application,2026-02-17,04:44:42.116000,22:32:53.120000,24,,24,Tuesday
-clicked_nav_drawer_menu,application,2026-02-18,06:38:16.906000,21:35:39.425000,33,,33,Wednesday
+clicked_nav_drawer_menu,application,2026-02-17,04:44:42.116000,22:32:53.120000,25,,25,Tuesday
+clicked_nav_drawer_menu,application,2026-02-18,06:38:16.906000,21:35:39.425000,34,,34,Wednesday
 clicked_nav_drawer_menu,application,2026-02-19,09:26:12.974000,20:12:25.473000,13,,13,Thursday
 clicked_nav_drawer_my_profile,application,2025-12-18,18:43:07.586000,18:43:07.586000,1,,1,Thursday
 clicked_nav_drawer_my_profile,application,2025-12-20,01:28:36.528000,01:28:36.528000,1,,1,Saturday
@@ -2020,11 +1410,11 @@ clicked_offer_discount_edit,application,2025-12-13,08:16:55.926000,08:16:55.9260
 clicked_offer_discount_edit,application,2025-12-19,20:03:43.763000,20:03:43.763000,1,,1,Friday
 clicked_offer_discount_edit,application,2025-12-27,15:46:35.452000,15:46:49.463000,4,,4,Saturday
 clicked_offer_discount_edit,application,2026-01-11,14:09:34.741000,14:09:34.741000,1,,1,Sunday
-clicked_offer_discount_edit,application,2026-02-12,17:37:19.666000,17:38:30.759000,4,,4,Thursday
+clicked_offer_discount_edit,application,2026-02-12,17:37:19.666000,17:39:15.411000,6,,6,Thursday
 clicked_on_video,application,2025-12-06,10:42:33.333000,10:43:19.874000,2,,2,Saturday
 clicked_on_video,application,2025-12-08,06:57:48.020000,07:01:47.134000,3,,3,Monday
 clicked_on_video,application,2025-12-15,23:28:24.862000,23:29:11.644000,2,,2,Monday
-clicked_on_video,application,2025-12-21,22:32:03.676000,22:32:03.676000,1,,1,Sunday
+clicked_on_video,application,2025-12-21,22:32:03.676000,22:41:27.393000,2,,2,Sunday
 clicked_on_video,application,2025-12-23,12:07:04.757000,12:07:05.655000,7,,7,Tuesday
 clicked_on_video,application,2026-01-16,14:24:09.576000,14:24:09.576000,1,,1,Friday
 clicked_on_video,application,2026-01-17,14:26:29.745000,14:26:29.745000,1,,1,Saturday
@@ -2151,8 +1541,8 @@ dashboard_clicked_gps_vistar_se_dekhe_bus_card,application,2025-12-17,20:17:51.3
 dashboard_clicked_gps_vistar_se_dekhe_bus_card,application,2025-12-18,08:41:00.776000,18:43:34.345000,10,,10,Thursday
 dashboard_clicked_gps_vistar_se_dekhe_bus_card,application,2025-12-19,01:15:19.473000,23:57:32.540000,16,,16,Friday
 dashboard_clicked_gps_vistar_se_dekhe_bus_card,application,2025-12-20,01:29:30.410000,22:05:40.088000,18,,18,Saturday
-dashboard_clicked_gps_vistar_se_dekhe_bus_card,application,2025-12-21,01:16:41.415000,19:21:11.122000,21,,21,Sunday
-dashboard_clicked_gps_vistar_se_dekhe_bus_card,application,2025-12-22,06:13:25.219000,20:00:36.917000,26,,26,Monday
+dashboard_clicked_gps_vistar_se_dekhe_bus_card,application,2025-12-21,01:16:41.415000,20:37:53.678000,22,,22,Sunday
+dashboard_clicked_gps_vistar_se_dekhe_bus_card,application,2025-12-22,06:13:25.219000,20:00:36.917000,27,,27,Monday
 dashboard_clicked_gps_vistar_se_dekhe_bus_card,application,2025-12-23,09:42:20.014000,23:39:52.425000,22,,22,Tuesday
 dashboard_clicked_gps_vistar_se_dekhe_bus_card,application,2025-12-24,10:08:33.014000,23:45:25.960000,12,,12,Wednesday
 dashboard_clicked_gps_vistar_se_dekhe_bus_card,application,2025-12-25,08:08:08.934000,21:13:35.439000,5,,5,Thursday
@@ -2179,10 +1569,10 @@ dashboard_clicked_gps_vistar_se_dekhe_bus_card,application,2026-01-16,11:36:56.1
 dashboard_clicked_gps_vistar_se_dekhe_bus_card,application,2026-01-17,14:51:22.855000,14:51:22.855000,1,,1,Saturday
 dashboard_clicked_gps_vistar_se_dekhe_bus_card,application,2026-01-24,10:27:55.371000,10:27:55.371000,1,,1,Saturday
 dashboard_clicked_gps_vistar_se_dekhe_bus_card,application,2026-01-25,15:56:31.596000,16:57:58.815000,2,,2,Sunday
-dashboard_clicked_gps_vistar_se_dekhe_bus_card,application,2026-01-26,03:06:54.143000,16:32:31.500000,3,,3,Monday
-dashboard_clicked_gps_vistar_se_dekhe_bus_card,application,2026-01-27,12:32:30.105000,17:53:20.236000,15,,15,Tuesday
+dashboard_clicked_gps_vistar_se_dekhe_bus_card,application,2026-01-26,02:59:41.343000,16:32:31.500000,5,,5,Monday
+dashboard_clicked_gps_vistar_se_dekhe_bus_card,application,2026-01-27,12:32:30.105000,17:53:20.236000,16,,16,Tuesday
 dashboard_clicked_gps_vistar_se_dekhe_bus_card,application,2026-01-28,00:20:54.555000,18:40:33.533000,13,,13,Wednesday
-dashboard_clicked_gps_vistar_se_dekhe_bus_card,application,2026-01-29,08:57:02.099000,23:59:36.798000,14,,14,Thursday
+dashboard_clicked_gps_vistar_se_dekhe_bus_card,application,2026-01-29,08:57:02.099000,23:59:36.798000,15,,15,Thursday
 dashboard_clicked_gps_vistar_se_dekhe_bus_card,application,2026-01-30,02:23:59.340000,18:14:53.042000,3,,3,Friday
 dashboard_clicked_gps_vistar_se_dekhe_bus_card,application,2026-01-31,10:27:14.828000,12:54:52.189000,7,,7,Saturday
 dashboard_clicked_gps_vistar_se_dekhe_bus_card,application,2026-02-01,07:32:46.549000,16:39:19.907000,8,,8,Sunday
@@ -2201,86 +1591,87 @@ dashboard_clicked_gps_vistar_se_dekhe_bus_card,application,2026-02-15,10:54:15.8
 dashboard_clicked_gps_vistar_se_dekhe_bus_card,application,2026-02-17,11:32:12.241000,11:32:12.241000,1,,1,Tuesday
 dashboard_clicked_gps_vistar_se_dekhe_bus_card,application,2026-02-18,11:55:53.001000,21:33:30.378000,4,,4,Wednesday
 dashboard_clicked_gps_vistar_se_dekhe_bus_card,application,2026-02-19,04:40:46.423000,22:42:01.742000,4,,4,Thursday
-home_page_load_error,application,2025-11-28,16:21:31.346000,21:17:22.735000,42,,42,Friday
-home_page_load_error,application,2025-11-29,18:42:59.363000,18:49:36.328000,105,,105,Saturday
-home_page_load_error,application,2025-11-30,06:18:13.237000,20:11:19.210000,78,,78,Sunday
+home_page_load_error,application,2025-11-27,07:42:57.805000,07:42:57.805000,1,,1,Thursday
+home_page_load_error,application,2025-11-28,16:21:31.346000,21:17:43.696000,44,,44,Friday
+home_page_load_error,application,2025-11-29,18:42:58.361000,18:49:36.328000,116,,116,Saturday
+home_page_load_error,application,2025-11-30,06:18:13.237000,20:11:19.210000,79,,79,Sunday
 home_page_load_error,application,2025-12-01,11:53:39.765000,21:20:17.034000,55,,55,Monday
-home_page_load_error,application,2025-12-02,07:53:00.285000,22:56:34.063000,57,,57,Tuesday
-home_page_load_error,application,2025-12-03,09:07:12.607000,17:58:47.590000,56,,56,Wednesday
+home_page_load_error,application,2025-12-02,07:53:00.285000,22:56:34.063000,60,,60,Tuesday
+home_page_load_error,application,2025-12-03,09:07:12.607000,17:58:47.590000,57,,57,Wednesday
 home_page_load_error,application,2025-12-04,08:50:24.901000,19:27:54.890000,21,,21,Thursday
-home_page_load_error,application,2025-12-05,01:14:22.125000,17:01:45.157000,77,,77,Friday
-home_page_load_error,application,2025-12-06,10:08:01.407000,21:18:47.865000,66,,66,Saturday
+home_page_load_error,application,2025-12-05,01:14:22.125000,17:01:45.157000,81,,81,Friday
+home_page_load_error,application,2025-12-06,10:08:01.407000,21:18:47.865000,68,,68,Saturday
 home_page_load_error,application,2025-12-07,06:56:16.287000,18:28:54.930000,23,,23,Sunday
-home_page_load_error,application,2025-12-08,09:57:30.772000,19:24:36.065000,157,,157,Monday
+home_page_load_error,application,2025-12-08,09:57:30.772000,19:24:36.065000,161,,161,Monday
 home_page_load_error,application,2025-12-09,14:12:48.724000,20:51:14.782000,18,,18,Tuesday
-home_page_load_error,application,2025-12-10,06:27:42.386000,20:10:01.534000,44,,44,Wednesday
-home_page_load_error,application,2025-12-11,08:18:45.516000,22:00:12.067000,44,,44,Thursday
-home_page_load_error,application,2025-12-12,10:57:59.797000,19:35:06.517000,342,,342,Friday
-home_page_load_error,application,2025-12-13,07:05:07.425000,19:00:54.160000,446,,446,Saturday
+home_page_load_error,application,2025-12-10,06:27:42.386000,20:10:01.534000,45,,45,Wednesday
+home_page_load_error,application,2025-12-11,08:18:45.516000,22:00:12.067000,47,,47,Thursday
+home_page_load_error,application,2025-12-12,10:57:59.797000,19:35:06.517000,366,,366,Friday
+home_page_load_error,application,2025-12-13,07:05:03.205000,19:00:54.160000,461,,461,Saturday
 home_page_load_error,application,2025-12-14,10:11:59.610000,17:08:32.168000,4,,4,Sunday
-home_page_load_error,application,2025-12-15,07:29:02.534000,18:25:07.373000,64,,64,Monday
-home_page_load_error,application,2025-12-16,06:52:27.199000,16:52:34.057000,22,,22,Tuesday
-home_page_load_error,application,2025-12-17,07:36:14.828000,21:16:20.765000,93,,93,Wednesday
+home_page_load_error,application,2025-12-15,07:29:02.534000,18:25:07.373000,70,,70,Monday
+home_page_load_error,application,2025-12-16,06:52:27.199000,16:52:34.057000,25,,25,Tuesday
+home_page_load_error,application,2025-12-17,07:36:14.828000,21:16:20.765000,99,,99,Wednesday
 home_page_load_error,application,2025-12-18,00:05:09.471000,16:57:03.485000,24,,24,Thursday
-home_page_load_error,application,2025-12-19,12:11:27.101000,23:55:56.187000,43,,43,Friday
+home_page_load_error,application,2025-12-19,12:11:27.101000,23:55:56.187000,44,,44,Friday
 home_page_load_error,application,2025-12-20,08:45:24.512000,18:31:53.712000,110,,110,Saturday
-home_page_load_error,application,2025-12-21,07:37:42.252000,19:33:34.977000,103,,103,Sunday
-home_page_load_error,application,2025-12-22,07:37:09.192000,21:08:55.559000,300,,300,Monday
-home_page_load_error,application,2025-12-23,07:36:33.051000,21:16:12.775000,86,,86,Tuesday
-home_page_load_error,application,2025-12-24,04:22:35.054000,21:40:50.224000,2836,,2836,Wednesday
+home_page_load_error,application,2025-12-21,07:37:42.252000,19:33:34.977000,105,,105,Sunday
+home_page_load_error,application,2025-12-22,07:37:09.192000,21:08:55.559000,316,,316,Monday
+home_page_load_error,application,2025-12-23,07:36:33.051000,21:16:12.775000,92,,92,Tuesday
+home_page_load_error,application,2025-12-24,04:22:35.054000,21:40:50.224000,3070,,3070,Wednesday
 home_page_load_error,application,2025-12-25,08:48:33.447000,21:10:43.782000,59,,59,Thursday
-home_page_load_error,application,2025-12-26,07:37:48.441000,19:44:57.572000,74,,74,Friday
-home_page_load_error,application,2025-12-27,09:47:53.761000,20:19:26.657000,10,,10,Saturday
+home_page_load_error,application,2025-12-26,07:37:48.441000,19:44:57.572000,75,,75,Friday
+home_page_load_error,application,2025-12-27,09:47:53.761000,20:19:26.657000,11,,11,Saturday
 home_page_load_error,application,2025-12-28,07:04:17.000000,20:40:22.852000,26,,26,Sunday
 home_page_load_error,application,2025-12-29,08:26:56.371000,18:52:14.195000,19,,19,Monday
-home_page_load_error,application,2025-12-30,07:20:33.859000,16:40:59.413000,49,,49,Tuesday
-home_page_load_error,application,2025-12-31,07:40:29.891000,15:35:25.658000,17,,17,Wednesday
-home_page_load_error,application,2026-01-01,09:46:55.667000,21:55:51.001000,51,,51,Thursday
+home_page_load_error,application,2025-12-30,07:20:33.859000,16:40:59.413000,54,,54,Tuesday
+home_page_load_error,application,2025-12-31,07:40:29.891000,15:35:25.658000,19,,19,Wednesday
+home_page_load_error,application,2026-01-01,09:46:55.667000,21:55:51.001000,53,,53,Thursday
 home_page_load_error,application,2026-01-02,07:37:44.706000,19:32:09.377000,7,,7,Friday
 home_page_load_error,application,2026-01-03,08:06:48.975000,12:38:51.514000,5,,5,Saturday
 home_page_load_error,application,2026-01-04,13:20:52.240000,18:46:43.357000,3,,3,Sunday
-home_page_load_error,application,2026-01-05,10:04:17.169000,17:58:44.255000,831,,831,Monday
-home_page_load_error,application,2026-01-06,01:40:44.676000,18:50:12.593000,637,,637,Tuesday
-home_page_load_error,application,2026-01-07,09:51:38.203000,22:36:36.028000,355,,355,Wednesday
-home_page_load_error,application,2026-01-08,06:32:17.922000,19:29:37.618000,43,,43,Thursday
+home_page_load_error,application,2026-01-05,10:04:17.169000,20:25:19.325000,871,,871,Monday
+home_page_load_error,application,2026-01-06,01:40:44.676000,18:50:12.593000,684,,684,Tuesday
+home_page_load_error,application,2026-01-07,09:51:38.203000,22:36:36.028000,391,,391,Wednesday
+home_page_load_error,application,2026-01-08,06:32:17.922000,19:29:37.618000,47,,47,Thursday
 home_page_load_error,application,2026-01-09,08:34:28.433000,19:52:24.206000,41,,41,Friday
-home_page_load_error,application,2026-01-10,09:38:09.775000,17:59:31.328000,33,,33,Saturday
+home_page_load_error,application,2026-01-10,09:38:09.775000,18:49:18.942000,36,,36,Saturday
 home_page_load_error,application,2026-01-11,07:18:27.971000,20:17:18.791000,36,,36,Sunday
-home_page_load_error,application,2026-01-12,07:55:41.680000,17:55:32.408000,180,,180,Monday
-home_page_load_error,application,2026-01-13,12:20:23.851000,19:24:48.286000,29,,29,Tuesday
-home_page_load_error,application,2026-01-14,07:14:37.336000,22:40:34.035000,34,,34,Wednesday
-home_page_load_error,application,2026-01-15,10:24:46.754000,22:23:49.093000,58,,58,Thursday
-home_page_load_error,application,2026-01-16,07:59:36.878000,21:38:03.091000,246,,246,Friday
-home_page_load_error,application,2026-01-17,05:45:19.556000,19:35:13.766000,108,,108,Saturday
+home_page_load_error,application,2026-01-12,07:55:41.680000,17:55:32.408000,183,,183,Monday
+home_page_load_error,application,2026-01-13,12:20:23.851000,19:24:48.286000,33,,33,Tuesday
+home_page_load_error,application,2026-01-14,07:14:37.336000,22:40:34.035000,36,,36,Wednesday
+home_page_load_error,application,2026-01-15,10:24:46.754000,22:23:49.093000,60,,60,Thursday
+home_page_load_error,application,2026-01-16,07:59:36.878000,21:38:03.091000,255,,255,Friday
+home_page_load_error,application,2026-01-17,05:45:19.556000,19:35:48.531000,111,,111,Saturday
 home_page_load_error,application,2026-01-18,11:58:13.566000,11:58:15.014000,2,,2,Sunday
 home_page_load_error,application,2026-01-23,08:13:57.163000,16:43:02.144000,37,,37,Friday
-home_page_load_error,application,2026-01-24,07:15:50.286000,21:34:11.499000,184,,184,Saturday
-home_page_load_error,application,2026-01-25,08:01:04.529000,18:37:28.512000,31,,31,Sunday
-home_page_load_error,application,2026-01-26,08:58:30.800000,16:06:58.132000,101,,101,Monday
-home_page_load_error,application,2026-01-27,08:27:53.647000,21:20:51.513000,35,,35,Tuesday
+home_page_load_error,application,2026-01-24,07:15:50.286000,21:34:11.499000,207,,207,Saturday
+home_page_load_error,application,2026-01-25,07:32:54.553000,18:37:28.512000,35,,35,Sunday
+home_page_load_error,application,2026-01-26,08:58:30.800000,16:06:58.132000,102,,102,Monday
+home_page_load_error,application,2026-01-27,08:27:53.647000,21:20:51.513000,36,,36,Tuesday
 home_page_load_error,application,2026-01-28,00:17:41.277000,20:57:52.836000,32,,32,Wednesday
-home_page_load_error,application,2026-01-29,08:18:43.434000,16:07:21.218000,56,,56,Thursday
-home_page_load_error,application,2026-01-30,11:20:31.836000,18:07:46.900000,167,,167,Friday
-home_page_load_error,application,2026-01-31,10:02:48.799000,17:23:49.187000,70,,70,Saturday
-home_page_load_error,application,2026-02-01,06:37:25.288000,22:47:32.087000,44,,44,Sunday
+home_page_load_error,application,2026-01-29,08:18:43.434000,16:07:21.218000,61,,61,Thursday
+home_page_load_error,application,2026-01-30,11:20:31.836000,18:07:46.900000,182,,182,Friday
+home_page_load_error,application,2026-01-31,10:02:48.799000,17:23:49.187000,73,,73,Saturday
+home_page_load_error,application,2026-02-01,06:37:25.288000,22:47:32.087000,47,,47,Sunday
 home_page_load_error,application,2026-02-02,02:28:38.365000,20:25:24.891000,21,,21,Monday
-home_page_load_error,application,2026-02-03,06:25:14.445000,18:55:29.369000,139,,139,Tuesday
-home_page_load_error,application,2026-02-04,10:41:41.417000,19:39:18.893000,350,,350,Wednesday
-home_page_load_error,application,2026-02-05,08:57:39.641000,20:02:03.122000,145,,145,Thursday
-home_page_load_error,application,2026-02-06,04:23:44.942000,17:26:34.465000,61,,61,Friday
-home_page_load_error,application,2026-02-07,08:20:37.823000,17:00:32.859000,25,,25,Saturday
-home_page_load_error,application,2026-02-08,09:50:26.103000,17:20:20.434000,94,,94,Sunday
-home_page_load_error,application,2026-02-09,12:07:46.023000,22:55:26.584000,297,,297,Monday
-home_page_load_error,application,2026-02-10,04:38:10.557000,21:35:02.858000,51,,51,Tuesday
-home_page_load_error,application,2026-02-11,07:35:49.267000,19:32:09.154000,134,,134,Wednesday
-home_page_load_error,application,2026-02-12,13:20:52.248000,17:56:41.952000,24,,24,Thursday
-home_page_load_error,application,2026-02-13,08:21:46.937000,20:28:37.010000,135,,135,Friday
-home_page_load_error,application,2026-02-14,10:34:56.280000,17:40:07.171000,42,,42,Saturday
+home_page_load_error,application,2026-02-03,06:25:14.445000,18:55:29.369000,141,,141,Tuesday
+home_page_load_error,application,2026-02-04,10:41:41.417000,19:39:18.893000,382,,382,Wednesday
+home_page_load_error,application,2026-02-05,08:57:39.641000,20:02:03.122000,150,,150,Thursday
+home_page_load_error,application,2026-02-06,04:23:44.942000,17:26:34.465000,63,,63,Friday
+home_page_load_error,application,2026-02-07,08:20:37.823000,17:00:32.859000,27,,27,Saturday
+home_page_load_error,application,2026-02-08,09:50:26.103000,17:20:32.446000,96,,96,Sunday
+home_page_load_error,application,2026-02-09,12:07:46.023000,22:55:26.584000,323,,323,Monday
+home_page_load_error,application,2026-02-10,04:38:10.557000,21:35:02.858000,52,,52,Tuesday
+home_page_load_error,application,2026-02-11,07:35:49.267000,19:32:09.154000,143,,143,Wednesday
+home_page_load_error,application,2026-02-12,12:44:43.671000,17:56:41.952000,26,,26,Thursday
+home_page_load_error,application,2026-02-13,08:21:46.937000,20:28:37.010000,145,,145,Friday
+home_page_load_error,application,2026-02-14,10:34:56.280000,17:40:07.171000,43,,43,Saturday
 home_page_load_error,application,2026-02-15,10:05:55.267000,20:50:05.912000,28,,28,Sunday
-home_page_load_error,application,2026-02-16,08:19:27.561000,20:22:37.536000,57,,57,Monday
+home_page_load_error,application,2026-02-16,08:19:27.561000,20:22:37.536000,58,,58,Monday
 home_page_load_error,application,2026-02-17,09:46:29.431000,17:46:09.569000,8,,8,Tuesday
-home_page_load_error,application,2026-02-18,07:54:05.085000,20:14:36.769000,34,,34,Wednesday
-home_page_load_error,application,2026-02-19,07:23:45.246000,20:29:36.338000,111,,111,Thursday
+home_page_load_error,application,2026-02-18,07:54:05.085000,20:14:36.769000,35,,35,Wednesday
+home_page_load_error,application,2026-02-19,07:23:45.246000,20:29:36.338000,116,,116,Thursday
 login_send_otp_failed,application,2025-12-20,16:30:58.784000,16:30:58.784000,1,,1,Saturday
 login_send_otp_failed,application,2025-12-25,12:15:33.040000,14:15:06.261000,2,,2,Thursday
 login_send_otp_failed,application,2025-12-27,01:06:01.304000,01:07:33.780000,2,,2,Saturday
@@ -2318,64 +1709,66 @@ login_verify_otp_failed,application,2026-02-17,08:41:20.949000,08:41:20.949000,1
 login_verify_otp_failed,application,2026-02-18,09:26:09.924000,09:26:09.924000,1,,1,Wednesday
 login_verify_otp_success,application,2025-12-06,10:19:21.400000,10:19:21.400000,1,,1,Saturday
 login_verify_otp_success,application,2025-12-13,14:37:40.472000,14:37:40.472000,1,,1,Saturday
-login_verify_otp_success,application,2025-12-17,12:55:26.782000,15:15:07.593000,2,,2,Wednesday
-login_verify_otp_success,application,2025-12-18,14:53:04.753000,22:51:17.914000,4,,4,Thursday
+login_verify_otp_success,application,2025-12-17,12:55:26.782000,15:15:07.593000,3,,3,Wednesday
+login_verify_otp_success,application,2025-12-18,14:53:04.753000,22:51:17.914000,6,,6,Thursday
 login_verify_otp_success,application,2025-12-19,11:36:14.621000,13:46:14.466000,3,,3,Friday
 login_verify_otp_success,application,2025-12-20,02:44:15.140000,22:52:01.951000,4,,4,Saturday
 login_verify_otp_success,application,2025-12-21,12:45:23.072000,19:12:19.678000,2,,2,Sunday
-login_verify_otp_success,application,2025-12-22,17:38:31.616000,18:07:43.306000,2,,2,Monday
-login_verify_otp_success,application,2025-12-23,15:43:32.427000,17:01:39.189000,2,,2,Tuesday
-login_verify_otp_success,application,2025-12-24,07:51:11.520000,22:11:48.838000,4,,4,Wednesday
-login_verify_otp_success,application,2025-12-25,09:38:32.200000,16:25:18.316000,6,,6,Thursday
+login_verify_otp_success,application,2025-12-22,17:38:31.616000,23:58:12.231000,3,,3,Monday
+login_verify_otp_success,application,2025-12-23,11:21:21.521000,17:01:39.189000,3,,3,Tuesday
+login_verify_otp_success,application,2025-12-24,07:51:11.520000,22:11:48.838000,6,,6,Wednesday
+login_verify_otp_success,application,2025-12-25,09:38:32.200000,16:25:18.316000,7,,7,Thursday
 login_verify_otp_success,application,2025-12-26,14:59:43.386000,14:59:43.386000,1,,1,Friday
 login_verify_otp_success,application,2025-12-27,02:11:15.198000,14:18:28.539000,2,,2,Saturday
-login_verify_otp_success,application,2025-12-28,18:36:26.853000,20:54:11.551000,4,,4,Sunday
-login_verify_otp_success,application,2025-12-29,06:58:21.350000,19:57:42.463000,5,,5,Monday
+login_verify_otp_success,application,2025-12-28,09:08:00.362000,20:54:11.551000,5,,5,Sunday
+login_verify_otp_success,application,2025-12-29,06:58:21.350000,19:57:42.463000,10,,10,Monday
 login_verify_otp_success,application,2025-12-30,21:09:08.760000,21:09:08.760000,1,,1,Tuesday
+login_verify_otp_success,application,2026-01-02,13:26:21.392000,16:36:18.022000,2,,2,Friday
 login_verify_otp_success,application,2026-01-03,11:36:20.573000,11:36:20.573000,1,,1,Saturday
 login_verify_otp_success,application,2026-01-04,12:08:29.902000,20:50:53.832000,6,,6,Sunday
-login_verify_otp_success,application,2026-01-05,08:34:00.681000,21:26:04.781000,32,,32,Monday
+login_verify_otp_success,application,2026-01-05,08:34:00.681000,21:26:04.781000,36,,36,Monday
 login_verify_otp_success,application,2026-01-07,12:08:21.978000,20:27:00.283000,3,,3,Wednesday
-login_verify_otp_success,application,2026-01-08,11:34:32.963000,19:55:03.908000,2,,2,Thursday
-login_verify_otp_success,application,2026-01-09,13:01:33.181000,20:59:51.963000,13,,13,Friday
+login_verify_otp_success,application,2026-01-08,11:34:32.963000,19:55:03.908000,3,,3,Thursday
+login_verify_otp_success,application,2026-01-09,13:01:33.181000,22:29:41.200000,14,,14,Friday
 login_verify_otp_success,application,2026-01-10,17:09:34.044000,17:09:34.044000,3,,3,Saturday
 login_verify_otp_success,application,2026-01-15,16:33:26.047000,16:33:26.047000,1,,1,Thursday
-login_verify_otp_success,application,2026-01-16,08:38:48.629000,11:36:40.180000,2,,2,Friday
-login_verify_otp_success,application,2026-01-17,09:46:24.689000,14:17:43.939000,2,,2,Saturday
-login_verify_otp_success,application,2026-01-23,16:12:29.025000,16:12:29.025000,1,,1,Friday
+login_verify_otp_success,application,2026-01-16,08:38:48.629000,13:14:48.808000,3,,3,Friday
+login_verify_otp_success,application,2026-01-17,09:46:24.689000,16:20:14.005000,5,,5,Saturday
+login_verify_otp_success,application,2026-01-23,12:47:59.154000,16:12:29.025000,2,,2,Friday
 login_verify_otp_success,application,2026-01-24,21:51:43.098000,21:51:43.098000,1,,1,Saturday
 login_verify_otp_success,application,2026-01-26,08:41:10.852000,08:41:10.852000,1,,1,Monday
 login_verify_otp_success,application,2026-01-27,10:25:26.658000,15:38:22.794000,3,,3,Tuesday
-login_verify_otp_success,application,2026-01-28,12:18:08.034000,17:49:14.215000,2,,2,Wednesday
+login_verify_otp_success,application,2026-01-28,12:18:08.034000,20:16:19.952000,3,,3,Wednesday
 login_verify_otp_success,application,2026-01-29,12:37:39.330000,20:51:59.739000,4,,4,Thursday
 login_verify_otp_success,application,2026-01-30,19:23:43.134000,20:05:42.531000,2,,2,Friday
 login_verify_otp_success,application,2026-01-31,14:16:31.187000,18:42:15.269000,2,,2,Saturday
 login_verify_otp_success,application,2026-02-02,09:50:47.268000,23:57:51.641000,2,,2,Monday
 login_verify_otp_success,application,2026-02-03,12:43:26.247000,12:43:26.247000,1,,1,Tuesday
-login_verify_otp_success,application,2026-02-04,11:24:51.745000,11:24:51.745000,1,,1,Wednesday
+login_verify_otp_success,application,2026-02-04,11:24:51.745000,12:30:29.264000,2,,2,Wednesday
 login_verify_otp_success,application,2026-02-05,20:10:12.552000,20:10:12.552000,1,,1,Thursday
-login_verify_otp_success,application,2026-02-06,12:30:50.508000,18:34:38.132000,3,,3,Friday
+login_verify_otp_success,application,2026-02-06,12:30:50.508000,18:34:38.132000,4,,4,Friday
 login_verify_otp_success,application,2026-02-07,23:23:09.231000,23:23:09.231000,1,,1,Saturday
 login_verify_otp_success,application,2026-02-08,15:32:45.875000,15:32:45.875000,1,,1,Sunday
-login_verify_otp_success,application,2026-02-09,13:14:00.841000,13:14:00.841000,1,,1,Monday
-login_verify_otp_success,application,2026-02-10,11:01:07.968000,21:55:42.420000,6,,6,Tuesday
-login_verify_otp_success,application,2026-02-11,09:19:31.113000,20:16:37.074000,8,,8,Wednesday
+login_verify_otp_success,application,2026-02-09,13:14:00.841000,17:40:21.674000,2,,2,Monday
+login_verify_otp_success,application,2026-02-10,11:01:07.968000,21:55:42.420000,10,,10,Tuesday
+login_verify_otp_success,application,2026-02-11,09:19:31.113000,20:16:37.074000,9,,9,Wednesday
 login_verify_otp_success,application,2026-02-12,12:48:58.256000,17:04:33.888000,2,,2,Thursday
 login_verify_otp_success,application,2026-02-13,12:11:45.661000,16:14:25.203000,4,,4,Friday
 login_verify_otp_success,application,2026-02-14,15:14:01.547000,17:38:03.909000,6,,6,Saturday
 login_verify_otp_success,application,2026-02-15,11:02:17.941000,11:02:17.941000,3,,3,Sunday
-login_verify_otp_success,application,2026-02-16,14:06:45.218000,19:28:14.376000,5,,5,Monday
-login_verify_otp_success,application,2026-02-17,16:58:33.501000,17:14:37.204000,2,,2,Tuesday
+login_verify_otp_success,application,2026-02-16,14:06:45.218000,19:28:14.376000,6,,6,Monday
+login_verify_otp_success,application,2026-02-17,08:41:29.038000,17:14:37.204000,4,,4,Tuesday
 login_verify_otp_success,application,2026-02-18,09:26:24.965000,17:24:52.135000,5,,5,Wednesday
 login_verify_otp_success,application,2026-02-19,16:02:20.450000,17:23:18.375000,2,,2,Thursday
 logout,application,2026-01-30,23:27:03.993000,23:27:03.993000,2,,2,Friday
 online_booking_detail_clicked_back_btn,application,2026-02-09,07:43:11.801000,07:43:30.909000,2,,2,Monday
 pageview_bus_list,application,2025-12-15,09:42:27.784000,09:42:27.798000,3,,3,Monday
 passenger_card_clicked,application,2026-01-25,19:46:19.428000,19:57:27.046000,7,,7,Sunday
-select_seat,application,2025-12-02,13:11:46.807000,13:15:10.096000,7,,7,Tuesday
-select_seat,application,2025-12-20,14:14:31.815000,15:52:04.109000,20,,20,Saturday
+select_seat,application,2025-12-02,13:10:37.075000,13:16:30.800000,10,,10,Tuesday
+select_seat,application,2025-12-20,14:14:31.815000,15:52:04.109000,22,,22,Saturday
 select_seat,application,2025-12-22,22:33:27.464000,22:33:27.464000,1,,1,Monday
-select_seat,application,2026-01-25,19:45:06.138000,19:56:57.457000,13,,13,Sunday
+select_seat,application,2026-01-25,19:45:06.138000,19:56:58.090000,15,,15,Sunday
+select_seat,application,2026-02-12,18:20:59.304000,18:20:59.304000,1,,1,Thursday
 smart_ticketing_settings_failed,application,2025-12-07,08:07:13.201000,08:07:13.201000,1,,1,Sunday
 smart_ticketing_settings_failed,application,2025-12-12,10:50:34.881000,10:50:34.881000,1,,1,Friday
 smart_ticketing_settings_failed,application,2025-12-24,16:50:03.448000,16:50:03.448000,1,,1,Wednesday
@@ -2511,248 +1904,249 @@ viewed_cash_settlement_screen,application,2026-02-12,09:36:57.949000,19:28:56.49
 viewed_cash_settlement_screen,application,2026-02-14,13:15:45.427000,13:15:50.039000,3,,3,Saturday
 viewed_cash_settlement_screen,application,2026-02-16,06:17:13.243000,15:18:43.202000,3,,3,Monday
 viewed_cash_settlement_screen,application,2026-02-18,21:22:42.549000,21:22:42.549000,1,,1,Wednesday
-viewed_dashboard_page,application,2025-11-28,07:25:07.731000,18:09:10.132000,18,,18,Friday
-viewed_dashboard_page,application,2025-11-29,07:49:25.092000,22:28:59.905000,28,,28,Saturday
-viewed_dashboard_page,application,2025-11-30,00:16:18.140000,20:13:22.051000,27,,27,Sunday
-viewed_dashboard_page,application,2025-12-01,05:01:13.017000,20:25:39.703000,32,,32,Monday
-viewed_dashboard_page,application,2025-12-02,07:59:05.138000,18:55:37.413000,31,,31,Tuesday
-viewed_dashboard_page,application,2025-12-03,07:01:10.116000,21:34:54.312000,45,,45,Wednesday
-viewed_dashboard_page,application,2025-12-04,05:57:13.849000,23:25:42.641000,28,,28,Thursday
-viewed_dashboard_page,application,2025-12-05,07:23:48.665000,23:33:08.904000,36,,36,Friday
-viewed_dashboard_page,application,2025-12-06,08:17:14.358000,23:00:05.578000,45,,45,Saturday
-viewed_dashboard_page,application,2025-12-07,04:15:14.032000,21:14:29.463000,29,,29,Sunday
-viewed_dashboard_page,application,2025-12-08,07:39:49.181000,19:40:46.268000,39,,39,Monday
-viewed_dashboard_page,application,2025-12-09,00:56:33.413000,20:48:56.633000,37,,37,Tuesday
-viewed_dashboard_page,application,2025-12-10,07:09:43.904000,23:45:02.354000,33,,33,Wednesday
-viewed_dashboard_page,application,2025-12-11,07:44:06.942000,22:59:03.194000,38,,38,Thursday
-viewed_dashboard_page,application,2025-12-12,08:17:06.311000,23:17:34.091000,28,,28,Friday
-viewed_dashboard_page,application,2025-12-13,03:45:51.650000,19:03:01.240000,49,,49,Saturday
-viewed_dashboard_page,application,2025-12-14,05:05:19.907000,22:53:17.396000,31,,31,Sunday
-viewed_dashboard_page,application,2025-12-15,03:08:04.934000,21:17:27.820000,46,,46,Monday
-viewed_dashboard_page,application,2025-12-16,05:46:56.527000,20:26:55.818000,39,,39,Tuesday
-viewed_dashboard_page,application,2025-12-17,07:16:17.122000,20:59:22.889000,53,,53,Wednesday
-viewed_dashboard_page,application,2025-12-18,06:22:58.752000,23:59:28.933000,209,,209,Thursday
-viewed_dashboard_page,application,2025-12-19,05:02:23.444000,23:53:07.381000,230,,230,Friday
-viewed_dashboard_page,application,2025-12-20,00:47:31.111000,22:57:16.171000,258,,258,Saturday
-viewed_dashboard_page,application,2025-12-21,01:15:35.728000,23:15:02.379000,209,,209,Sunday
-viewed_dashboard_page,application,2025-12-22,00:15:32.758000,23:58:12.581000,299,,299,Monday
-viewed_dashboard_page,application,2025-12-23,00:02:50.575000,22:14:46.088000,255,,255,Tuesday
-viewed_dashboard_page,application,2025-12-24,07:06:05.324000,23:22:06.337000,222,,222,Wednesday
-viewed_dashboard_page,application,2025-12-25,00:24:00.380000,22:49:00.272000,316,,316,Thursday
-viewed_dashboard_page,application,2025-12-26,01:06:15.413000,23:45:07.879000,353,,353,Friday
-viewed_dashboard_page,application,2025-12-27,01:33:10.442000,22:29:07.681000,150,,150,Saturday
-viewed_dashboard_page,application,2025-12-28,07:08:18.609000,23:07:17.112000,126,,126,Sunday
-viewed_dashboard_page,application,2025-12-29,03:26:35.739000,23:41:29.413000,135,,135,Monday
-viewed_dashboard_page,application,2025-12-30,05:22:26.886000,23:54:42.380000,134,,134,Tuesday
-viewed_dashboard_page,application,2025-12-31,04:48:45.258000,23:54:45.943000,165,,165,Wednesday
-viewed_dashboard_page,application,2026-01-01,04:47:08.305000,21:14:56.441000,146,,146,Thursday
-viewed_dashboard_page,application,2026-01-02,06:13:03.459000,20:49:10.423000,134,,134,Friday
-viewed_dashboard_page,application,2026-01-03,00:38:34.822000,22:29:12.340000,137,,137,Saturday
-viewed_dashboard_page,application,2026-01-04,04:28:38.134000,23:53:17.790000,222,,222,Sunday
-viewed_dashboard_page,application,2026-01-05,00:00:30.187000,23:15:48.252000,402,,402,Monday
-viewed_dashboard_page,application,2026-01-06,07:57:51.971000,22:59:09.484000,121,,121,Tuesday
-viewed_dashboard_page,application,2026-01-07,05:33:49.675000,22:36:27.717000,153,,153,Wednesday
-viewed_dashboard_page,application,2026-01-08,04:49:46.010000,23:55:02.113000,141,,141,Thursday
-viewed_dashboard_page,application,2026-01-09,07:10:26.486000,23:23:51.966000,177,,177,Friday
-viewed_dashboard_page,application,2026-01-10,00:00:12.710000,23:22:37.493000,133,,133,Saturday
-viewed_dashboard_page,application,2026-01-11,04:06:06.263000,22:57:06.355000,118,,118,Sunday
-viewed_dashboard_page,application,2026-01-12,02:54:44.267000,22:18:59.684000,135,,135,Monday
-viewed_dashboard_page,application,2026-01-13,07:19:15.876000,22:35:56.147000,134,,134,Tuesday
-viewed_dashboard_page,application,2026-01-14,00:24:21.158000,23:14:35.845000,173,,173,Wednesday
-viewed_dashboard_page,application,2026-01-15,06:19:23.857000,22:42:05.161000,124,,124,Thursday
-viewed_dashboard_page,application,2026-01-16,06:30:34.982000,22:36:24.817000,172,,172,Friday
-viewed_dashboard_page,application,2026-01-17,00:46:42.735000,22:58:03.311000,153,,153,Saturday
-viewed_dashboard_page,application,2026-01-18,00:14:55.465000,23:05:45.089000,21,,21,Sunday
-viewed_dashboard_page,application,2026-01-23,04:17:32.107000,22:39:31.357000,130,,130,Friday
-viewed_dashboard_page,application,2026-01-24,01:19:25.377000,21:53:16.621000,125,,125,Saturday
-viewed_dashboard_page,application,2026-01-25,00:01:24.583000,21:45:02.420000,141,,141,Sunday
-viewed_dashboard_page,application,2026-01-26,07:53:45.305000,22:28:45.465000,138,,138,Monday
-viewed_dashboard_page,application,2026-01-27,00:29:47.573000,22:29:56.547000,159,,159,Tuesday
-viewed_dashboard_page,application,2026-01-28,00:17:41.278000,23:40:25.171000,175,,175,Wednesday
-viewed_dashboard_page,application,2026-01-29,00:27:26.614000,23:44:27.368000,193,,193,Thursday
-viewed_dashboard_page,application,2026-01-30,00:07:55.636000,23:06:17.571000,158,,158,Friday
-viewed_dashboard_page,application,2026-01-31,01:33:16.903000,23:24:23.345000,161,,161,Saturday
-viewed_dashboard_page,application,2026-02-01,01:08:22.979000,22:48:11.346000,170,,170,Sunday
-viewed_dashboard_page,application,2026-02-02,01:30:33.333000,23:57:52.074000,174,,174,Monday
-viewed_dashboard_page,application,2026-02-03,00:41:54.577000,23:41:36.960000,220,,220,Tuesday
-viewed_dashboard_page,application,2026-02-04,03:28:22.498000,22:53:15.426000,261,,261,Wednesday
-viewed_dashboard_page,application,2026-02-05,00:17:47.664000,22:51:27.995000,212,,212,Thursday
-viewed_dashboard_page,application,2026-02-06,00:08:08.342000,23:53:27.266000,219,,219,Friday
-viewed_dashboard_page,application,2026-02-07,00:11:00.729000,23:26:24.015000,231,,231,Saturday
-viewed_dashboard_page,application,2026-02-08,00:48:59.758000,23:45:48.536000,189,,189,Sunday
-viewed_dashboard_page,application,2026-02-09,00:48:54.527000,23:35:55.137000,242,,242,Monday
-viewed_dashboard_page,application,2026-02-10,04:59:19.588000,23:34:48.045000,211,,211,Tuesday
-viewed_dashboard_page,application,2026-02-11,00:03:50.963000,23:53:29.274000,211,,211,Wednesday
-viewed_dashboard_page,application,2026-02-12,05:44:53.430000,23:40:05.868000,253,,253,Thursday
-viewed_dashboard_page,application,2026-02-13,00:19:12.942000,22:34:32.984000,223,,223,Friday
-viewed_dashboard_page,application,2026-02-14,01:34:49.422000,23:52:28.772000,215,,215,Saturday
-viewed_dashboard_page,application,2026-02-15,00:30:06.172000,23:37:38.418000,230,,230,Sunday
-viewed_dashboard_page,application,2026-02-16,00:00:33.650000,23:29:30.163000,256,,256,Monday
-viewed_dashboard_page,application,2026-02-17,00:38:21.438000,23:44:23.031000,281,,281,Tuesday
-viewed_dashboard_page,application,2026-02-18,00:44:48.882000,23:58:32.198000,300,,300,Wednesday
-viewed_dashboard_page,application,2026-02-19,02:00:11.206000,23:57:41.228000,268,,268,Thursday
+viewed_dashboard_page,application,2025-11-27,07:43:22.441000,23:08:10.202000,20,,20,Thursday
+viewed_dashboard_page,application,2025-11-28,00:03:49.642000,23:28:06.817000,123,,123,Friday
+viewed_dashboard_page,application,2025-11-29,00:23:35.267000,23:41:03.812000,172,,172,Saturday
+viewed_dashboard_page,application,2025-11-30,00:03:19.774000,23:42:20.443000,159,,159,Sunday
+viewed_dashboard_page,application,2025-12-01,00:17:28.717000,23:26:02.475000,161,,161,Monday
+viewed_dashboard_page,application,2025-12-02,02:57:18.144000,23:21:21.445000,161,,161,Tuesday
+viewed_dashboard_page,application,2025-12-03,00:16:59.496000,23:35:40.954000,206,,206,Wednesday
+viewed_dashboard_page,application,2025-12-04,00:02:44.418000,23:25:42.641000,172,,172,Thursday
+viewed_dashboard_page,application,2025-12-05,00:26:29.441000,23:46:13.427000,205,,205,Friday
+viewed_dashboard_page,application,2025-12-06,02:01:20.849000,23:35:04.353000,181,,181,Saturday
+viewed_dashboard_page,application,2025-12-07,00:42:20.970000,23:49:33.518000,166,,166,Sunday
+viewed_dashboard_page,application,2025-12-08,00:04:21.682000,23:40:55.969000,195,,195,Monday
+viewed_dashboard_page,application,2025-12-09,00:56:33.413000,23:22:03.440000,181,,181,Tuesday
+viewed_dashboard_page,application,2025-12-10,00:52:44.098000,23:45:02.354000,178,,178,Wednesday
+viewed_dashboard_page,application,2025-12-11,01:58:43.351000,23:15:28.991000,203,,203,Thursday
+viewed_dashboard_page,application,2025-12-12,00:13:24.206000,23:55:34.829000,163,,163,Friday
+viewed_dashboard_page,application,2025-12-13,03:45:51.650000,23:25:49.408000,187,,187,Saturday
+viewed_dashboard_page,application,2025-12-14,00:22:56.942000,23:10:52.813000,187,,187,Sunday
+viewed_dashboard_page,application,2025-12-15,00:50:54.887000,23:42:13.785000,215,,215,Monday
+viewed_dashboard_page,application,2025-12-16,01:55:18.856000,23:57:48.424000,226,,226,Tuesday
+viewed_dashboard_page,application,2025-12-17,00:39:03.237000,23:46:06.882000,259,,259,Wednesday
+viewed_dashboard_page,application,2025-12-18,00:03:08.927000,23:59:28.933000,424,,424,Thursday
+viewed_dashboard_page,application,2025-12-19,02:04:27.643000,23:53:07.381000,427,,427,Friday
+viewed_dashboard_page,application,2025-12-20,00:47:31.111000,23:20:51.682000,440,,440,Saturday
+viewed_dashboard_page,application,2025-12-21,00:25:36.976000,23:15:02.379000,376,,376,Sunday
+viewed_dashboard_page,application,2025-12-22,00:15:32.758000,23:58:12.581000,458,,458,Monday
+viewed_dashboard_page,application,2025-12-23,00:00:20.990000,23:56:06.737000,461,,461,Tuesday
+viewed_dashboard_page,application,2025-12-24,02:30:56.593000,23:22:06.337000,372,,372,Wednesday
+viewed_dashboard_page,application,2025-12-25,00:24:00.380000,23:42:26.464000,511,,511,Thursday
+viewed_dashboard_page,application,2025-12-26,00:06:07.942000,23:45:07.879000,551,,551,Friday
+viewed_dashboard_page,application,2025-12-27,00:23:25.308000,22:29:07.681000,275,,275,Saturday
+viewed_dashboard_page,application,2025-12-28,06:42:05.984000,23:35:33.206000,192,,192,Sunday
+viewed_dashboard_page,application,2025-12-29,03:26:35.739000,23:41:29.413000,221,,221,Monday
+viewed_dashboard_page,application,2025-12-30,04:34:07.206000,23:54:42.380000,240,,240,Tuesday
+viewed_dashboard_page,application,2025-12-31,04:48:45.258000,23:54:45.943000,276,,276,Wednesday
+viewed_dashboard_page,application,2026-01-01,00:08:45.751000,23:19:23.136000,226,,226,Thursday
+viewed_dashboard_page,application,2026-01-02,04:31:55.817000,23:42:21.621000,227,,227,Friday
+viewed_dashboard_page,application,2026-01-03,00:38:34.822000,22:59:53.542000,212,,212,Saturday
+viewed_dashboard_page,application,2026-01-04,04:28:38.134000,23:53:17.790000,293,,293,Sunday
+viewed_dashboard_page,application,2026-01-05,00:00:30.187000,23:15:48.252000,505,,505,Monday
+viewed_dashboard_page,application,2026-01-06,07:57:51.971000,23:21:32.374000,209,,209,Tuesday
+viewed_dashboard_page,application,2026-01-07,03:59:20.088000,23:00:47.069000,246,,246,Wednesday
+viewed_dashboard_page,application,2026-01-08,00:17:51.466000,23:55:02.113000,246,,246,Thursday
+viewed_dashboard_page,application,2026-01-09,05:02:08.787000,23:57:39.636000,360,,360,Friday
+viewed_dashboard_page,application,2026-01-10,00:00:12.710000,23:42:03.096000,246,,246,Saturday
+viewed_dashboard_page,application,2026-01-11,00:06:30.286000,22:57:06.355000,196,,196,Sunday
+viewed_dashboard_page,application,2026-01-12,02:54:44.267000,22:18:59.684000,227,,227,Monday
+viewed_dashboard_page,application,2026-01-13,04:54:56.104000,22:35:56.147000,229,,229,Tuesday
+viewed_dashboard_page,application,2026-01-14,00:24:21.158000,23:24:43.865000,264,,264,Wednesday
+viewed_dashboard_page,application,2026-01-15,04:21:37.738000,23:37:19.767000,226,,226,Thursday
+viewed_dashboard_page,application,2026-01-16,02:03:12.020000,23:51:08.115000,285,,285,Friday
+viewed_dashboard_page,application,2026-01-17,00:46:42.735000,23:14:11.633000,253,,253,Saturday
+viewed_dashboard_page,application,2026-01-18,00:14:55.465000,23:05:45.089000,35,,35,Sunday
+viewed_dashboard_page,application,2026-01-23,04:04:27.422000,22:39:31.357000,229,,229,Friday
+viewed_dashboard_page,application,2026-01-24,00:37:18.086000,23:58:17.480000,240,,240,Saturday
+viewed_dashboard_page,application,2026-01-25,00:00:43.188000,23:42:51.214000,238,,238,Sunday
+viewed_dashboard_page,application,2026-01-26,00:40:36.779000,22:28:45.465000,214,,214,Monday
+viewed_dashboard_page,application,2026-01-27,00:29:47.573000,23:28:41.959000,272,,272,Tuesday
+viewed_dashboard_page,application,2026-01-28,00:08:54.727000,23:50:42.383000,280,,280,Wednesday
+viewed_dashboard_page,application,2026-01-29,00:11:06.670000,23:58:50.475000,325,,325,Thursday
+viewed_dashboard_page,application,2026-01-30,00:07:55.636000,23:44:42.388000,268,,268,Friday
+viewed_dashboard_page,application,2026-01-31,01:33:16.903000,23:24:23.345000,274,,274,Saturday
+viewed_dashboard_page,application,2026-02-01,00:33:32.616000,23:46:12.299000,276,,276,Sunday
+viewed_dashboard_page,application,2026-02-02,00:29:51.941000,23:57:52.074000,259,,259,Monday
+viewed_dashboard_page,application,2026-02-03,00:41:54.577000,23:49:19.575000,341,,341,Tuesday
+viewed_dashboard_page,application,2026-02-04,00:17:07.225000,23:41:01.934000,442,,442,Wednesday
+viewed_dashboard_page,application,2026-02-05,00:17:47.664000,22:51:27.995000,363,,363,Thursday
+viewed_dashboard_page,application,2026-02-06,00:08:08.342000,23:53:27.266000,382,,382,Friday
+viewed_dashboard_page,application,2026-02-07,00:11:00.729000,23:40:19.144000,393,,393,Saturday
+viewed_dashboard_page,application,2026-02-08,00:48:59.758000,23:55:33.165000,338,,338,Sunday
+viewed_dashboard_page,application,2026-02-09,00:04:10.571000,23:51:36.888000,395,,395,Monday
+viewed_dashboard_page,application,2026-02-10,00:29:50.609000,23:38:41.736000,373,,373,Tuesday
+viewed_dashboard_page,application,2026-02-11,00:03:50.963000,23:53:29.274000,361,,361,Wednesday
+viewed_dashboard_page,application,2026-02-12,00:05:54.949000,23:49:14.627000,389,,389,Thursday
+viewed_dashboard_page,application,2026-02-13,00:19:12.942000,23:56:37.320000,392,,392,Friday
+viewed_dashboard_page,application,2026-02-14,01:34:49.422000,23:52:28.772000,399,,399,Saturday
+viewed_dashboard_page,application,2026-02-15,00:30:06.172000,23:52:35.022000,374,,374,Sunday
+viewed_dashboard_page,application,2026-02-16,00:00:33.650000,23:52:45.652000,399,,399,Monday
+viewed_dashboard_page,application,2026-02-17,00:32:52.544000,23:59:39.390000,456,,456,Tuesday
+viewed_dashboard_page,application,2026-02-18,00:44:48.882000,23:58:32.198000,486,,486,Wednesday
+viewed_dashboard_page,application,2026-02-19,00:12:21.383000,23:57:41.228000,482,,482,Thursday
 viewed_hisab_bus_detail,application,2025-11-27,07:27:57.030000,18:04:14.697000,41,,41,Thursday
-viewed_hisab_bus_detail,application,2025-11-28,00:04:35.976000,23:46:47.984000,546,,546,Friday
-viewed_hisab_bus_detail,application,2025-11-29,00:06:43.438000,23:58:15.907000,441,,441,Saturday
-viewed_hisab_bus_detail,application,2025-11-30,00:43:36.899000,22:48:27.732000,372,,372,Sunday
-viewed_hisab_bus_detail,application,2025-12-01,00:29:02.269000,23:12:40.531000,419,,419,Monday
-viewed_hisab_bus_detail,application,2025-12-02,06:30:46.790000,23:52:57.560000,432,,432,Tuesday
-viewed_hisab_bus_detail,application,2025-12-03,00:19:36.312000,23:40:10.090000,406,,406,Wednesday
-viewed_hisab_bus_detail,application,2025-12-04,05:33:08.942000,23:35:49.839000,524,,524,Thursday
-viewed_hisab_bus_detail,application,2025-12-05,00:27:16.799000,23:36:02.399000,459,,459,Friday
-viewed_hisab_bus_detail,application,2025-12-06,02:25:56.885000,23:53:21.237000,518,,518,Saturday
-viewed_hisab_bus_detail,application,2025-12-07,00:01:55.915000,23:59:20.092000,389,,389,Sunday
-viewed_hisab_bus_detail,application,2025-12-08,00:05:20.621000,22:56:23.929000,476,,476,Monday
-viewed_hisab_bus_detail,application,2025-12-09,00:58:16.632000,22:43:32.775000,505,,505,Tuesday
-viewed_hisab_bus_detail,application,2025-12-10,01:09:08.955000,22:53:02.050000,564,,564,Wednesday
-viewed_hisab_bus_detail,application,2025-12-11,01:17:53.925000,23:17:23.601000,428,,428,Thursday
-viewed_hisab_bus_detail,application,2025-12-12,00:31:50.839000,22:58:14.406000,522,,522,Friday
-viewed_hisab_bus_detail,application,2025-12-13,06:34:45.045000,23:54:28.771000,452,,452,Saturday
-viewed_hisab_bus_detail,application,2025-12-14,00:09:58.431000,23:48:06.427000,574,,574,Sunday
-viewed_hisab_bus_detail,application,2025-12-15,03:09:23.053000,23:34:42.655000,565,,565,Monday
-viewed_hisab_bus_detail,application,2025-12-16,04:19:00.254000,23:48:36.187000,533,,533,Tuesday
-viewed_hisab_bus_detail,application,2025-12-17,00:27:35.195000,23:27:26.437000,440,,440,Wednesday
-viewed_hisab_bus_detail,application,2025-12-18,00:03:42.300000,23:59:56.857000,742,,742,Thursday
-viewed_hisab_bus_detail,application,2025-12-19,00:53:40.878000,23:36:42.505000,1062,,1062,Friday
-viewed_hisab_bus_detail,application,2025-12-20,02:30:22.028000,23:49:16.689000,898,,898,Saturday
-viewed_hisab_bus_detail,application,2025-12-21,04:55:33.529000,23:29:54.053000,906,,906,Sunday
-viewed_hisab_bus_detail,application,2025-12-22,04:35:40.539000,23:38:18.980000,1357,,1357,Monday
-viewed_hisab_bus_detail,application,2025-12-23,00:57:58.531000,23:39:05.473000,1135,,1135,Tuesday
-viewed_hisab_bus_detail,application,2025-12-24,00:06:27.121000,23:59:53.104000,862,,862,Wednesday
-viewed_hisab_bus_detail,application,2025-12-25,00:08:32.143000,22:40:47.390000,958,,958,Thursday
-viewed_hisab_bus_detail,application,2025-12-26,00:50:04.501000,23:11:00.039000,1133,,1133,Friday
-viewed_hisab_bus_detail,application,2025-12-27,05:36:01.552000,23:14:32.114000,633,,633,Saturday
-viewed_hisab_bus_detail,application,2025-12-28,05:59:40.890000,22:04:22.616000,544,,544,Sunday
-viewed_hisab_bus_detail,application,2025-12-29,00:38:44.169000,23:41:42.397000,522,,522,Monday
-viewed_hisab_bus_detail,application,2025-12-30,05:22:58.422000,23:49:04.445000,631,,631,Tuesday
-viewed_hisab_bus_detail,application,2025-12-31,00:24:14.397000,23:12:14.404000,783,,783,Wednesday
-viewed_hisab_bus_detail,application,2026-01-01,00:12:48.682000,22:25:37.231000,718,,718,Thursday
-viewed_hisab_bus_detail,application,2026-01-02,00:00:32.529000,23:23:18.347000,550,,550,Friday
-viewed_hisab_bus_detail,application,2026-01-03,00:20:34.127000,22:14:48.866000,705,,705,Saturday
-viewed_hisab_bus_detail,application,2026-01-04,06:29:08.729000,22:44:36.543000,980,,980,Sunday
-viewed_hisab_bus_detail,application,2026-01-05,00:00:40.499000,22:00:31.552000,1288,,1288,Monday
-viewed_hisab_bus_detail,application,2026-01-06,07:45:20.304000,23:46:19.380000,453,,453,Tuesday
-viewed_hisab_bus_detail,application,2026-01-07,00:23:41.553000,23:00:54.631000,548,,548,Wednesday
-viewed_hisab_bus_detail,application,2026-01-08,06:39:49.120000,21:52:32.943000,565,,565,Thursday
-viewed_hisab_bus_detail,application,2026-01-09,05:26:34.807000,23:58:46.174000,427,,427,Friday
-viewed_hisab_bus_detail,application,2026-01-10,06:38:10.298000,23:21:19.979000,570,,570,Saturday
-viewed_hisab_bus_detail,application,2026-01-11,00:57:59.827000,22:57:13.712000,466,,466,Sunday
-viewed_hisab_bus_detail,application,2026-01-12,01:24:21.509000,23:53:49.774000,647,,647,Monday
-viewed_hisab_bus_detail,application,2026-01-13,07:18:38.510000,21:37:35.123000,592,,592,Tuesday
-viewed_hisab_bus_detail,application,2026-01-14,00:13:06.232000,22:50:59.439000,642,,642,Wednesday
-viewed_hisab_bus_detail,application,2026-01-15,06:21:06.628000,23:46:21.611000,662,,662,Thursday
-viewed_hisab_bus_detail,application,2026-01-16,00:06:05.921000,23:49:33.348000,505,,505,Friday
-viewed_hisab_bus_detail,application,2026-01-17,00:02:02.837000,21:57:17.808000,597,,597,Saturday
-viewed_hisab_bus_detail,application,2026-01-18,06:10:00.715000,23:00:15.250000,133,,133,Sunday
-viewed_hisab_bus_detail,application,2026-01-23,00:11:20.489000,22:22:07.710000,434,,434,Friday
-viewed_hisab_bus_detail,application,2026-01-24,07:05:58.238000,23:41:54.393000,426,,426,Saturday
-viewed_hisab_bus_detail,application,2026-01-25,01:04:27.939000,23:22:04.839000,489,,489,Sunday
-viewed_hisab_bus_detail,application,2026-01-26,06:16:58.626000,21:36:36.768000,674,,674,Monday
-viewed_hisab_bus_detail,application,2026-01-27,06:13:59.237000,23:29:25.841000,863,,863,Tuesday
-viewed_hisab_bus_detail,application,2026-01-28,07:02:40.691000,23:04:01.374000,492,,492,Wednesday
-viewed_hisab_bus_detail,application,2026-01-29,05:44:01.540000,23:07:47.647000,699,,699,Thursday
-viewed_hisab_bus_detail,application,2026-01-30,07:03:05.922000,23:03:32.553000,397,,397,Friday
-viewed_hisab_bus_detail,application,2026-01-31,00:32:34.292000,22:13:56.542000,436,,436,Saturday
-viewed_hisab_bus_detail,application,2026-02-01,06:28:30.197000,22:56:55.930000,587,,587,Sunday
-viewed_hisab_bus_detail,application,2026-02-02,06:48:49.642000,22:27:20.524000,969,,969,Monday
-viewed_hisab_bus_detail,application,2026-02-03,06:25:45.784000,23:04:23.695000,888,,888,Tuesday
-viewed_hisab_bus_detail,application,2026-02-04,00:18:07.828000,23:50:17.361000,672,,672,Wednesday
-viewed_hisab_bus_detail,application,2026-02-05,00:05:31.579000,23:13:39.857000,574,,574,Thursday
-viewed_hisab_bus_detail,application,2026-02-06,00:38:41.871000,23:32:20.215000,784,,784,Friday
-viewed_hisab_bus_detail,application,2026-02-07,03:34:55.459000,23:32:30.699000,790,,790,Saturday
-viewed_hisab_bus_detail,application,2026-02-08,02:43:55.788000,23:08:48.497000,662,,662,Sunday
-viewed_hisab_bus_detail,application,2026-02-09,03:01:32.922000,23:12:21.336000,935,,935,Monday
-viewed_hisab_bus_detail,application,2026-02-10,06:02:30.354000,23:52:26.039000,736,,736,Tuesday
-viewed_hisab_bus_detail,application,2026-02-11,01:15:14.369000,23:51:30.537000,712,,712,Wednesday
-viewed_hisab_bus_detail,application,2026-02-12,03:41:40.547000,23:58:59.094000,774,,774,Thursday
-viewed_hisab_bus_detail,application,2026-02-13,00:23:56.314000,21:55:20.749000,744,,744,Friday
-viewed_hisab_bus_detail,application,2026-02-14,04:02:12.155000,22:22:10.457000,699,,699,Saturday
-viewed_hisab_bus_detail,application,2026-02-15,00:04:30.773000,22:39:13.017000,877,,877,Sunday
-viewed_hisab_bus_detail,application,2026-02-16,05:41:40.020000,22:36:41.350000,917,,917,Monday
-viewed_hisab_bus_detail,application,2026-02-17,06:28:59.543000,22:18:10.947000,770,,770,Tuesday
-viewed_hisab_bus_detail,application,2026-02-18,00:45:08.906000,23:12:54.944000,857,,857,Wednesday
-viewed_hisab_bus_detail,application,2026-02-19,04:47:58.782000,23:38:15.474000,625,,625,Thursday
-viewed_hisab_page,application,2025-11-27,07:27:59.904000,20:15:57.522000,85,,85,Thursday
-viewed_hisab_page,application,2025-11-28,00:04:50.394000,23:46:50.001000,1900,,1900,Friday
-viewed_hisab_page,application,2025-11-29,00:06:50.290000,23:58:21.634000,4353,,4353,Saturday
-viewed_hisab_page,application,2025-11-30,00:11:20.859000,22:48:30.693000,4399,,4399,Sunday
-viewed_hisab_page,application,2025-12-01,00:29:44.877000,23:30:42.079000,4987,,4987,Monday
-viewed_hisab_page,application,2025-12-02,05:48:14.673000,23:53:00.160000,2492,,2492,Tuesday
-viewed_hisab_page,application,2025-12-03,00:19:37.442000,23:40:13.539000,3304,,3304,Wednesday
-viewed_hisab_page,application,2025-12-04,00:03:14.755000,23:41:48.885000,3206,,3206,Thursday
-viewed_hisab_page,application,2025-12-05,00:27:32.022000,23:36:04.794000,3103,,3103,Friday
-viewed_hisab_page,application,2025-12-06,00:38:27.336000,23:53:24.832000,3760,,3760,Saturday
-viewed_hisab_page,application,2025-12-07,00:19:03.835000,23:56:23.427000,3256,,3256,Sunday
-viewed_hisab_page,application,2025-12-08,00:07:22.999000,22:56:25.444000,3760,,3760,Monday
-viewed_hisab_page,application,2025-12-09,00:24:42.214000,23:12:14.554000,2620,,2620,Tuesday
-viewed_hisab_page,application,2025-12-10,00:12:58.821000,22:53:06.608000,3279,,3279,Wednesday
-viewed_hisab_page,application,2025-12-11,01:17:59.678000,23:55:25.889000,2660,,2660,Thursday
-viewed_hisab_page,application,2025-12-12,00:31:57.937000,22:58:18.684000,2199,,2199,Friday
-viewed_hisab_page,application,2025-12-13,03:46:00.227000,23:54:32.018000,3848,,3848,Saturday
-viewed_hisab_page,application,2025-12-14,00:10:27.258000,23:16:44.214000,3288,,3288,Sunday
-viewed_hisab_page,application,2025-12-15,03:08:45.136000,23:34:44.787000,3280,,3280,Monday
-viewed_hisab_page,application,2025-12-16,06:25:12.312000,23:58:41.818000,2567,,2567,Tuesday
-viewed_hisab_page,application,2025-12-17,00:26:34.385000,23:27:28.694000,2217,,2217,Wednesday
-viewed_hisab_page,application,2025-12-18,00:04:35.886000,23:59:58.803000,6014,,6014,Thursday
-viewed_hisab_page,application,2025-12-19,05:02:26.212000,23:56:04.483000,4905,,4905,Friday
-viewed_hisab_page,application,2025-12-20,00:36:05.093000,23:44:05.105000,4668,,4668,Saturday
-viewed_hisab_page,application,2025-12-21,01:16:05.727000,23:29:56.609000,4500,,4500,Sunday
-viewed_hisab_page,application,2025-12-22,04:34:52.222000,23:43:06.191000,5367,,5367,Monday
-viewed_hisab_page,application,2025-12-23,02:11:01.247000,23:57:06.395000,5265,,5265,Tuesday
-viewed_hisab_page,application,2025-12-24,00:06:47.869000,23:59:54.973000,4748,,4748,Wednesday
-viewed_hisab_page,application,2025-12-25,00:08:34.121000,22:36:46.011000,4427,,4427,Thursday
-viewed_hisab_page,application,2025-12-26,00:00:10.324000,23:45:25.934000,5196,,5196,Friday
-viewed_hisab_page,application,2025-12-27,00:27:09.294000,23:14:33.425000,2787,,2787,Saturday
-viewed_hisab_page,application,2025-12-28,06:20:10.549000,23:42:16.623000,2130,,2130,Sunday
-viewed_hisab_page,application,2025-12-29,00:38:21.525000,23:42:06.976000,2768,,2768,Monday
-viewed_hisab_page,application,2025-12-30,05:22:29.837000,23:49:20.303000,2107,,2107,Tuesday
-viewed_hisab_page,application,2025-12-31,00:19:53.067000,23:59:12.119000,3798,,3798,Wednesday
-viewed_hisab_page,application,2026-01-01,00:09:06.636000,23:59:59.265000,5871,,5871,Thursday
-viewed_hisab_page,application,2026-01-02,00:00:42.587000,23:23:37.036000,2409,,2409,Friday
-viewed_hisab_page,application,2026-01-03,00:38:43.178000,23:59:54.115000,2216,,2216,Saturday
-viewed_hisab_page,application,2026-01-04,00:00:12.343000,23:31:05.456000,2892,,2892,Sunday
-viewed_hisab_page,application,2026-01-05,00:00:35.632000,23:46:17.808000,4542,,4542,Monday
-viewed_hisab_page,application,2026-01-06,07:08:27.877000,23:05:20.094000,3675,,3675,Tuesday
-viewed_hisab_page,application,2026-01-07,00:05:22.492000,23:00:54.884000,2861,,2861,Wednesday
-viewed_hisab_page,application,2026-01-08,04:49:50.833000,23:55:03.497000,3896,,3896,Thursday
-viewed_hisab_page,application,2026-01-09,06:45:32.074000,23:58:47.253000,1654,,1654,Friday
-viewed_hisab_page,application,2026-01-10,00:22:27.159000,23:22:40.741000,2492,,2492,Saturday
-viewed_hisab_page,application,2026-01-11,00:57:24.399000,23:04:15.677000,2237,,2237,Sunday
-viewed_hisab_page,application,2026-01-12,01:24:21.928000,23:53:50.827000,2588,,2588,Monday
-viewed_hisab_page,application,2026-01-13,00:11:02.191000,22:59:31.513000,2814,,2814,Tuesday
-viewed_hisab_page,application,2026-01-14,00:16:12.805000,23:24:31.487000,2683,,2683,Wednesday
-viewed_hisab_page,application,2026-01-15,05:34:22.185000,23:18:43.308000,2770,,2770,Thursday
-viewed_hisab_page,application,2026-01-16,00:05:25.866000,23:49:40.168000,2023,,2023,Friday
-viewed_hisab_page,application,2026-01-17,00:00:31.773000,22:58:06.337000,2204,,2204,Saturday
-viewed_hisab_page,application,2026-01-18,06:10:42.767000,23:05:57.090000,207,,207,Sunday
-viewed_hisab_page,application,2026-01-23,00:11:21.363000,23:12:55.412000,1398,,1398,Friday
-viewed_hisab_page,application,2026-01-24,06:34:41.510000,23:42:00.863000,1458,,1458,Saturday
-viewed_hisab_page,application,2026-01-25,01:04:29.005000,23:22:05.531000,2000,,2000,Sunday
-viewed_hisab_page,application,2026-01-26,06:04:14.830000,22:41:29.244000,1790,,1790,Monday
-viewed_hisab_page,application,2026-01-27,00:18:43.399000,23:30:09.027000,2224,,2224,Tuesday
-viewed_hisab_page,application,2026-01-28,02:29:02.021000,23:11:18.159000,1597,,1597,Wednesday
-viewed_hisab_page,application,2026-01-29,01:22:30.942000,23:07:53.447000,2406,,2406,Thursday
-viewed_hisab_page,application,2026-01-30,05:03:49.014000,23:16:03.685000,2575,,2575,Friday
-viewed_hisab_page,application,2026-01-31,00:32:39.364000,23:24:34.181000,1891,,1891,Saturday
-viewed_hisab_page,application,2026-02-01,05:02:39.680000,22:57:00.072000,2227,,2227,Sunday
-viewed_hisab_page,application,2026-02-02,04:45:51.302000,23:04:07.918000,2672,,2672,Monday
-viewed_hisab_page,application,2026-02-03,00:02:54.285000,23:49:52.462000,2478,,2478,Tuesday
-viewed_hisab_page,application,2026-02-04,00:19:05.354000,23:50:19.936000,2740,,2740,Wednesday
-viewed_hisab_page,application,2026-02-05,00:04:24.076000,23:13:41.401000,2930,,2930,Thursday
-viewed_hisab_page,application,2026-02-06,00:38:53.067000,23:42:53.123000,2692,,2692,Friday
-viewed_hisab_page,application,2026-02-07,00:24:02.832000,23:33:37.259000,2217,,2217,Saturday
-viewed_hisab_page,application,2026-02-08,01:17:06.890000,23:56:01.892000,2280,,2280,Sunday
-viewed_hisab_page,application,2026-02-09,03:26:56.783000,23:30:47.468000,2362,,2362,Monday
-viewed_hisab_page,application,2026-02-10,02:04:56.812000,23:52:26.286000,2007,,2007,Tuesday
-viewed_hisab_page,application,2026-02-11,00:29:09.927000,23:51:30.997000,2241,,2241,Wednesday
-viewed_hisab_page,application,2026-02-12,00:37:22.378000,23:59:01.749000,3200,,3200,Thursday
-viewed_hisab_page,application,2026-02-13,00:23:56.930000,23:58:29.115000,2985,,2985,Friday
-viewed_hisab_page,application,2026-02-14,00:16:10.787000,23:52:28.773000,2275,,2275,Saturday
-viewed_hisab_page,application,2026-02-15,00:04:03.552000,22:39:16.385000,2569,,2569,Sunday
-viewed_hisab_page,application,2026-02-16,05:41:16.895000,22:36:43.345000,2998,,2998,Monday
-viewed_hisab_page,application,2026-02-17,00:38:24.229000,22:43:23.897000,2415,,2415,Tuesday
-viewed_hisab_page,application,2026-02-18,00:44:58.245000,23:58:37.823000,2404,,2404,Wednesday
-viewed_hisab_page,application,2026-02-19,04:30:23.776000,23:57:42.809000,2854,,2854,Thursday
+viewed_hisab_bus_detail,application,2025-11-28,00:04:35.976000,23:46:47.984000,574,,574,Friday
+viewed_hisab_bus_detail,application,2025-11-29,00:06:43.438000,23:58:15.907000,457,,457,Saturday
+viewed_hisab_bus_detail,application,2025-11-30,00:43:36.899000,22:48:27.732000,390,,390,Sunday
+viewed_hisab_bus_detail,application,2025-12-01,00:29:02.269000,23:12:40.531000,442,,442,Monday
+viewed_hisab_bus_detail,application,2025-12-02,06:30:46.790000,23:52:57.560000,458,,458,Tuesday
+viewed_hisab_bus_detail,application,2025-12-03,00:19:36.312000,23:40:10.090000,423,,423,Wednesday
+viewed_hisab_bus_detail,application,2025-12-04,05:33:08.942000,23:35:49.839000,549,,549,Thursday
+viewed_hisab_bus_detail,application,2025-12-05,00:27:16.799000,23:36:02.399000,478,,478,Friday
+viewed_hisab_bus_detail,application,2025-12-06,02:25:56.885000,23:53:21.237000,548,,548,Saturday
+viewed_hisab_bus_detail,application,2025-12-07,00:01:55.915000,23:59:20.092000,403,,403,Sunday
+viewed_hisab_bus_detail,application,2025-12-08,00:05:20.621000,22:56:23.929000,498,,498,Monday
+viewed_hisab_bus_detail,application,2025-12-09,00:58:16.632000,22:43:32.775000,534,,534,Tuesday
+viewed_hisab_bus_detail,application,2025-12-10,01:09:08.955000,22:53:02.050000,583,,583,Wednesday
+viewed_hisab_bus_detail,application,2025-12-11,01:17:53.925000,23:17:23.601000,445,,445,Thursday
+viewed_hisab_bus_detail,application,2025-12-12,00:31:50.839000,22:58:14.406000,547,,547,Friday
+viewed_hisab_bus_detail,application,2025-12-13,06:34:45.045000,23:54:28.771000,480,,480,Saturday
+viewed_hisab_bus_detail,application,2025-12-14,00:09:58.431000,23:48:06.427000,596,,596,Sunday
+viewed_hisab_bus_detail,application,2025-12-15,03:09:23.053000,23:34:42.655000,583,,583,Monday
+viewed_hisab_bus_detail,application,2025-12-16,04:19:00.254000,23:48:36.187000,560,,560,Tuesday
+viewed_hisab_bus_detail,application,2025-12-17,00:27:35.195000,23:27:26.437000,467,,467,Wednesday
+viewed_hisab_bus_detail,application,2025-12-18,00:03:42.300000,23:59:56.857000,763,,763,Thursday
+viewed_hisab_bus_detail,application,2025-12-19,00:53:40.878000,23:36:42.505000,1089,,1089,Friday
+viewed_hisab_bus_detail,application,2025-12-20,02:30:22.028000,23:49:16.689000,924,,924,Saturday
+viewed_hisab_bus_detail,application,2025-12-21,04:55:33.529000,23:29:54.053000,926,,926,Sunday
+viewed_hisab_bus_detail,application,2025-12-22,04:35:40.539000,23:38:18.980000,1389,,1389,Monday
+viewed_hisab_bus_detail,application,2025-12-23,00:57:58.531000,23:56:58.701000,1166,,1166,Tuesday
+viewed_hisab_bus_detail,application,2025-12-24,00:06:27.121000,23:59:53.104000,892,,892,Wednesday
+viewed_hisab_bus_detail,application,2025-12-25,00:08:32.143000,22:40:47.390000,989,,989,Thursday
+viewed_hisab_bus_detail,application,2025-12-26,00:31:59.719000,23:11:00.039000,1153,,1153,Friday
+viewed_hisab_bus_detail,application,2025-12-27,05:36:01.552000,23:14:32.114000,648,,648,Saturday
+viewed_hisab_bus_detail,application,2025-12-28,05:59:40.890000,22:04:22.616000,551,,551,Sunday
+viewed_hisab_bus_detail,application,2025-12-29,00:38:44.169000,23:41:42.397000,541,,541,Monday
+viewed_hisab_bus_detail,application,2025-12-30,05:22:58.422000,23:49:04.445000,652,,652,Tuesday
+viewed_hisab_bus_detail,application,2025-12-31,00:24:14.397000,23:12:14.404000,803,,803,Wednesday
+viewed_hisab_bus_detail,application,2026-01-01,00:12:48.682000,22:25:37.231000,728,,728,Thursday
+viewed_hisab_bus_detail,application,2026-01-02,00:00:32.529000,23:23:18.347000,563,,563,Friday
+viewed_hisab_bus_detail,application,2026-01-03,00:20:34.127000,22:41:20.052000,718,,718,Saturday
+viewed_hisab_bus_detail,application,2026-01-04,06:29:08.729000,22:44:36.543000,996,,996,Sunday
+viewed_hisab_bus_detail,application,2026-01-05,00:00:40.499000,22:00:31.552000,1301,,1301,Monday
+viewed_hisab_bus_detail,application,2026-01-06,07:45:20.304000,23:46:19.380000,472,,472,Tuesday
+viewed_hisab_bus_detail,application,2026-01-07,00:23:41.553000,23:00:54.631000,563,,563,Wednesday
+viewed_hisab_bus_detail,application,2026-01-08,06:39:49.120000,21:52:32.943000,584,,584,Thursday
+viewed_hisab_bus_detail,application,2026-01-09,05:26:34.807000,23:58:46.174000,446,,446,Friday
+viewed_hisab_bus_detail,application,2026-01-10,06:38:10.298000,23:21:19.979000,582,,582,Saturday
+viewed_hisab_bus_detail,application,2026-01-11,00:57:59.827000,22:57:13.712000,475,,475,Sunday
+viewed_hisab_bus_detail,application,2026-01-12,01:24:21.509000,23:53:49.774000,670,,670,Monday
+viewed_hisab_bus_detail,application,2026-01-13,07:18:38.510000,22:08:25.870000,610,,610,Tuesday
+viewed_hisab_bus_detail,application,2026-01-14,00:13:06.232000,22:50:59.439000,656,,656,Wednesday
+viewed_hisab_bus_detail,application,2026-01-15,06:21:06.628000,23:46:21.611000,679,,679,Thursday
+viewed_hisab_bus_detail,application,2026-01-16,00:06:05.921000,23:49:33.348000,526,,526,Friday
+viewed_hisab_bus_detail,application,2026-01-17,00:02:02.837000,21:57:17.808000,628,,628,Saturday
+viewed_hisab_bus_detail,application,2026-01-18,06:10:00.715000,23:00:15.250000,134,,134,Sunday
+viewed_hisab_bus_detail,application,2026-01-23,00:11:20.489000,22:22:07.710000,446,,446,Friday
+viewed_hisab_bus_detail,application,2026-01-24,07:05:58.238000,23:41:54.393000,460,,460,Saturday
+viewed_hisab_bus_detail,application,2026-01-25,01:04:27.939000,23:22:04.839000,522,,522,Sunday
+viewed_hisab_bus_detail,application,2026-01-26,06:16:58.626000,21:36:36.768000,713,,713,Monday
+viewed_hisab_bus_detail,application,2026-01-27,06:13:59.237000,23:29:25.841000,881,,881,Tuesday
+viewed_hisab_bus_detail,application,2026-01-28,07:02:40.691000,23:04:01.374000,500,,500,Wednesday
+viewed_hisab_bus_detail,application,2026-01-29,05:44:01.540000,23:07:47.647000,718,,718,Thursday
+viewed_hisab_bus_detail,application,2026-01-30,07:03:05.922000,23:03:32.553000,415,,415,Friday
+viewed_hisab_bus_detail,application,2026-01-31,00:32:34.292000,22:13:56.542000,463,,463,Saturday
+viewed_hisab_bus_detail,application,2026-02-01,06:28:30.197000,22:56:55.930000,597,,597,Sunday
+viewed_hisab_bus_detail,application,2026-02-02,06:48:49.642000,22:27:20.524000,982,,982,Monday
+viewed_hisab_bus_detail,application,2026-02-03,06:25:45.784000,23:04:23.695000,898,,898,Tuesday
+viewed_hisab_bus_detail,application,2026-02-04,00:18:07.828000,23:50:17.361000,688,,688,Wednesday
+viewed_hisab_bus_detail,application,2026-02-05,00:05:31.579000,23:13:39.857000,590,,590,Thursday
+viewed_hisab_bus_detail,application,2026-02-06,00:38:41.871000,23:32:20.215000,801,,801,Friday
+viewed_hisab_bus_detail,application,2026-02-07,03:34:55.459000,23:32:30.699000,802,,802,Saturday
+viewed_hisab_bus_detail,application,2026-02-08,02:43:55.788000,23:08:48.497000,671,,671,Sunday
+viewed_hisab_bus_detail,application,2026-02-09,03:01:32.922000,23:12:21.336000,956,,956,Monday
+viewed_hisab_bus_detail,application,2026-02-10,06:02:30.354000,23:52:26.039000,751,,751,Tuesday
+viewed_hisab_bus_detail,application,2026-02-11,01:15:14.369000,23:51:30.537000,732,,732,Wednesday
+viewed_hisab_bus_detail,application,2026-02-12,03:41:40.547000,23:58:59.094000,791,,791,Thursday
+viewed_hisab_bus_detail,application,2026-02-13,00:23:56.314000,21:55:20.749000,765,,765,Friday
+viewed_hisab_bus_detail,application,2026-02-14,04:02:12.155000,22:22:10.457000,717,,717,Saturday
+viewed_hisab_bus_detail,application,2026-02-15,00:04:30.773000,22:39:13.017000,890,,890,Sunday
+viewed_hisab_bus_detail,application,2026-02-16,05:41:40.020000,22:36:41.350000,933,,933,Monday
+viewed_hisab_bus_detail,application,2026-02-17,06:28:59.543000,23:21:10.497000,792,,792,Tuesday
+viewed_hisab_bus_detail,application,2026-02-18,00:45:08.906000,23:12:54.944000,878,,878,Wednesday
+viewed_hisab_bus_detail,application,2026-02-19,04:47:58.782000,23:38:15.474000,639,,639,Thursday
+viewed_hisab_page,application,2025-11-27,07:27:59.904000,20:15:57.522000,96,,96,Thursday
+viewed_hisab_page,application,2025-11-28,00:04:50.394000,23:46:50.001000,2059,,2059,Friday
+viewed_hisab_page,application,2025-11-29,00:06:50.290000,23:58:21.634000,4521,,4521,Saturday
+viewed_hisab_page,application,2025-11-30,00:11:20.859000,22:48:30.693000,4560,,4560,Sunday
+viewed_hisab_page,application,2025-12-01,00:29:44.877000,23:30:42.079000,5162,,5162,Monday
+viewed_hisab_page,application,2025-12-02,05:48:14.673000,23:53:00.160000,2629,,2629,Tuesday
+viewed_hisab_page,application,2025-12-03,00:19:37.442000,23:40:13.539000,3463,,3463,Wednesday
+viewed_hisab_page,application,2025-12-04,00:03:14.755000,23:41:48.885000,3364,,3364,Thursday
+viewed_hisab_page,application,2025-12-05,00:27:32.022000,23:36:04.794000,3268,,3268,Friday
+viewed_hisab_page,application,2025-12-06,00:38:27.336000,23:53:24.832000,3903,,3903,Saturday
+viewed_hisab_page,application,2025-12-07,00:18:38.679000,23:57:24.508000,3414,,3414,Sunday
+viewed_hisab_page,application,2025-12-08,00:07:15.418000,22:56:25.444000,3916,,3916,Monday
+viewed_hisab_page,application,2025-12-09,00:24:42.214000,23:12:14.554000,2777,,2777,Tuesday
+viewed_hisab_page,application,2025-12-10,00:09:47.376000,22:53:06.608000,3427,,3427,Wednesday
+viewed_hisab_page,application,2025-12-11,01:17:59.678000,23:55:25.889000,2806,,2806,Thursday
+viewed_hisab_page,application,2025-12-12,00:31:57.937000,23:09:53.058000,2335,,2335,Friday
+viewed_hisab_page,application,2025-12-13,03:46:00.227000,23:56:09.731000,4006,,4006,Saturday
+viewed_hisab_page,application,2025-12-14,00:10:27.258000,23:16:44.214000,3411,,3411,Sunday
+viewed_hisab_page,application,2025-12-15,03:08:45.136000,23:34:44.787000,3466,,3466,Monday
+viewed_hisab_page,application,2025-12-16,06:25:12.312000,23:58:41.818000,2716,,2716,Tuesday
+viewed_hisab_page,application,2025-12-17,00:26:34.385000,23:32:55.813000,2373,,2373,Wednesday
+viewed_hisab_page,application,2025-12-18,00:04:35.886000,23:59:58.803000,6194,,6194,Thursday
+viewed_hisab_page,application,2025-12-19,05:02:26.212000,23:56:04.483000,5084,,5084,Friday
+viewed_hisab_page,application,2025-12-20,00:36:05.093000,23:44:05.105000,4840,,4840,Saturday
+viewed_hisab_page,application,2025-12-21,01:16:05.727000,23:29:56.609000,4667,,4667,Sunday
+viewed_hisab_page,application,2025-12-22,04:34:52.222000,23:43:06.191000,5581,,5581,Monday
+viewed_hisab_page,application,2025-12-23,02:11:01.247000,23:57:06.395000,5456,,5456,Tuesday
+viewed_hisab_page,application,2025-12-24,00:06:47.869000,23:59:54.973000,4918,,4918,Wednesday
+viewed_hisab_page,application,2025-12-25,00:08:34.121000,23:10:26.988000,4644,,4644,Thursday
+viewed_hisab_page,application,2025-12-26,00:00:10.324000,23:45:25.934000,5408,,5408,Friday
+viewed_hisab_page,application,2025-12-27,00:27:09.294000,23:14:33.425000,2891,,2891,Saturday
+viewed_hisab_page,application,2025-12-28,06:20:10.549000,23:42:16.623000,2210,,2210,Sunday
+viewed_hisab_page,application,2025-12-29,00:15:36.337000,23:42:06.976000,2860,,2860,Monday
+viewed_hisab_page,application,2025-12-30,05:22:29.837000,23:49:20.303000,2184,,2184,Tuesday
+viewed_hisab_page,application,2025-12-31,00:19:53.067000,23:59:12.119000,3917,,3917,Wednesday
+viewed_hisab_page,application,2026-01-01,00:09:06.636000,23:59:59.265000,5973,,5973,Thursday
+viewed_hisab_page,application,2026-01-02,00:00:42.587000,23:23:37.036000,2527,,2527,Friday
+viewed_hisab_page,application,2026-01-03,00:38:43.178000,23:59:54.115000,2309,,2309,Saturday
+viewed_hisab_page,application,2026-01-04,00:00:12.343000,23:31:05.456000,2985,,2985,Sunday
+viewed_hisab_page,application,2026-01-05,00:00:35.632000,23:55:18.445000,4645,,4645,Monday
+viewed_hisab_page,application,2026-01-06,07:08:27.877000,23:05:20.094000,3793,,3793,Tuesday
+viewed_hisab_page,application,2026-01-07,00:05:22.492000,23:00:54.884000,2976,,2976,Wednesday
+viewed_hisab_page,application,2026-01-08,04:49:50.833000,23:55:03.497000,3999,,3999,Thursday
+viewed_hisab_page,application,2026-01-09,06:45:32.074000,23:58:47.253000,1748,,1748,Friday
+viewed_hisab_page,application,2026-01-10,00:22:27.159000,23:22:40.741000,2597,,2597,Saturday
+viewed_hisab_page,application,2026-01-11,00:57:24.399000,23:04:15.677000,2315,,2315,Sunday
+viewed_hisab_page,application,2026-01-12,01:24:21.928000,23:53:50.827000,2700,,2700,Monday
+viewed_hisab_page,application,2026-01-13,00:10:21.674000,22:59:31.513000,2929,,2929,Tuesday
+viewed_hisab_page,application,2026-01-14,00:16:12.805000,23:24:31.487000,2788,,2788,Wednesday
+viewed_hisab_page,application,2026-01-15,05:34:22.185000,23:18:43.308000,2887,,2887,Thursday
+viewed_hisab_page,application,2026-01-16,00:05:25.866000,23:49:40.168000,2128,,2128,Friday
+viewed_hisab_page,application,2026-01-17,00:00:31.773000,22:58:06.337000,2330,,2330,Saturday
+viewed_hisab_page,application,2026-01-18,06:10:42.767000,23:05:57.090000,216,,216,Sunday
+viewed_hisab_page,application,2026-01-23,00:11:21.363000,23:12:55.412000,1487,,1487,Friday
+viewed_hisab_page,application,2026-01-24,06:34:41.510000,23:42:00.863000,1577,,1577,Saturday
+viewed_hisab_page,application,2026-01-25,01:04:29.005000,23:46:55.271000,2120,,2120,Sunday
+viewed_hisab_page,application,2026-01-26,06:04:14.830000,22:41:29.244000,1918,,1918,Monday
+viewed_hisab_page,application,2026-01-27,00:18:43.399000,23:30:09.027000,2334,,2334,Tuesday
+viewed_hisab_page,application,2026-01-28,02:29:02.021000,23:11:18.159000,1672,,1672,Wednesday
+viewed_hisab_page,application,2026-01-29,01:22:30.942000,23:07:53.447000,2487,,2487,Thursday
+viewed_hisab_page,application,2026-01-30,05:03:49.014000,23:47:01.574000,2681,,2681,Friday
+viewed_hisab_page,application,2026-01-31,00:32:39.364000,23:24:34.181000,1987,,1987,Saturday
+viewed_hisab_page,application,2026-02-01,05:02:39.680000,23:33:57.077000,2318,,2318,Sunday
+viewed_hisab_page,application,2026-02-02,04:45:51.302000,23:04:07.918000,2750,,2750,Monday
+viewed_hisab_page,application,2026-02-03,00:02:54.285000,23:49:52.462000,2553,,2553,Tuesday
+viewed_hisab_page,application,2026-02-04,00:19:05.354000,23:50:19.936000,2818,,2818,Wednesday
+viewed_hisab_page,application,2026-02-05,00:04:24.076000,23:29:15.649000,3019,,3019,Thursday
+viewed_hisab_page,application,2026-02-06,00:38:53.067000,23:42:53.123000,2771,,2771,Friday
+viewed_hisab_page,application,2026-02-07,00:24:02.832000,23:33:37.259000,2301,,2301,Saturday
+viewed_hisab_page,application,2026-02-08,01:17:06.890000,23:56:01.892000,2349,,2349,Sunday
+viewed_hisab_page,application,2026-02-09,03:26:56.783000,23:30:47.468000,2448,,2448,Monday
+viewed_hisab_page,application,2026-02-10,02:04:56.812000,23:52:26.286000,2088,,2088,Tuesday
+viewed_hisab_page,application,2026-02-11,00:29:09.927000,23:51:30.997000,2353,,2353,Wednesday
+viewed_hisab_page,application,2026-02-12,00:37:22.378000,23:59:01.749000,3387,,3387,Thursday
+viewed_hisab_page,application,2026-02-13,00:23:56.930000,23:58:29.115000,3102,,3102,Friday
+viewed_hisab_page,application,2026-02-14,00:16:10.787000,23:52:28.773000,2385,,2385,Saturday
+viewed_hisab_page,application,2026-02-15,00:03:44.197000,22:39:16.385000,2677,,2677,Sunday
+viewed_hisab_page,application,2026-02-16,05:41:16.895000,22:36:43.345000,3123,,3123,Monday
+viewed_hisab_page,application,2026-02-17,00:38:24.229000,22:43:23.897000,2514,,2514,Tuesday
+viewed_hisab_page,application,2026-02-18,00:44:58.245000,23:58:37.823000,2506,,2506,Wednesday
+viewed_hisab_page,application,2026-02-19,04:30:23.776000,23:57:42.809000,2963,,2963,Thursday
 viewed_hisab_trip_detail,application,2025-11-29,16:52:00.746000,16:52:00.746000,1,,1,Saturday
 viewed_hisab_trip_detail,application,2025-11-30,08:39:01.089000,08:39:01.089000,1,,1,Sunday
 viewed_hisab_trip_detail,application,2025-12-01,09:36:22.609000,16:12:21.649000,3,,3,Monday
@@ -2832,19 +2226,19 @@ viewed_hisab_trip_detail,application,2026-02-17,06:29:49.914000,20:42:27.265000,
 viewed_hisab_trip_detail,application,2026-02-18,00:45:30.037000,21:59:16.128000,161,,161,Wednesday
 viewed_hisab_trip_detail,application,2026-02-19,07:00:46.772000,21:53:06.175000,104,,104,Thursday
 viewed_login/signup_page,application,2025-12-04,15:40:09.835000,15:40:09.835000,1,,1,Thursday
-viewed_login/signup_page,application,2025-12-06,10:17:37.342000,10:17:37.342000,1,,1,Saturday
+viewed_login/signup_page,application,2025-12-06,10:17:37.342000,23:30:16.058000,2,,2,Saturday
 viewed_login/signup_page,application,2025-12-13,14:25:39.631000,14:31:41.679000,2,,2,Saturday
 viewed_login/signup_page,application,2025-12-17,12:54:14.512000,19:34:18.809000,5,,5,Wednesday
-viewed_login/signup_page,application,2025-12-18,14:52:43.784000,23:01:06.949000,7,,7,Thursday
+viewed_login/signup_page,application,2025-12-18,14:52:43.784000,23:01:06.949000,8,,8,Thursday
 viewed_login/signup_page,application,2025-12-19,11:33:24.288000,13:45:55.872000,3,,3,Friday
 viewed_login/signup_page,application,2025-12-20,02:43:53.121000,22:51:40.739000,9,,9,Saturday
 viewed_login/signup_page,application,2025-12-21,12:45:13.083000,19:11:55.121000,2,,2,Sunday
 viewed_login/signup_page,application,2025-12-22,17:38:18.202000,23:58:03.401000,3,,3,Monday
-viewed_login/signup_page,application,2025-12-23,11:21:00.792000,17:00:39.169000,3,,3,Tuesday
-viewed_login/signup_page,application,2025-12-24,07:29:18.902000,22:11:27.866000,9,,9,Wednesday
-viewed_login/signup_page,application,2025-12-25,09:37:24.119000,16:24:32.246000,17,,17,Thursday
+viewed_login/signup_page,application,2025-12-23,11:21:00.792000,17:21:22.139000,4,,4,Tuesday
+viewed_login/signup_page,application,2025-12-24,07:29:18.902000,22:11:27.866000,10,,10,Wednesday
+viewed_login/signup_page,application,2025-12-25,09:37:24.119000,23:08:53.444000,18,,18,Thursday
 viewed_login/signup_page,application,2025-12-26,14:59:23.876000,14:59:23.876000,1,,1,Friday
-viewed_login/signup_page,application,2025-12-27,01:05:27.393000,14:18:13.638000,3,,3,Saturday
+viewed_login/signup_page,application,2025-12-27,01:05:27.393000,14:18:13.638000,4,,4,Saturday
 viewed_login/signup_page,application,2025-12-28,09:07:45.146000,20:54:02.537000,12,,12,Sunday
 viewed_login/signup_page,application,2025-12-29,06:57:46.495000,19:01:23.376000,10,,10,Monday
 viewed_login/signup_page,application,2025-12-30,20:57:19.649000,20:57:19.649000,1,,1,Tuesday
@@ -2859,12 +2253,12 @@ viewed_login/signup_page,application,2026-01-10,17:07:52.378000,17:07:52.378000,
 viewed_login/signup_page,application,2026-01-13,08:23:58.949000,14:51:22.736000,2,,2,Tuesday
 viewed_login/signup_page,application,2026-01-14,12:31:19.936000,12:31:19.936000,1,,1,Wednesday
 viewed_login/signup_page,application,2026-01-15,11:29:27.497000,17:19:10.005000,5,,5,Thursday
-viewed_login/signup_page,application,2026-01-16,08:38:10.830000,13:14:30.556000,3,,3,Friday
+viewed_login/signup_page,application,2026-01-16,08:38:10.830000,13:14:30.556000,4,,4,Friday
 viewed_login/signup_page,application,2026-01-17,09:45:32.748000,16:19:52.682000,5,,5,Saturday
 viewed_login/signup_page,application,2026-01-23,12:44:13.121000,16:11:33.166000,2,,2,Friday
 viewed_login/signup_page,application,2026-01-24,21:51:24.009000,21:51:24.009000,1,,1,Saturday
 viewed_login/signup_page,application,2026-01-26,08:40:17.783000,08:40:17.783000,1,,1,Monday
-viewed_login/signup_page,application,2026-01-27,10:24:57.218000,15:38:09.048000,3,,3,Tuesday
+viewed_login/signup_page,application,2026-01-27,10:24:57.218000,15:38:09.048000,5,,5,Tuesday
 viewed_login/signup_page,application,2026-01-28,12:16:31.036000,20:16:02.521000,4,,4,Wednesday
 viewed_login/signup_page,application,2026-01-29,12:37:23.829000,20:48:39.962000,5,,5,Thursday
 viewed_login/signup_page,application,2026-01-30,18:43:43.454000,20:05:32.726000,3,,3,Friday
@@ -2877,7 +2271,7 @@ viewed_login/signup_page,application,2026-02-06,06:21:28.177000,18:34:21.301000,
 viewed_login/signup_page,application,2026-02-07,23:22:49.735000,23:22:49.735000,3,,3,Saturday
 viewed_login/signup_page,application,2026-02-08,15:32:30.852000,15:32:30.852000,2,,2,Sunday
 viewed_login/signup_page,application,2026-02-09,12:58:00.144000,17:37:36.102000,2,,2,Monday
-viewed_login/signup_page,application,2026-02-10,11:00:53.004000,21:55:27.488000,6,,6,Tuesday
+viewed_login/signup_page,application,2026-02-10,10:34:32.708000,21:55:27.488000,7,,7,Tuesday
 viewed_login/signup_page,application,2026-02-11,07:41:05.083000,20:10:44.693000,11,,11,Wednesday
 viewed_login/signup_page,application,2026-02-12,12:47:41.099000,17:03:33.267000,3,,3,Thursday
 viewed_login/signup_page,application,2026-02-13,12:11:08.290000,16:13:59.292000,4,,4,Friday
@@ -3160,6 +2554,7 @@ viewed_null_page,application,2026-02-14,08:11:52.314000,08:11:52.314000,1,,1,Sat
 viewed_null_page,application,2026-02-16,14:19:24.881000,15:36:46.520000,3,,3,Monday
 viewed_null_page,application,2026-02-17,18:32:12.314000,21:27:31.906000,4,,4,Tuesday
 viewed_null_page,application,2026-02-19,06:18:23.079000,11:26:10.720000,3,,3,Thursday
+viewed_offer_discount_page,application,2025-12-02,13:42:43.412000,13:42:43.412000,1,,1,Tuesday
 viewed_offer_discount_page,application,2025-12-06,10:47:57.530000,10:48:32.384000,2,,2,Saturday
 viewed_offer_discount_page,application,2025-12-13,19:04:21.507000,19:04:21.507000,1,,1,Saturday
 viewed_offer_discount_page,application,2025-12-18,16:44:12.475000,16:44:12.475000,1,,1,Thursday
@@ -3212,6 +2607,7 @@ viewed_online_payment_history_page,application,2026-01-09,11:29:39.125000,18:54:
 viewed_online_payment_history_page,application,2026-01-10,14:54:56.314000,14:54:56.314000,1,,1,Saturday
 viewed_online_payment_history_page,application,2026-01-11,06:57:20.791000,20:08:47.707000,4,,4,Sunday
 viewed_online_payment_history_page,application,2026-01-12,07:07:20.567000,19:57:12.263000,4,,4,Monday
+viewed_online_payment_history_page,application,2026-01-13,14:33:48.384000,14:33:48.384000,1,,1,Tuesday
 viewed_online_payment_history_page,application,2026-01-15,07:18:30.646000,21:15:04.644000,4,,4,Thursday
 viewed_online_payment_history_page,application,2026-01-16,11:42:26.380000,18:30:28.547000,8,,8,Friday
 viewed_online_payment_history_page,application,2026-01-17,07:27:40.902000,16:24:25.312000,9,,9,Saturday
@@ -3234,6 +2630,7 @@ viewed_online_payment_history_page,application,2026-02-09,17:15:46.869000,21:29:
 viewed_online_payment_history_page,application,2026-02-10,08:27:12.471000,15:30:52.115000,2,,2,Tuesday
 viewed_online_payment_history_page,application,2026-02-11,13:14:11.123000,19:41:20.235000,2,,2,Wednesday
 viewed_online_payment_history_page,application,2026-02-12,12:08:33.204000,19:27:56.386000,7,,7,Thursday
+viewed_online_payment_history_page,application,2026-02-13,00:42:36.175000,00:42:36.175000,1,,1,Friday
 viewed_online_payment_history_page,application,2026-02-14,10:57:37.238000,10:57:37.238000,1,,1,Saturday
 viewed_online_payment_history_page,application,2026-02-15,13:12:28.826000,13:12:28.826000,1,,1,Sunday
 viewed_online_payment_history_page,application,2026-02-16,00:01:06.698000,18:33:59.348000,5,,5,Monday
@@ -3245,30 +2642,30 @@ viewed_recharge_page,application,2026-01-27,15:47:43.187000,15:55:02.471000,2,,2
 viewed_recharge_page,application,2026-02-10,15:30:38.147000,15:32:08.557000,2,,2,Tuesday
 viewed_recharge_page,application,2026-02-17,18:48:16.514000,18:48:16.514000,1,,1,Tuesday
 viewed_recharge_page,application,2026-02-18,21:34:19.102000,21:34:19.102000,1,,1,Wednesday
-viewed_setting_ticketing_machine_page,application,2025-11-29,08:51:33.596000,08:51:33.596000,1,,1,Saturday
+viewed_setting_ticketing_machine_page,application,2025-11-29,07:48:58.657000,08:51:33.596000,2,,2,Saturday
 viewed_setting_ticketing_machine_page,application,2025-12-01,12:21:12.497000,18:22:39.800000,7,,7,Monday
 viewed_setting_ticketing_machine_page,application,2025-12-03,21:11:57.128000,21:11:57.128000,1,,1,Wednesday
-viewed_setting_ticketing_machine_page,application,2025-12-04,08:33:10.598000,08:33:10.598000,1,,1,Thursday
+viewed_setting_ticketing_machine_page,application,2025-12-04,08:33:10.598000,08:33:12.129000,2,,2,Thursday
 viewed_setting_ticketing_machine_page,application,2025-12-05,22:15:43.443000,22:15:43.443000,1,,1,Friday
 viewed_setting_ticketing_machine_page,application,2025-12-06,10:35:53.939000,17:35:48.546000,10,,10,Saturday
 viewed_setting_ticketing_machine_page,application,2025-12-07,04:25:09.486000,19:25:46.634000,7,,7,Sunday
 viewed_setting_ticketing_machine_page,application,2025-12-08,06:42:15.590000,14:08:28.778000,6,,6,Monday
 viewed_setting_ticketing_machine_page,application,2025-12-09,21:42:48.846000,22:29:44.911000,17,,17,Tuesday
 viewed_setting_ticketing_machine_page,application,2025-12-10,11:44:29.667000,21:14:40.919000,11,,11,Wednesday
-viewed_setting_ticketing_machine_page,application,2025-12-11,08:30:43.830000,18:35:34.377000,58,,58,Thursday
-viewed_setting_ticketing_machine_page,application,2025-12-12,09:20:10.363000,19:37:59.247000,11,,11,Friday
+viewed_setting_ticketing_machine_page,application,2025-12-11,08:30:43.830000,18:35:34.377000,59,,59,Thursday
+viewed_setting_ticketing_machine_page,application,2025-12-12,09:20:10.363000,19:38:17.267000,12,,12,Friday
 viewed_setting_ticketing_machine_page,application,2025-12-13,07:54:29.859000,18:26:56.026000,5,,5,Saturday
 viewed_setting_ticketing_machine_page,application,2025-12-14,07:56:32.708000,21:21:30.553000,12,,12,Sunday
-viewed_setting_ticketing_machine_page,application,2025-12-15,08:49:35.402000,23:30:50.477000,54,,54,Monday
+viewed_setting_ticketing_machine_page,application,2025-12-15,08:49:35.402000,23:30:50.477000,55,,55,Monday
 viewed_setting_ticketing_machine_page,application,2025-12-16,10:44:18.203000,21:09:40.946000,23,,23,Tuesday
 viewed_setting_ticketing_machine_page,application,2025-12-17,15:41:02.211000,16:26:29.221000,2,,2,Wednesday
 viewed_setting_ticketing_machine_page,application,2025-12-18,08:27:19.686000,18:44:12.378000,13,,13,Thursday
 viewed_setting_ticketing_machine_page,application,2025-12-19,00:57:06.376000,20:06:18.197000,25,,25,Friday
 viewed_setting_ticketing_machine_page,application,2025-12-20,01:27:56.830000,22:52:26.774000,55,,55,Saturday
 viewed_setting_ticketing_machine_page,application,2025-12-21,07:21:39.291000,22:27:53.344000,27,,27,Sunday
-viewed_setting_ticketing_machine_page,application,2025-12-22,08:18:14.262000,18:15:20.839000,22,,22,Monday
+viewed_setting_ticketing_machine_page,application,2025-12-22,08:18:14.262000,18:15:20.839000,23,,23,Monday
 viewed_setting_ticketing_machine_page,application,2025-12-23,08:37:16.214000,15:30:59.796000,12,,12,Tuesday
-viewed_setting_ticketing_machine_page,application,2025-12-24,06:27:46.769000,20:10:53.359000,15,,15,Wednesday
+viewed_setting_ticketing_machine_page,application,2025-12-24,06:27:46.769000,20:10:53.359000,17,,17,Wednesday
 viewed_setting_ticketing_machine_page,application,2025-12-25,12:16:17.723000,17:48:05.761000,7,,7,Thursday
 viewed_setting_ticketing_machine_page,application,2025-12-26,08:00:03.997000,17:32:13.170000,28,,28,Friday
 viewed_setting_ticketing_machine_page,application,2025-12-27,01:53:22.849000,16:36:39.508000,8,,8,Saturday
@@ -3278,14 +2675,14 @@ viewed_setting_ticketing_machine_page,application,2025-12-30,10:20:08.458000,17:
 viewed_setting_ticketing_machine_page,application,2025-12-31,10:23:46.993000,11:39:09.901000,2,,2,Wednesday
 viewed_setting_ticketing_machine_page,application,2026-01-01,10:17:33.530000,20:47:39.631000,4,,4,Thursday
 viewed_setting_ticketing_machine_page,application,2026-01-02,08:22:57.979000,11:38:25.026000,5,,5,Friday
-viewed_setting_ticketing_machine_page,application,2026-01-03,07:19:25.875000,15:39:36.706000,7,,7,Saturday
+viewed_setting_ticketing_machine_page,application,2026-01-03,07:19:25.875000,15:39:36.706000,8,,8,Saturday
 viewed_setting_ticketing_machine_page,application,2026-01-04,12:10:10.578000,21:25:04.992000,32,,32,Sunday
 viewed_setting_ticketing_machine_page,application,2026-01-05,07:37:15.814000,18:41:17.504000,71,,71,Monday
 viewed_setting_ticketing_machine_page,application,2026-01-06,05:07:27.292000,12:49:28.686000,7,,7,Tuesday
 viewed_setting_ticketing_machine_page,application,2026-01-07,10:20:05.344000,21:32:53.745000,14,,14,Wednesday
 viewed_setting_ticketing_machine_page,application,2026-01-08,09:13:05.564000,09:13:05.564000,1,,1,Thursday
 viewed_setting_ticketing_machine_page,application,2026-01-09,07:58:15.685000,17:45:15.123000,81,,81,Friday
-viewed_setting_ticketing_machine_page,application,2026-01-10,17:23:34.759000,21:09:16.006000,20,,20,Saturday
+viewed_setting_ticketing_machine_page,application,2026-01-10,17:23:34.759000,21:09:16.006000,21,,21,Saturday
 viewed_setting_ticketing_machine_page,application,2026-01-12,13:49:52.783000,19:21:52.339000,4,,4,Monday
 viewed_setting_ticketing_machine_page,application,2026-01-13,08:57:43.867000,16:07:43.006000,69,,69,Tuesday
 viewed_setting_ticketing_machine_page,application,2026-01-14,06:22:21.018000,08:23:48.137000,2,,2,Wednesday
@@ -3303,13 +2700,13 @@ viewed_setting_ticketing_machine_page,application,2026-01-29,11:54:43.193000,22:
 viewed_setting_ticketing_machine_page,application,2026-01-31,12:52:09.805000,20:14:22.865000,4,,4,Saturday
 viewed_setting_ticketing_machine_page,application,2026-02-01,06:35:52.729000,06:36:10.110000,4,,4,Sunday
 viewed_setting_ticketing_machine_page,application,2026-02-02,13:26:48.243000,20:33:39.326000,3,,3,Monday
-viewed_setting_ticketing_machine_page,application,2026-02-03,09:51:27.764000,09:51:37.553000,2,,2,Tuesday
+viewed_setting_ticketing_machine_page,application,2026-02-03,09:50:54.586000,09:51:37.553000,4,,4,Tuesday
 viewed_setting_ticketing_machine_page,application,2026-02-04,06:40:08.072000,20:21:00.788000,7,,7,Wednesday
-viewed_setting_ticketing_machine_page,application,2026-02-05,11:41:15.653000,23:36:52.991000,2,,2,Thursday
+viewed_setting_ticketing_machine_page,application,2026-02-05,11:41:15.653000,23:37:27.770000,3,,3,Thursday
 viewed_setting_ticketing_machine_page,application,2026-02-06,12:38:51.219000,18:18:57.960000,3,,3,Friday
 viewed_setting_ticketing_machine_page,application,2026-02-07,09:15:11.843000,11:25:05.632000,2,,2,Saturday
 viewed_setting_ticketing_machine_page,application,2026-02-08,02:02:07.541000,10:57:15.918000,3,,3,Sunday
-viewed_setting_ticketing_machine_page,application,2026-02-09,14:49:48.002000,14:50:11.601000,21,,21,Monday
+viewed_setting_ticketing_machine_page,application,2026-02-09,14:49:47.981000,14:50:11.601000,22,,22,Monday
 viewed_setting_ticketing_machine_page,application,2026-02-10,09:25:59.530000,22:28:01.732000,7,,7,Tuesday
 viewed_setting_ticketing_machine_page,application,2026-02-11,10:52:36.205000,23:35:52.489000,31,,31,Wednesday
 viewed_setting_ticketing_machine_page,application,2026-02-12,11:56:54.803000,17:08:45.956000,3,,3,Thursday
@@ -3415,6 +2812,6 @@ viewed_view_route_page_back_btn,application,2025-12-10,11:43:15.693000,11:43:15.
 viewed_view_route_page_back_btn,application,2025-12-13,14:25:13.740000,15:40:24.714000,12,,12,Saturday
 viewed_view_route_page_back_btn,application,2025-12-20,11:09:12.065000,11:09:16.917000,2,,2,Saturday
 viewed_view_route_page_back_btn,application,2026-01-05,14:09:14.246000,14:09:14.246000,2,,2,Monday
-viewed_view_route_page_back_btn,application,2026-01-09,11:55:29.242000,11:55:29.242000,1,,1,Friday
+viewed_view_route_page_back_btn,application,2026-01-09,11:55:29.242000,11:55:41.384000,2,,2,Friday
 viewed_view_route_page_back_btn,application,2026-01-15,16:08:01.800000,16:08:01.800000,1,,1,Thursday
 viewed_view_route_page_back_btn,application,2026-01-23,10:29:49.970000,15:05:21.214000,5,,5,Friday
