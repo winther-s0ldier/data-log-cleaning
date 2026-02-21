@@ -9,17 +9,23 @@ def compiler_node(state: AnalyticsState) -> dict:
     results = state.get("metric_results", {})
     errors = state.get("errors", [])
     summary = state.get("dataset_summary", {})
+    pipeline_type = state.get("pipeline_type", "commuter")
+    is_biz = pipeline_type == "business"
 
     print(f"[Compiler] Received {len(results)} metric results, {len(errors)} errors")
 
-    prompt = f"""You are a senior product analytics consultant with 15 years of experience in mobile app growth,
-retention, and monetisation. You specialise in bus/travel booking platforms.
+    app_type = "bus operator management platform (ApniBus)" if is_biz else "bus ticket booking mobile app"
+    audience = "Operations Manager / CEO" if is_biz else "VP of Product / CTO"
+    scorecard_type = "Operational Health Scorecard" if is_biz else "User Health Scorecard"
+    scorecard_dimensions = "Workflow Completion, System Stability, Growth, Feature Adoption, Push Response" if is_biz else "Acquisition, Activation, Retention, Revenue, Referral (AARRR)"
 
-You have received results from {len(results)} independent analysis agents that each examined a different
-dimension of user behaviour within a bus ticket booking mobile app. Your job is to synthesize these
-individual findings into a single, unified executive report that a VP of Product or CTO can act on.
+    prompt = f"""You are a senior { "operations" if is_biz else "product" } analytics consultant.
+You are synthesising results for a {app_type}.
 
-Dataset summary (application events only, system events excluded):
+You have received results from {len(results)} independent analysis agents. Your job is to 
+synthesize these individual findings into a single, unified executive report that a {audience} can act on.
+
+Dataset summary:
 {json.dumps(summary, indent=2)}
 
 Individual metric results:
@@ -28,35 +34,29 @@ Individual metric results:
         insights = data.get("insights", "No insights")
         prompt += f"\n### {name}\n{insights}\n"
 
-    prompt += """
+    prompt += f"""
 
-CRITICAL FORMATTING RULES — violating any of these will cause rendering failures:
-- Use ONLY HTML tags for formatting: <h3>, <h4>, <ul>, <li>, <p>, <strong>, <em>.
-- Do NOT use markdown syntax anywhere. No **, no *, no ##, no - lists.
-- Do NOT use emoji characters anywhere. Be professional and data-driven.
-- Every paragraph must be wrapped in <p> tags.
-- Every list must use <ul> and <li> tags.
-- Section headers must use <h3> tags. Sub-headers use <h4>.
-- Bold text must use <strong> tags, not **text**.
-- Keep all numbers and percentages precise — round to 1 decimal place.
+CRITICAL FORMATTING RULES:
+- Use ONLY HTML tags: <h3>, <h4>, <ul>, <li>, <p>, <strong>, <em>.
+- Do NOT use markdown or emoji.
+- Precision: Round numbers to 1 decimal place.
 
 Produce a structured executive report with these exact sections:
-1. <h3>Executive Summary</h3> — 3-4 sentences on overall product health, key KPIs, and trajectory.
-2. <h3>Top 5 Critical Findings</h3> — Ranked by business impact. Each finding must cite specific numbers
-   from the metric results. Format as numbered <li> items.
-3. <h3>Cross-Metric Correlations</h3> — Patterns visible across 2+ metrics (e.g., high friction
-   correlating with drop-off, retention tied to session depth). Cite which metrics you are correlating.
-4. <h3>User Health Scorecard</h3> — Rate the app on: Acquisition, Activation, Retention, Revenue,
-   Referral (AARRR framework). Give each a rating (Critical/Needs Work/Healthy) with 1 sentence why.
-5. <h3>Strategic Recommendations</h3> — 5 prioritised actions. Each must have: the problem it solves,
-   the expected impact (quantified), and implementation complexity (Low/Medium/High).
+1. <h3>Executive Summary</h3> — 3-4 sentences on overall { "operational" if is_biz else "product" } health and key KPIs.
+2. <h3>Top 5 Critical Findings</h3> — Ranked by business impact. Cite specific numbers.
+3. <h3>Cross-Metric Correlations</h3> — Patterns visible across 2+ metrics.
+4. <h3>{scorecard_type}</h3> — Rate the platform on: {scorecard_dimensions}. Give each a rating (Critical/Needs Work/Healthy) with 1 sentence why.
+5. <h3>Strategic Recommendations</h3> — 5 prioritised actions with problem, impact, and complexity.
 6. <h3>Quick Wins</h3> — 3 things implementable within a single sprint with highest ROI."""
 
     compiled_insights = call_llm(prompt)
 
     os.makedirs("outputs", exist_ok=True)
-    html = _build_consolidated_html(compiled_insights, results, errors, summary)
-    out_path = "outputs/analytics_report.html"
+    html = _build_consolidated_html(compiled_insights, results, errors, summary, pipeline_type)
+    
+    filename = "business_report.html" if is_biz else "analytics_report.html"
+    out_path = f"outputs/{filename}"
+    
     with open(out_path, "w", encoding="utf-8") as f:
         f.write(html)
 
@@ -67,11 +67,12 @@ Produce a structured executive report with these exact sections:
         "html_path": out_path,
     }
 
-    print(f"[Compiler] Consolidated report -> {out_path}")
+    print(f"[Compiler] Consolidated {pipeline_type} report -> {out_path}")
     return {"compiled_report": compiled}
 
 
 def _clean_markdown(text: str) -> str:
+    # ... (rest of the function remains same, I'll keep the existing implementation)
     text = re.sub(r"```html?\s*\n?", "", text)
     text = re.sub(r"```\s*$", "", text, flags=re.MULTILINE)
     emoji_pattern = re.compile(
@@ -119,13 +120,23 @@ def _clean_markdown(text: str) -> str:
     return text
 
 
-def _build_consolidated_html(exec_insights, results, errors, summary):
+def _build_consolidated_html(exec_insights, results, errors, summary, pipeline_type):
     metric_sections = ""
-    order = [
+    is_biz = pipeline_type == "business"
+    
+    BUSINESS_ORDER = [
+        "workflow_funnels", "event_transitions", "operational_volume", 
+        "growth_trends", "feature_adoption", "push_roi", "business_friction_points",
+        "event_frequency", "temporal_patterns"
+    ]
+    COMMUTER_ORDER = [
         "funnel_analysis", "dropoff_analysis", "friction_points", "session_metrics",
         "retention_analysis", "user_segmentation", "conversion_rates", "time_to_action",
-        "event_frequency", "temporal_patterns", "user_journey_insights",
+        "event_frequency", "temporal_patterns", "user_journey_insights"
     ]
+    
+    order = BUSINESS_ORDER if is_biz else COMMUTER_ORDER
+    
     for name in order:
         if name not in results:
             continue
@@ -162,13 +173,16 @@ def _build_consolidated_html(exec_insights, results, errors, summary):
 
     total_events = summary.get("total_events", 0)
     total_events_fmt = f"{total_events:,}" if isinstance(total_events, int) else str(total_events)
+    
+    report_title = "Operator Analytics Report" if is_biz else "Commuter Analytics Report"
+    user_label = "IDs" if is_biz else "users"
 
     return f"""<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Analytics Report</title>
+    <title>{report_title}</title>
     <script src="https://cdn.plot.ly/plotly-2.35.2.min.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;450;500;600;700&display=swap" rel="stylesheet">
@@ -363,12 +377,12 @@ def _build_consolidated_html(exec_insights, results, errors, summary):
 
     <main class="main">
         <div class="hero">
-            <h1>Analytics Report</h1>
-            <p class="subtitle">{summary.get('date_range_str', 'Date Range Unknown')} • {summary.get('total_users', '?')} users • {total_events_fmt} events</p>
+            <h1>{report_title}</h1>
+            <p class="subtitle">{summary.get('date_range_str', 'Date Range Unknown')} • {summary.get('total_users', '?')} {user_label} • {total_events_fmt} events</p>
         </div>
 
         <div class="kpi-row">
-            <div class="kpi"><div class="value">{summary.get('total_users', '?')}</div><div class="label">Users</div></div>
+            <div class="kpi"><div class="value">{summary.get('total_users', '?')}</div><div class="label">{user_label.capitalize()}</div></div>
             <div class="kpi"><div class="value">{total_events_fmt}</div><div class="label">Events</div></div>
             <div class="kpi"><div class="value">{summary.get('days_covered', '?')}</div><div class="label">Days Covered</div></div>
             <div class="kpi"><div class="value">{summary.get('peak_day', 'N/A')}</div><div class="label">Peak Day</div></div>

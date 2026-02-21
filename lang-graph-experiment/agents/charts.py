@@ -243,3 +243,81 @@ def build_user_journey_chart(ctx):
                       font=dict(family="Inter,sans-serif", size=11, color="#cbd5e1"),
                       paper_bgcolor="#0f172a", plot_bgcolor="#1e293b", height=400, showlegend=False)
     return fig.to_html(include_plotlyjs=False, full_html=False)
+
+
+def build_workflow_chart(ctx):
+    data = ctx.get("workflow_volume", [])
+    if not data:
+        return ""
+    
+    fig = px.pie(
+        names=[d["workflow"] for d in data],
+        values=[d["events"] for d in data],
+        hole=0.45,
+        color_discrete_sequence=px.colors.qualitative.Pastel
+    )
+    fig.update_layout(title=dict(text="Workflow Distribution", font=dict(size=18, color="#e2e8f0")),
+                      font=dict(family="Inter,sans-serif", size=12, color="#cbd5e1"),
+                      paper_bgcolor="#0f172a", plot_bgcolor="#0f172a", height=500,
+                      margin=dict(t=60, b=20))
+    fig.update_traces(textposition='inside', textinfo='percent+label')
+    return fig.to_html(include_plotlyjs=False, full_html=False)
+
+
+def build_transition_chart(ctx):
+    trans = ctx.get("top_transitions", [])[:15]
+    if not trans:
+        return ""
+    
+    fig = go.Figure(go.Bar(
+        y=[f"{t['event_name']} → {t['next_event']}" for t in trans],
+        x=[t["count"] for t in trans],
+        orientation="h",
+        marker=dict(color=[t["count"] for t in trans], colorscale="Cividis")
+    ))
+    fig.update_layout(title=dict(text="Top Event Transitions", font=dict(size=18, color="#e2e8f0")),
+                      font=dict(family="Inter,sans-serif", size=12, color="#cbd5e1"),
+                      paper_bgcolor="#0f172a", plot_bgcolor="#1e293b", height=500,
+                      yaxis=dict(autorange="reversed"), margin=dict(l=250, t=60))
+    return fig.to_html(include_plotlyjs=False, full_html=False)
+
+
+def build_growth_chart(ctx):
+    m = ctx.get("growth_metrics", {})
+    if not m:
+        return ""
+    
+    clr = "#34d399" if m["growth_pct"] >= 0 else "#ef4444"
+    fig = go.Figure(go.Indicator(
+        mode = "number+delta",
+        value = m["current_volume"],
+        delta = {'reference': m["previous_volume"], 'relative': True, 'increasing': {'color': "#34d399"}, 'decreasing': {'color': "#ef4444"}},
+        title = {"text": f"Event Volume (Last {m['period_days']}d vs Prev)", "font": {"size": 18, "color": "#e2e8f0"}},
+        domain = {'x': [0, 1], 'y': [0, 1]}
+    ))
+    fig.update_layout(paper_bgcolor="#0f172a", font=dict(color="#cbd5e1"), height=300)
+    return fig.to_html(include_plotlyjs=False, full_html=False)
+
+
+def build_push_roi_chart(ctx):
+    m = ctx.get("push_metrics", {})
+    if not m:
+        return ""
+    
+    stages = ["Sent", "Delivered", "Clicked"]
+    # Ensure we use the values from the metrics dictionary, matching the tool's output
+    values = [m.get("sent", 0), m.get("delivered", 0), m.get("clicked", 0)]
+    
+    if all(v == 0 for v in values):
+        return "<div style='height:300px; display:flex; align-items:center; justify-content:center; background:#0f172a; color:#94a3b8; border-radius:8px;'>No push notification engagement data detected in this period.</div>"
+    
+    fig = go.Figure(go.Funnel(
+        y=stages, x=values,
+        textinfo="value+percent initial",
+        marker=dict(color=["#818cf8", "#22d3ee", "#34d399"])
+    ))
+    fig.update_layout(title=dict(text="Push Engagement ROI", font=dict(size=18, color="#e2e8f0")),
+                      font=dict(family="Inter,sans-serif", size=12, color="#cbd5e1"),
+                      paper_bgcolor="#0f172a", plot_bgcolor="#0f172a", height=400,
+                      margin=dict(l=150, r=40, t=50, b=40))
+    return fig.to_html(include_plotlyjs=False, full_html=False)

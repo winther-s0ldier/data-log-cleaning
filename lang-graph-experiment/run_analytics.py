@@ -1,25 +1,37 @@
 import os
 import sys
 import time
+import argparse
 
 # Ensure this script works from any cwd by setting paths relative to itself
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
-PROJECT_ROOT = os.path.dirname(SCRIPT_DIR)  # z:\data-log-cleaning
+PROJECT_ROOT = os.path.dirname(SCRIPT_DIR)
 
 
 def main():
+    parser = argparse.ArgumentParser(description="Run LangGraph Analytics Pipeline")
+    parser.add_argument("--type", type=str, choices=["commuter", "business"], default="commuter",
+                        help="Pipeline type: commuter (default) or business")
+    args = parser.parse_args()
+    
+    pipeline_type = args.type
     os.chdir(SCRIPT_DIR)
     sys.path.insert(0, SCRIPT_DIR)
     os.environ["PYTHONIOENCODING"] = "utf-8"
 
-    subset_path = os.path.join(SCRIPT_DIR, "analysis_subset.csv")
+    filename = "analysis_subset.csv" if pipeline_type == "commuter" else "business_analysis_subset.csv"
+    subset_path = os.path.join(SCRIPT_DIR, filename)
 
     if not os.path.exists(subset_path):
         print("=" * 60)
-        print("Step 1: Creating analysis subset...")
+        print(f"Step 1: Creating {pipeline_type} analysis subset...")
         print("=" * 60)
-        from create_subset import create_subset
-        create_subset()
+        if pipeline_type == "commuter":
+            from create_subset import create_subset
+            create_subset()
+        else:
+            from create_business_subset import create_business_subset
+            create_business_subset()
         print()
 
     if not os.path.exists(subset_path):
@@ -27,14 +39,15 @@ def main():
         sys.exit(1)
 
     print("=" * 60)
-    print("Step 2: Building LangGraph pipeline...")
+    print(f"Step 2: Building {pipeline_type.capitalize()} LangGraph pipeline...")
     print("=" * 60)
 
     from agents.graph import build_graph
-    graph = build_graph()
+    graph = build_graph(pipeline_type=pipeline_type)
 
     initial_state = {
         "dataset_path": subset_path,
+        "pipeline_type": pipeline_type,
         "dataset_summary": {},
         "metric_results": {},
         "compiled_report": {},
@@ -43,7 +56,7 @@ def main():
 
     print()
     print("=" * 60)
-    print("Step 3: Executing pipeline...")
+    print(f"Step 3: Executing {pipeline_type} pipeline...")
     print("=" * 60)
 
     start = time.time()

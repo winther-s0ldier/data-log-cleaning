@@ -1,0 +1,114 @@
+{
+  "metric": "operational_volume",
+  "data": {
+    "top_events": [
+      {
+        "event": "viewed_hisab_page",
+        "count": 5720,
+        "pct": 41.16
+      },
+      {
+        "event": "viewed_hisab_bus_detail",
+        "count": 2306,
+        "pct": 16.59
+      },
+      {
+        "event": "viewed_dashboard_page",
+        "count": 1926,
+        "pct": 13.86
+      },
+      {
+        "event": "clicked_hisab_bus_detail_card",
+        "count": 743,
+        "pct": 5.35
+      },
+      {
+        "event": "viewed_hisab_trip_detail",
+        "count": 742,
+        "pct": 5.34
+      },
+      {
+        "event": "clicked_hisab_trip_detail_card",
+        "count": 720,
+        "pct": 5.18
+      },
+      {
+        "event": "clicked_hisab_yestarday_btn",
+        "count": 257,
+        "pct": 1.85
+      },
+      {
+        "event": "home_page_load_error",
+        "count": 206,
+        "pct": 1.48
+      },
+      {
+        "event": "clicked_nav_drawer_menu",
+        "count": 145,
+        "pct": 1.04
+      },
+      {
+        "event": "dashboard_clicked_gps_vistar_se_dekhe_bus_card",
+        "count": 136,
+        "pct": 0.98
+      },
+      {
+        "event": "clicked_hisab_coustom_date_btn",
+        "count": 128,
+        "pct": 0.92
+      },
+      {
+        "event": "viewed_online_payment_history_page",
+        "count": 58,
+        "pct": 0.42
+      },
+      {
+        "event": "viewed_setting_ticketing_machine_page",
+        "count": 49,
+        "pct": 0.35
+      },
+      {
+        "event": "clicked_login_send_otp_btn",
+        "count": 46,
+        "pct": 0.33
+      },
+      {
+        "event": "viewed_login/signup_page",
+        "count": 43,
+        "pct": 0.31
+      },
+      {
+        "event": "viewed_login_page",
+        "count": 38,
+        "pct": 0.27
+      },
+      {
+        "event": "clicked_login_verify_otp",
+        "count": 35,
+        "pct": 0.25
+      },
+      {
+        "event": "login_verify_otp_success",
+        "count": 35,
+        "pct": 0.25
+      },
+      {
+        "event": "clicked_nav_drawer_logout",
+        "count": 34,
+        "pct": 0.24
+      },
+      {
+        "event": "clicked_hisab_today_btn",
+        "count": 32,
+        "pct": 0.23
+      }
+    ],
+    "categories": {
+      "application": 13896
+    },
+    "power": {
+      "status": "User-centric stats unavailable in aggregate dataset"
+    }
+  },
+  "insights": "<h4>Analysis of the Bus Operator Platform Dataset</h4>\n\n<p>The dataset contains a total of <strong>13,896</strong> events recorded between <strong>November 27, 2025</strong> and <strong>February 19, 2026</strong>. All events fall under the <strong>application</strong> category, indicating a focus on user interactions with the application rather than system-driven events.</p>\n\n<h4>Findings</h4>\n\n<h4>VOLUME PROFILE</h4>\n<p>The volume of events is primarily <strong>application-driven</strong>, with all <strong>13,896</strong> events categorized under application usage. There are no indications of system-driven events (such as push or sync), suggesting that the majority of interactions are initiated by users engaging with the platform.</p>\n\n<h4>CRITICAL LOAD</h4>\n<p>The following events generate the most traffic:</p>\n<ul>\n    <li><strong>viewed_hisab_page</strong>: <strong>5,720</strong> events (41.16%)</li>\n    <li><strong>viewed_hisab_bus_detail</strong>: <strong>2,306</strong> events (16.59%)</li>\n    <li><strong>viewed_dashboard_page</strong>: <strong>1,926</strong> events (13.86%)</li>\n    <li><strong>clicked_hisab_bus_detail_card</strong>: <strong>743</strong> events (5.35%)</li>\n    <li><strong>viewed_hisab_trip_detail</strong>: <strong>742</strong> events (5.34%)</li>\n    <li><strong>clicked_hisab_trip_detail_card</strong>: <strong>720</strong> events (5.18%)</li>\n    <li><strong>clicked_hisab_yestarday_btn</strong>: <strong>257</strong> events (1.85%)</li>\n    <li><strong>home_page_load_error</strong>: <strong>206</strong> events (1.48%)</li>\n    <li><strong>clicked_nav_drawer_menu</strong>: <strong>145</strong> events (1.04%)</li>\n    <li><strong>dashboard_clicked_gps_vistar_se_dekhe_bus_card</strong>: <strong>136</strong> events (0.98%)</li>\n</ul>\n\n<h4>INFRASTRUCTURE IMPACT</h4>\n<p>The data indicates significant user engagement, particularly with the <strong>viewed_hisab_page</strong> event, which alone accounts for over 41% of total events. This high volume suggests that the system must be capable of handling peak loads effectively. Given the total volume of <strong>13,896</strong> events, the platform's scalability needs to be assessed to ensure it can accommodate potential spikes in user activity, especially during peak usage periods.</p>"
+}

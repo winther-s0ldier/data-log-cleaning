@@ -1,0 +1,21 @@
+{
+  "metric": "feature_adoption",
+  "data": [
+    {
+      "workflow": "Hisab",
+      "events": 7182,
+      "pct": 51.7
+    },
+    {
+      "workflow": "Dashboard",
+      "events": 1926,
+      "pct": 13.9
+    },
+    {
+      "workflow": "Pricing",
+      "events": 25,
+      "pct": 0.2
+    }
+  ],
+  "insights": "Analysis complete."
+}

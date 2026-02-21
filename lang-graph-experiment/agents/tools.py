@@ -12,7 +12,7 @@ def create_query_tools(df, ctx):
         """Get dataset summary: total events, users, event types, date range, categories."""
         info = {
             "total_events": len(df),
-            "total_users": int(df["user_uuid"].nunique()),
+            "total_users": int(df["user_uuid"].nunique()) if "user_uuid" in df.columns else 0,
             "event_types": int(df["event_name"].nunique()),
             "date_start": str(df["event_time"].min()),
             "date_end": str(df["event_time"].max()),
@@ -24,12 +24,14 @@ def create_query_tools(df, ctx):
     @tool
     def list_event_names(category: str = "") -> str:
         """List unique event names, optionally filtered by category."""
-        sub = df[df["category"] == category] if category else df
+        sub = df[df["category"].str.lower() == category.lower()] if category else df
         return json.dumps(sorted(sub["event_name"].unique().tolist()))
 
     @tool
     def count_users_with_events(event_names: list[str]) -> str:
         """Count users who triggered at least one of the given events."""
+        if "user_uuid" not in df.columns:
+            return json.dumps({"error": "No user_uuid in dataset"})
         ue = df.groupby("user_uuid")["event_name"].apply(set)
         t = set(event_names)
         c = sum(1 for e in ue if e & t)
@@ -42,6 +44,36 @@ def create_query_tools(df, ctx):
         return json.dumps([{"event": e, "count": int(c), "pct": round(c / len(df) * 100, 2)} for e, c in ec.items()])
 
     return [get_dataset_summary, list_event_names, count_users_with_events, get_top_events]
+
+
+def create_business_query_tools(df, ctx):
+    """Business equivalent of query tools (no user-centric metrics)."""
+    @tool
+    def get_business_dataset_summary() -> str:
+        """Get dataset summary for business events: total events, event types, date range."""
+        info = {
+            "total_events": len(df),
+            "event_types": int(df["event_name"].nunique()),
+            "date_start": str(df["event_time"].min()),
+            "date_end": str(df["event_time"].max()),
+            "categories": {k: int(v) for k, v in df["category"].value_counts().items()},
+        }
+        ctx["dataset_summary"] = info
+        return json.dumps(info, indent=2)
+
+    @tool
+    def list_event_names(category: str = "") -> str:
+        """List unique event names, optionally filtered by category."""
+        sub = df[df["category"].str.lower() == category.lower()] if category else df
+        return json.dumps(sorted(sub["event_name"].unique().tolist()))
+
+    @tool
+    def get_top_events(n: int = 20) -> str:
+        """Get top N events by frequency."""
+        ec = df["event_name"].value_counts().head(n)
+        return json.dumps([{"event": e, "count": int(c), "pct": round(c / len(df) * 100, 2)} for e, c in ec.items()])
+
+    return [get_business_dataset_summary, list_event_names, get_top_events]
 
 
 def create_funnel_tools(df, ctx):
@@ -239,13 +271,19 @@ def create_latency_tools(df, ctx):
 def create_frequency_tools(df, ctx):
     @tool
     def compute_frequency_distribution(top_n: int = 20) -> str:
-        """Get event frequency distribution, category breakdown, power user stats."""
+        """Get event frequency distribution, category breakdown, and power user stats."""
         ec = df["event_name"].value_counts()
         top = [{"event":e,"count":int(c),"pct":round(c/len(df)*100,2)} for e,c in ec.head(top_n).items()]
         cat = {k:int(v) for k,v in df["category"].value_counts().items()}
-        uec = df.groupby("user_uuid").size()
-        pw = {"median":int(uec.median()),"p90":int(uec.quantile(0.9)),"p99":int(uec.quantile(0.99)),
-              "max":int(uec.max()),"above_200":int((uec>200).sum())}
+        
+        pw = {}
+        if "user_uuid" in df.columns:
+            uec = df.groupby("user_uuid").size()
+            pw = {"median":int(uec.median()),"p90":int(uec.quantile(0.9)),"p99":int(uec.quantile(0.99)),
+                  "max":int(uec.max()),"above_200":int((uec>200).sum())}
+        else:
+            pw = {"status": "User-centric stats unavailable in aggregate dataset"}
+            
         ctx["frequency_data"] = {"top_events":top,"categories":cat,"power":pw}
         return json.dumps(ctx["frequency_data"], indent=2)
     return [compute_frequency_distribution]
@@ -259,14 +297,23 @@ def create_temporal_tools(df, ctx):
         d = df.copy()
         d["hour"] = d["event_time"].dt.hour
         d["day"] = d["event_time"].dt.day_name()
+        
+        # Check if we have enough data
+        if d.empty:
+            return json.dumps({"error": "No data for temporal analysis"})
+            
         pivot = d.groupby(["day","hour"]).size().reset_index(name="c")
         pivot = pivot.pivot_table(index="day",columns="hour",values="c",fill_value=0)
         pivot = pivot.reindex(DAYS).reindex(columns=range(24),fill_value=0)
+        
         hourly = d.groupby("hour").size()
         daily = d.groupby("day").size().reindex(DAYS)
-        data = {"peak_hour":int(hourly.idxmax()),"off_hour":int(hourly.idxmin()),
-                "peak_day":daily.idxmax(),"low_day":daily.idxmin(),
-                "ratio":round(float(hourly.max()/hourly.min()),1) if hourly.min()>0 else 0}
+        
+        data = {"peak_hour":int(hourly.idxmax()) if not hourly.empty else 0,
+                "off_hour":int(hourly.idxmin()) if not hourly.empty else 0,
+                "peak_day":daily.idxmax() if not daily.dropna().empty else "N/A",
+                "low_day":daily.idxmin() if not daily.dropna().empty else "N/A",
+                "ratio":round(float(hourly.max()/hourly.min()),1) if not hourly.empty and hourly.min()>0 else 0}
         ctx["temporal"] = data
         ctx["temporal_matrix"] = pivot.values.tolist()
         return json.dumps(data, indent=2)
@@ -350,3 +397,103 @@ def create_user_journey_tools(df, ctx):
         return json.dumps(metrics, indent=2)
 
     return [compute_user_journey_stats]
+
+
+def create_workflow_tools(df, ctx):
+    """Aggregate workflow analysis for operator pipeline."""
+    @tool
+    def compute_workflow_volume(workflows: dict[str, list[str]]) -> str:
+        """Compute volume of events per business workflow. workflows: {name: [events]}."""
+        results = []
+        for name, events in workflows.items():
+            count = df[df["event_name"].isin(events)].shape[0]
+            results.append({"workflow": name, "events": count, "pct": round(count / len(df) * 100, 1)})
+        
+        results = sorted(results, key=lambda x: x["events"], reverse=True)
+        ctx["workflow_volume"] = results
+        return json.dumps(results, indent=2)
+    
+    @tool
+    def compute_workflow_funnel(stages: list[dict]) -> str:
+        """Compute global aggregate funnel for a specific workflow (e.g. login). stages: [{name, events}]."""
+        results = []
+        # Since we have no users, we use "Total Occurrences" for each stage
+        # This assumes stages are sequential in nature
+        for s in stages:
+            c = df[df["event_name"].isin(s["events"])].shape[0]
+            results.append({"stage": s["name"], "count": c})
+            
+        for i in range(1, len(results)):
+            prev = results[i-1]["count"]
+            results[i]["conversion"] = round(results[i]["count"] / prev * 100, 1) if prev > 0 else 0
+            
+        ctx["workflow_funnel"] = results
+        return json.dumps(results, indent=2)
+
+    return [compute_workflow_volume, compute_workflow_funnel]
+
+
+def create_transition_tools(df, ctx):
+    @tool
+    def get_top_transitions(min_count: int = 5, top_n: int = 20) -> str:
+        """Identify most common event-to-event transitions globally."""
+        d = df.sort_values("event_time").copy()
+        d["next_event"] = d["event_name"].shift(-1)
+        # Only transitions within a reasonable time gap (e.g. 5 mins)
+        d["next_time"] = d["event_time"].shift(-1)
+        d["gap"] = (d["next_time"] - d["event_time"]).dt.total_seconds()
+        
+        valid = d[(d["gap"] <= 300) & (d["gap"] >= 0)]
+        trans = valid.groupby(["event_name", "next_event"]).size().reset_index(name="count")
+        trans = trans[trans["count"] >= min_count].sort_values("count", ascending=False).head(top_n)
+        
+        results = trans.to_dict(orient="records")
+        ctx["top_transitions"] = results
+        return json.dumps(results, indent=2)
+    return [get_top_transitions]
+
+
+def create_growth_tools(df, ctx):
+    @tool
+    def compute_daily_growth(n_days: int = 7) -> str:
+        """Compare current period event volume with previous period."""
+        d = df.copy()
+        d["date"] = d["event_time"].dt.date
+        max_date = d["date"].max()
+        
+        curr_mask = d["date"] > (max_date - pd.Timedelta(days=n_days))
+        prev_mask = (d["date"] <= (max_date - pd.Timedelta(days=n_days))) & \
+                    (d["date"] > (max_date - pd.Timedelta(days=2*n_days)))
+                    
+        curr_vol = d[curr_mask].shape[0]
+        prev_vol = d[prev_mask].shape[0]
+        
+        growth = round((curr_vol - prev_vol) / prev_vol * 100, 1) if prev_vol > 0 else 0
+        
+        res = {
+            "period_days": n_days,
+            "current_volume": curr_vol,
+            "previous_volume": prev_vol,
+            "growth_pct": growth
+        }
+        ctx["growth_metrics"] = res
+        return json.dumps(res, indent=2)
+    return [compute_daily_growth]
+
+
+def create_push_roi_tools(df, ctx):
+    @tool
+    def get_push_metrics() -> str:
+        """Get global push notification funnel metrics."""
+        push_events = ["Push Sent", "Push Delivered", "Push Impression", "Push Click"]
+        counts = {ev: df[df["event_name"] == ev].shape[0] for ev in push_events}
+        
+        metrics = {
+            "sent": counts["Push Sent"],
+            "delivered": counts["Push Delivered"],
+            "delivery_rate": round(counts["Push Delivered"] / counts["Push Sent"] * 100, 1) if counts["Push Sent"] > 0 else 0,
+            "click_rate": round(counts["Push Click"] / counts["Push Delivered"] * 100, 1) if counts["Push Delivered"] > 0 else 0
+        }
+        ctx["push_metrics"] = metrics
+        return json.dumps(metrics, indent=2)
+    return [get_push_metrics]

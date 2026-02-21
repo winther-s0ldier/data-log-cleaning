@@ -185,7 +185,13 @@ with top_tab_user:
 
     st.divider()
 
-    main_tab1, main_tab2, main_tab3, main_tab4 = st.tabs(["Data", "Analysis", "Session Analysis", "Pattern Discovery"])
+    main_tab1, main_tab2, main_tab3, main_tab4, main_tab5 = st.tabs([
+        "Data", 
+        "Analysis", 
+        "Session Analysis", 
+        "Pattern Discovery",
+        "Global AI Report"
+    ])
 
     with main_tab1:
         render_data_tab(app_user_df, app_user_rep_df, tab_prefix="user")
@@ -198,6 +204,28 @@ with top_tab_user:
 
     with main_tab4:
         app4_pattern_discovery.render_pattern_discovery()
+
+    with main_tab5:
+        st.header("Global AI Report")
+        
+        report_path = "lang-graph-experiment/outputs/analytics_report.html"
+        if os.path.exists(report_path):
+            with open(report_path, "r", encoding="utf-8") as f:
+                html_content = f.read()
+            
+            import streamlit.components.v1 as components
+            components.html(html_content, height=800, scrolling=True)
+            
+            st.download_button(
+                label="Download Full HTML Report",
+                data=html_content,
+                file_name="commuter_analytics_report.html",
+                mime="text/html",
+                key="dl_user_report"
+            )
+        else:
+            st.warning("LangGraph report not found. Please run the analytics pipeline first.")
+            st.code("python lang-graph-experiment/run_analytics.py --type commuter")
 
     st.divider()
     st.caption("All AI analysis is strictly per-user and filtered to application events only.")
@@ -261,7 +289,13 @@ with top_tab_business:
 
     st.divider()
 
-    biz_tab1, biz_tab2, biz_tab3, biz_tab4 = st.tabs(["Data", "AI Analysis", "📊 Operations Analytics", "🔍 Pattern Analysis"])
+    biz_tab1, biz_tab2, biz_tab3, biz_tab4, biz_tab5 = st.tabs([
+        "Data", 
+        "AI Analysis", 
+        "📊 Operations Analytics", 
+        "🔍 Pattern Analysis",
+        "Global AI Report"
+    ])
 
     with biz_tab1:
         render_data_tab(biz_app_df, biz_app_rep_df, tab_prefix="biz")
@@ -313,6 +347,28 @@ with top_tab_business:
     with biz_tab4:
         # Business-specific event pattern analysis
         app4_business_patterns.render_business_pattern_discovery(csv_path=os.path.join(BUSINESS_BASE_DIR, "cleaned_events.csv"))
+
+    with biz_tab5:
+        st.header("Global AI Report")
+        
+        report_path = "lang-graph-experiment/outputs/business_report.html"
+        if os.path.exists(report_path):
+            with open(report_path, "r", encoding="utf-8") as f:
+                html_content = f.read()
+            
+            import streamlit.components.v1 as components
+            components.html(html_content, height=800, scrolling=True)
+            
+            st.download_button(
+                label="Download Full HTML Report",
+                data=html_content,
+                file_name="business_analytics_report.html",
+                mime="text/html",
+                key="dl_biz_report"
+            )
+        else:
+            st.warning("LangGraph report not found. Please run the analytics pipeline first.")
+            st.code("python lang-graph-experiment/run_analytics.py --type business")
 
     st.divider()
     st.caption("Business analytics — aggregate event analysis for bus operators. AI analysis uses a sampled subset of recent events.")

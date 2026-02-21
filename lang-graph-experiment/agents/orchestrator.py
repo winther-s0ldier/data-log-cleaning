@@ -16,9 +16,12 @@ def orchestrator_node(state: AnalyticsState) -> dict:
     # event_day is already in source CSV
     peak_day = df["event_day"].mode()[0] if "event_day" in df.columns else "N/A"
 
+    is_biz = state.get("pipeline_type") == "business"
+    total_users = df["id"].nunique() if is_biz and "id" in df.columns else (df["user_uuid"].nunique() if "user_uuid" in df.columns else 0)
+
     summary = {
         "total_events": len(df),
-        "total_users": df["user_uuid"].nunique(),
+        "total_users": int(total_users),
         "total_event_types": df["event_name"].nunique(),
         "days_covered": (end_date - start_date).days + 1,
         "date_range_str": date_range_str,
@@ -31,7 +34,8 @@ def orchestrator_node(state: AnalyticsState) -> dict:
         "top_events": df["event_name"].value_counts().head(15).to_dict(),
     }
 
-    print(f"[Orchestrator] {summary['total_events']:,} application events | {summary['total_users']:,} users | {summary['total_event_types']} event types")
+    user_label = "IDs" if is_biz else "users"
+    print(f"[Orchestrator] {summary['total_events']:,} application events | {summary['total_users']:,} {user_label} | {summary['total_event_types']} event types")
     print(f"[Orchestrator] Dispatching to metric agents...")
 
     return {"dataset_summary": summary}

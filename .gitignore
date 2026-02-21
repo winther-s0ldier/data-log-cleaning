@@ -9,3 +9,7 @@ __pycache__/
 .streamlit/secrets.toml
 *.env
 .env.*
+
+# Large Raw Data (Kept locally)
+Business Events data.csv
+Commuter Users Event data.csv

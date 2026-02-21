@@ -10,6 +10,7 @@ def merge_dicts(a: dict, b: dict) -> dict:
 
 class AnalyticsState(TypedDict):
     dataset_path: str
+    pipeline_type: str  # "commuter" or "business"
     dataset_summary: dict
     metric_results: Annotated[dict, merge_dicts]
     compiled_report: dict

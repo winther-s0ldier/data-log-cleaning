@@ -1,0 +1,90 @@
+{
+  "metric": "business_friction_points",
+  "data": [
+    {
+      "event": "viewed_hisab_page",
+      "repeat_rate": 43.4,
+      "avg_per_session": 1.0,
+      "total": 5720,
+      "score": 43.4
+    },
+    {
+      "event": "home_page_load_error",
+      "repeat_rate": 40.8,
+      "avg_per_session": 1.0,
+      "total": 206,
+      "score": 40.8
+    },
+    {
+      "event": "login_send_otp_failed",
+      "repeat_rate": 31.2,
+      "avg_per_session": 1.0,
+      "total": 16,
+      "score": 31.2
+    },
+    {
+      "event": "_location_elastic-town-search",
+      "repeat_rate": 25.0,
+      "avg_per_session": 1.0,
+      "total": 12,
+      "score": 25.0
+    },
+    {
+      "event": "viewed_dashboard_page",
+      "repeat_rate": 23.7,
+      "avg_per_session": 1.0,
+      "total": 1926,
+      "score": 23.7
+    },
+    {
+      "event": "viewed_hisab_bus_detail",
+      "repeat_rate": 18.0,
+      "avg_per_session": 1.0,
+      "total": 2306,
+      "score": 18.0
+    },
+    {
+      "event": "viewed_view_route_page_back_btn",
+      "repeat_rate": 16.7,
+      "avg_per_session": 1.0,
+      "total": 18,
+      "score": 16.7
+    },
+    {
+      "event": "viewed_view_route_page",
+      "repeat_rate": 16.7,
+      "avg_per_session": 1.0,
+      "total": 12,
+      "score": 16.7
+    },
+    {
+      "event": "clicked_hisab_coustom_date_btn",
+      "repeat_rate": 13.3,
+      "avg_per_session": 1.0,
+      "total": 128,
+      "score": 13.3
+    },
+    {
+      "event": "clicked_nav_drawer_menu",
+      "repeat_rate": 11.7,
+      "avg_per_session": 1.0,
+      "total": 145,
+      "score": 11.7
+    },
+    {
+      "event": "viewed_setting_ticketing_machine_page",
+      "repeat_rate": 10.2,
+      "avg_per_session": 1.0,
+      "total": 49,
+      "score": 10.2
+    },
+    {
+      "event": "dashboard_clicked_gps_vistar_se_dekhe_bus_card",
+      "repeat_rate": 9.6,
+      "avg_per_session": 1.0,
+      "total": 136,
+      "score": 9.6
+    }
+  ],
+  "insights": "<h4>Analysis of Dataset and Findings</h4>\n\n<p>The dataset includes a total of <strong>13,896 events</strong> across <strong>104 event types</strong> from <strong>November 27, 2025</strong> to <strong>February 19, 2026</strong>. The analysis of friction points in the workflow has identified several events with high repetition rates.</p>\n\n<h4>Top 3 Friction Points</h4>\n\n<ul>\n  <li>\n    <strong>Event:</strong> viewed_hisab_page<br>\n    <strong>Repetition Rate:</strong> 43.4% (5,720 total occurrences)\n    <ul>\n      <li><strong>OPERATIONAL IMPACT:</strong> The high repetition indicates that operators are likely spending additional time reloading or revisiting this page, potentially wasting significant time per session.</li>\n      <li><strong>PROBABLE CAUSE:</strong> This could be due to slow loading times or a lack of clarity on whether the page has loaded successfully.</li>\n      <li><strong>SOLUTION:</strong> Optimize the page load speed and implement a loading indicator to inform operators that the page is processing.</li>\n    </ul>\n  </li>\n  \n  <li>\n    <strong>Event:</strong> home_page_load_error<br>\n    <strong>Repetition Rate:</strong> 40.8% (206 total occurrences)\n    <ul>\n      <li><strong>OPERATIONAL IMPACT:</strong> Operators may be wasting time attempting to reload the home page after encountering errors, leading to frustration and delays.</li>\n      <li><strong>PROBABLE CAUSE:</strong> This may stem from server issues or network instability causing the home page to fail to load properly.</li>\n      <li><strong>SOLUTION:</strong> Improve server reliability and provide error messages with guidance on how to proceed after a load error.</li>\n    </ul>\n  </li>\n  \n  <li>\n    <strong>Event:</strong> login_send_otp_failed<br>\n    <strong>Repetition Rate:</strong> 31.2% (16 total occurrences)\n    <ul>\n      <li><strong>OPERATIONAL IMPACT:</strong> Repeated attempts to send OTPs can lead to delays in logging in, impacting overall efficiency.</li>\n      <li><strong>PROBABLE CAUSE:</strong> This could be due to issues with the OTP service or user input errors.</li>\n      <li><strong>SOLUTION:</strong> Enhance the OTP sending mechanism and provide clear feedback on the status of the OTP request.</li>\n    </ul>\n  </li>\n</ul>\n\n<p>Addressing these friction points will significantly enhance the efficiency of the bus operator's workflow and reduce wasted time due to repetitive actions.</p>"
+}

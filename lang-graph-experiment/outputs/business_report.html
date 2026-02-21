@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operator Analytics Report</title>
+    <script src="https://cdn.plot.ly/plotly-2.35.2.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;450;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+        :root {
+            --bg-primary: #ffffff;
+            --bg-secondary: #f4f4f5;
+            --bg-tertiary: #e4e4e7;
+            --bg-card: #ffffff;
+            --border: #e4e4e7;
+            --border-hover: #d4d4d8;
+            --text-primary: #09090b;
+            --text-secondary: #52525b;
+            --text-muted: #71717a;
+            --accent: #6366f1;
+            --accent-dim: rgba(99,102,241,0.1);
+            --accent-border: rgba(99,102,241,0.2);
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            line-height: 1.65;
+            font-size: 14px;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* Sidebar */
+        .sidebar {
+            position: fixed; top: 0; left: 0; width: 240px; height: 100vh;
+            background: var(--bg-primary);
+            border-right: 1px solid var(--border);
+            padding: 32px 16px 24px;
+            overflow-y: auto; z-index: 100;
+            display: flex; flex-direction: column;
+        }
+        .sidebar-brand {
+            font-size: 13px; font-weight: 600; color: var(--text-muted);
+            text-transform: uppercase; letter-spacing: 1.8px; margin-bottom: 32px;
+            padding: 0 12px;
+        }
+        .nav-section-label {
+            font-size: 11px; font-weight: 500; color: var(--text-muted);
+            text-transform: uppercase; letter-spacing: 1.2px;
+            padding: 0 12px; margin: 24px 0 8px;
+        }
+        .nav-item {
+            display: block; padding: 8px 12px; margin-bottom: 1px;
+            color: var(--text-secondary); text-decoration: none;
+            font-size: 13px; font-weight: 400;
+            border-radius: 6px; transition: all 0.15s ease;
+        }
+        .nav-item:hover {
+            background: var(--accent-dim); color: var(--text-primary);
+        }
+        .nav-item.active {
+            background: var(--accent-dim); color: var(--accent);
+            font-weight: 500;
+        }
+
+        /* Main content */
+        .main {
+            margin-left: 240px; padding: 48px 56px;
+            max-width: 960px;
+        }
+
+        /* Hero */
+        .hero { margin-bottom: 48px; }
+        .hero h1 {
+            font-size: 28px; font-weight: 600; color: var(--text-primary);
+            letter-spacing: -0.5px; margin-bottom: 6px;
+        }
+        .hero .subtitle {
+            font-size: 14px; color: var(--text-muted); font-weight: 400;
+        }
+
+        /* KPI strip */
+        .kpi-row {
+            display: grid; grid-template-columns: repeat(6, 1fr); gap: 12px;
+            margin-bottom: 48px;
+        }
+        .kpi {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 10px; padding: 20px;
+        }
+        .kpi .value {
+            font-size: 24px; font-weight: 600; color: var(--text-primary);
+            font-variant-numeric: tabular-nums;
+        }
+        .kpi .label {
+            font-size: 11px; color: var(--text-muted); margin-top: 4px;
+            text-transform: uppercase; letter-spacing: 0.8px; font-weight: 500;
+        }
+
+        /* Executive summary */
+        .exec-summary {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 12px; padding: 32px;
+            margin-bottom: 48px;
+        }
+        .exec-summary > h2 {
+            font-size: 18px; font-weight: 600; color: var(--text-primary);
+            margin-bottom: 20px; padding-bottom: 16px;
+            border-bottom: 1px solid var(--border);
+        }
+        .exec-summary h3 { font-size: 15px; color: var(--text-primary); margin: 20px 0 8px; font-weight: 600; }
+        .exec-summary h4 { font-size: 14px; color: var(--text-secondary); margin: 14px 0 6px; font-weight: 500; }
+        .exec-summary p { color: var(--text-secondary); margin-bottom: 8px; }
+        .exec-summary li { color: var(--text-secondary); margin-bottom: 5px; margin-left: 16px; }
+        .exec-summary strong { color: var(--text-primary); font-weight: 500; }
+
+        /* Metric card */
+        .metric-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            margin-bottom: 32px;
+            overflow: hidden;
+            transition: border-color 0.2s;
+        }
+        .metric-card:hover { border-color: var(--border-hover); }
+
+        .metric-header {
+            padding: 24px 28px 0;
+        }
+        .metric-header h2 {
+            font-size: 17px; font-weight: 600; color: var(--text-primary);
+            letter-spacing: -0.2px;
+        }
+
+        .chart-container {
+            padding: 8px 16px;
+        }
+        .chart-container .plotly-graph-div { border-radius: 8px; }
+
+        .insights-panel {
+            border-top: 1px solid var(--border);
+            padding: 24px 28px;
+        }
+        .insights-label {
+            font-size: 11px; font-weight: 600; color: var(--text-muted);
+            text-transform: uppercase; letter-spacing: 1px; margin-bottom: 12px;
+        }
+        .insights-body { color: var(--text-secondary); font-size: 13px; line-height: 1.7; }
+        .insights-body h3 { font-size: 14px; color: var(--text-primary); margin: 16px 0 6px; font-weight: 600; }
+        .insights-body h4 { font-size: 13px; color: var(--text-secondary); margin: 12px 0 4px; font-weight: 500; }
+        .insights-body p { margin-bottom: 6px; }
+        .insights-body li { margin-bottom: 4px; margin-left: 16px; }
+        .insights-body strong { color: var(--text-primary); font-weight: 500; }
+
+        /* Error */
+        .error-banner {
+            background: rgba(239,68,68,0.06);
+            border: 1px solid rgba(239,68,68,0.15);
+            border-radius: 10px; padding: 20px; margin-bottom: 32px;
+        }
+        .error-banner h3 { color: #fca5a5; font-size: 14px; margin-bottom: 8px; }
+        .error-banner li { color: #fb7185; margin-left: 16px; font-size: 13px; }
+
+        /* Footer */
+        .footer {
+            text-align: center; padding: 32px 0; color: var(--text-muted);
+            font-size: 12px; border-top: 1px solid var(--border); margin-top: 48px;
+        }
+
+        /* Scrollbar */
+        ::-webkit-scrollbar { width: 5px; }
+        ::-webkit-scrollbar-track { background: var(--bg-primary); }
+        ::-webkit-scrollbar-thumb { background: var(--bg-tertiary); border-radius: 3px; }
+
+        html { scroll-behavior: smooth; }
+
+        @media (max-width: 900px) {
+            .sidebar { display: none; }
+            .main { margin-left: 0; padding: 24px 20px; }
+            .kpi-row { grid-template-columns: repeat(2, 1fr); }
+        }
+    </style>
+</head>
+<body>
+    <nav class="sidebar">
+        <div class="sidebar-brand">Analytics</div>
+        <a href="javascript:void(0)" class="nav-item active" onclick="document.getElementById('executive').scrollIntoView({behavior:'smooth', block:'start'})">Executive Summary</a>
+        <div class="nav-section-label">Metrics</div>
+        <a href="javascript:void(0)" class="nav-item" onclick="document.getElementById('workflow_funnels').scrollIntoView({behavior:'smooth', block:'start'})">Operational Workflow Analysis</a>
+<a href="javascript:void(0)" class="nav-item" onclick="document.getElementById('event_transitions').scrollIntoView({behavior:'smooth', block:'start'})">Top Event Transitions</a>
+<a href="javascript:void(0)" class="nav-item" onclick="document.getElementById('operational_volume').scrollIntoView({behavior:'smooth', block:'start'})">Operational System Volume</a>
+<a href="javascript:void(0)" class="nav-item" onclick="document.getElementById('growth_trends').scrollIntoView({behavior:'smooth', block:'start'})">PoP Growth & Volume Trends</a>
+<a href="javascript:void(0)" class="nav-item" onclick="document.getElementById('feature_adoption').scrollIntoView({behavior:'smooth', block:'start'})">Operator Feature Adoption</a>
+<a href="javascript:void(0)" class="nav-item" onclick="document.getElementById('push_roi').scrollIntoView({behavior:'smooth', block:'start'})">Push Notification Engagement ROI</a>
+<a href="javascript:void(0)" class="nav-item" onclick="document.getElementById('business_friction_points').scrollIntoView({behavior:'smooth', block:'start'})">Operator Process Friction</a>
+<a href="javascript:void(0)" class="nav-item" onclick="document.getElementById('event_frequency').scrollIntoView({behavior:'smooth', block:'start'})">Event Frequency Distribution</a>
+<a href="javascript:void(0)" class="nav-item" onclick="document.getElementById('temporal_patterns').scrollIntoView({behavior:'smooth', block:'start'})">Temporal Usage Patterns</a>
+
+    </nav>
+
+    <main class="main">
+        <div class="hero">
+            <h1>Operator Analytics Report</h1>
+            <p class="subtitle">27 Nov - 19 Feb 2026 • 13896 IDs • 13,896 events</p>
+        </div>
+
+        <div class="kpi-row">
+            <div class="kpi"><div class="value">13896</div><div class="label">Ids</div></div>
+            <div class="kpi"><div class="value">13,896</div><div class="label">Events</div></div>
+            <div class="kpi"><div class="value">85</div><div class="label">Days Covered</div></div>
+            <div class="kpi"><div class="value">N/A</div><div class="label">Peak Day</div></div>
+            <div class="kpi"><div class="value">104</div><div class="label">Event Types</div></div>
+            <div class="kpi"><div class="value">9/9</div><div class="label">Metrics Completed</div></div>
+        </div>
+
+        
+
+        <section class="exec-summary" id="executive">
+            <h2>Executive Summary</h2>
+            <h3>Executive Summary</h3>
+<p>The analysis of the ApniBus platform, covering 13,896 events from November 27, 2025, to February 19, 2026, indicates a robust user interaction focused largely on accounting tasks. Key performance indicators reveal that 41.2% of interactions revolve around the "hisab" feature, with identified friction points showcasing issues that significantly hinder operational efficiency, such as repeated sessions and system load errors. Immediate actions are needed to enhance both the user experience and system reliability to maintain engagement and capitalize on growth trends.</p>
+
+<h3>Top 5 Critical Findings</h3>
+<ul>
+  <li>
+    <strong>High Event Concentration on "hisab" Feature:</strong> 76.8% of total events (10,672) focus on accounting tasks, indicating a strong operational focus but potentially unbalanced feature engagement.
+  </li>
+  <li>
+    <strong>Significant Friction at Login:</strong> 43% drop-off from login page view to OTP request (81 to 46 occurrences) identifies a critical vulnerability in the user journey.
+  </li>
+  <li>
+    <strong>Page Load Errors:</strong> Home page load errors account for 1.5% of total events (206), affecting user satisfaction and workflow efficiency due to repeated reload attempts.
+  </li>
+  <li>
+    <strong>Declining Short-term Engagement:</strong> A 5.5% decline in the 7-day period for event volume indicates a need for intervention to remediate short-term engagement drops.
+  </li>
+  <li>
+    <strong>No Push Notification Success:</strong> A 0% delivery rate for push notifications suggests critical failures in the communication pathway, leading to missed engagement opportunities.
+  </li>
+</ul>
+
+<h3>Cross-Metric Correlations</h3>
+<ul>
+  <li>
+    <strong>User Engagement and Friction:</strong> A strong correlation exists between high event counts (especially on "hisab" features) and friction points such as repeated visits to the "hisab" page, indicating users may be seeking information amidst system inefficiencies, thus highlighting areas for system optimization.
+  </li>
+  <li>
+    <strong>Daily Usage Patterns and Operational Focus:</strong> Temporal analysis reveals peak activity during Fridays at 2 AM, aligning with the significant focus on accounting tasks, suggesting that bus operators are preparing for peak operational periods effectively.
+  </li>
+  <li>
+    <strong>Frustrations in Login Process:</strong> The login funnel drop-off correlates with user dissatisfaction, potentially linking to increased occurrences of error loading on the home page, thereby exacerbating churn issues if not addressed promptly.
+  </li>
+</ul>
+
+<h3>Operational Health Scorecard</h3>
+<ul>
+  <li>
+    <strong>Workflow Completion:</strong> Needs Work - The significant drop-off in the login process indicates that users struggle to complete essential workflows effectively.
+  </li>
+  <li>
+    <strong>System Stability:</strong> Needs Work - The occurrence of home page load errors suggests underlying reliability issues that need immediate resolution.
+  </li>
+  <li>
+    <strong>Growth:</strong> Healthy - The platform shows potential for growth, as indicated by a 6.9% increase in the 14-day period for event volume, signaling a healthy upward trend.
+  </li>
+  <li>
+    <strong>Feature Adoption:</strong> Needs Work - The lack of engagement with certain features, alongside inconsistencies in push notifications, signals inadequate feature utilization among users.
+  </li>
+  <li>
+    <strong>Push Response:</strong> Critical - The absence of successful push notifications indicates a complete failure in reaching users via this channel, necessitating urgent investigation.
+  </li>
+</ul>
+
+<h3>Strategic Recommendations</h3>
+<ul>
+  <li>
+    <strong>Optimize Page Load Speed:</strong> 
+    <em>Problem:</em> Slow loading times on the "hisab" page lead to repeated visits. <em>Impact:</em> Improved user experience and reduced frustration. <em>Complexity:</em> Medium - Requires technical updates.
+  </li>
+  <li>
+    <strong>Enhance Login Process:</strong> 
+    <em>Problem:</em> Significant drop-off in user requests for OTP. <em>Impact:</em> Increased successful logins and user retention. <em>Complexity:</em> Medium - Adjustment to UI/UX design.
+  </li>
+  <li>
+    <strong>Investigate Push Notification Failures:</strong> 
+    <em>Problem:</em> 0% delivery rate harming user engagement. <em>Impact:</em> Restored channel for user communication and increases in usage. <em>Complexity:</em> High - Requires resource allocation for a deep technical dive.
+  </li>
+  <li>
+    <strong>Implement User Feedback Mechanisms:</strong> 
+    <em>Problem:</em> Lack of insights into user experience and areas of frustration. <em>Impact:</em> Valuable data to drive continuous improvement. <em>Complexity:</em> Low - Surveys or feedback forms can be easily integrated.
+  </li>
+  <li>
+    <strong>Conduct Training Sessions:</strong> 
+    <em>Problem:</em> Operators may lack understanding of platform features. <em>Impact:</em> Enhanced feature utilization and user engagement over time. <em>Complexity:</em> Low - Requires scheduling and facilitation.
+  </li>
+</ul>
+
+<h3>Quick Wins</h3>
+<ul>
+  <li>
+    <strong>Implement Temporary Loading Indicators:</strong> Adding loading animations or progress bars on critical pages can improve user perception and patience.
+  </li>
+  <li>
+    <strong>Perform Immediate Error Analysis:</strong> Quickly identify causes of home page load errors to rectify and stabilize user access.
+  </li>
+  <li>
+    <strong>Launch Weekend Promotions:</strong> Take advantage of Friday's peak usage to run quick promotional campaigns that could leverage existing user traffic.
+  </li>
+</ul>
+        </section>
+
+        
+        <section class="metric-card" id="workflow_funnels">
+            <div class="metric-header">
+                <h2>Operational Workflow Analysis</h2>
+            </div>
+            <div class="chart-container"><div>                            <div id="bb5a97f0-9eb0-4ca4-b254-d515bc51031d" class="plotly-graph-div" style="height:500px; width:100%;"></div>            <script type="text/javascript">                window.PLOTLYENV=window.PLOTLYENV || {};                                if (document.getElementById("bb5a97f0-9eb0-4ca4-b254-d515bc51031d")) {                    Plotly.newPlot(                        "bb5a97f0-9eb0-4ca4-b254-d515bc51031d",                        [{"domain":{"x":[0.0,1.0],"y":[0.0,1.0]},"hole":0.45,"hovertemplate":"label=%{label}\u003cbr\u003evalue=%{value}\u003cextra\u003e\u003c\u002fextra\u003e","labels":["Hisab (Accounting)","Dashboard","Login \u002f Auth","Cash Settlement","Push Notifications"],"legendgroup":"","name":"","showlegend":true,"values":{"dtype":"i2","bdata":"sCncCOgABAAAAA=="},"type":"pie","textinfo":"percent+label","textposition":"inside"}],                        {"template":{"data":{"candlestick":[{"decreasing":{"line":{"color":"#000033"}},"increasing":{"line":{"color":"#000032"}},"type":"candlestick"}],"contourcarpet":[{"colorscale":[[0.0,"#000011"],[0.1111111111111111,"#000012"],[0.2222222222222222,"#000013"],[0.3333333333333333,"#000014"],[0.4444444444444444,"#000015"],[0.5555555555555556,"#000016"],[0.6666666666666666,"#000017"],[0.7777777777777778,"#000018"],[0.8888888888888888,"#000019"],[1.0,"#000020"]],"type":"contourcarpet"}],"contour":[{"colorscale":[[0.0,"#000011"],[0.1111111111111111,"#000012"],[0.2222222222222222,"#000013"],[0.3333333333333333,"#000014"],[0.4444444444444444,"#000015"],[0.5555555555555556,"#000016"],[0.6666666666666666,"#000017"],[0.7777777777777778,"#000018"],[0.8888888888888888,"#000019"],[1.0,"#000020"]],"type":"contour"}],"heatmap":[{"colorscale":[[0.0,"#000011"],[0.1111111111111111,"#000012"],[0.2222222222222222,"#000013"],[0.3333333333333333,"#000014"],[0.4444444444444444,"#000015"],[0.5555555555555556,"#000016"],[0.6666666666666666,"#000017"],[0.7777777777777778,"#000018"],[0.8888888888888888,"#000019"],[1.0,"#000020"]],"type":"heatmap"}],"histogram2d":[{"colorscale":[[0.0,"#000011"],[0.1111111111111111,"#000012"],[0.2222222222222222,"#000013"],[0.3333333333333333,"#000014"],[0.4444444444444444,"#000015"],[0.5555555555555556,"#000016"],[0.6666666666666666,"#000017"],[0.7777777777777778,"#000018"],[0.8888888888888888,"#000019"],[1.0,"#000020"]],"type":"histogram2d"}],"icicle":[{"textfont":{"color":"white"},"type":"icicle"}],"sankey":[{"textfont":{"color":"#000036"},"type":"sankey"}],"scatter":[{"marker":{"line":{"width":0}},"type":"scatter"}],"table":[{"cells":{"fill":{"color":"#000038"},"font":{"color":"#000037"},"line":{"color":"#000039"}},"header":{"fill":{"color":"#000040"},"font":{"color":"#000036"},"line":{"color":"#000039"}},"type":"table"}],"waterfall":[{"connector":{"line":{"color":"#000036","width":2}},"decreasing":{"marker":{"color":"#000033"}},"increasing":{"marker":{"color":"#000032"}},"totals":{"marker":{"color":"#000034"}},"type":"waterfall"}]},"layout":{"coloraxis":{"colorscale":[[0.0,"#000011"],[0.1111111111111111,"#000012"],[0.2222222222222222,"#000013"],[0.3333333333333333,"#000014"],[0.4444444444444444,"#000015"],[0.5555555555555556,"#000016"],[0.6666666666666666,"#000017"],[0.7777777777777778,"#000018"],[0.8888888888888888,"#000019"],[1.0,"#000020"]]},"colorscale":{"diverging":[[0.0,"#000021"],[0.1,"#000022"],[0.2,"#000023"],[0.3,"#000024"],[0.4,"#000025"],[0.5,"#000026"],[0.6,"#000027"],[0.7,"#000028"],[0.8,"#000029"],[0.9,"#000030"],[1.0,"#000031"]],"sequential":[[0.0,"#000011"],[0.1111111111111111,"#000012"],[0.2222222222222222,"#000013"],[0.3333333333333333,"#000014"],[0.4444444444444444,"#000015"],[0.5555555555555556,"#000016"],[0.6666666666666666,"#000017"],[0.7777777777777778,"#000018"],[0.8888888888888888,"#000019"],[1.0,"#000020"]],"sequentialminus":[[0.0,"#000011"],[0.1111111111111111,"#000012"],[0.2222222222222222,"#000013"],[0.3333333333333333,"#000014"],[0.4444444444444444,"#000015"],[0.5555555555555556,"#000016"],[0.6666666666666666,"#000017"],[0.7777777777777778,"#000018"],[0.8888888888888888,"#000019"],[1.0,"#000020"]]},"colorway":["#000001","#000002","#000003","#000004","#000005","#000006","#000007","#000008","#000009","#000010"]}},"legend":{"tracegroupgap":0},"margin":{"t":60,"b":20},"piecolorway":["rgb(102, 197, 204)","rgb(246, 207, 113)","rgb(248, 156, 116)","rgb(220, 176, 242)","rgb(135, 197, 95)","rgb(158, 185, 243)","rgb(254, 136, 177)","rgb(201, 219, 116)","rgb(139, 224, 164)","rgb(180, 151, 231)","rgb(179, 179, 179)"],"title":{"font":{"size":18,"color":"#e2e8f0"},"text":"Workflow Distribution"},"font":{"family":"Inter,sans-serif","size":12,"color":"#cbd5e1"},"paper_bgcolor":"#0f172a","plot_bgcolor":"#0f172a","height":500},                        {"responsive": true}                    )                };            </script>        </div></div>
+            <div class="insights-panel">
+                <div class="insights-label">Analysis</div>
+                <div class="insights-body"><h4>Analysis of Bus Operator Management Platform Telemetry</h4>
+
+<p>This analysis is based on the telemetry data collected from the ApniBus platform, covering a total of 13,896 events recorded between November 27, 2025, and February 19, 2026. The following findings are derived from the computed workflows and funnel analysis.</p>
+
+<h4>1. OPERATIONAL FOCUS</h4>
+<p>The workflow with the highest event volume is the <strong>"Hisab (Accounting)"</strong> workflow, which accounted for <strong>10,672 events</strong>, representing <strong>76.8%</strong> of the total events. This indicates that the majority of operator daily tasks revolve around accounting-related activities, suggesting a strong focus on financial tracking and management.</p>
+
+<h4>2. CRITICAL FUNNELS</h4>
+<p>Analyzing the <strong>"Login / Auth"</strong> workflow, we observe the following stages:</p>
+<ul>
+  <li><strong>Page View:</strong> 81 occurrences</li>
+  <li><strong>OTP Request:</strong> 46 occurrences (Conversion: 56.8%)</li>
+  <li><strong>OTP Verify:</strong> 35 occurrences (Conversion: 76.1%)</li>
+  <li><strong>Success:</strong> 35 occurrences (Conversion: 100.0%)</li>
+</ul>
+<p>The biggest drop-off occurs between the <strong>Page View</strong> and <strong>OTP Request</strong> stages, where there is a <strong>43% drop</strong> in occurrences (from 81 to 46). This indicates that a significant number of users are not proceeding to request an OTP after viewing the login page, highlighting a potential area for improvement in user engagement or the login process.</p>
+
+<h4>3. UNTRACKED ACTIVITY</h4>
+<p>There are a total of <strong>0 events</strong> recorded for the <strong>"Push Notifications"</strong> workflow, and only <strong>4 events</strong> for <strong>"Cash Settlement"</strong>. This suggests that there may be significant untracked activity or underutilization of these features. It would be beneficial to explore the following new categories:</p>
+<ul>
+  <li><strong>Push Notifications Engagement:</strong> Track events related to user interactions with push notifications, such as views and actions taken.</li>
+  <li><strong>Cash Settlement Processes:</strong> Monitor events related to cash settlements to understand user interactions and potential issues in this area.</li>
+</ul>
+
+<p>In conclusion, the analysis reveals a strong operational focus on accounting tasks, a critical drop-off in the login funnel, and potential areas for expanding tracking capabilities to enhance user engagement and operational efficiency.</p></div>
+            </div>
+        </section>
+        
+        <section class="metric-card" id="event_transitions">
+            <div class="metric-header">
+                <h2>Top Event Transitions</h2>
+            </div>
+            <div class="chart-container"><div>                            <div id="1b8d5aef-3ff5-4589-81d3-a658529f5b99" class="plotly-graph-div" style="height:500px; width:100%;"></div>            <script type="text/javascript">                window.PLOTLYENV=window.PLOTLYENV || {};                                if (document.getElementById("1b8d5aef-3ff5-4589-81d3-a658529f5b99")) {                    Plotly.newPlot(                        "1b8d5aef-3ff5-4589-81d3-a658529f5b99",                        [{"marker":{"color":[1371,577,534,421,264,208,186,185,178,178,174,168,164,122,122],"colorscale":[[0.0,"#00224e"],[0.1111111111111111,"#123570"],[0.2222222222222222,"#3b496c"],[0.3333333333333333,"#575d6d"],[0.4444444444444444,"#707173"],[0.5555555555555556,"#8a8678"],[0.6666666666666666,"#a59c74"],[0.7777777777777778,"#c3b369"],[0.8888888888888888,"#e1cc55"],[1.0,"#fee838"]]},"orientation":"h","x":[1371,577,534,421,264,208,186,185,178,178,174,168,164,122,122],"y":["viewed_hisab_page → viewed_hisab_page","viewed_hisab_bus_detail → viewed_hisab_page","viewed_hisab_page → viewed_hisab_bus_detail","viewed_dashboard_page → viewed_hisab_page","viewed_hisab_page → viewed_dashboard_page","viewed_hisab_bus_detail → viewed_hisab_bus_detail","viewed_hisab_page → viewed_hisab_trip_detail","viewed_dashboard_page → viewed_dashboard_page","clicked_hisab_bus_detail_card → viewed_hisab_page","clicked_hisab_trip_detail_card → viewed_hisab_page","viewed_hisab_page → clicked_hisab_bus_detail_card","viewed_hisab_page → clicked_hisab_trip_detail_card","viewed_hisab_trip_detail → viewed_hisab_page","viewed_dashboard_page → viewed_hisab_bus_detail","clicked_hisab_bus_detail_card → viewed_hisab_bus_detail"],"type":"bar"}],                        {"template":{"data":{"candlestick":[{"decreasing":{"line":{"color":"#000033"}},"increasing":{"line":{"color":"#000032"}},"type":"candlestick"}],"contourcarpet":[{"colorscale":[[0.0,"#000011"],[0.1111111111111111,"#000012"],[0.2222222222222222,"#000013"],[0.3333333333333333,"#000014"],[0.4444444444444444,"#000015"],[0.5555555555555556,"#000016"],[0.6666666666666666,"#000017"],[0.7777777777777778,"#000018"],[0.8888888888888888,"#000019"],[1.0,"#000020"]],"type":"contourcarpet"}],"contour":[{"colorscale":[[0.0,"#000011"],[0.1111111111111111,"#000012"],[0.2222222222222222,"#000013"],[0.3333333333333333,"#000014"],[0.4444444444444444,"#000015"],[0.5555555555555556,"#000016"],[0.6666666666666666,"#000017"],[0.7777777777777778,"#000018"],[0.8888888888888888,"#000019"],[1.0,"#000020"]],"type":"contour"}],"heatmap":[{"colorscale":[[0.0,"#000011"],[0.1111111111111111,"#000012"],[0.2222222222222222,"#000013"],[0.3333333333333333,"#000014"],[0.4444444444444444,"#000015"],[0.5555555555555556,"#000016"],[0.6666666666666666,"#000017"],[0.7777777777777778,"#000018"],[0.8888888888888888,"#000019"],[1.0,"#000020"]],"type":"heatmap"}],"histogram2d":[{"colorscale":[[0.0,"#000011"],[0.1111111111111111,"#000012"],[0.2222222222222222,"#000013"],[0.3333333333333333,"#000014"],[0.4444444444444444,"#000015"],[0.5555555555555556,"#000016"],[0.6666666666666666,"#000017"],[0.7777777777777778,"#000018"],[0.8888888888888888,"#000019"],[1.0,"#000020"]],"type":"histogram2d"}],"icicle":[{"textfont":{"color":"white"},"type":"icicle"}],"sankey":[{"textfont":{"color":"#000036"},"type":"sankey"}],"scatter":[{"marker":{"line":{"width":0}},"type":"scatter"}],"table":[{"cells":{"fill":{"color":"#000038"},"font":{"color":"#000037"},"line":{"color":"#000039"}},"header":{"fill":{"color":"#000040"},"font":{"color":"#000036"},"line":{"color":"#000039"}},"type":"table"}],"waterfall":[{"connector":{"line":{"color":"#000036","width":2}},"decreasing":{"marker":{"color":"#000033"}},"increasing":{"marker":{"color":"#000032"}},"totals":{"marker":{"color":"#000034"}},"type":"waterfall"}]},"layout":{"coloraxis":{"colorscale":[[0.0,"#000011"],[0.1111111111111111,"#000012"],[0.2222222222222222,"#000013"],[0.3333333333333333,"#000014"],[0.4444444444444444,"#000015"],[0.5555555555555556,"#000016"],[0.6666666666666666,"#000017"],[0.7777777777777778,"#000018"],[0.8888888888888888,"#000019"],[1.0,"#000020"]]},"colorscale":{"diverging":[[0.0,"#000021"],[0.1,"#000022"],[0.2,"#000023"],[0.3,"#000024"],[0.4,"#000025"],[0.5,"#000026"],[0.6,"#000027"],[0.7,"#000028"],[0.8,"#000029"],[0.9,"#000030"],[1.0,"#000031"]],"sequential":[[0.0,"#000011"],[0.1111111111111111,"#000012"],[0.2222222222222222,"#000013"],[0.3333333333333333,"#000014"],[0.4444444444444444,"#000015"],[0.5555555555555556,"#000016"],[0.6666666666666666,"#000017"],[0.7777777777777778,"#000018"],[0.8888888888888888,"#000019"],[1.0,"#000020"]],"sequentialminus":[[0.0,"#000011"],[0.1111111111111111,"#000012"],[0.2222222222222222,"#000013"],[0.3333333333333333,"#000014"],[0.4444444444444444,"#000015"],[0.5555555555555556,"#000016"],[0.6666666666666666,"#000017"],[0.7777777777777778,"#000018"],[0.8888888888888888,"#000019"],[1.0,"#000020"]]},"colorway":["#000001","#000002","#000003","#000004","#000005","#000006","#000007","#000008","#000009","#000010"]}},"title":{"font":{"size":18,"color":"#e2e8f0"},"text":"Top Event Transitions"},"font":{"family":"Inter,sans-serif","size":12,"color":"#cbd5e1"},"yaxis":{"autorange":"reversed"},"margin":{"l":250,"t":60},"paper_bgcolor":"#0f172a","plot_bgcolor":"#1e293b","height":500},                        {"responsive": true}                    )                };            </script>        </div></div>
+            <div class="insights-panel">
+                <div class="insights-label">Analysis</div>
+                <div class="insights-body"><h4>Analysis of Bus Operator Management App Event Flow</h4>
+
+<p>The dataset contains a total of <strong>13,896</strong> events across <strong>104</strong> unique event types, collected between <strong>November 27, 2025</strong> and <strong>February 19, 2026</strong>.</p>
+
+<h4>Findings</h4>
+
+<h4>a) DOMINANT PATHWAYS</h4>
+<p>The top 5 transitions, representing the most frequent event pairs, are as follows:</p>
+<ul>
+    <li><strong>viewed_hisab_page</strong> -> <strong>viewed_hisab_page</strong>: 1371 transitions</li>
+    <li><strong>viewed_hisab_bus_detail</strong> -> <strong>viewed_hisab_page</strong>: 577 transitions</li>
+    <li><strong>viewed_hisab_page</strong> -> <strong>viewed_hisab_bus_detail</strong>: 534 transitions</li>
+    <li><strong>viewed_dashboard_page</strong> -> <strong>viewed_hisab_page</strong>: 421 transitions</li>
+    <li><strong>viewed_hisab_page</strong> -> <strong>viewed_dashboard_page</strong>: 264 transitions</li>
+</ul>
+
+<h4>b) DEAD ENDS</h4>
+<p>There are no specific transitions leading into "error" or "failure" events identified in the top transitions, suggesting that the dataset does not prominently feature such negative outcomes. Further analysis may be required to identify less frequent transitions that lead to failures.</p>
+
+<h4>c) UNEXPECTED JUMPS</h4>
+<p>Transitions between unrelated workflows can indicate navigation friction. However, the data provided does not explicitly highlight unexpected jumps. The transitions primarily revolve around the "hisab" and "dashboard" pages, indicating a focused workflow rather than unrelated jumps.</p>
+
+<h4>d) LOOPING</h4>
+<p>Notable looping behavior is observed with the transition:</p>
+<ul>
+    <li><strong>viewed_hisab_page</strong> -> <strong>viewed_hisab_page</strong>: 1371 transitions</li>
+    <li><strong>viewed_dashboard_page</strong> -> <strong>viewed_dashboard_page</strong>: 185 transitions</li>
+</ul>
+<p>This indicates that users frequently revisit the same pages, which may suggest either a need for additional information or potential friction in navigation.</p>
+
+<p>Overall, the analysis indicates a strong focus on specific pages within the app, with potential areas for improvement in user navigation and reducing looping behavior.</p></div>
+            </div>
+        </section>
+        
+        <section class="metric-card" id="operational_volume">
+            <div class="metric-header">
+                <h2>Operational System Volume</h2>
+            </div>
+            <div class="chart-container"><div>                            <div id="7053374d-0b4d-4482-b4df-9fcd815aa04d" class="plotly-graph-div" style="height:520px; width:100%;"></div>            <script type="text/javascript">                window.PLOTLYENV=window.PLOTLYENV || {};                                if (document.getElementById("7053374d-0b4d-4482-b4df-9fcd815aa04d")) {                    Plotly.newPlot(                        "7053374d-0b4d-4482-b4df-9fcd815aa04d",                        [{"branchvalues":"total","customdata":{"dtype":"f8","bdata":"FK5H4XqUREDXo3A9CpcwQLgehetRuCtAZmZmZmZmFUBcj8L1KFwVQLgehetRuBRAmpmZmZmZ\u002fT+uR+F6FK73P6RwPQrXo\u002fA\u002fXI\u002fC9Shc7z9xPQrXo3DtP+F6FK5H4do\u002fZmZmZmZm1j8fhetRuB7VP9ejcD0K19M\u002fSOF6FK5H0T8AAAAAAADQPwAAAAAAANA\u002fuB6F61G4zj9xPQrXo3DNPyC1yGHOYjdA","shape":"21, 1"},"domain":{"x":[0.0,1.0],"y":[0.0,1.0]},"hovertemplate":"labels=%{label}\u003cbr\u003ecount=%{value}\u003cbr\u003eparent=%{parent}\u003cbr\u003eid=%{id}\u003cbr\u003epct=%{color}\u003cextra\u003e\u003c\u002fextra\u003e","ids":["All Events\u002fviewed_hisab_page","All Events\u002fviewed_hisab_bus_detail","All Events\u002fviewed_dashboard_page","All Events\u002fclicked_hisab_bus_detail_card","All Events\u002fviewed_hisab_trip_detail","All Events\u002fclicked_hisab_trip_detail_card","All Events\u002fclicked_hisab_yestarday_btn","All Events\u002fhome_page_load_error","All Events\u002fclicked_nav_drawer_menu","All Events\u002fdashboard_clicked_gps_vistar_se_dekhe_bus_card","All Events\u002fclicked_hisab_coustom_date_btn","All Events\u002fviewed_online_payment_history_page","All Events\u002fviewed_setting_ticketing_machine_page","All Events\u002fclicked_login_send_otp_btn","All Events\u002fviewed_login\u002fsignup_page","All Events\u002fviewed_login_page","All Events\u002fclicked_login_verify_otp","All Events\u002flogin_verify_otp_success","All Events\u002fclicked_nav_drawer_logout","All Events\u002fclicked_hisab_today_btn","All Events"],"labels":["viewed_hisab_page","viewed_hisab_bus_detail","viewed_dashboard_page","clicked_hisab_bus_detail_card","viewed_hisab_trip_detail","clicked_hisab_trip_detail_card","clicked_hisab_yestarday_btn","home_page_load_error","clicked_nav_drawer_menu","dashboard_clicked_gps_vistar_se_dekhe_bus_card","clicked_hisab_coustom_date_btn","viewed_online_payment_history_page","viewed_setting_ticketing_machine_page","clicked_login_send_otp_btn","viewed_login\u002fsignup_page","viewed_login_page","clicked_login_verify_otp","login_verify_otp_success","clicked_nav_drawer_logout","clicked_hisab_today_btn","All Events"],"marker":{"coloraxis":"coloraxis","colors":{"dtype":"f8","bdata":"FK5H4XqUREDXo3A9CpcwQLgehetRuCtAZmZmZmZmFUBcj8L1KFwVQLgehetRuBRAmpmZmZmZ\u002fT+uR+F6FK73P6RwPQrXo\u002fA\u002fXI\u002fC9Shc7z9xPQrXo3DtP+F6FK5H4do\u002fZmZmZmZm1j8fhetRuB7VP9ejcD0K19M\u002fSOF6FK5H0T8AAAAAAADQPwAAAAAAANA\u002fuB6F61G4zj9xPQrXo3DNPyC1yGHOYjdA"},"line":{"color":"#0f172a","width":1}},"name":"","parents":["All Events","All Events","All Events","All Events","All Events","All Events","All Events","All Events","All Events","All Events","All Events","All Events","All Events","All Events","All Events","All Events","All Events","All Events","All Events","All Events",""],"values":{"dtype":"f8","bdata":"AAAAAABYtkAAAAAAAASiQAAAAAAAGJ5AAAAAAAA4h0AAAAAAADCHQAAAAAAAgIZAAAAAAAAQcEAAAAAAAMBpQAAAAAAAIGJAAAAAAAAAYUAAAAAAAABgQAAAAAAAAE1AAAAAAACASEAAAAAAAABHQAAAAAAAgEVAAAAAAAAAQ0AAAAAAAIBBQAAAAAAAgEFAAAAAAAAAQUAAAAAAAABAQAAAAACAK8pA"},"type":"treemap","textfont":{"color":"#f8fafc"}}],                        {"template":{"data":{"candlestick":[{"decreasing":{"line":{"color":"#000033"}},"increasing":{"line":{"color":"#000032"}},"type":"candlestick"}],"contourcarpet":[{"colorscale":[[0.0,"#000011"],[0.1111111111111111,"#000012"],[0.2222222222222222,"#000013"],[0.3333333333333333,"#000014"],[0.4444444444444444,"#000015"],[0.5555555555555556,"#000016"],[0.6666666666666666,"#000017"],[0.7777777777777778,"#000018"],[0.8888888888888888,"#000019"],[1.0,"#000020"]],"type":"contourcarpet"}],"contour":[{"colorscale":[[0.0,"#000011"],[0.1111111111111111,"#000012"],[0.2222222222222222,"#000013"],[0.3333333333333333,"#000014"],[0.4444444444444444,"#000015"],[0.5555555555555556,"#000016"],[0.6666666666666666,"#000017"],[0.7777777777777778,"#000018"],[0.8888888888888888,"#000019"],[1.0,"#000020"]],"type":"contour"}],"heatmap":[{"colorscale":[[0.0,"#000011"],[0.1111111111111111,"#000012"],[0.2222222222222222,"#000013"],[0.3333333333333333,"#000014"],[0.4444444444444444,"#000015"],[0.5555555555555556,"#000016"],[0.6666666666666666,"#000017"],[0.7777777777777778,"#000018"],[0.8888888888888888,"#000019"],[1.0,"#000020"]],"type":"heatmap"}],"histogram2d":[{"colorscale":[[0.0,"#000011"],[0.1111111111111111,"#000012"],[0.2222222222222222,"#000013"],[0.3333333333333333,"#000014"],[0.4444444444444444,"#000015"],[0.5555555555555556,"#000016"],[0.6666666666666666,"#000017"],[0.7777777777777778,"#000018"],[0.8888888888888888,"#000019"],[1.0,"#000020"]],"type":"histogram2d"}],"icicle":[{"textfont":{"color":"white"},"type":"icicle"}],"sankey":[{"textfont":{"color":"#000036"},"type":"sankey"}],"scatter":[{"marker":{"line":{"width":0}},"type":"scatter"}],"table":[{"cells":{"fill":{"color":"#000038"},"font":{"color":"#000037"},"line":{"color":"#000039"}},"header":{"fill":{"color":"#000040"},"font":{"color":"#000036"},"line":{"color":"#000039"}},"type":"table"}],"waterfall":[{"connector":{"line":{"color":"#000036","width":2}},"decreasing":{"marker":{"color":"#000033"}},"increasing":{"marker":{"color":"#000032"}},"totals":{"marker":{"color":"#000034"}},"type":"waterfall"}]},"layout":{"coloraxis":{"colorscale":[[0.0,"#000011"],[0.1111111111111111,"#000012"],[0.2222222222222222,"#000013"],[0.3333333333333333,"#000014"],[0.4444444444444444,"#000015"],[0.5555555555555556,"#000016"],[0.6666666666666666,"#000017"],[0.7777777777777778,"#000018"],[0.8888888888888888,"#000019"],[1.0,"#000020"]]},"colorscale":{"diverging":[[0.0,"#000021"],[0.1,"#000022"],[0.2,"#000023"],[0.3,"#000024"],[0.4,"#000025"],[0.5,"#000026"],[0.6,"#000027"],[0.7,"#000028"],[0.8,"#000029"],[0.9,"#000030"],[1.0,"#000031"]],"sequential":[[0.0,"#000011"],[0.1111111111111111,"#000012"],[0.2222222222222222,"#000013"],[0.3333333333333333,"#000014"],[0.4444444444444444,"#000015"],[0.5555555555555556,"#000016"],[0.6666666666666666,"#000017"],[0.7777777777777778,"#000018"],[0.8888888888888888,"#000019"],[1.0,"#000020"]],"sequentialminus":[[0.0,"#000011"],[0.1111111111111111,"#000012"],[0.2222222222222222,"#000013"],[0.3333333333333333,"#000014"],[0.4444444444444444,"#000015"],[0.5555555555555556,"#000016"],[0.6666666666666666,"#000017"],[0.7777777777777778,"#000018"],[0.8888888888888888,"#000019"],[1.0,"#000020"]]},"colorway":["#000001","#000002","#000003","#000004","#000005","#000006","#000007","#000008","#000009","#000010"]}},"coloraxis":{"colorbar":{"title":{"text":"pct"}},"colorscale":[[0,"#1e1b4b"],[0.3,"#4338ca"],[0.7,"#818cf8"],[1,"#c4b5fd"]]},"legend":{"tracegroupgap":0},"title":{"text":"Event Frequency (Top 20)"},"font":{"family":"Inter,sans-serif","size":12,"color":"#cbd5e1"},"margin":{"t":50,"l":10,"r":10,"b":10},"paper_bgcolor":"#0f172a","plot_bgcolor":"#0f172a","height":520},                        {"responsive": true}                    )                };            </script>        </div></div>
+            <div class="insights-panel">
+                <div class="insights-label">Analysis</div>
+                <div class="insights-body"><h4>Analysis of the Bus Operator Platform Dataset</h4>
+
+<p>The dataset contains a total of <strong>13,896</strong> events recorded between <strong>November 27, 2025</strong> and <strong>February 19, 2026</strong>. All events fall under the <strong>application</strong> category, indicating a focus on user interactions with the application rather than system-driven events.</p>
+
+<h4>Findings</h4>
+
+<h4>VOLUME PROFILE</h4>
+<p>The volume of events is primarily <strong>application-driven</strong>, with all <strong>13,896</strong> events categorized under application usage. There are no indications of system-driven events (such as push or sync), suggesting that the majority of interactions are initiated by users engaging with the platform.</p>
+
+<h4>CRITICAL LOAD</h4>
+<p>The following events generate the most traffic:</p>
+<ul>
+    <li><strong>viewed_hisab_page</strong>: <strong>5,720</strong> events (41.16%)</li>
+    <li><strong>viewed_hisab_bus_detail</strong>: <strong>2,306</strong> events (16.59%)</li>
+    <li><strong>viewed_dashboard_page</strong>: <strong>1,926</strong> events (13.86%)</li>
+    <li><strong>clicked_hisab_bus_detail_card</strong>: <strong>743</strong> events (5.35%)</li>
+    <li><strong>viewed_hisab_trip_detail</strong>: <strong>742</strong> events (5.34%)</li>
+    <li><strong>clicked_hisab_trip_detail_card</strong>: <strong>720</strong> events (5.18%)</li>
+    <li><strong>clicked_hisab_yestarday_btn</strong>: <strong>257</strong> events (1.85%)</li>
+    <li><strong>home_page_load_error</strong>: <strong>206</strong> events (1.48%)</li>
+    <li><strong>clicked_nav_drawer_menu</strong>: <strong>145</strong> events (1.04%)</li>
+    <li><strong>dashboard_clicked_gps_vistar_se_dekhe_bus_card</strong>: <strong>136</strong> events (0.98%)</li>
+</ul>
+
+<h4>INFRASTRUCTURE IMPACT</h4>
+<p>The data indicates significant user engagement, particularly with the <strong>viewed_hisab_page</strong> event, which alone accounts for over 41% of total events. This high volume suggests that the system must be capable of handling peak loads effectively. Given the total volume of <strong>13,896</strong> events, the platform's scalability needs to be assessed to ensure it can accommodate potential spikes in user activity, especially during peak usage periods.</p></div>
+            </div>
+        </section>
+        
+        <section class="metric-card" id="growth_trends">
+            <div class="metric-header">
+                <h2>PoP Growth & Volume Trends</h2>
+            </div>
+            <div class="chart-container"><div>                            <div id="1425fc47-c6f0-47f1-a087-eee0a6890662" class="plotly-graph-div" style="height:300px; width:100%;"></div>            <script type="text/javascript">                window.PLOTLYENV=window.PLOTLYENV || {};                                if (document.getElementById("1425fc47-c6f0-47f1-a087-eee0a6890662")) {                    Plotly.newPlot(                        "1425fc47-c6f0-47f1-a087-eee0a6890662",                        [{"delta":{"decreasing":{"color":"#ef4444"},"increasing":{"color":"#34d399"},"reference":2334,"relative":true},"domain":{"x":[0,1],"y":[0,1]},"mode":"number+delta","title":{"font":{"color":"#e2e8f0","size":18},"text":"Event Volume (Last 14d vs Prev)"},"value":2495,"type":"indicator"}],                        {"template":{"data":{"candlestick":[{"decreasing":{"line":{"color":"#000033"}},"increasing":{"line":{"color":"#000032"}},"type":"candlestick"}],"contourcarpet":[{"colorscale":[[0.0,"#000011"],[0.1111111111111111,"#000012"],[0.2222222222222222,"#000013"],[0.3333333333333333,"#000014"],[0.4444444444444444,"#000015"],[0.5555555555555556,"#000016"],[0.6666666666666666,"#000017"],[0.7777777777777778,"#000018"],[0.8888888888888888,"#000019"],[1.0,"#000020"]],"type":"contourcarpet"}],"contour":[{"colorscale":[[0.0,"#000011"],[0.1111111111111111,"#000012"],[0.2222222222222222,"#000013"],[0.3333333333333333,"#000014"],[0.4444444444444444,"#000015"],[0.5555555555555556,"#000016"],[0.6666666666666666,"#000017"],[0.7777777777777778,"#000018"],[0.8888888888888888,"#000019"],[1.0,"#000020"]],"type":"contour"}],"heatmap":[{"colorscale":[[0.0,"#000011"],[0.1111111111111111,"#000012"],[0.2222222222222222,"#000013"],[0.3333333333333333,"#000014"],[0.4444444444444444,"#000015"],[0.5555555555555556,"#000016"],[0.6666666666666666,"#000017"],[0.7777777777777778,"#000018"],[0.8888888888888888,"#000019"],[1.0,"#000020"]],"type":"heatmap"}],"histogram2d":[{"colorscale":[[0.0,"#000011"],[0.1111111111111111,"#000012"],[0.2222222222222222,"#000013"],[0.3333333333333333,"#000014"],[0.4444444444444444,"#000015"],[0.5555555555555556,"#000016"],[0.6666666666666666,"#000017"],[0.7777777777777778,"#000018"],[0.8888888888888888,"#000019"],[1.0,"#000020"]],"type":"histogram2d"}],"icicle":[{"textfont":{"color":"white"},"type":"icicle"}],"sankey":[{"textfont":{"color":"#000036"},"type":"sankey"}],"scatter":[{"marker":{"line":{"width":0}},"type":"scatter"}],"table":[{"cells":{"fill":{"color":"#000038"},"font":{"color":"#000037"},"line":{"color":"#000039"}},"header":{"fill":{"color":"#000040"},"font":{"color":"#000036"},"line":{"color":"#000039"}},"type":"table"}],"waterfall":[{"connector":{"line":{"color":"#000036","width":2}},"decreasing":{"marker":{"color":"#000033"}},"increasing":{"marker":{"color":"#000032"}},"totals":{"marker":{"color":"#000034"}},"type":"waterfall"}]},"layout":{"coloraxis":{"colorscale":[[0.0,"#000011"],[0.1111111111111111,"#000012"],[0.2222222222222222,"#000013"],[0.3333333333333333,"#000014"],[0.4444444444444444,"#000015"],[0.5555555555555556,"#000016"],[0.6666666666666666,"#000017"],[0.7777777777777778,"#000018"],[0.8888888888888888,"#000019"],[1.0,"#000020"]]},"colorscale":{"diverging":[[0.0,"#000021"],[0.1,"#000022"],[0.2,"#000023"],[0.3,"#000024"],[0.4,"#000025"],[0.5,"#000026"],[0.6,"#000027"],[0.7,"#000028"],[0.8,"#000029"],[0.9,"#000030"],[1.0,"#000031"]],"sequential":[[0.0,"#000011"],[0.1111111111111111,"#000012"],[0.2222222222222222,"#000013"],[0.3333333333333333,"#000014"],[0.4444444444444444,"#000015"],[0.5555555555555556,"#000016"],[0.6666666666666666,"#000017"],[0.7777777777777778,"#000018"],[0.8888888888888888,"#000019"],[1.0,"#000020"]],"sequentialminus":[[0.0,"#000011"],[0.1111111111111111,"#000012"],[0.2222222222222222,"#000013"],[0.3333333333333333,"#000014"],[0.4444444444444444,"#000015"],[0.5555555555555556,"#000016"],[0.6666666666666666,"#000017"],[0.7777777777777778,"#000018"],[0.8888888888888888,"#000019"],[1.0,"#000020"]]},"colorway":["#000001","#000002","#000003","#000004","#000005","#000006","#000007","#000008","#000009","#000010"]}},"font":{"color":"#cbd5e1"},"paper_bgcolor":"#0f172a","height":300},                        {"responsive": true}                    )                };            </script>        </div></div>
+            <div class="insights-panel">
+                <div class="insights-label">Analysis</div>
+                <div class="insights-body"><h4>Analysis of Operator Activity on ApniBus Platform</h4>
+
+<p>This analysis examines the growth performance, momentum, and actionable forecasts based on the period-over-period growth of operator activity on the ApniBus platform.</p>
+
+<h4>1. GROWTH PERFORMANCE</h4>
+<p>The event volume shows a mixed performance over the two periods analyzed:</p>
+<ul>
+  <li><strong>7-Day Period:</strong> The current volume is 1212 events, down from 1283 events in the previous week, resulting in a <strong>decline of 5.5%</strong>.</li>
+  <li><strong>14-Day Period:</strong> The current volume is 2495 events, up from 2334 events in the previous two weeks, resulting in a <strong>growth of 6.9%</strong>.</li>
+</ul>
+
+<h4>2. MOMENTUM</h4>
+<p>The trends observed in the 14-day period contradict those of the 7-day period:</p>
+<ul>
+  <li>The 14-day trend shows a positive growth of 6.9%, indicating an upward momentum in operator activity.</li>
+  <li>Conversely, the 7-day trend shows a decline of 5.5%, suggesting a short-term drop in activity.</li>
+</ul>
+<p>This discrepancy suggests that while there may be fluctuations in operator engagement on a weekly basis, the overall adoption speed appears to be improving over a longer timeframe.</p>
+
+<h4>3. ACTIONABLE FORECAST</h4>
+<p>Given the current growth rate and the contrasting trends:</p>
+<ul>
+  <li>The decline in the 7-day period may indicate a need for immediate intervention to boost operator activity.</li>
+  <li>However, the positive trend in the 14-day period suggests that operators are gradually adopting the platform.</li>
+</ul>
+<p>Therefore, it would be prudent to increase training and marketing efforts to address the short-term decline while supporting the longer-term growth trend. This dual approach could help stabilize and enhance operator engagement on the platform.</p></div>
+            </div>
+        </section>
+        
+        <section class="metric-card" id="feature_adoption">
+            <div class="metric-header">
+                <h2>Operator Feature Adoption</h2>
+            </div>
+            <div class="chart-container"><div>                            <div id="eef10853-4303-425f-83eb-7438ce119fbe" class="plotly-graph-div" style="height:500px; width:100%;"></div>            <script type="text/javascript">                window.PLOTLYENV=window.PLOTLYENV || {};                                if (document.getElementById("eef10853-4303-425f-83eb-7438ce119fbe")) {                    Plotly.newPlot(                        "eef10853-4303-425f-83eb-7438ce119fbe",                        [{"domain":{"x":[0.0,1.0],"y":[0.0,1.0]},"hole":0.45,"hovertemplate":"label=%{label}\u003cbr\u003evalue=%{value}\u003cextra\u003e\u003c\u002fextra\u003e","labels":["Hisab","Dashboard","Pricing"],"legendgroup":"","name":"","showlegend":true,"values":{"dtype":"i2","bdata":"DhyGBxkA"},"type":"pie","textinfo":"percent+label","textposition":"inside"}],                        {"template":{"data":{"candlestick":[{"decreasing":{"line":{"color":"#000033"}},"increasing":{"line":{"color":"#000032"}},"type":"candlestick"}],"contourcarpet":[{"colorscale":[[0.0,"#000011"],[0.1111111111111111,"#000012"],[0.2222222222222222,"#000013"],[0.3333333333333333,"#000014"],[0.4444444444444444,"#000015"],[0.5555555555555556,"#000016"],[0.6666666666666666,"#000017"],[0.7777777777777778,"#000018"],[0.8888888888888888,"#000019"],[1.0,"#000020"]],"type":"contourcarpet"}],"contour":[{"colorscale":[[0.0,"#000011"],[0.1111111111111111,"#000012"],[0.2222222222222222,"#000013"],[0.3333333333333333,"#000014"],[0.4444444444444444,"#000015"],[0.5555555555555556,"#000016"],[0.6666666666666666,"#000017"],[0.7777777777777778,"#000018"],[0.8888888888888888,"#000019"],[1.0,"#000020"]],"type":"contour"}],"heatmap":[{"colorscale":[[0.0,"#000011"],[0.1111111111111111,"#000012"],[0.2222222222222222,"#000013"],[0.3333333333333333,"#000014"],[0.4444444444444444,"#000015"],[0.5555555555555556,"#000016"],[0.6666666666666666,"#000017"],[0.7777777777777778,"#000018"],[0.8888888888888888,"#000019"],[1.0,"#000020"]],"type":"heatmap"}],"histogram2d":[{"colorscale":[[0.0,"#000011"],[0.1111111111111111,"#000012"],[0.2222222222222222,"#000013"],[0.3333333333333333,"#000014"],[0.4444444444444444,"#000015"],[0.5555555555555556,"#000016"],[0.6666666666666666,"#000017"],[0.7777777777777778,"#000018"],[0.8888888888888888,"#000019"],[1.0,"#000020"]],"type":"histogram2d"}],"icicle":[{"textfont":{"color":"white"},"type":"icicle"}],"sankey":[{"textfont":{"color":"#000036"},"type":"sankey"}],"scatter":[{"marker":{"line":{"width":0}},"type":"scatter"}],"table":[{"cells":{"fill":{"color":"#000038"},"font":{"color":"#000037"},"line":{"color":"#000039"}},"header":{"fill":{"color":"#000040"},"font":{"color":"#000036"},"line":{"color":"#000039"}},"type":"table"}],"waterfall":[{"connector":{"line":{"color":"#000036","width":2}},"decreasing":{"marker":{"color":"#000033"}},"increasing":{"marker":{"color":"#000032"}},"totals":{"marker":{"color":"#000034"}},"type":"waterfall"}]},"layout":{"coloraxis":{"colorscale":[[0.0,"#000011"],[0.1111111111111111,"#000012"],[0.2222222222222222,"#000013"],[0.3333333333333333,"#000014"],[0.4444444444444444,"#000015"],[0.5555555555555556,"#000016"],[0.6666666666666666,"#000017"],[0.7777777777777778,"#000018"],[0.8888888888888888,"#000019"],[1.0,"#000020"]]},"colorscale":{"diverging":[[0.0,"#000021"],[0.1,"#000022"],[0.2,"#000023"],[0.3,"#000024"],[0.4,"#000025"],[0.5,"#000026"],[0.6,"#000027"],[0.7,"#000028"],[0.8,"#000029"],[0.9,"#000030"],[1.0,"#000031"]],"sequential":[[0.0,"#000011"],[0.1111111111111111,"#000012"],[0.2222222222222222,"#000013"],[0.3333333333333333,"#000014"],[0.4444444444444444,"#000015"],[0.5555555555555556,"#000016"],[0.6666666666666666,"#000017"],[0.7777777777777778,"#000018"],[0.8888888888888888,"#000019"],[1.0,"#000020"]],"sequentialminus":[[0.0,"#000011"],[0.1111111111111111,"#000012"],[0.2222222222222222,"#000013"],[0.3333333333333333,"#000014"],[0.4444444444444444,"#000015"],[0.5555555555555556,"#000016"],[0.6666666666666666,"#000017"],[0.7777777777777778,"#000018"],[0.8888888888888888,"#000019"],[1.0,"#000020"]]},"colorway":["#000001","#000002","#000003","#000004","#000005","#000006","#000007","#000008","#000009","#000010"]}},"legend":{"tracegroupgap":0},"margin":{"t":60,"b":20},"piecolorway":["rgb(102, 197, 204)","rgb(246, 207, 113)","rgb(248, 156, 116)","rgb(220, 176, 242)","rgb(135, 197, 95)","rgb(158, 185, 243)","rgb(254, 136, 177)","rgb(201, 219, 116)","rgb(139, 224, 164)","rgb(180, 151, 231)","rgb(179, 179, 179)"],"title":{"font":{"size":18,"color":"#e2e8f0"},"text":"Workflow Distribution"},"font":{"family":"Inter,sans-serif","size":12,"color":"#cbd5e1"},"paper_bgcolor":"#0f172a","plot_bgcolor":"#0f172a","height":500},                        {"responsive": true}                    )                };            </script>        </div></div>
+            <div class="insights-panel">
+                <div class="insights-label">Analysis</div>
+                <div class="insights-body"><p>Analysis complete.</p></div>
+            </div>
+        </section>
+        
+        <section class="metric-card" id="push_roi">
+            <div class="metric-header">
+                <h2>Push Notification Engagement ROI</h2>
+            </div>
+            <div class="chart-container"><div style='height:300px; display:flex; align-items:center; justify-content:center; background:#0f172a; color:#94a3b8; border-radius:8px;'>No push notification engagement data detected in this period.</div></div>
+            <div class="insights-panel">
+                <div class="insights-label">Analysis</div>
+                <div class="insights-body"><h4>Analysis of Push Notification Metrics for Bus Operators</h4>
+
+<p>Based on the gathered data, here are the findings regarding the push notifications sent to bus operators:</p>
+
+<h4>1. DELIVERY PERFORMANCE</h4>
+<p>The delivery performance of the push notifications is currently at:</p>
+<ul>
+    <li><strong>Sent:</strong> 0</li>
+    <li><strong>Delivered:</strong> 0</li>
+    <li><strong>Delivery Rate:</strong> 0%</li>
+</ul>
+<p>This indicates a significant issue with the push notification system, as the delivery rate is well below the acceptable threshold of 60%. The absence of any sent or delivered notifications suggests that there may be a critical failure in the notification system, possibly due to:</p>
+<ul>
+    <li>System notification failures</li>
+    <li>Configuration issues preventing notifications from being sent</li>
+    <li>Technical glitches or outages affecting the push notification service</li>
+</ul>
+
+<h4>2. ENGAGEMENT DEPTH</h4>
+<p>Since there have been no notifications sent or delivered, the click-to-delivered rate cannot be calculated. This lack of engagement implies that the notifications, if they were to be sent, are not reaching the intended audience, making it impossible to assess their relevance or effectiveness.</p>
+
+<h4>3. OPERATIONAL IMPACT</h4>
+<p>With no push notifications being successfully delivered, there is no associated click volume to analyze. Consequently, we cannot link push notification success to platform engagement, such as activity on Hisab or Dashboard. The absence of engagement metrics indicates a need for immediate investigation into the push notification system to restore functionality.</p>
+
+<p>In summary, the current state of push notifications for bus operators is concerning, with a complete lack of delivery and engagement. Urgent action is required to identify and resolve the underlying issues affecting the notification system.</p></div>
+            </div>
+        </section>
+        
+        <section class="metric-card" id="business_friction_points">
+            <div class="metric-header">
+                <h2>Operator Process Friction</h2>
+            </div>
+            <div class="chart-container"><div>                            <div id="5176f629-38b8-43f9-90a7-744955a0f748" class="plotly-graph-div" style="height:480px; width:100%;"></div>            <script type="text/javascript">                window.PLOTLYENV=window.PLOTLYENV || {};                                if (document.getElementById("5176f629-38b8-43f9-90a7-744955a0f748")) {                    Plotly.newPlot(                        "5176f629-38b8-43f9-90a7-744955a0f748",                        [{"marker":{"color":[43.4,40.8,31.2,25.0,23.7,18.0,16.7,16.7,13.3,11.7],"colorbar":{"tickfont":{"color":"#94a3b8"},"title":{"font":{"color":"#94a3b8"},"text":"Score"}},"colorscale":[[0,"#fbbf24"],[0.5,"#f97316"],[1,"#ef4444"]]},"orientation":"h","text":["43.4% rep | 1.0x","40.8% rep | 1.0x","31.2% rep | 1.0x","25.0% rep | 1.0x","23.7% rep | 1.0x","18.0% rep | 1.0x","16.7% rep | 1.0x","16.7% rep | 1.0x","13.3% rep | 1.0x","11.7% rep | 1.0x"],"textfont":{"color":"#f8fafc","size":10},"textposition":"auto","x":[43.4,40.8,31.2,25.0,23.7,18.0,16.7,16.7,13.3,11.7],"y":["viewed_hisab_page","home_page_load_error","login_send_otp_failed","_location_elastic-town-search","viewed_dashboard_page","viewed_hisab_bus_detail","viewed_view_route_page_back_btn","viewed_view_route_page","clicked_hisab_coustom_date_btn","clicked_nav_drawer_menu"],"type":"bar"}],                        {"template":{"data":{"candlestick":[{"decreasing":{"line":{"color":"#000033"}},"increasing":{"line":{"color":"#000032"}},"type":"candlestick"}],"contourcarpet":[{"colorscale":[[0.0,"#000011"],[0.1111111111111111,"#000012"],[0.2222222222222222,"#000013"],[0.3333333333333333,"#000014"],[0.4444444444444444,"#000015"],[0.5555555555555556,"#000016"],[0.6666666666666666,"#000017"],[0.7777777777777778,"#000018"],[0.8888888888888888,"#000019"],[1.0,"#000020"]],"type":"contourcarpet"}],"contour":[{"colorscale":[[0.0,"#000011"],[0.1111111111111111,"#000012"],[0.2222222222222222,"#000013"],[0.3333333333333333,"#000014"],[0.4444444444444444,"#000015"],[0.5555555555555556,"#000016"],[0.6666666666666666,"#000017"],[0.7777777777777778,"#000018"],[0.8888888888888888,"#000019"],[1.0,"#000020"]],"type":"contour"}],"heatmap":[{"colorscale":[[0.0,"#000011"],[0.1111111111111111,"#000012"],[0.2222222222222222,"#000013"],[0.3333333333333333,"#000014"],[0.4444444444444444,"#000015"],[0.5555555555555556,"#000016"],[0.6666666666666666,"#000017"],[0.7777777777777778,"#000018"],[0.8888888888888888,"#000019"],[1.0,"#000020"]],"type":"heatmap"}],"histogram2d":[{"colorscale":[[0.0,"#000011"],[0.1111111111111111,"#000012"],[0.2222222222222222,"#000013"],[0.3333333333333333,"#000014"],[0.4444444444444444,"#000015"],[0.5555555555555556,"#000016"],[0.6666666666666666,"#000017"],[0.7777777777777778,"#000018"],[0.8888888888888888,"#000019"],[1.0,"#000020"]],"type":"histogram2d"}],"icicle":[{"textfont":{"color":"white"},"type":"icicle"}],"sankey":[{"textfont":{"color":"#000036"},"type":"sankey"}],"scatter":[{"marker":{"line":{"width":0}},"type":"scatter"}],"table":[{"cells":{"fill":{"color":"#000038"},"font":{"color":"#000037"},"line":{"color":"#000039"}},"header":{"fill":{"color":"#000040"},"font":{"color":"#000036"},"line":{"color":"#000039"}},"type":"table"}],"waterfall":[{"connector":{"line":{"color":"#000036","width":2}},"decreasing":{"marker":{"color":"#000033"}},"increasing":{"marker":{"color":"#000032"}},"totals":{"marker":{"color":"#000034"}},"type":"waterfall"}]},"layout":{"coloraxis":{"colorscale":[[0.0,"#000011"],[0.1111111111111111,"#000012"],[0.2222222222222222,"#000013"],[0.3333333333333333,"#000014"],[0.4444444444444444,"#000015"],[0.5555555555555556,"#000016"],[0.6666666666666666,"#000017"],[0.7777777777777778,"#000018"],[0.8888888888888888,"#000019"],[1.0,"#000020"]]},"colorscale":{"diverging":[[0.0,"#000021"],[0.1,"#000022"],[0.2,"#000023"],[0.3,"#000024"],[0.4,"#000025"],[0.5,"#000026"],[0.6,"#000027"],[0.7,"#000028"],[0.8,"#000029"],[0.9,"#000030"],[1.0,"#000031"]],"sequential":[[0.0,"#000011"],[0.1111111111111111,"#000012"],[0.2222222222222222,"#000013"],[0.3333333333333333,"#000014"],[0.4444444444444444,"#000015"],[0.5555555555555556,"#000016"],[0.6666666666666666,"#000017"],[0.7777777777777778,"#000018"],[0.8888888888888888,"#000019"],[1.0,"#000020"]],"sequentialminus":[[0.0,"#000011"],[0.1111111111111111,"#000012"],[0.2222222222222222,"#000013"],[0.3333333333333333,"#000014"],[0.4444444444444444,"#000015"],[0.5555555555555556,"#000016"],[0.6666666666666666,"#000017"],[0.7777777777777778,"#000018"],[0.8888888888888888,"#000019"],[1.0,"#000020"]]},"colorway":["#000001","#000002","#000003","#000004","#000005","#000006","#000007","#000008","#000009","#000010"]}},"title":{"font":{"size":18,"color":"#e2e8f0"},"text":"Friction Points"},"font":{"family":"Inter,sans-serif","size":12,"color":"#cbd5e1"},"yaxis":{"autorange":"reversed"},"margin":{"l":200,"t":50},"paper_bgcolor":"#0f172a","plot_bgcolor":"#1e293b","height":480},                        {"responsive": true}                    )                };            </script>        </div></div>
+            <div class="insights-panel">
+                <div class="insights-label">Analysis</div>
+                <div class="insights-body"><h4>Analysis of Dataset and Findings</h4>
+
+<p>The dataset includes a total of <strong>13,896 events</strong> across <strong>104 event types</strong> from <strong>November 27, 2025</strong> to <strong>February 19, 2026</strong>. The analysis of friction points in the workflow has identified several events with high repetition rates.</p>
+
+<h4>Top 3 Friction Points</h4>
+
+<ul>
+  <li>
+    <strong>Event:</strong> viewed_hisab_page<br>
+    <strong>Repetition Rate:</strong> 43.4% (5,720 total occurrences)
+    <ul>
+      <li><strong>OPERATIONAL IMPACT:</strong> The high repetition indicates that operators are likely spending additional time reloading or revisiting this page, potentially wasting significant time per session.</li>
+      <li><strong>PROBABLE CAUSE:</strong> This could be due to slow loading times or a lack of clarity on whether the page has loaded successfully.</li>
+      <li><strong>SOLUTION:</strong> Optimize the page load speed and implement a loading indicator to inform operators that the page is processing.</li>
+    </ul>
+  </li>
+  
+  <li>
+    <strong>Event:</strong> home_page_load_error<br>
+    <strong>Repetition Rate:</strong> 40.8% (206 total occurrences)
+    <ul>
+      <li><strong>OPERATIONAL IMPACT:</strong> Operators may be wasting time attempting to reload the home page after encountering errors, leading to frustration and delays.</li>
+      <li><strong>PROBABLE CAUSE:</strong> This may stem from server issues or network instability causing the home page to fail to load properly.</li>
+      <li><strong>SOLUTION:</strong> Improve server reliability and provide error messages with guidance on how to proceed after a load error.</li>
+    </ul>
+  </li>
+  
+  <li>
+    <strong>Event:</strong> login_send_otp_failed<br>
+    <strong>Repetition Rate:</strong> 31.2% (16 total occurrences)
+    <ul>
+      <li><strong>OPERATIONAL IMPACT:</strong> Repeated attempts to send OTPs can lead to delays in logging in, impacting overall efficiency.</li>
+      <li><strong>PROBABLE CAUSE:</strong> This could be due to issues with the OTP service or user input errors.</li>
+      <li><strong>SOLUTION:</strong> Enhance the OTP sending mechanism and provide clear feedback on the status of the OTP request.</li>
+    </ul>
+  </li>
+</ul>
+
+<p>Addressing these friction points will significantly enhance the efficiency of the bus operator's workflow and reduce wasted time due to repetitive actions.</p></div>
+            </div>
+        </section>
+        
+        <section class="metric-card" id="event_frequency">
+            <div class="metric-header">
+                <h2>Event Frequency Distribution</h2>
+            </div>
+            <div class="chart-container"><div>                            <div id="3ecc647b-dc7d-40d7-9f11-3014a90c5964" class="plotly-graph-div" style="height:520px; width:100%;"></div>            <script type="text/javascript">                window.PLOTLYENV=window.PLOTLYENV || {};                                if (document.getElementById("3ecc647b-dc7d-40d7-9f11-3014a90c5964")) {                    Plotly.newPlot(                        "3ecc647b-dc7d-40d7-9f11-3014a90c5964",                        [{"branchvalues":"total","customdata":{"dtype":"f8","bdata":"FK5H4XqUREDXo3A9CpcwQLgehetRuCtAZmZmZmZmFUBcj8L1KFwVQLgehetRuBRAmpmZmZmZ\u002fT+uR+F6FK73P6RwPQrXo\u002fA\u002fXI\u002fC9Shc7z9xPQrXo3DtP+F6FK5H4do\u002fZmZmZmZm1j8fhetRuB7VP9ejcD0K19M\u002fSOF6FK5H0T8AAAAAAADQPwAAAAAAANA\u002fuB6F61G4zj9xPQrXo3DNPyC1yGHOYjdA","shape":"21, 1"},"domain":{"x":[0.0,1.0],"y":[0.0,1.0]},"hovertemplate":"labels=%{label}\u003cbr\u003ecount=%{value}\u003cbr\u003eparent=%{parent}\u003cbr\u003eid=%{id}\u003cbr\u003epct=%{color}\u003cextra\u003e\u003c\u002fextra\u003e","ids":["All Events\u002fviewed_hisab_page","All Events\u002fviewed_hisab_bus_detail","All Events\u002fviewed_dashboard_page","All Events\u002fclicked_hisab_bus_detail_card","All Events\u002fviewed_hisab_trip_detail","All Events\u002fclicked_hisab_trip_detail_card","All Events\u002fclicked_hisab_yestarday_btn","All Events\u002fhome_page_load_error","All Events\u002fclicked_nav_drawer_menu","All Events\u002fdashboard_clicked_gps_vistar_se_dekhe_bus_card","All Events\u002fclicked_hisab_coustom_date_btn","All Events\u002fviewed_online_payment_history_page","All Events\u002fviewed_setting_ticketing_machine_page","All Events\u002fclicked_login_send_otp_btn","All Events\u002fviewed_login\u002fsignup_page","All Events\u002fviewed_login_page","All Events\u002fclicked_login_verify_otp","All Events\u002flogin_verify_otp_success","All Events\u002fclicked_nav_drawer_logout","All Events\u002fclicked_hisab_today_btn","All Events"],"labels":["viewed_hisab_page","viewed_hisab_bus_detail","viewed_dashboard_page","clicked_hisab_bus_detail_card","viewed_hisab_trip_detail","clicked_hisab_trip_detail_card","clicked_hisab_yestarday_btn","home_page_load_error","clicked_nav_drawer_menu","dashboard_clicked_gps_vistar_se_dekhe_bus_card","clicked_hisab_coustom_date_btn","viewed_online_payment_history_page","viewed_setting_ticketing_machine_page","clicked_login_send_otp_btn","viewed_login\u002fsignup_page","viewed_login_page","clicked_login_verify_otp","login_verify_otp_success","clicked_nav_drawer_logout","clicked_hisab_today_btn","All Events"],"marker":{"coloraxis":"coloraxis","colors":{"dtype":"f8","bdata":"FK5H4XqUREDXo3A9CpcwQLgehetRuCtAZmZmZmZmFUBcj8L1KFwVQLgehetRuBRAmpmZmZmZ\u002fT+uR+F6FK73P6RwPQrXo\u002fA\u002fXI\u002fC9Shc7z9xPQrXo3DtP+F6FK5H4do\u002fZmZmZmZm1j8fhetRuB7VP9ejcD0K19M\u002fSOF6FK5H0T8AAAAAAADQPwAAAAAAANA\u002fuB6F61G4zj9xPQrXo3DNPyC1yGHOYjdA"},"line":{"color":"#0f172a","width":1}},"name":"","parents":["All Events","All Events","All Events","All Events","All Events","All Events","All Events","All Events","All Events","All Events","All Events","All Events","All Events","All Events","All Events","All Events","All Events","All Events","All Events","All Events",""],"values":{"dtype":"f8","bdata":"AAAAAABYtkAAAAAAAASiQAAAAAAAGJ5AAAAAAAA4h0AAAAAAADCHQAAAAAAAgIZAAAAAAAAQcEAAAAAAAMBpQAAAAAAAIGJAAAAAAAAAYUAAAAAAAABgQAAAAAAAAE1AAAAAAACASEAAAAAAAABHQAAAAAAAgEVAAAAAAAAAQ0AAAAAAAIBBQAAAAAAAgEFAAAAAAAAAQUAAAAAAAABAQAAAAACAK8pA"},"type":"treemap","textfont":{"color":"#f8fafc"}}],                        {"template":{"data":{"candlestick":[{"decreasing":{"line":{"color":"#000033"}},"increasing":{"line":{"color":"#000032"}},"type":"candlestick"}],"contourcarpet":[{"colorscale":[[0.0,"#000011"],[0.1111111111111111,"#000012"],[0.2222222222222222,"#000013"],[0.3333333333333333,"#000014"],[0.4444444444444444,"#000015"],[0.5555555555555556,"#000016"],[0.6666666666666666,"#000017"],[0.7777777777777778,"#000018"],[0.8888888888888888,"#000019"],[1.0,"#000020"]],"type":"contourcarpet"}],"contour":[{"colorscale":[[0.0,"#000011"],[0.1111111111111111,"#000012"],[0.2222222222222222,"#000013"],[0.3333333333333333,"#000014"],[0.4444444444444444,"#000015"],[0.5555555555555556,"#000016"],[0.6666666666666666,"#000017"],[0.7777777777777778,"#000018"],[0.8888888888888888,"#000019"],[1.0,"#000020"]],"type":"contour"}],"heatmap":[{"colorscale":[[0.0,"#000011"],[0.1111111111111111,"#000012"],[0.2222222222222222,"#000013"],[0.3333333333333333,"#000014"],[0.4444444444444444,"#000015"],[0.5555555555555556,"#000016"],[0.6666666666666666,"#000017"],[0.7777777777777778,"#000018"],[0.8888888888888888,"#000019"],[1.0,"#000020"]],"type":"heatmap"}],"histogram2d":[{"colorscale":[[0.0,"#000011"],[0.1111111111111111,"#000012"],[0.2222222222222222,"#000013"],[0.3333333333333333,"#000014"],[0.4444444444444444,"#000015"],[0.5555555555555556,"#000016"],[0.6666666666666666,"#000017"],[0.7777777777777778,"#000018"],[0.8888888888888888,"#000019"],[1.0,"#000020"]],"type":"histogram2d"}],"icicle":[{"textfont":{"color":"white"},"type":"icicle"}],"sankey":[{"textfont":{"color":"#000036"},"type":"sankey"}],"scatter":[{"marker":{"line":{"width":0}},"type":"scatter"}],"table":[{"cells":{"fill":{"color":"#000038"},"font":{"color":"#000037"},"line":{"color":"#000039"}},"header":{"fill":{"color":"#000040"},"font":{"color":"#000036"},"line":{"color":"#000039"}},"type":"table"}],"waterfall":[{"connector":{"line":{"color":"#000036","width":2}},"decreasing":{"marker":{"color":"#000033"}},"increasing":{"marker":{"color":"#000032"}},"totals":{"marker":{"color":"#000034"}},"type":"waterfall"}]},"layout":{"coloraxis":{"colorscale":[[0.0,"#000011"],[0.1111111111111111,"#000012"],[0.2222222222222222,"#000013"],[0.3333333333333333,"#000014"],[0.4444444444444444,"#000015"],[0.5555555555555556,"#000016"],[0.6666666666666666,"#000017"],[0.7777777777777778,"#000018"],[0.8888888888888888,"#000019"],[1.0,"#000020"]]},"colorscale":{"diverging":[[0.0,"#000021"],[0.1,"#000022"],[0.2,"#000023"],[0.3,"#000024"],[0.4,"#000025"],[0.5,"#000026"],[0.6,"#000027"],[0.7,"#000028"],[0.8,"#000029"],[0.9,"#000030"],[1.0,"#000031"]],"sequential":[[0.0,"#000011"],[0.1111111111111111,"#000012"],[0.2222222222222222,"#000013"],[0.3333333333333333,"#000014"],[0.4444444444444444,"#000015"],[0.5555555555555556,"#000016"],[0.6666666666666666,"#000017"],[0.7777777777777778,"#000018"],[0.8888888888888888,"#000019"],[1.0,"#000020"]],"sequentialminus":[[0.0,"#000011"],[0.1111111111111111,"#000012"],[0.2222222222222222,"#000013"],[0.3333333333333333,"#000014"],[0.4444444444444444,"#000015"],[0.5555555555555556,"#000016"],[0.6666666666666666,"#000017"],[0.7777777777777778,"#000018"],[0.8888888888888888,"#000019"],[1.0,"#000020"]]},"colorway":["#000001","#000002","#000003","#000004","#000005","#000006","#000007","#000008","#000009","#000010"]}},"coloraxis":{"colorbar":{"title":{"text":"pct"}},"colorscale":[[0,"#1e1b4b"],[0.3,"#4338ca"],[0.7,"#818cf8"],[1,"#c4b5fd"]]},"legend":{"tracegroupgap":0},"title":{"text":"Event Frequency (Top 20)"},"font":{"family":"Inter,sans-serif","size":12,"color":"#cbd5e1"},"margin":{"t":50,"l":10,"r":10,"b":10},"paper_bgcolor":"#0f172a","plot_bgcolor":"#0f172a","height":520},                        {"responsive": true}                    )                };            </script>        </div></div>
+            <div class="insights-panel">
+                <div class="insights-label">Analysis</div>
+                <div class="insights-body"><h4>Analysis of Bus Ticket Booking App Dataset</h4>
+
+<p>The dataset contains a total of <strong>13,896 events</</strong> recorded over a period from <strong>November 27, 2025</strong> to <strong>February 19, 2026</strong>. There are <strong>104 unique event types</strong> in the application category.</p>
+
+<h4>Dominant Patterns</h4>
+<p>The following events dominate user interaction:</p>
+<ul>
+    <li><strong>viewed_hisab_page</strong>: 5,720 events (41.16%)</li>
+    <li><strong>viewed_hisab_bus_detail</strong>: 2,306 events (16.59%)</li>
+    <li><strong>viewed_dashboard_page</strong>: 1,926 events (13.86%)</li>
+    <li><strong>clicked_hisab_bus_detail_card</strong>: 743 events (5.35%)</li>
+    <li><strong>viewed_hisab_trip_detail</strong>: 742 events (5.34%)</li>
+    <li><strong>clicked_hisab_trip_detail_card</strong>: 720 events (5.18%)</li>
+</ul>
+<p>This distribution indicates that users primarily engage with the "hisab" feature, suggesting it is a central part of their experience. The high percentage of events related to viewing and interacting with bus details and trips indicates a strong focus on trip management.</p>
+
+<h4>Event Noise</h4>
+<p>Events that appear suspiciously often or rarely include:</p>
+<ul>
+    <li><strong>home_page_load_error</strong>: 206 events (1.48%) - This may indicate a potential issue with the home page loading, warranting further investigation.</li>
+    <li><strong>viewed_online_payment_history_page</strong>: 58 events (0.42%) - This low count suggests that users are not frequently accessing their payment history, which could indicate a broken feature or lack of interest.</li>
+    <li><strong>viewed_setting_ticketing_machine_page</strong>: 49 events (0.35%) - Similar to the payment history, this low frequency may suggest it is underused or not functioning as intended.</li>
+</ul>
+
+<h4>Power Users</h4>
+<p>Power users, defined as those in the P90+ event count, are not explicitly detailed in the dataset summary. However, the median event count is not provided either. To understand the engagement ceiling, we can infer that users engaging with the "hisab" features are likely more active, while casual users may not interact as frequently.</p>
+
+<h4>Consolidation</h4>
+<p>Upon reviewing the event names, there are several related to the "hisab" feature, such as:</p>
+<ul>
+    <li><strong>viewed_hisab_page</strong></li>
+    <li><strong>viewed_hisab_bus_detail</strong></li>
+    <li><strong>viewed_hisab_trip_detail</strong></li>
+    <li><strong>clicked_hisab_bus_detail_card</strong></li>
+    <li><strong>clicked_hisab_trip_detail_card</strong></li>
+</ul>
+<p>These events could potentially be consolidated under a single "hisab" category to simplify tracking and analysis.</p></div>
+            </div>
+        </section>
+        
+        <section class="metric-card" id="temporal_patterns">
+            <div class="metric-header">
+                <h2>Temporal Usage Patterns</h2>
+            </div>
+            <div class="chart-container"><div>                            <div id="c3865bde-245e-44a0-bf6a-20c41606b70c" class="plotly-graph-div" style="height:400px; width:100%;"></div>            <script type="text/javascript">                window.PLOTLYENV=window.PLOTLYENV || {};                                if (document.getElementById("c3865bde-245e-44a0-bf6a-20c41606b70c")) {                    Plotly.newPlot(                        "c3865bde-245e-44a0-bf6a-20c41606b70c",                        [{"colorbar":{"tickfont":{"color":"#94a3b8"},"title":{"font":{"color":"#94a3b8"},"text":"Events"}},"colorscale":[[0,"#0f172a"],[0.2,"#312e81"],[0.4,"#4338ca"],[0.6,"#6366f1"],[0.8,"#a78bfa"],[1,"#e9d5ff"]],"x":["00:00","01:00","02:00","03:00","04:00","05:00","06:00","07:00","08:00","09:00","10:00","11:00","12:00","13:00","14:00","15:00","16:00","17:00","18:00","19:00","20:00","21:00","22:00","23:00"],"y":["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],"z":[[79.0,99.0,96.0,83.0,98.0,79.0,85.0,104.0,78.0,93.0,95.0,77.0,98.0,89.0,94.0,76.0,95.0,75.0,79.0,36.0,42.0,18.0,43.0,74.0],[91.0,80.0,103.0,86.0,93.0,88.0,100.0,72.0,96.0,86.0,92.0,83.0,92.0,97.0,65.0,106.0,79.0,87.0,109.0,43.0,69.0,28.0,55.0,32.0],[102.0,88.0,106.0,83.0,86.0,94.0,79.0,94.0,84.0,84.0,99.0,92.0,80.0,100.0,84.0,79.0,88.0,96.0,87.0,48.0,47.0,29.0,43.0,33.0],[100.0,97.0,117.0,98.0,88.0,94.0,98.0,105.0,89.0,92.0,93.0,103.0,106.0,96.0,95.0,83.0,92.0,80.0,101.0,48.0,33.0,20.0,37.0,74.0],[90.0,99.0,96.0,113.0,86.0,95.0,101.0,105.0,87.0,94.0,90.0,102.0,92.0,100.0,99.0,96.0,109.0,90.0,91.0,57.0,51.0,17.0,68.0,55.0],[84.0,97.0,107.0,99.0,101.0,90.0,91.0,102.0,95.0,102.0,95.0,91.0,97.0,106.0,93.0,93.0,97.0,95.0,79.0,69.0,24.0,23.0,38.0,65.0],[95.0,99.0,95.0,107.0,88.0,95.0,94.0,103.0,93.0,95.0,101.0,87.0,108.0,95.0,100.0,103.0,94.0,97.0,60.0,67.0,30.0,43.0,29.0,41.0]],"type":"heatmap"}],                        {"template":{"data":{"candlestick":[{"decreasing":{"line":{"color":"#000033"}},"increasing":{"line":{"color":"#000032"}},"type":"candlestick"}],"contourcarpet":[{"colorscale":[[0.0,"#000011"],[0.1111111111111111,"#000012"],[0.2222222222222222,"#000013"],[0.3333333333333333,"#000014"],[0.4444444444444444,"#000015"],[0.5555555555555556,"#000016"],[0.6666666666666666,"#000017"],[0.7777777777777778,"#000018"],[0.8888888888888888,"#000019"],[1.0,"#000020"]],"type":"contourcarpet"}],"contour":[{"colorscale":[[0.0,"#000011"],[0.1111111111111111,"#000012"],[0.2222222222222222,"#000013"],[0.3333333333333333,"#000014"],[0.4444444444444444,"#000015"],[0.5555555555555556,"#000016"],[0.6666666666666666,"#000017"],[0.7777777777777778,"#000018"],[0.8888888888888888,"#000019"],[1.0,"#000020"]],"type":"contour"}],"heatmap":[{"colorscale":[[0.0,"#000011"],[0.1111111111111111,"#000012"],[0.2222222222222222,"#000013"],[0.3333333333333333,"#000014"],[0.4444444444444444,"#000015"],[0.5555555555555556,"#000016"],[0.6666666666666666,"#000017"],[0.7777777777777778,"#000018"],[0.8888888888888888,"#000019"],[1.0,"#000020"]],"type":"heatmap"}],"histogram2d":[{"colorscale":[[0.0,"#000011"],[0.1111111111111111,"#000012"],[0.2222222222222222,"#000013"],[0.3333333333333333,"#000014"],[0.4444444444444444,"#000015"],[0.5555555555555556,"#000016"],[0.6666666666666666,"#000017"],[0.7777777777777778,"#000018"],[0.8888888888888888,"#000019"],[1.0,"#000020"]],"type":"histogram2d"}],"icicle":[{"textfont":{"color":"white"},"type":"icicle"}],"sankey":[{"textfont":{"color":"#000036"},"type":"sankey"}],"scatter":[{"marker":{"line":{"width":0}},"type":"scatter"}],"table":[{"cells":{"fill":{"color":"#000038"},"font":{"color":"#000037"},"line":{"color":"#000039"}},"header":{"fill":{"color":"#000040"},"font":{"color":"#000036"},"line":{"color":"#000039"}},"type":"table"}],"waterfall":[{"connector":{"line":{"color":"#000036","width":2}},"decreasing":{"marker":{"color":"#000033"}},"increasing":{"marker":{"color":"#000032"}},"totals":{"marker":{"color":"#000034"}},"type":"waterfall"}]},"layout":{"coloraxis":{"colorscale":[[0.0,"#000011"],[0.1111111111111111,"#000012"],[0.2222222222222222,"#000013"],[0.3333333333333333,"#000014"],[0.4444444444444444,"#000015"],[0.5555555555555556,"#000016"],[0.6666666666666666,"#000017"],[0.7777777777777778,"#000018"],[0.8888888888888888,"#000019"],[1.0,"#000020"]]},"colorscale":{"diverging":[[0.0,"#000021"],[0.1,"#000022"],[0.2,"#000023"],[0.3,"#000024"],[0.4,"#000025"],[0.5,"#000026"],[0.6,"#000027"],[0.7,"#000028"],[0.8,"#000029"],[0.9,"#000030"],[1.0,"#000031"]],"sequential":[[0.0,"#000011"],[0.1111111111111111,"#000012"],[0.2222222222222222,"#000013"],[0.3333333333333333,"#000014"],[0.4444444444444444,"#000015"],[0.5555555555555556,"#000016"],[0.6666666666666666,"#000017"],[0.7777777777777778,"#000018"],[0.8888888888888888,"#000019"],[1.0,"#000020"]],"sequentialminus":[[0.0,"#000011"],[0.1111111111111111,"#000012"],[0.2222222222222222,"#000013"],[0.3333333333333333,"#000014"],[0.4444444444444444,"#000015"],[0.5555555555555556,"#000016"],[0.6666666666666666,"#000017"],[0.7777777777777778,"#000018"],[0.8888888888888888,"#000019"],[1.0,"#000020"]]},"colorway":["#000001","#000002","#000003","#000004","#000005","#000006","#000007","#000008","#000009","#000010"]}},"title":{"font":{"size":18,"color":"#e2e8f0"},"text":"Usage Heatmap | Peak: Friday 2:00 | Ratio: 4.0x"},"font":{"family":"Inter,sans-serif","size":12,"color":"#cbd5e1"},"margin":{"l":100,"t":50},"paper_bgcolor":"#0f172a","plot_bgcolor":"#0f172a","height":400},                        {"responsive": true}                    )                };            </script>        </div></div>
+            <div class="insights-panel">
+                <div class="insights-label">Analysis</div>
+                <div class="insights-body"><h4>Dataset Summary</h4>
+<p>The dataset contains a total of <strong>13,896 events</</strong> recorded between <strong>November 27, 2025</strong> and <strong>February 19, 2026</strong>. There are <strong>104 unique event types</strong> related to application usage.</p>
+
+<h4>Temporal Analysis Findings</h4>
+<p>The analysis of the day x hour distribution reveals the following:</p>
+<ul>
+    <li><strong>Peak Hour:</strong> 2 AM</li>
+    <li><strong>Off-Peak Hour:</strong> 9 PM</li>
+    <li><strong>Peak Day:</strong> Friday</li>
+    <li><strong>Low Day:</strong> Monday</li>
+    <li><strong>Peak-to-Trough Ratio:</strong> 4.0</li>
+</ul>
+
+<h4>Analysis</h4>
+
+<h4>PUSH NOTIFICATION TIMING</h4>
+<p>The marketing team should focus on sending push notifications during peak hours to maximize open rates. The exact peak hours are:</p>
+<ul>
+    <li><strong>Friday at 2 AM</strong></li>
+</ul>
+<p>Additionally, considering the overall engagement, notifications sent on <strong>Fridays</strong> may yield higher engagement rates compared to other days.</p>
+
+<h4>CAPACITY PLANNING</h4>
+<p>The app needs maximum server capacity during peak usage times, specifically on:</p>
+<ul>
+    <li><strong>Fridays at 2 AM</strong></li>
+</ul>
+<p>Infrastructure should prepare for predictable traffic spikes during this time to ensure optimal performance and user experience.</p>
+
+<h4>MARKETING WINDOWS</h4>
+<p>The best times for running in-app promotions or flash sales are during peak engagement periods. Given the data, the following times are recommended:</p>
+<ul>
+    <li><strong>Friday at 2 AM</strong></li>
+</ul>
+<p>This timing aligns with when users are most active, thus increasing the likelihood of participation in promotions.</p>
+
+<h4>WEEKEND VS WEEKDAY</h4>
+<p>The usage patterns suggest a more commuter-focused application rather than a leisure travel app. The day-of-week distribution indicates:</p>
+<ul>
+    <li><strong>Peak usage on Fridays</strong> suggests users are preparing for weekend travel, but the low engagement on Mondays indicates less commuter traffic.</li>
+</ul>
+<p>This pattern may reflect user demographics that prioritize travel for work or specific events rather than leisure activities.</p></div>
+            </div>
+        </section>
+        
+
+        <div class="footer">
+            Generated by LangGraph Multi-Agent Pipeline
+        </div>
+    </main>
+
+    <script>
+        const navItems = document.querySelectorAll('.nav-item');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    navItems.forEach(n => n.classList.remove('active'));
+                    const id = entry.target.id;
+                    navItems.forEach(link => {
+                        if (link.getAttribute('onclick') && link.getAttribute('onclick').includes(id)) {
+                            link.classList.add('active');
+                        }
+                    });
+                }
+            });
+        }, { rootMargin: '-20% 0px -70% 0px' });
+        document.querySelectorAll('section[id]').forEach(s => observer.observe(s));
+
+        document.addEventListener('click', function(e) {
+            if (e.target.tagName === 'A') {
+                e.preventDefault();
+            }
+        });
+    </script>
+</body>
+</html>
