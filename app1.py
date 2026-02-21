@@ -152,7 +152,7 @@ def render_analysis_tab(app_user_df, app_user_rep_df, selected_user, journey_dat
 # TOP-LEVEL TAB SELECTOR: User vs Business
 # ============================================================================
 
-top_tab_user, top_tab_business = st.tabs(["👤 User (Commuter)", "🏢 Business (Operator)"])
+top_tab_user, top_tab_business = st.tabs(["👤 User", "🏢 Operator"])
 
 # ============================================================================
 # USER TAB — existing commuter analytics
