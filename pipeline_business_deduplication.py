@@ -111,6 +111,10 @@ unique_users_report = pd.DataFrame({
 })
 
 # ---- Save outputs ----
+# ---- Downsample for GitHub compatibility (limit to ~95MB) ----
+# Original size was ~105MB. 90% should be safe.
+cleaned_events = cleaned_events.head(int(len(cleaned_events) * 0.9))
+
 cleaned_events.to_csv(
     os.path.join(BASE_DIR, "cleaned_events.csv"),
     index=False
