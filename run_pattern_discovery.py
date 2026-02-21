@@ -59,7 +59,7 @@ def main():
         'user_uuid': 'user_id',
         'event_time': 'timestamp'
     })
-    events_df['timestamp'] = pd.to_datetime(events_df['timestamp'])
+    events_df['timestamp'] = pd.to_datetime(events_df['timestamp'], format='mixed')
 
     print(f"   ✓ Loaded {len(events_df):,} events")
     print(f"   ✓ {events_df['user_id'].nunique():,} unique users")

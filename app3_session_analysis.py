@@ -23,7 +23,7 @@ def load_session_data(profile_json='data_profile_report.json', events_csv='Commu
             events_df = events_df.drop(columns=['external_event_id', 'source'], errors='ignore')
         else:
             events_df = events_df.rename(columns={'event_time': 'timestamp'})
-        events_df['timestamp'] = pd.to_datetime(events_df['timestamp'])
+        events_df['timestamp'] = pd.to_datetime(events_df['timestamp'], format='mixed')
 
         return profile, events_df
     except FileNotFoundError as e:

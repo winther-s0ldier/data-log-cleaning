@@ -61,7 +61,7 @@ def main():
         'event_time': 'timestamp'
     })
     events_df = events_df.drop(columns=["external_event_id", "source"], errors="ignore")
-    events_df['timestamp'] = pd.to_datetime(events_df['timestamp'])
+    events_df['timestamp'] = pd.to_datetime(events_df['timestamp'], format='mixed')
 
     print(f"   ✓ Loaded {len(events_df):,} events")
     print(f"   ✓ {events_df['user_id'].nunique():,} unique IDs")

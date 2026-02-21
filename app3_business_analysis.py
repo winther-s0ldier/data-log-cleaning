@@ -83,7 +83,7 @@ def load_business_data(csv_path: str = "Business Events data.csv"):
     """Load and prepare business event data."""
     try:
         df = pd.read_csv(csv_path)
-        df['event_time'] = pd.to_datetime(df['event_time'])
+        df['event_time'] = pd.to_datetime(df['event_time'], format='mixed')
         df['date'] = df['event_time'].dt.date
         df['hour'] = df['event_time'].dt.hour
         df['day_of_week'] = df['event_time'].dt.day_name()

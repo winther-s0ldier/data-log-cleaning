@@ -23,7 +23,7 @@ def load_business_events(csv_path: str = "Business Events data.csv"):
     """Load business event data."""
     try:
         df = pd.read_csv(csv_path)
-        df['event_time'] = pd.to_datetime(df['event_time'])
+        df['event_time'] = pd.to_datetime(df['event_time'], format='mixed')
         df['date'] = df['event_time'].dt.date
         return df
     except FileNotFoundError:
