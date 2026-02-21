@@ -147,7 +147,7 @@ def render_business_session_analysis(csv_path: str = "Business Events data.csv")
             )
             fig.update_traces(textposition='inside', textinfo='percent+label')
             fig.update_layout(height=500)
-            st.plotly_chart(fig, use_container_width=True)
+            st.plotly_chart(fig, width="stretch")
 
         with col2:
             st.subheader("Workflow Volume")
@@ -157,11 +157,15 @@ def render_business_session_analysis(csv_path: str = "Business Events data.csv")
                 pct = count / len(app_df) * 100
                 color = colors[i % len(colors)]
                 st.markdown(f"**{wf}**")
-                # Custom HTML progress bar for consistent coloring and better visibility
-                progress_val = min(pct / workflow_counts.values[0] * 100, 100)
+                # Fix: Calculate relative width correctly (relative to the max workflow count)
+                # This ensures the top workflow fills the bar, and others are scaled proportional to it
+                max_count = workflow_counts.values[0]
+                progress_val = (count / max_count) * 100
+                
+                # Custom HTML progress bar with lighter background so the colors are visible
                 st.markdown(f"""
-                    <div style="background-color: #334155; border-radius: 4px; height: 10px; width: 100%; margin: 4px 0;">
-                        <div style="background-color: {color}; height: 100%; width: {progress_val}%; border-radius: 4px;"></div>
+                    <div style="background-color: rgba(51, 65, 85, 0.2); border-radius: 4px; height: 12px; width: 100%; margin: 4px 0;">
+                        <div style="background-color: {color}; height: 100%; width: {progress_val}%; border-radius: 4px; box-shadow: 0 1px 2px rgba(0,0,0,0.1);"></div>
                     </div>
                 """, unsafe_allow_html=True)
                 st.caption(f"{count:,} events ({pct:.1f}%)")
@@ -186,7 +190,7 @@ def render_business_session_analysis(csv_path: str = "Business Events data.csv")
             color_continuous_scale="Teal",
         )
         fig.update_layout(height=400, xaxis_tickangle=-30, showlegend=False)
-        st.plotly_chart(fig, use_container_width=True)
+        st.plotly_chart(fig, width="stretch")
 
     # ========================================================================
     # TAB 2: DAILY / HOURLY TRENDS
@@ -213,7 +217,7 @@ def render_business_session_analysis(csv_path: str = "Business Events data.csv")
         ))
         fig.update_layout(height=400, xaxis_title="Date", yaxis_title="Events",
                           hovermode='x unified')
-        st.plotly_chart(fig, use_container_width=True)
+        st.plotly_chart(fig, width="stretch")
 
         col1, col2 = st.columns(2)
 
@@ -228,7 +232,7 @@ def render_business_session_analysis(csv_path: str = "Business Events data.csv")
                 color='events', color_continuous_scale='YlOrRd',
             )
             fig.update_layout(height=350, showlegend=False)
-            st.plotly_chart(fig, use_container_width=True)
+            st.plotly_chart(fig, width="stretch")
 
         with col2:
             # Day-of-week distribution
@@ -242,7 +246,7 @@ def render_business_session_analysis(csv_path: str = "Business Events data.csv")
                 color='events', color_continuous_scale='Viridis',
             )
             fig.update_layout(height=350, showlegend=False)
-            st.plotly_chart(fig, use_container_width=True)
+            st.plotly_chart(fig, width="stretch")
 
         # Hour x Day-of-week heatmap
         st.subheader("Activity Heatmap (Hour × Day)")
@@ -259,7 +263,7 @@ def render_business_session_analysis(csv_path: str = "Business Events data.csv")
             aspect="auto"
         )
         fig.update_layout(height=350)
-        st.plotly_chart(fig, use_container_width=True)
+        st.plotly_chart(fig, width="stretch")
 
     # ========================================================================
     # TAB 3: PUSH NOTIFICATION FUNNEL
@@ -296,7 +300,7 @@ def render_business_session_analysis(csv_path: str = "Business Events data.csv")
                 marker=dict(color=['#4B9EFF', '#00CC66', '#FFA500', '#FF4B4B']),
             ))
             fig.update_layout(title="Push Notification Funnel", height=400)
-            st.plotly_chart(fig, use_container_width=True)
+            st.plotly_chart(fig, width="stretch")
 
         with col2:
             st.subheader("📊 Key Rates")
@@ -329,7 +333,7 @@ def render_business_session_analysis(csv_path: str = "Business Events data.csv")
                 title="Daily Push Notification Events",
             )
             fig.update_layout(height=350)
-            st.plotly_chart(fig, use_container_width=True)
+            st.plotly_chart(fig, width="stretch")
 
     # ========================================================================
     # TAB 4: LOGIN / AUTH FUNNEL
@@ -364,7 +368,7 @@ def render_business_session_analysis(csv_path: str = "Business Events data.csv")
                 marker=dict(color=['#636EFA', '#EF553B', '#00CC96', '#AB63FA', '#FFA15A', '#19D3F3']),
             ))
             fig.update_layout(title="Login Funnel", height=450)
-            st.plotly_chart(fig, use_container_width=True)
+            st.plotly_chart(fig, width="stretch")
 
         with col2:
             st.subheader("📊 Conversion Rates")
@@ -407,7 +411,7 @@ def render_business_session_analysis(csv_path: str = "Business Events data.csv")
             labels={"date": "Date", "events": "Events", "workflow": "Workflow"},
         )
         fig.update_layout(height=450, hovermode='x unified')
-        st.plotly_chart(fig, use_container_width=True)
+        st.plotly_chart(fig, width="stretch")
 
         st.divider()
 
@@ -433,7 +437,7 @@ def render_business_session_analysis(csv_path: str = "Business Events data.csv")
             category_orders={"week": weekly_wf['week'].unique().tolist()}
         )
         fig.update_layout(height=450, xaxis_title="Week (Year)", xaxis={'type': 'category'})
-        st.plotly_chart(fig, use_container_width=True)
+        st.plotly_chart(fig, width="stretch")
 
     # ---- Footer ----
     st.divider()
