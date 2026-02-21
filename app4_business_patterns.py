@@ -161,7 +161,7 @@ def render_business_pattern_discovery(csv_path: str = "Business Events data.csv"
                 )
                 fig.update_traces(texttemplate='%{text:.1f}%', textposition='outside')
                 fig.update_layout(height=500, yaxis={'categoryorder': 'total ascending'})
-                st.plotly_chart(fig, use_container_width=True)
+                st.plotly_chart(fig, width="stretch")
 
             with col2:
                 st.subheader("Transition Probabilities")
@@ -199,7 +199,7 @@ def render_business_pattern_discovery(csv_path: str = "Business Events data.csv"
             aspect="auto"
         )
         fig.update_layout(height=500)
-        st.plotly_chart(fig, use_container_width=True)
+        st.plotly_chart(fig, width="stretch")
 
     # ========================================================================
     # TAB 2: FRICTION DETECTION
@@ -227,7 +227,7 @@ def render_business_pattern_discovery(csv_path: str = "Business Events data.csv"
                     labels={'friction_score': 'Friction Score', 'repeat_rate': 'Repeat Rate'},
                 )
                 fig.update_layout(height=500, yaxis={'categoryorder': 'total ascending'})
-                st.plotly_chart(fig, use_container_width=True)
+                st.plotly_chart(fig, width="stretch")
 
             with col2:
                 st.subheader("🎯 Priority Fixes")
@@ -248,7 +248,7 @@ def render_business_pattern_discovery(csv_path: str = "Business Events data.csv"
             display_df['repeat_rate'] = display_df['repeat_rate'].apply(lambda x: f"{x:.1%}")
             display_df['friction_score'] = display_df['friction_score'].apply(lambda x: f"{x:,.0f}")
             display_df.columns = ['Event', 'Repeats', 'Total Occurrences', 'Repeat Rate', 'Friction Score']
-            st.dataframe(display_df, use_container_width=True, height=400)
+            st.dataframe(display_df, width="stretch", height=400)
 
     # ========================================================================
     # TAB 3: DAILY TRENDS
@@ -266,7 +266,7 @@ def render_business_pattern_discovery(csv_path: str = "Business Events data.csv"
             labels={"date": "Date", "count": "Events", "event_name": "Event"},
         )
         fig.update_layout(height=500, hovermode='x unified')
-        st.plotly_chart(fig, use_container_width=True)
+        st.plotly_chart(fig, width="stretch")
 
         st.divider()
 
@@ -318,9 +318,9 @@ def render_business_pattern_discovery(csv_path: str = "Business Events data.csv"
                 color_continuous_midpoint=0,
             )
             fig.update_layout(height=400, yaxis={'categoryorder': 'total ascending'})
-            st.plotly_chart(fig, use_container_width=True)
+            st.plotly_chart(fig, width="stretch")
 
-            st.dataframe(growth_df, use_container_width=True)
+            st.dataframe(growth_df, width="stretch")
         else:
             st.warning(f"Not enough data for {period_option} comparison (need at least {n_days * 2} days, have {len(dates)})")
 
@@ -367,7 +367,7 @@ def render_business_pattern_discovery(csv_path: str = "Business Events data.csv"
                 aspect="auto"
             )
             fig.update_layout(height=550)
-            st.plotly_chart(fig, use_container_width=True)
+            st.plotly_chart(fig, width="stretch")
 
             # Top co-occurring pairs
             st.subheader("Top Co-occurring Event Pairs")
@@ -383,7 +383,7 @@ def render_business_pattern_discovery(csv_path: str = "Business Events data.csv"
                         })
 
             pairs_df = pd.DataFrame(pairs).sort_values('Co-occurrences', ascending=False).head(20)
-            st.dataframe(pairs_df, use_container_width=True)
+            st.dataframe(pairs_df, width="stretch")
         else:
             st.info("Not enough data to compute co-occurrence.")
 

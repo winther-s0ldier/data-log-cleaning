@@ -76,7 +76,7 @@ def render_pattern_discovery(pattern_json='pattern_discovery_report.json'):
                 labels={'Frequency': 'Number of Occurrences', 'Pattern_Length': 'Sequence Length'}
             )
             fig.update_layout(height=600, showlegend=True, yaxis={'categoryorder':'total ascending'})
-            st.plotly_chart(fig, use_container_width=True)
+            st.plotly_chart(fig, width="stretch")
 
             # Insights
             with st.expander("📊 Pattern Insights"):
@@ -169,7 +169,7 @@ def render_pattern_discovery(pattern_json='pattern_discovery_report.json'):
                 }
             )
             fig.update_traces(textposition='inside', textinfo='percent+label')
-            st.plotly_chart(fig, use_container_width=True)
+            st.plotly_chart(fig, width="stretch")
 
         with col2:
             st.subheader("Segment Characteristics")
@@ -200,7 +200,7 @@ def render_pattern_discovery(pattern_json='pattern_discovery_report.json'):
                 showlegend=True,
                 title="Segment Comparison"
             )
-            st.plotly_chart(fig, use_container_width=True)
+            st.plotly_chart(fig, width="stretch")
 
         # Detailed segment cards
         st.subheader("Segment Profiles")
@@ -272,7 +272,7 @@ def render_pattern_discovery(pattern_json='pattern_discovery_report.json'):
                     labels={'Friction Score': 'Friction Score (Repetition Rate * 100)'}
                 )
                 fig.update_layout(height=500, yaxis={'categoryorder':'total ascending'})
-                st.plotly_chart(fig, use_container_width=True)
+                st.plotly_chart(fig, width="stretch")
 
         with col2:
             st.subheader("🎯 Priority Fixes")
@@ -353,7 +353,7 @@ def render_pattern_discovery(pattern_json='pattern_discovery_report.json'):
                     hovermode='x unified'
                 )
 
-                st.plotly_chart(fig, use_container_width=True)
+                st.plotly_chart(fig, width="stretch")
 
             with col2:
                 st.subheader("⚠️ Critical Drop-offs")

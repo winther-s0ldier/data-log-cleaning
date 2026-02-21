@@ -77,6 +77,6 @@ display_cols = [
 
 st.dataframe(
     timeline_df[display_cols],
-    use_container_width=True,
+    width="stretch",
     hide_index=True
 )

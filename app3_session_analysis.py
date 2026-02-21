@@ -116,7 +116,7 @@ def render_session_analysis(profile_json='data_profile_report.json', events_csv=
             color_discrete_sequence=px.colors.qualitative.Set3
         )
         fig.update_traces(textposition='inside', textinfo='percent+label')
-        st.plotly_chart(fig, use_container_width=True)
+        st.plotly_chart(fig, width="stretch")
 
     st.divider()
 
@@ -154,7 +154,7 @@ def render_session_analysis(profile_json='data_profile_report.json', events_csv=
             labels={'Sessions': 'Number of Sessions Ending Here'}
         )
         fig.update_layout(height=500, showlegend=False)
-        st.plotly_chart(fig, use_container_width=True)
+        st.plotly_chart(fig, width="stretch")
 
     with col2:
         st.markdown("### 🎯 Critical Drop-offs")
@@ -205,7 +205,7 @@ def render_session_analysis(profile_json='data_profile_report.json', events_csv=
         color_continuous_scale='Blues'
     )
     fig.update_layout(height=400, showlegend=False, xaxis_tickangle=-45)
-    st.plotly_chart(fig, use_container_width=True)
+    st.plotly_chart(fig, width="stretch")
 
     st.divider()
 
@@ -238,7 +238,7 @@ def render_session_analysis(profile_json='data_profile_report.json', events_csv=
         )
         fig.update_traces(texttemplate='%{text:.0f}', textposition='outside')
         fig.update_layout(showlegend=False)
-        st.plotly_chart(fig, use_container_width=True)
+        st.plotly_chart(fig, width="stretch")
 
     with col2:
         st.markdown("### 💡 Session Length Insights")
@@ -288,7 +288,7 @@ def render_session_analysis(profile_json='data_profile_report.json', events_csv=
         )
         fig.update_traces(texttemplate='%{text:,}', textposition='outside')
         fig.update_layout(height=450, showlegend=False, xaxis_tickangle=-45)
-        st.plotly_chart(fig, use_container_width=True)
+        st.plotly_chart(fig, width="stretch")
 
     with col2:
         st.markdown("### Category Breakdown")

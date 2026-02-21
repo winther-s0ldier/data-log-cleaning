@@ -291,11 +291,22 @@ def build_growth_chart(ctx):
     fig = go.Figure(go.Indicator(
         mode = "number+delta",
         value = m["current_volume"],
-        delta = {'reference': m["previous_volume"], 'relative': True, 'increasing': {'color': "#34d399"}, 'decreasing': {'color': "#ef4444"}},
-        title = {"text": f"Event Volume (Last {m['period_days']}d vs Prev)", "font": {"size": 18, "color": "#e2e8f0"}},
-        domain = {'x': [0, 1], 'y': [0, 1]}
+        delta = {'reference': m["previous_volume"], 'relative': True, 
+                 'increasing': {'color': "#34d399"}, 'decreasing': {'color': "#ef4444"},
+                 'valueformat': '.1%'},
+        domain = {'x': [0.1, 0.9], 'y': [0.1, 0.8]}
     ))
-    fig.update_layout(paper_bgcolor="#0f172a", font=dict(color="#cbd5e1"), height=300)
+    fig.update_layout(
+        title=dict(
+            text=f"Event Volume (Last {m['period_days']}d vs Prev)",
+            font=dict(size=18, color="#e2e8f0"),
+            x=0.5, y=0.9, xanchor='center'
+        ),
+        paper_bgcolor="#0f172a", 
+        font=dict(color="#cbd5e1"), 
+        height=350,
+        margin=dict(l=40, r=40, t=80, b=40)
+    )
     return fig.to_html(include_plotlyjs=False, full_html=False)
 
 

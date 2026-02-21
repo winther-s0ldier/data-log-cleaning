@@ -69,7 +69,7 @@ def render_data_tab(app_user_df, app_user_rep_df, tab_prefix="user"):
     st.subheader("Events")
 
     display_cols = ["event_date", "event_day", "event_time_only", "event_name", "category"]
-    st.dataframe(view_df[display_cols], use_container_width=True, hide_index=True)
+    st.dataframe(view_df[display_cols], width="stretch", hide_index=True)
 
     st.divider()
 
@@ -79,7 +79,7 @@ def render_data_tab(app_user_df, app_user_rep_df, tab_prefix="user"):
     if selected_event != "All Events":
         summary_view = summary_view[summary_view["event_name"] == selected_event]
 
-    st.dataframe(summary_view, use_container_width=True, hide_index=True)
+    st.dataframe(summary_view, width="stretch", hide_index=True)
 
 
 def render_analysis_tab(app_user_df, app_user_rep_df, selected_user, journey_data, tab_prefix="user", is_business=False):
@@ -119,7 +119,7 @@ def render_analysis_tab(app_user_df, app_user_rep_df, selected_user, journey_dat
                     )
                     .sort_values("Count", ascending=False)
                 )
-                st.dataframe(breakdown_df, use_container_width=True, hide_index=True)
+                st.dataframe(breakdown_df, width="stretch", hide_index=True)
 
     with analysis_tab2:
         st.subheader("AI Event Interpretation" if is_business else "AI Journey Interpretation")
@@ -285,7 +285,7 @@ with top_tab_business:
         color_continuous_scale="Blues"
     )
     fig.update_layout(height=450, showlegend=False, xaxis_tickangle=-45)
-    st.plotly_chart(fig, use_container_width=True)
+    st.plotly_chart(fig, width="stretch")
 
     st.divider()
 
