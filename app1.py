@@ -38,7 +38,6 @@ st.title("Product Analytics Dashboard")
 
 
 def load_pipeline_data(base_dir):
-    """Load cleaned events, repetition summary, and unique users from a pipeline output dir."""
     cleaned_file = os.path.join(base_dir, "cleaned_events.csv")
     rep_file = os.path.join(base_dir, "repetition_summary.csv")
     users_file = os.path.join(base_dir, "unique_users_list.csv")
@@ -55,7 +54,6 @@ def load_pipeline_data(base_dir):
 
 
 def render_data_tab(app_user_df, app_user_rep_df, tab_prefix="user"):
-    """Render the Data tab — events table and repetition summary."""
     st.header("Event Data")
 
     user_events = app_user_df["event_name"].sort_values().unique().tolist()
@@ -148,15 +146,9 @@ def render_analysis_tab(app_user_df, app_user_rep_df, selected_user, journey_dat
             st.write_stream(insights_stream_fn(payload))
 
 
-# ============================================================================
-# TOP-LEVEL TAB SELECTOR: User vs Business
-# ============================================================================
 
-top_tab_user, top_tab_business = st.tabs(["👤 User", "🏢 Operator"])
+top_tab_user, top_tab_business = st.tabs(["User", " Operator"])
 
-# ============================================================================
-# USER TAB — existing commuter analytics
-# ============================================================================
 with top_tab_user:
     df, rep_df, users_df = load_pipeline_data(USER_BASE_DIR)
 
@@ -202,7 +194,7 @@ with top_tab_user:
         render_analysis_tab(app_user_df, app_user_rep_df, selected_user, journey_data, tab_prefix="user", is_business=False)
 
     with main_tab3:
-        app3_session_analysis.render_session_analysis()
+        app3_session_analysis.render_session_analysis(events_csv=os.path.join(USER_BASE_DIR, "cleaned_events.csv"))
 
     with main_tab4:
         app4_pattern_discovery.render_pattern_discovery()
@@ -210,10 +202,6 @@ with top_tab_user:
     st.divider()
     st.caption("All AI analysis is strictly per-user and filtered to application events only.")
 
-
-# ============================================================================
-# BUSINESS TAB — operator/business analytics
-# ============================================================================
 with top_tab_business:
     biz_df, biz_rep_df, biz_users_df = load_pipeline_data(BUSINESS_BASE_DIR)
 
@@ -320,11 +308,11 @@ with top_tab_business:
 
     with biz_tab3:
         # Business-specific operations analytics
-        app3_business_analysis.render_business_session_analysis()
+        app3_business_analysis.render_business_session_analysis(csv_path=os.path.join(BUSINESS_BASE_DIR, "cleaned_events.csv"))
 
     with biz_tab4:
         # Business-specific event pattern analysis
-        app4_business_patterns.render_business_pattern_discovery()
+        app4_business_patterns.render_business_pattern_discovery(csv_path=os.path.join(BUSINESS_BASE_DIR, "cleaned_events.csv"))
 
     st.divider()
     st.caption("Business analytics — aggregate event analysis for bus operators. AI analysis uses a sampled subset of recent events.")
