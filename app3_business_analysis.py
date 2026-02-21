@@ -151,10 +151,19 @@ def render_business_session_analysis(csv_path: str = "Business Events data.csv")
 
         with col2:
             st.subheader("Workflow Volume")
-            for wf, count in workflow_counts.items():
+            # Use same color palette as the pie chart (px.colors.qualitative.Set2)
+            colors = ['#66c2a5', '#fc8d62', '#8da0cb', '#e78ac3', '#a6d854', '#ffd92f', '#e5c494', '#b3b3b3']
+            for i, (wf, count) in enumerate(workflow_counts.items()):
                 pct = count / len(app_df) * 100
+                color = colors[i % len(colors)]
                 st.markdown(f"**{wf}**")
-                st.progress(min(pct / workflow_counts.values[0] * 100, 100) / 100)
+                # Custom HTML progress bar for consistent coloring and better visibility
+                progress_val = min(pct / workflow_counts.values[0] * 100, 100)
+                st.markdown(f"""
+                    <div style="background-color: #334155; border-radius: 4px; height: 10px; width: 100%; margin: 4px 0;">
+                        <div style="background-color: {color}; height: 100%; width: {progress_val}%; border-radius: 4px;"></div>
+                    </div>
+                """, unsafe_allow_html=True)
                 st.caption(f"{count:,} events ({pct:.1f}%)")
 
         st.divider()
@@ -405,16 +414,25 @@ def render_business_session_analysis(csv_path: str = "Business Events data.csv")
         # Week-over-week comparison
         st.subheader("Weekly Workflow Comparison")
         app_df_copy = app_df.copy()
-        app_df_copy['week'] = app_df_copy['event_time'].dt.isocalendar().week.astype(int)
-        weekly_wf = app_df_copy.groupby(['week', 'workflow']).size().reset_index(name='events')
+        
+        # Combine Year and Week to handle data spanning multiple years or discrete segments
+        app_df_copy['year'] = app_df_copy['event_time'].dt.isocalendar().year
+        app_df_copy['week_num'] = app_df_copy['event_time'].dt.isocalendar().week
+        app_df_copy['week'] = "W" + app_df_copy['week_num'].astype(str) + " (" + app_df_copy['year'].astype(str) + ")"
+        
+        # Group by the new formatted week string
+        # We sort by year and week_num first to ensure the bars appear in chronological order
+        weekly_wf = app_df_copy.groupby(['year', 'week_num', 'week', 'workflow']).size().reset_index(name='events')
         weekly_wf = weekly_wf[weekly_wf['workflow'].isin(top_workflows)]
+        weekly_wf = weekly_wf.sort_values(['year', 'week_num'])
 
         fig = px.bar(
             weekly_wf, x='week', y='events', color='workflow',
             title="Weekly Workflow Volume",
             barmode='stack',
+            category_orders={"week": weekly_wf['week'].unique().tolist()}
         )
-        fig.update_layout(height=400, xaxis_title="Week Number")
+        fig.update_layout(height=450, xaxis_title="Week (Year)", xaxis={'type': 'category'})
         st.plotly_chart(fig, use_container_width=True)
 
     # ---- Footer ----
