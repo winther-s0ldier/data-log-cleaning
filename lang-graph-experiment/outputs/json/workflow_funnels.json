@@ -3,17 +3,17 @@
   "data": [
     {
       "workflow": "Hisab (Accounting)",
-      "events": 10672,
-      "pct": 76.8
+      "events": 12391,
+      "pct": 82.7
     },
     {
       "workflow": "Dashboard",
-      "events": 2268,
-      "pct": 16.3
+      "events": 1581,
+      "pct": 10.6
     },
     {
       "workflow": "Login / Auth",
-      "events": 232,
+      "events": 252,
       "pct": 1.7
     },
     {
@@ -27,5 +27,5 @@
       "pct": 0.0
     }
   ],
-  "insights": "<h4>Analysis of Bus Operator Management Platform Telemetry</h4>\n\n<p>This analysis is based on the telemetry data collected from the ApniBus platform, covering a total of 13,896 events recorded between November 27, 2025, and February 19, 2026. The following findings are derived from the computed workflows and funnel analysis.</p>\n\n<h4>1. OPERATIONAL FOCUS</h4>\n<p>The workflow with the highest event volume is the <strong>\"Hisab (Accounting)\"</strong> workflow, which accounted for <strong>10,672 events</strong>, representing <strong>76.8%</strong> of the total events. This indicates that the majority of operator daily tasks revolve around accounting-related activities, suggesting a strong focus on financial tracking and management.</p>\n\n<h4>2. CRITICAL FUNNELS</h4>\n<p>Analyzing the <strong>\"Login / Auth\"</strong> workflow, we observe the following stages:</p>\n<ul>\n  <li><strong>Page View:</strong> 81 occurrences</li>\n  <li><strong>OTP Request:</strong> 46 occurrences (Conversion: 56.8%)</li>\n  <li><strong>OTP Verify:</strong> 35 occurrences (Conversion: 76.1%)</li>\n  <li><strong>Success:</strong> 35 occurrences (Conversion: 100.0%)</li>\n</ul>\n<p>The biggest drop-off occurs between the <strong>Page View</strong> and <strong>OTP Request</strong> stages, where there is a <strong>43% drop</strong> in occurrences (from 81 to 46). This indicates that a significant number of users are not proceeding to request an OTP after viewing the login page, highlighting a potential area for improvement in user engagement or the login process.</p>\n\n<h4>3. UNTRACKED ACTIVITY</h4>\n<p>There are a total of <strong>0 events</strong> recorded for the <strong>\"Push Notifications\"</strong> workflow, and only <strong>4 events</strong> for <strong>\"Cash Settlement\"</strong>. This suggests that there may be significant untracked activity or underutilization of these features. It would be beneficial to explore the following new categories:</p>\n<ul>\n  <li><strong>Push Notifications Engagement:</strong> Track events related to user interactions with push notifications, such as views and actions taken.</li>\n  <li><strong>Cash Settlement Processes:</strong> Monitor events related to cash settlements to understand user interactions and potential issues in this area.</li>\n</ul>\n\n<p>In conclusion, the analysis reveals a strong operational focus on accounting tasks, a critical drop-off in the login funnel, and potential areas for expanding tracking capabilities to enhance user engagement and operational efficiency.</p>"
+  "insights": "<h4>Analysis of the ApniBus Dataset</h4>\n\n<p>The dataset contains a total of <strong>14,985</strong> events recorded from <strong>109</strong> unique event types between <strong>November 27, 2025</strong> and <strong>February 19, 2026</strong>.</p>\n\n<h4>1. OPERATIONAL FOCUS</h4>\n<p>The workflow with the highest event volume is <strong>\"Hisab (Accounting)\"</strong>, which accounted for <strong>12,391</strong> events, representing <strong>82.7%</strong> of the total events. This indicates that the majority of the operator's daily tasks revolve around accounting-related activities, suggesting a strong focus on financial management and trip details.</p>\n\n<h4>2. CRITICAL FUNNELS</h4>\n<p>In analyzing the \"Login / Auth\" workflow, the following stages were observed:</p>\n<ul>\n  <li><strong>Page View:</strong> 76 events</li>\n  <li><strong>OTP Request:</strong> 58 events (Conversion: 76.3%)</li>\n  <li><strong>OTP Verify:</strong> 43 events (Conversion: 74.1%)</li>\n  <li><strong>Success:</strong> 31 events (Conversion: 72.1%)</li>\n</ul>\n<p>The biggest drop-off occurs between the \"OTP Request\" and \"OTP Verify\" stages, where the count decreases from <strong>58</strong> to <strong>43</strong>, indicating a drop-off rate of approximately <strong>26%</strong>. This suggests potential issues with the OTP verification process that may need to be addressed to improve user login success rates.</p>\n\n<h4>3. UNTRACKED ACTIVITY</h4>\n<p>There are <strong>0</strong> events recorded under the \"Push Notifications\" workflow, indicating a lack of engagement or tracking in this area. Additionally, the \"Cash Settlement\" workflow recorded only <strong>4</strong> events, which is minimal. This suggests that these activities may not be a focus for users or that they are not being effectively tracked.</p>\n<p>To enhance operational insights, it may be beneficial to create new categories for:</p>\n<ul>\n  <li><strong>User Engagement:</strong> Tracking user interactions with notifications and alerts.</li>\n  <li><strong>Cash Management:</strong> More detailed tracking of cash settlements and related activities.</li>\n  <li><strong>Feedback Mechanisms:</strong> Capturing user feedback on the app's features and functionalities.</li>\n</ul>"
 }

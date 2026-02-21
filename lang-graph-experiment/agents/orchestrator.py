@@ -23,7 +23,7 @@ def orchestrator_node(state: AnalyticsState) -> dict:
         "total_events": len(df),
         "total_users": int(total_users),
         "total_event_types": df["event_name"].nunique(),
-        "days_covered": (end_date - start_date).days + 1,
+        "days_covered": int(df["event_date"].nunique()) if "event_date" in df.columns else (end_date - start_date).days + 1,
         "date_range_str": date_range_str,
         "peak_day": peak_day,
         "date_range": {

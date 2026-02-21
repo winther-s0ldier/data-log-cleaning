@@ -21,6 +21,11 @@ os.makedirs(PER_USER_DIR)
 
 df = pd.read_csv(INPUT_FILE)
 
+# ---- Filter: keep APPLICATION events only (exclude system events) ----
+before_filter = len(df)
+df = df[df["category"] == "application"].copy()
+print(f"Filtered out {before_filter - len(df)} system events, kept {len(df)} application events")
+
 # Rename 'id' -> 'user_uuid' for downstream compatibility
 df = df.rename(columns={"id": "user_uuid"})
 
@@ -111,9 +116,6 @@ unique_users_report = pd.DataFrame({
 })
 
 # ---- Save outputs ----
-# ---- Downsample for GitHub compatibility (limit to ~95MB) ----
-# Original size was ~105MB. 90% should be safe.
-cleaned_events = cleaned_events.head(int(len(cleaned_events) * 0.9))
 
 cleaned_events.to_csv(
     os.path.join(BASE_DIR, "cleaned_events.csv"),
