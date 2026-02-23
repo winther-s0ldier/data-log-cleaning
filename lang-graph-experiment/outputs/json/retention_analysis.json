@@ -2,15 +2,24 @@
   "metric": "retention_analysis",
   "title": "Cohort Retention Heatmap",
   "data": {
-    "w1_pct": 5.2,
+    "w1_pct": 69.0,
     "labels": [
-      "W1 (n=118)",
-      "W2 (n=220)",
-      "W3 (n=154)",
-      "W52 (n=7)"
+      "W1 (n=20)",
+      "W2 (n=19)",
+      "W3 (n=19)",
+      "W4 (n=13)",
+      "W5 (n=20)",
+      "W6 (n=22)",
+      "W7 (n=25)",
+      "W8 (n=22)",
+      "W48 (n=90)",
+      "W49 (n=45)",
+      "W50 (n=34)",
+      "W51 (n=29)",
+      "W52 (n=23)"
     ],
-    "max_weeks": 3
+    "max_weeks": 5
   },
-  "insights": "<h4>Dataset Summary</h4>\n<p>The dataset contains a total of <strong>44,031 events</strong> recorded from <strong>499 users</strong> over a date range from <strong>December 24, 2025</strong> to <strong>January 20, 2026</strong>. There are <strong>80 event types</strong> categorized under the application.</p>\n\n<h4>Cohort Retention Matrix</h4>\n<p>The retention matrix for the cohorts is as follows:</p>\n<ul>\n  <li><strong>W1 (n=118):</strong> 100% (initial), 7.6% (W1 retention)</li>\n  <li><strong>W2 (n=220):</strong> 100% (initial), 4.1% (W1 retention)</li>\n  <li><strong>W3 (n=154):</strong> 100% (initial), 0.0% (W1 retention)</li>\n  <li><strong>W52 (n=7):</strong> 100% (initial), 71.4% (W1 retention)</li>\n</ul>\n\n<h4>Insights</h4>\n<ul>\n  <li><strong>BEST COHORT:</strong> The cohort from week 52 has the strongest retention with a W1 retention of <strong>71.4%</strong>. This could be attributed to seasonal factors, such as increased travel during the holiday season, or effective marketing campaigns aimed at encouraging users to book tickets during this period.</li>\n  \n  <li><strong>WORST COHORT:</strong> The cohort from week 3 shows the fastest drop-off, with a W1 retention of <strong>0.0%</strong> and W2 retention of <strong>0.0%</strong>. This indicates that users from this cohort did not return after their initial experience, suggesting potential issues with the app's usability or value proposition during that time.</li>\n  \n  <li><strong>OVERALL TREND:</strong> Retention appears to be declining across successive cohorts. The W1 retention rates decrease significantly from <strong>7.6%</strong> in week 1 to <strong>0.0%</strong> in week 3, indicating that user engagement is not improving and may be negatively impacted by product changes or a lack of compelling reasons for users to return.</li>\n  \n  <li><strong>RETENTION STRATEGIES:</strong> \n    <ul>\n      <li>Implement a user feedback mechanism after the first booking experience to identify pain points, as the drop-off in week 3 suggests users are not finding value in the app.</li>\n      <li>Enhance marketing efforts during the initial user experience, particularly for cohorts that show lower retention rates, to encourage repeat bookings and improve the overall user experience.</li>\n    </ul>\n  </li>\n</ul>",
+  "insights": "<h4>Insights from the Bus Ticket Booking App Cohort Analysis</h4>\n\n<p>The dataset contains a total of 14,952 events from 381 users, spanning from November 27, 2025, to February 22, 2026. The cohort retention matrix has been computed for up to 5 weeks, providing insights into user retention patterns.</p>\n\n<h4>1. BEST COHORT</h4>\n<p>The cohort with the strongest retention is Week 48 (W48), which has a W1 retention rate of <strong>82.2%</strong>. This high retention could be attributed to several factors:</p>\n<ul>\n    <li>Seasonal travel trends during the holiday season, leading to increased bookings.</li>\n    <li>Potential marketing campaigns or promotions that were active during this period, encouraging users to return.</li>\n</ul>\n\n<h4>2. WORST COHORT</h4>\n<p>The cohort that drops off the fastest is Week 7 (W7), with a W1 retention of <strong>40.0%</strong> and a W2 retention of <strong>0.0%</strong>. This indicates a significant loss of users after their initial experience, suggesting that the app may not have met their expectations or that there were usability issues.</p>\n\n<h4>3. OVERALL TREND</h4>\n<p>Retention appears to be improving across successive cohorts. For instance, the W1 retention rates show an upward trend from <strong>31.6%</strong> in Week 3 (W3) to <strong>82.2%</strong> in Week 48 (W48). This suggests that product changes or enhancements may be positively impacting user engagement.</p>\n\n<h4>4. RETENTION STRATEGIES</h4>\n<p>To improve W1 retention, the following strategies are recommended:</p>\n<ul>\n    <li><strong>Enhance User Experience:</strong> The drop in retention for Week 7 indicates potential usability issues. Conducting user testing and gathering feedback could help identify pain points and improve the onboarding process.</li>\n    <li><strong>Targeted Marketing Campaigns:</strong> The success of Week 48 suggests that targeted marketing efforts can significantly boost retention. Implementing campaigns that focus on user engagement during peak travel times could help maintain or increase W1 retention rates.</li>\n</ul>",
   "iterations": 2
 }

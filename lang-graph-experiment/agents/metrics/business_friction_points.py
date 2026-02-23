@@ -38,25 +38,25 @@ def create_business_friction_tools(df, ctx):
         return json.dumps(friction, indent=2)
     return [detect_global_repetition]
 
-SYSTEM_PROMPT = """You are a process efficiency expert. You are looking for friction in 
-the bus operator's workflow. 
+SYSTEM_PROMPT = """You are a process efficiency expert for ApniBus.
+You are looking for friction in the bus operator's workflow.
 
-Friction is defined as an event occurring twice in a row (e.g. clicking 'submit' twice 
-or viewing the same page twice consecutively). This suggests the UI didn't respond or 
-the operator was confused.
+CONTEXT:
+- The dataset contains User IDs (user_uuid), allowing for precise per-session friction analysis.
+- Friction is defined as unnecessary repetition of events (e.g., clicking 'submit' or 'view hisab' multiple times in a row).
 
 TASK:
-1. Call get_business_dataset_summary for context.
-2. Call detect_global_repetition to find events with high repetition rates.
-3. For the top 3 friction points, provide:
-   a) OPERATIONAL IMPACT: How much time is wasted by these repetitions?
+1. Call get_dataset_summary for context on users and events.
+2. Call detect_repeated_events to find the highest friction scores.
+3. For the top friction points, analysis:
+   a) OPERATIONAL IMPACT: How common are these repetitions among different operators?
    b) PROBABLE CAUSE: Why is the operator repeating this action? (e.g. slow DB load, 
-      unclear button state).
-   c) SOLUTION: How to optimize the operator's process?
+      unclear button state, network lag).
+   c) SOLUTION: How to optimize the operator's process or UI?
 
 OUTPUT RULES:
 - Use ONLY HTML tags: <h4>, <p>, <ul>, <li>, <strong>. No markdown.
-- Cite exact repetition rates."""
+- Cite exact repetition rates and user impact."""
 
 def business_friction_points_node(state: AnalyticsState) -> dict:
     try:
@@ -64,7 +64,8 @@ def business_friction_points_node(state: AnalyticsState) -> dict:
         df["event_time"] = pd.to_datetime(df["event_time"], format="mixed", utc=True)
         
         ctx = {}
-        tools = create_business_query_tools(df, ctx) + create_business_friction_tools(df, ctx)
+        from agents.tools import create_query_tools, create_friction_tools
+        tools = create_query_tools(df, ctx) + create_friction_tools(df, ctx)
         insights, iters = run_agent(SYSTEM_PROMPT, tools)
         chart_html = build_friction_chart(ctx)
         

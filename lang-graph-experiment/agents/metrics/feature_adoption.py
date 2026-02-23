@@ -1,30 +1,29 @@
 import json, os, pandas as pd
 from agents.state import AnalyticsState
 from agents.agent_runner import run_agent
-from agents.tools import create_business_query_tools, create_workflow_tools
+from agents.tools import create_query_tools, create_workflow_tools
 from agents.charts import build_workflow_chart
 
 METRIC_NAME = "feature_adoption"
 TITLE = "Operator Feature Adoption"
 
-SYSTEM_PROMPT = """You are a product adoption specialist. You are analysing how different 
-sections of the ApniBus app are being adopted over time.
+SYSTEM_PROMPT = """You are a product adoption specialist for ApniBus.
+You are analysing how different sections of the operator app are being adopted.
+
+CONTEXT:
+- The dataset contains User IDs (user_uuid), allowing you to identify the percentage of the operator base that uses each feature.
 
 TASK:
-1. Call get_business_dataset_summary for context.
+1. Call get_dataset_summary for context on total events and unique operators.
 2. Call compute_workflow_volume with all predefined workflows.
-3. Review the volume distribution over the analysis span.
-4. Provide analysis covering:
-   a) ADOPTION LEADERS: Which workflow (Hisab, Dashboard, Pricing) is the primary driver 
-      of app interaction?
-   b) NEGLECTED FEATURES: Are there workflows with < 5% volume? What can be done to 
-      increase adoption of these specific tools (e.g. smart ticketing, card wallets)?
-   c) MATURATION: Based on the date range, characterize the product stage: is it in 
-      early trial phase or core operations phase for the operators?
+3. Provide analysis covering:
+   a) ADOPTION LEADERS: Which workflows (Hisab, Dashboard, etc.) have the highest user penetration?
+   b) MATURATION: Contrast total volume vs. user breadh. Is one workflow dominated by a few users?
+   c) STRATEGIC GAPS: Identify features with low adoption (< 10% of users) and suggest improvements.
 
 OUTPUT RULES:
 - Use ONLY HTML tags: <h4>, <p>, <ul>, <li>, <strong>. No markdown.
-- Cite exact counts and adoption percentages."""
+- Cite exact counts, user numbers, and adoption percentages."""
 
 def feature_adoption_node(state: AnalyticsState) -> dict:
     try:
@@ -32,8 +31,7 @@ def feature_adoption_node(state: AnalyticsState) -> dict:
         df["event_time"] = pd.to_datetime(df["event_time"], format="mixed", utc=True)
         
         ctx = {}
-        # Feature adoption is essentially a workflow distribution analysis
-        tools = create_business_query_tools(df, ctx) + create_workflow_tools(df, ctx)
+        tools = create_query_tools(df, ctx) + create_workflow_tools(df, ctx)
         insights, iters = run_agent(SYSTEM_PROMPT, tools)
         chart_html = build_workflow_chart(ctx)
         

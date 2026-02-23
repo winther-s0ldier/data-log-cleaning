@@ -1,92 +1,92 @@
 {
   "application": {
     "basic_stats": {
-      "total_events": 1166245,
+      "total_events": 1201955,
       "unique_events": 181,
-      "unique_users": 1166245,
+      "unique_users": 507,
       "date_range": {
         "start": "2025-11-27T07:27:08.342000+05:30",
-        "end": "2026-02-19T23:57:42.809000+05:30",
-        "span_days": 84
+        "end": "2026-02-22T23:41:35.409000+05:30",
+        "span_days": 87
       },
-      "avg_events_per_user": 1.0,
-      "median_events_per_user": 1.0,
+      "avg_events_per_user": 2370.7199211045363,
+      "median_events_per_user": 283.0,
       "events_per_user_distribution": {
-        "p25": 1.0,
-        "p50": 1.0,
-        "p75": 1.0,
-        "p90": 1.0,
-        "p95": 1.0
+        "p25": 45.0,
+        "p50": 283.0,
+        "p75": 1721.5,
+        "p90": 5250.200000000004,
+        "p95": 10900.299999999988
       }
     },
     "sessions": {
-      "total_sessions": 1166245,
-      "avg_session_length": 1.0,
-      "median_session_length": 1.0,
-      "avg_session_duration_minutes": 0.0,
-      "median_session_duration_minutes": 0.0,
-      "bounce_rate": 1.0,
+      "total_sessions": 97600,
+      "avg_session_length": 16.961875,
+      "median_session_length": 5.0,
+      "avg_session_duration_minutes": 14.937405592896175,
+      "median_session_duration_minutes": 0.23711666666666667,
+      "bounce_rate": 0.1634938524590164,
       "session_length_distribution": {
-        "p25": 1.0,
-        "p50": 1.0,
-        "p75": 1.0,
-        "p90": 1.0,
-        "p95": 1.0
+        "p25": 2.0,
+        "p50": 5.0,
+        "p75": 14.0,
+        "p90": 35.0,
+        "p95": 61.0
       },
       "common_start_events": {
-        "viewed_hisab_page": 526687,
-        "viewed_hisab_bus_detail": 230423,
-        "viewed_dashboard_page": 97491,
-        "viewed_hisab_trip_detail": 71880,
-        "clicked_hisab_trip_detail_card": 70723,
-        "clicked_hisab_bus_detail_card": 70592,
-        "home_page_load_error": 16282,
-        "clicked_hisab_yestarday_btn": 8179,
-        "clicked_nav_drawer_menu": 7615,
-        "clicked_hisab_coustom_date_btn": 5302
+        "viewed_hisab_page": 56885,
+        "viewed_dashboard_page": 19071,
+        "viewed_hisab_bus_detail": 6244,
+        "home_page_load_error": 2167,
+        "dashboard_clicked_gps_vistar_se_dekhe_bus_card": 1969,
+        "clicked_login_verify_otp": 1928,
+        "clicked_hisab_yestarday_btn": 1867,
+        "clicked_nav_drawer_logout": 1250,
+        "clicked_nav_drawer_menu": 905,
+        "viewed_online_payment_history_page": 668
       },
       "common_end_events": {
-        "viewed_hisab_page": 526687,
-        "viewed_hisab_bus_detail": 230423,
-        "viewed_dashboard_page": 97491,
-        "viewed_hisab_trip_detail": 71880,
-        "clicked_hisab_trip_detail_card": 70723,
-        "clicked_hisab_bus_detail_card": 70592,
-        "home_page_load_error": 16282,
-        "clicked_hisab_yestarday_btn": 8179,
-        "clicked_nav_drawer_menu": 7615,
-        "clicked_hisab_coustom_date_btn": 5302
+        "viewed_dashboard_page": 75188,
+        "viewed_hisab_page": 13403,
+        "viewed_login/signup_page": 2287,
+        "login_verify_otp_success": 2094,
+        "home_page_load_error": 1597,
+        "viewed_hisab_bus_detail": 622,
+        "clicked_hisab_bus_detail_card": 619,
+        "clicked_hisab_trip_detail_card": 266,
+        "clicked_login_btn": 254,
+        "clicked_nav_drawer_menu": 239
       },
       "session_detection_method": "system_events_only",
-      "session_markers_used": 139343,
-      "total_session_boundaries": 1358178
+      "session_markers_used": 145674,
+      "total_session_boundaries": 145772
     },
     "time_patterns": {
       "hourly_activity": {
-        "0": 2416,
-        "1": 1034,
-        "2": 549,
-        "3": 489,
-        "4": 818,
-        "5": 2123,
-        "6": 9560,
-        "7": 42778,
-        "8": 81566,
-        "9": 89795,
-        "10": 86486,
-        "11": 93887,
-        "12": 93562,
-        "13": 91145,
-        "14": 97045,
-        "15": 105705,
-        "16": 97869,
-        "17": 87485,
-        "18": 78244,
-        "19": 47100,
-        "20": 25532,
-        "21": 17377,
-        "22": 8545,
-        "23": 5135
+        "0": 2506,
+        "1": 1068,
+        "2": 554,
+        "3": 506,
+        "4": 852,
+        "5": 2197,
+        "6": 10083,
+        "7": 44196,
+        "8": 84073,
+        "9": 91932,
+        "10": 88701,
+        "11": 96706,
+        "12": 96905,
+        "13": 93745,
+        "14": 99884,
+        "15": 109146,
+        "16": 101477,
+        "17": 89993,
+        "18": 80548,
+        "19": 48602,
+        "20": 26275,
+        "21": 17881,
+        "22": 8820,
+        "23": 5305
       },
       "peak_hours": [
         15,
@@ -94,67 +94,2197 @@
         14
       ],
       "daily_activity": {
-        "Friday": 176301,
+        "Friday": 187744,
         "Monday": 181854,
-        "Saturday": 169685,
-        "Sunday": 142525,
+        "Saturday": 182052,
+        "Sunday": 154425,
         "Thursday": 169840,
         "Tuesday": 161922,
         "Wednesday": 164118
       },
-      "avg_events_per_day": 14398.086419753086,
-      "median_events_per_day": 13394.0,
-      "avg_active_days_per_user": 1.0
+      "avg_events_per_day": 14308.988095238095,
+      "median_events_per_day": 13099.0,
+      "avg_active_days_per_user": 21.59171597633136
     },
     "transitions": {
-      "transition_probabilities": {},
-      "most_common_transitions": [],
-      "high_exit_events": [
+      "transition_probabilities": {
+        "choose_language": {
+          "Onboarding_Language": 0.8,
+          "_user": 0.1625,
+          "choose_language": 0.0375
+        },
+        "Onboarding_Language": {
+          "generate_otp": 0.59375,
+          "Onboarding_backpressed": 0.03125,
+          "choose_language": 0.3125,
+          "Onboarding_get_otp": 0.046875,
+          "Onboarding_Language": 0.015625
+        },
+        "generate_otp": {
+          "Onboarding_get_otp": 0.8367346938775511,
+          "verify_otp": 0.10204081632653061,
+          "_auth_generate-otp": 0.061224489795918366
+        },
+        "Onboarding_get_otp": {
+          "_auth_generate-otp": 0.8636363636363636,
+          "generate_otp": 0.06818181818181818,
+          "Onboarding_backpressed": 0.06818181818181818
+        },
+        "_auth_generate-otp": {
+          "get_otp": 1.0
+        },
+        "get_otp": {
+          "Onboarding_signup_": 1.0
+        },
+        "Onboarding_signup_": {
+          "verify_otp": 0.7608695652173914,
+          "Onboarding_backpressed": 0.06521739130434782,
+          "choose_language": 0.021739130434782608,
+          "resend_otp": 0.08695652173913043,
+          "_auth_verify-otp": 0.06521739130434782
+        },
+        "verify_otp": {
+          "_auth_verify-otp": 0.8333333333333334,
+          "login": 0.09523809523809523,
+          "enter_otp": 0.07142857142857142
+        },
+        "_auth_verify-otp": {
+          "enter_otp": 0.9230769230769231,
+          "verify_otp": 0.07692307692307693
+        },
+        "enter_otp": {
+          "login": 0.9487179487179487,
+          "Onboarding_Profile Saved": 0.02564102564102564,
+          "_user": 0.02564102564102564
+        },
+        "login": {
+          "_user": 0.8260869565217391,
+          "_ticket": 0.021739130434782608,
+          "_ticket_v2": 0.043478260869565216,
+          "Onboarding_Profile Saved": 0.021739130434782608,
+          "_location_from-town": 0.043478260869565216,
+          "_history_recommended-journey": 0.021739130434782608,
+          "_auth_verify-otp": 0.021739130434782608
+        },
+        "_user": {
+          "_location_from-town": 0.15734989648033126,
+          "_history_recommended-journey": 0.2070393374741201,
+          "_location_special-town-search": 0.14285714285714285,
+          "_user": 0.09730848861283643,
+          "_ticket": 0.09937888198757763,
+          "Onboarding_backpressed": 0.004140786749482402,
+          "Onboarding_Profile Saved": 0.043478260869565216,
+          "pageview_bus_list": 0.11387163561076605,
+          "_user_device": 0.026915113871635612,
+          "choose_language": 0.018633540372670808,
+          "_bus-search_user-bus-search": 0.051759834368530024,
+          "_location_elastic-town-search": 0.004140786749482402,
+          "login": 0.002070393374741201,
+          "Buslist_date change": 0.018633540372670808,
+          "_ticket_v2": 0.002070393374741201,
+          "_v1_accounts_in~~99199233_users": 0.002070393374741201,
+          "_bus-search_list": 0.002070393374741201,
+          "_profile": 0.004140786749482402,
+          "from_town_select": 0.002070393374741201
+        },
+        "_location_from-town": {
+          "_user": 0.520618556701031,
+          "_user_device": 0.030927835051546393,
+          "_location_from-town": 0.041237113402061855,
+          "_auth_guest-login": 0.005154639175257732,
+          "_profile": 0.005154639175257732,
+          "_history_recommended-journey": 0.13402061855670103,
+          "_v1_accounts_in~~99199233_users": 0.005154639175257732,
+          "_ticket": 0.13402061855670103,
+          "_location_special-town-search": 0.07731958762886598,
+          "Onboarding_backpressed": 0.005154639175257732,
+          "Onboarding_Profile Saved": 0.03608247422680412,
+          "_location_elastic-town-search": 0.005154639175257732
+        },
+        "_history_recommended-journey": {
+          "_location_from-town": 0.26993865030674846,
+          "_history_recommended-journey": 0.03680981595092025,
+          "_profile": 0.04294478527607362,
+          "_user_device": 0.12883435582822086,
+          "_location_special-town-search": 0.09815950920245399,
+          "_user": 0.38650306748466257,
+          "_ticket_v2": 0.024539877300613498,
+          "_ticket": 0.006134969325153374,
+          "_v1_accounts_in~~99199233_users": 0.006134969325153374
+        },
+        "_user_device": {
+          "_user": 0.4634146341463415,
+          "_location_from-town": 0.3170731707317073,
+          "_history_recommended-journey": 0.0975609756097561,
+          "_location_special-town-search": 0.07317073170731707,
+          "_ticket": 0.04878048780487805
+        },
+        "_location_special-town-search": {
+          "_ticket": 0.24150943396226415,
+          "_location_special-town-search": 0.09056603773584905,
+          "_user": 0.13962264150943396,
+          "_location_town-search": 0.03773584905660377,
+          "_profile": 0.0037735849056603774,
+          "_v1_accounts_in~~99199233_users": 0.0037735849056603774,
+          "_location_elastic-town-search": 0.3660377358490566,
+          "DeviceInfo": 0.011320754716981131,
+          "_history_recommended-journey": 0.033962264150943396,
+          "_location_from-town": 0.03773584905660377,
+          "Buslist_date change": 0.018867924528301886,
+          "_user_device": 0.0037735849056603774,
+          "to_town_select": 0.0037735849056603774,
+          "from_town_select": 0.0037735849056603774,
+          "enquire_now": 0.0037735849056603774
+        },
+        "_ticket": {
+          "_ticket": 0.05625,
+          "_user": 0.15625,
+          "_location_special-town-search": 0.43125,
+          "_ticket_v2": 0.16875,
+          "_location_from-town": 0.04375,
+          "PaymentPage_DiscountApplied": 0.0125,
+          "checkout_backpress": 0.01875,
+          "passenger_card_clicked": 0.00625,
+          "_history_recommended-journey": 0.0375,
+          "Buslist_date change": 0.0125,
+          "_profile": 0.01875,
+          "Onboarding_backpressed": 0.00625,
+          "_location_elastic-town-search": 0.0125,
+          "_v1_accounts_in~~99199233_users": 0.0125,
+          "choose_language": 0.00625
+        },
+        "Onboarding_backpressed": {
+          "Onboarding_backpressed": 0.7884615384615384,
+          "choose_language": 0.07692307692307693,
+          "generate_otp": 0.057692307692307696,
+          "_location_from-town": 0.038461538461538464,
+          "Onboarding_Profile Saved": 0.019230769230769232,
+          "_auth_generate-otp": 0.019230769230769232
+        },
+        "_auth_guest-login": {
+          "_profile": 0.75,
+          "generate_otp": 0.25
+        },
+        "_profile": {
+          "_profile_null": 0.013888888888888888,
+          "_location_special-town-search": 0.041666666666666664,
+          "_location_town-search": 0.013888888888888888,
+          "_profile": 0.041666666666666664,
+          "_location_from-town": 0.013888888888888888,
+          "generate_otp": 0.013888888888888888,
+          "_v1_accounts_in~~99199233_users": 0.027777777777777776,
+          "_bus-search_v2_layout": 0.4305555555555556,
+          "select_seat": 0.06944444444444445,
+          "_coupon": 0.027777777777777776,
+          "_bus-search_get-distance": 0.027777777777777776,
+          "auto_apply_coupon": 0.013888888888888888,
+          "_auth_guest-login": 0.027777777777777776,
+          "_ticket": 0.041666666666666664,
+          "Buslist_bus_selection": 0.013888888888888888,
+          "_notification_send_generic-notification": 0.05555555555555555,
+          "error": 0.027777777777777776,
+          "Buslist_date change": 0.013888888888888888,
+          "_bus-search_list": 0.013888888888888888,
+          "_history_recommended-journey": 0.027777777777777776,
+          "_user": 0.027777777777777776,
+          "_ticket_v2": 0.013888888888888888
+        },
+        "_profile_null": {
+          "_location_special-town-search": 1.0
+        },
+        "_location_town-search": {
+          "_location_from-town": 0.012195121951219513,
+          "generate_otp": 0.012195121951219513,
+          "_ticket_v2": 0.012195121951219513,
+          "_location_town-search": 0.25609756097560976,
+          "_location_elastic-town-search": 0.5487804878048781,
+          "from_town_select": 0.0975609756097561,
+          "to_town_select": 0.06097560975609756
+        },
+        "_ticket_v2": {
+          "_user": 0.2564102564102564,
+          "_ticket": 0.20512820512820512,
+          "_history_recommended-journey": 0.02564102564102564,
+          "_location_special-town-search": 0.15384615384615385,
+          "login": 0.02564102564102564,
+          "Buslist_date change": 0.05128205128205128,
+          "_v1_accounts_in~~99199233_users": 0.02564102564102564,
+          "DeviceInfo": 0.02564102564102564,
+          "_location_elastic-town-search": 0.15384615384615385,
+          "_profile": 0.05128205128205128,
+          "enquire_now": 0.02564102564102564
+        },
+        "_v1_accounts_in~~99199233_users": {
+          "_location_town-search": 0.125,
+          "_location_special-town-search": 0.125,
+          "_user": 0.125,
+          "logout": 0.125,
+          "_history_recommended-journey": 0.25,
+          "_ticket_v2": 0.25
+        },
+        "DeviceInfo": {
+          "app_start": 0.9705882352941176,
+          "choose_language": 0.029411764705882353
+        },
+        "app_start": {
+          "choose_language": 0.9696969696969697,
+          "Onboarding_backpressed": 0.030303030303030304
+        },
+        "Onboarding_Profile Saved": {
+          "_location_from-town": 0.6129032258064516,
+          "_user": 0.3548387096774194,
+          "login": 0.03225806451612903
+        },
+        "_location_elastic-town-search": {
+          "_location_elastic-town-search": 0.8329741379310345,
+          "Buslist_date change": 0.036637931034482756,
+          "_location_special-town-search": 0.04849137931034483,
+          "DeviceInfo": 0.0010775862068965517,
+          "Onboarding_backpressed": 0.0010775862068965517,
+          "_user": 0.011853448275862068,
+          "_ticket": 0.005387931034482759,
+          "_history_recommended-journey": 0.0010775862068965517,
+          "_bus-search_user-bus-search": 0.0021551724137931034,
+          "pageview_bus_list": 0.0010775862068965517,
+          "_profile": 0.0010775862068965517,
+          "choose_language": 0.003232758620689655,
+          "_location_from-town": 0.0010775862068965517,
+          "_location_town-search": 0.05064655172413793,
+          "_bus-search_list": 0.0010775862068965517,
+          "_rewards_best-V2": 0.0010775862068965517
+        },
+        "Buslist_date change": {
+          "_user": 0.27488151658767773,
+          "bus_search": 0.25118483412322273,
+          "_bus-search_user-bus-search": 0.18009478672985782,
+          "date_change_on_bus_list": 0.037914691943127965,
+          "pageview_bus_list": 0.04739336492890995,
+          "_rewards_best-V2": 0.07109004739336493,
+          "bus_result": 0.014218009478672985,
+          "_bus-search_list": 0.004739336492890996,
+          "Buslist_date change": 0.08056872037914692,
+          "date_select": 0.009478672985781991,
+          "_bus-search_v2_layout": 0.009478672985781991,
+          "from_town_select": 0.009478672985781991,
+          "error": 0.009478672985781991
+        },
+        "pageview_bus_list": {
+          "_bus-search_user-bus-search": 0.5,
+          "Buslist_date change": 0.05319148936170213,
+          "_bus-search_list": 0.22340425531914893,
+          "_user": 0.13829787234042554,
+          "_rewards_best-V2": 0.02127659574468085,
+          "bus_search": 0.010638297872340425,
+          "_location_from-town": 0.010638297872340425,
+          "pageview_bus_list": 0.031914893617021274,
+          "_location_special-town-search": 0.010638297872340425
+        },
+        "_bus-search_user-bus-search": {
+          "_bus-search_list": 0.6592592592592592,
+          "_user": 0.08888888888888889,
+          "pageview_bus_list": 0.16296296296296298,
+          "bus_search": 0.007407407407407408,
+          "Buslist_date change": 0.037037037037037035,
+          "Route_Selected": 0.007407407407407408,
+          "from_town_select": 0.014814814814814815,
+          "_bus-search_user-bus-search": 0.022222222222222223
+        },
+        "_bus-search_list": {
+          "_rewards_best-V2": 0.703125,
+          "Buslist_date change": 0.0546875,
+          "_user": 0.0390625,
+          "Buslist_Live Chat Icon": 0.015625,
+          "bus_search": 0.0546875,
+          "bus_result": 0.0390625,
+          "apply_filter": 0.0234375,
+          "_bus-search_list": 0.046875,
+          "pageview_bus_list": 0.015625,
+          "_location_elastic-town-search": 0.0078125
+        },
+        "_rewards_best-V2": {
+          "Buslist_date change": 0.4649122807017544,
+          "bus_search": 0.24561403508771928,
+          "bus_result": 0.07017543859649122,
+          "_history_recommended-journey": 0.008771929824561403,
+          "_location_elastic-town-search": 0.017543859649122806,
+          "_bus-search_list": 0.03508771929824561,
+          "apply_filter": 0.10526315789473684,
+          "sort_bus": 0.05263157894736842
+        },
+        "bus_search": {
+          "bus_result": 0.7168141592920354,
+          "Buslist_date change": 0.10619469026548672,
+          "_location_special-town-search": 0.017699115044247787,
+          "_user": 0.008849557522123894,
+          "_rewards_best-V2": 0.02654867256637168,
+          "select_seat": 0.017699115044247787,
+          "_location_town-search": 0.017699115044247787,
+          "to_town_select": 0.008849557522123894,
+          "_ticket": 0.008849557522123894,
+          "_location_elastic-town-search": 0.035398230088495575,
+          "date_change_on_bus_list": 0.008849557522123894,
+          "from_town_select": 0.017699115044247787,
+          "apply_filter": 0.008849557522123894
+        },
+        "bus_result": {
+          "Buslist_Live Chat Icon": 0.09183673469387756,
+          "_location_special-town-search": 0.14285714285714285,
+          "_user": 0.07142857142857142,
+          "Buslist_date change": 0.12244897959183673,
+          "choose_language": 0.02040816326530612,
+          "Buslist_bus_selection": 0.16326530612244897,
+          "select_seat": 0.17346938775510204,
+          "DeviceInfo": 0.01020408163265306,
+          "bus_search": 0.08163265306122448,
+          "Home_Faq": 0.01020408163265306,
+          "pageview_seat_selection": 0.01020408163265306,
+          "_location_from-town": 0.01020408163265306,
+          "_ticket": 0.01020408163265306,
+          "enquire_now": 0.02040816326530612,
+          "bus_detail": 0.01020408163265306,
+          "_bus-search_list": 0.01020408163265306,
+          "_location_town-search": 0.01020408163265306,
+          "date_change_on_bus_list": 0.01020408163265306,
+          "SeatSelection_Click On Back": 0.01020408163265306,
+          "_bus-search_v2_layout": 0.01020408163265306
+        },
+        "Buslist_Live Chat Icon": {
+          "enquire_now": 1.0
+        },
+        "enquire_now": {
+          "_location_special-town-search": 0.1875,
+          "_user": 0.1875,
+          "Buslist_date change": 0.3125,
+          "choose_language": 0.1875,
+          "Buslist_Live Chat Icon": 0.125
+        },
+        "viewed_login/signup_page": {
+          "viewed_login_page": 0.3452471482889734,
+          "clicked_login_btn": 0.49277566539923956,
+          "viewed_login/signup_page": 0.1376425855513308,
+          "dashboard_clicked_gps_vistar_se_dekhe_bus_card": 0.00038022813688212925,
+          "viewed_setting_ticketing_machine_page": 0.00038022813688212925,
+          "clicked_nav_drawer_online_payments_history": 0.00038022813688212925,
+          "clicked_nav_drawer_menu": 0.0007604562737642585,
+          "viewed_dashboard_page": 0.012927756653992395,
+          "viewed_hisab_page": 0.0034220532319391636,
+          "clicked_hisab_bus_detail_card": 0.00038022813688212925,
+          "clicked_login_send_otp_btn": 0.001520912547528517,
+          "viewed_manage_route_and_pricing_page": 0.00038022813688212925,
+          "home_page_load_error": 0.0011406844106463879,
+          "viewed_login_otp_verify_page": 0.0007604562737642585,
+          "clicked_nav_drawer_logout": 0.00038022813688212925,
+          "viewed_hisab_bus_detail": 0.00038022813688212925,
+          "viewed_my_profile_page": 0.00038022813688212925,
+          "clicked_login_verify_otp": 0.0007604562737642585
+        },
+        "viewed_login_page": {
+          "clicked_login_send_otp_btn": 0.804959289415248,
+          "viewed_login_page": 0.11287934863064397,
+          "viewed_login/signup_page": 0.02553663952627683,
+          "clicked_nav_drawer_menu": 0.003700962250185048,
+          "clicked_login_btn": 0.018504811250925242,
+          "viewed_dashboard_page": 0.006661732050333087,
+          "viewed_hisab_page": 0.0048112509252405625,
+          "viewed_login_otp_verify_page": 0.012953367875647668,
+          "login_send_otp_failed": 0.001850481125092524,
+          "clicked_nav_drawer_dsn_mapping": 0.0003700962250185048,
+          "clicked_login_verify_otp": 0.0014803849000740192,
+          "clicked_homepage_banner": 0.0003700962250185048,
+          "clicked_hisab_bus_detail_card": 0.0011102886750555144,
+          "clicked_home_banner_app": 0.0003700962250185048,
+          "viewed_hisab_bus_detail": 0.0007401924500370096,
+          "clicked_nav_drawer_my_profile": 0.0003700962250185048,
+          "viewed_online_payment_history_page": 0.0003700962250185048,
+          "clicked_nav_drawer_cash_settlement": 0.0003700962250185048,
+          "clicked_hisab_yestarday_btn": 0.0003700962250185048,
+          "clicked_hisab_trip_detail_card": 0.0007401924500370096,
+          "dashboard_clicked_gps_vistar_se_dekhe_bus_card": 0.0003700962250185048,
+          "clicked_view_pricing_page_prices_upload": 0.0003700962250185048,
+          "clicked_hisab_today_btn": 0.0003700962250185048,
+          "clicked_nav_drawer_logout": 0.0003700962250185048
+        },
+        "clicked_login_send_otp_btn": {
+          "viewed_login_otp_verify_page": 0.6873203449377195,
+          "login_send_otp_failed": 0.1877994251038007,
+          "clicked_login_send_otp_btn": 0.09869051421271159,
+          "clicked_nav_drawer_menu": 0.0006387735547748323,
+          "viewed_login/signup_page": 0.00670712232513574,
+          "clicked_login_verify_otp": 0.011178537208559566,
+          "viewed_login_page": 0.0019163206643244969,
+          "clicked_login_btn": 0.0031938677738741618,
+          "home_page_load_error": 0.0009581603321622484,
+          "clicked_hisab_trip_detail_card": 0.00031938677738741617,
+          "viewed_hisab_page": 0.0006387735547748323,
+          "viewed_dashboard_page": 0.0006387735547748323
+        },
+        "viewed_login_otp_verify_page": {
+          "clicked_login_verify_otp": 0.7832167832167832,
+          "viewed_login/signup_page": 0.02097902097902098,
+          "viewed_login_otp_verify_page": 0.10761460761460762,
+          "clicked_login_send_otp_btn": 0.029914529914529916,
+          "clicked_nav_drawer_logout": 0.0003885003885003885,
+          "viewed_dashboard_page": 0.005050505050505051,
+          "clicked_login_resend_otp": 0.029526029526029528,
+          "clicked_nav_drawer_menu": 0.003885003885003885,
+          "login_verify_otp_failed": 0.000777000777000777,
+          "viewed_hisab_page": 0.003885003885003885,
+          "clicked_login_btn": 0.00777000777000777,
+          "viewed_login_page": 0.003108003108003108,
+          "login_verify_otp_success": 0.000777000777000777,
+          "home_page_load_error": 0.0003885003885003885,
+          "viewed_setting_ticketing_machine_page": 0.0003885003885003885,
+          "clicked_hisab_yestarday_btn": 0.0003885003885003885,
+          "viewed_hisab_bus_detail": 0.000777000777000777,
+          "viewed_online_payment_history_page": 0.0003885003885003885,
+          "clicked_hisab_download_btn": 0.0003885003885003885,
+          "clicked_hisab_bus_detail_card": 0.0003885003885003885
+        },
+        "clicked_login_verify_otp": {
+          "login_verify_otp_success": 0.7941771128184392,
+          "login_verify_otp_failed": 0.08370400323493732,
+          "clicked_login_verify_otp": 0.10958350181965225,
+          "viewed_login/signup_page": 0.003234937323089365,
+          "viewed_login_page": 0.001213101496158512,
+          "home_page_load_error": 0.0004043671653861706,
+          "viewed_dashboard_page": 0.0028305701577031944,
+          "clicked_hisab_trip_detail_card": 0.0004043671653861706,
+          "viewed_login_otp_verify_page": 0.0020218358269308533,
+          "viewed_hisab_page": 0.0008087343307723412,
+          "clicked_hisab_bus_detail_card": 0.0004043671653861706,
+          "clicked_login_btn": 0.0004043671653861706,
+          "clicked_nav_drawer_menu": 0.0004043671653861706,
+          "clicked_login_send_otp_btn": 0.0004043671653861706
+        },
+        "login_verify_otp_success": {
+          "viewed_dashboard_page": 0.8914027149321267,
+          "login_verify_otp_success": 0.10180995475113122,
+          "clicked_homepage_banner": 0.00045248868778280545,
+          "clicked_nav_drawer_menu": 0.0013574660633484162,
+          "viewed_hisab_page": 0.0009049773755656109,
+          "viewed_setting_ticketing_machine_page": 0.0009049773755656109,
+          "clicked_login_verify_otp": 0.0009049773755656109,
+          "home_page_load_error": 0.00045248868778280545,
+          "clicked_hisab_bus_detail_card": 0.00045248868778280545,
+          "clicked_hisab_coustom_date_btn": 0.0009049773755656109,
+          "viewed_view_pricing_page ": 0.00045248868778280545
+        },
+        "viewed_dashboard_page": {
+          "viewed_online_payment_history_page": 0.006214739504599303,
+          "viewed_dashboard_page": 0.28770588177174417,
+          "clicked_nav_drawer_menu": 0.024196974637144184,
+          "viewed_login/signup_page": 0.005187183211311023,
+          "viewed_hisab_page": 0.6058926401280493,
+          "viewed_setting_ticketing_machine_page": 0.0033395579531869065,
+          "viewed_null_page": 0.0019958304927330034,
+          "dashboard_clicked_gps_vistar_se_dekhe_bus_card": 0.01604568673365543,
+          "clicked_homepage_banner": 0.0009979152463665017,
+          "dashboard_page_pay_btn": 2.9641046921777278e-05,
+          "clicked_hisab_bus_detail_card": 0.013249547974034442,
+          "viewed_hisab_bus_detail": 0.011174674689510033,
+          "home_page_load_error": 0.015996284988785803,
+          "viewed_cash_settlement_screen": 0.0009188724545750956,
+          "clicked_on_video": 1.976069794785152e-05,
+          "viewed_manage_route_and_pricing_page": 0.002173676774263667,
+          "clicked_hisab_trip_detail_card": 0.000741026173044432,
+          "clicked_hisab_yestarday_btn": 0.0014030095542974577,
+          "clicked_cash_settlement_bus_card": 9.88034897392576e-06,
+          "clicked_cash_settlement_tickets_detail_back_btn": 5.9282093843554556e-05,
+          "viewed_hisab_trip_detail": 0.00012844453666103486,
+          "viewed_offer_discount_page": 9.88034897392576e-05,
+          "viewed_my_profile_page": 0.0002173676774263667,
+          "clicked_manage_route_and_pricing_view_pricing_btn": 0.00015808558358281215,
+          "clicked_hisab_bus_detail_download_btn": 9.88034897392576e-06,
+          "clicked_view_route_page_submit_changes": 3.952139589570304e-05,
+          "clicked_hisab_coustom_date_btn": 0.00035569256306132734,
+          "viewed_camera_list_page": 2.9641046921777278e-05,
+          "viewed_card_wallet_history_page": 0.00038533360998310463,
+          "clicked_nav_drawer_manage_route_pricing": 9.88034897392576e-06,
+          "clicked_hisab_download_btn": 0.0002667694222959955,
+          "login_verify_otp_success": 0.00011856418768710911,
+          "viewed_login_otp_verify_page": 1.976069794785152e-05,
+          "clicked_login_send_otp_btn": 0.0001976069794785152,
+          "viewed_login_page": 7.904279179140607e-05,
+          "viewed_view_route_page_back_btn": 9.88034897392576e-06,
+          "clicked_hisab_today_btn": 0.00011856418768710911,
+          "clicked_nav_drawer_logout": 7.904279179140607e-05,
+          "clicked_hisab_bus_detail_today_btn": 1.976069794785152e-05,
+          "clicked_home_banner_app": 2.9641046921777278e-05,
+          "clicked_hisab_bus_detail_yeaterday_btn": 2.9641046921777278e-05,
+          "clicked_cash_settlement_settled_btn": 9.88034897392576e-06,
+          "clicked_hisab_trip_detail_card_download_btn": 3.952139589570304e-05,
+          "clicked_nav_drawer_my_profile": 9.88034897392576e-06,
+          "clicked_manage_route_and_pricing_bus_card": 9.88034897392576e-06,
+          "viewed_view_pricing_page ": 1.976069794785152e-05,
+          "smart_ticketing_settings_failed": 9.88034897392576e-06,
+          "viewed_view_route_page": 9.88034897392576e-06,
+          "dashboard_online_booking_detail_clicked_dashboard_": 9.88034897392576e-06,
+          "clicked_login_verify_otp": 1.976069794785152e-05,
+          "clicked_login_btn": 4.94017448696288e-05,
+          "clicked_nav_drawer_online_payments_history": 9.88034897392576e-06,
+          "clicked_manage_route_and_pricing_view_route_btn": 9.88034897392576e-06,
+          "login_send_otp_failed": 9.88034897392576e-06,
+          "clicked_nav_drawer_reports": 9.88034897392576e-06,
+          "viewed_recharge_page": 9.88034897392576e-06,
+          "clicked_login_resend_otp": 9.88034897392576e-06
+        },
+        "viewed_online_payment_history_page": {
+          "viewed_online_payment_history_page": 0.1845771144278607,
+          "viewed_recharge_page": 0.0004975124378109452,
+          "clicked_nav_drawer_menu": 0.10199004975124377,
+          "viewed_login/signup_page": 0.012437810945273632,
+          "viewed_dashboard_page": 0.2935323383084577,
+          "viewed_hisab_page": 0.27562189054726366,
+          "viewed_my_profile_page": 0.004477611940298508,
+          "viewed_manage_route_and_pricing_page": 0.031840796019900496,
+          "dashboard_clicked_gps_vistar_se_dekhe_bus_card": 0.014427860696517412,
+          "viewed_offer_discount_page": 0.003482587064676617,
+          "viewed_cash_settlement_screen": 0.01691542288557214,
+          "viewed_null_page": 0.012935323383084577,
+          "clicked_hisab_bus_detail_card": 0.003482587064676617,
+          "clicked_login_verify_otp": 0.0004975124378109452,
+          "viewed_setting_ticketing_machine_page": 0.01691542288557214,
+          "home_page_load_error": 0.011442786069651741,
+          "viewed_camera_list_page": 0.0004975124378109452,
+          "viewed_card_wallet_history_page": 0.001990049751243781,
+          "viewed_hisab_bus_detail": 0.004477611940298508,
+          "clicked_homepage_banner": 0.003980099502487562,
+          "clicked_online_payment_history_page_date_selection": 0.001990049751243781,
+          "viewed_view_pricing_page ": 0.0004975124378109452,
+          "clicked_login_send_otp_btn": 0.0004975124378109452,
+          "clicked_hisab_trip_detail_card": 0.0004975124378109452,
+          "clicked_on_video": 0.0004975124378109452
+        },
+        "viewed_recharge_page": {
+          "clicked_recharge_page_my_subscription": 0.4263565891472868,
+          "viewed_hisab_page": 0.007751937984496124,
+          "viewed_online_payment_history_page": 0.007751937984496124,
+          "viewed_setting_ticketing_machine_page": 0.023255813953488372,
+          "home_page_load_error": 0.11627906976744186,
+          "clicked_nav_drawer_menu": 0.20930232558139536,
+          "viewed_dashboard_page": 0.06976744186046512,
+          "clicked_recharge_page_recaharge_history_btn": 0.046511627906976744,
+          "clicked_recharge_page_pay_now_btn": 0.007751937984496124,
+          "dashboard_clicked_gps_vistar_se_dekhe_bus_card": 0.007751937984496124,
+          "viewed_recharge_page": 0.06976744186046512,
+          "viewed_login/signup_page": 0.007751937984496124
+        },
+        "clicked_recharge_page_my_subscription": {
+          "viewed_dashboard_page": 0.046153846153846156,
+          "clicked_nav_drawer_menu": 0.13846153846153847,
+          "clicked_recharge_page_recaharge_history_btn": 0.6461538461538462,
+          "viewed_hisab_page": 0.015384615384615385,
+          "home_page_load_error": 0.015384615384615385,
+          "viewed_login/signup_page": 0.015384615384615385,
+          "clicked_recharge_page_my_subscription": 0.1076923076923077,
+          "clicked_nav_drawer_recharge": 0.015384615384615385
+        },
+        "clicked_nav_drawer_menu": {
+          "clicked_nav_drawer_logout": 0.17932169071121234,
+          "viewed_dashboard_page": 0.09934193874968363,
+          "viewed_hisab_page": 0.05770690964312832,
+          "clicked_nav_drawer_menu": 0.24993672487977728,
+          "clicked_nav_drawer_cash_settlement": 0.02442419640597317,
+          "viewed_login/signup_page": 0.015059478613009365,
+          "clicked_nav_drawer_dsn_mapping": 0.023411794482409518,
+          "clicked_nav_drawer_recharge": 0.014553277651227537,
+          "clicked_nav_drawer_reports": 0.032270311313591496,
+          "clicked_nav_drawer_my_profile": 0.029865856745127817,
+          "clicked_nav_drawer_online_payments_history": 0.0120222728423184,
+          "clicked_nav_drawer_pos_settings": 0.05530245507466464,
+          "viewed_setting_ticketing_machine_page": 0.02898000506200962,
+          "clicked_homepage_banner": 0.002531004808909137,
+          "clicked_nav_drawer_manage_route_pricing": 0.07377879017970135,
+          "dashboard_clicked_gps_vistar_se_dekhe_bus_card": 0.009491268033409264,
+          "viewed_online_payment_history_page": 0.010883320678309289,
+          "viewed_t&c_page": 0.006960263224500126,
+          "home_page_load_error": 0.0304986079473551,
+          "clicked_nav_drawer_change_language": 0.013287775246772968,
+          "viewed_login_otp_verify_page": 0.0002531004808909137,
+          "dashboard_page_pay_btn": 0.0002531004808909137,
+          "viewed_cash_settlement_screen": 0.0020248038471273096,
+          "clicked_nav_drawer_offer_discount": 0.008605416350291066,
+          "viewed_my_profile_page": 0.0013920526449000253,
+          "chat_now_failed": 0.00012655024044545685,
+          "clicked_login_send_otp_btn": 0.0006327512022272843,
+          "clicked_login_verify_otp": 0.0007593014426727411,
+          "viewed_manage_route_and_pricing_page": 0.0029106555302455075,
+          "viewed_hisab_bus_detail": 0.000885851683118198,
+          "clicked_hisab_yestarday_btn": 0.0002531004808909137,
+          "viewed_card_wallet_history_page": 0.0005062009617818274,
+          "viewed_null_page": 0.0013920526449000253,
+          "viewed_training_videos_page": 0.004555808656036446,
+          "clicked_hisab_bus_detail_card": 0.001645153125790939,
+          "clicked_home_banner_app": 0.00012655024044545685,
+          "clicked_view_route_page_submit_changes": 0.0002531004808909137,
+          "clicked_nav_drawer_training_videos": 0.0006327512022272843,
+          "clicked_hisab_trip_detail_card": 0.00037965072133637056,
+          "viewed_view_route_page_back_btn": 0.0002531004808909137,
+          "viewed_machine_name_change_page": 0.00037965072133637056,
+          "viewed_offer_discount_page": 0.00037965072133637056,
+          "clicked_nav_drawer_t&c": 0.0007593014426727411,
+          "viewed_login_page": 0.00037965072133637056,
+          "clicked_login_btn": 0.00012655024044545685,
+          "login_verify_otp_success": 0.0002531004808909137,
+          "viewed_recharge_page": 0.00012655024044545685,
+          "clicked_recharge_page_recaharge_history_btn": 0.00012655024044545685
+        },
+        "viewed_hisab_page": {
+          "viewed_online_payment_history_page": 0.0009828725695571357,
+          "viewed_hisab_page": 0.4871433629362995,
+          "viewed_dashboard_page": 0.09613895199598738,
+          "clicked_hisab_yestarday_btn": 0.011016286548844895,
+          "clicked_hisab_trip_detail_card": 0.11115864632815035,
+          "viewed_hisab_bus_detail": 0.1580396394535745,
+          "clicked_hisab_bus_detail_card": 0.11058515032602602,
+          "clicked_hisab_bus_detail_yeaterday_btn": 0.0028010946213082345,
+          "home_page_load_error": 0.0030242232909450328,
+          "clicked_nav_drawer_menu": 0.0018274422447112973,
+          "viewed_login/signup_page": 0.0006786062018705927,
+          "clicked_hisab_download_btn": 0.0016356622311391733,
+          "viewed_setting_ticketing_machine_page": 0.0006066886967810462,
+          "dashboard_clicked_gps_vistar_se_dekhe_bus_card": 0.003103516950402738,
+          "clicked_hisab_coustom_date_btn": 0.00282506712300475,
+          "clicked_hisab_today_btn": 0.0007874044788009324,
+          "clicked_hisab_bus_detail_today_btn": 0.00028398194317410673,
+          "viewed_cash_settlement_screen": 0.00042044079898504117,
+          "clicked_hisab_bus_detail_download_btn": 0.0006417254300297996,
+          "viewed_null_page": 0.00040753252884076355,
+          "viewed_hisab_trip_detail": 0.004849821497064291,
+          "viewed_manage_route_and_pricing_page": 0.0004499454164576756,
+          "viewed_my_profile_page": 6.085327353730859e-05,
+          "clicked_homepage_banner": 0.00014014693299501372,
+          "viewed_offer_discount_page": 4.978904198507067e-05,
+          "clicked_hisab_trip_detail_card_download_btn": 3.872481043283274e-05,
+          "clicked_login_send_otp_btn": 2.0284424512436198e-05,
+          "clicked_reports_delete_trip_confirmation_btn": 2.0284424512436198e-05,
+          "clicked_home_banner_app": 1.8440385920396541e-06,
+          "clicked_nav_drawer_manage_route_pricing": 5.532115776118963e-06,
+          "clicked_manage_route_and_pricing_view_pricing_btn": 2.212846310447585e-05,
+          "clicked_view_route_page_submit_changes": 2.212846310447585e-05,
+          "viewed_card_wallet_history_page": 0.00010326616115422063,
+          "viewed_camera_list_page": 5.532115776118963e-06,
+          "viewed_view_route_page_back_btn": 1.290827014427758e-05,
+          "dashboard_online_booking_detail_clicked_dashboard_": 3.6880771840793083e-06,
+          "clicked_login_verify_otp": 2.212846310447585e-05,
+          "clicked_nav_drawer_logout": 5.532115776118963e-06,
+          "viewed_login_page": 5.532115776118963e-06,
+          "clicked_login_btn": 1.4752308736317233e-05,
+          "clicked_nav_drawer_cash_settlement": 3.6880771840793083e-06,
+          "clicked_cash_settlement_non_settled_btn": 1.8440385920396541e-06,
+          "clicked_nav_drawer_my_profile": 1.8440385920396541e-06,
+          "clicked_on_video": 5.532115776118963e-06,
+          "viewed_login_otp_verify_page": 3.6880771840793083e-06,
+          "clicked_nav_drawer_reports": 1.8440385920396541e-06,
+          "clicked_view_route_page_submit_changes_confirmed": 1.8440385920396541e-06,
+          "login_verify_otp_failed": 1.8440385920396541e-06,
+          "clicked_nav_drawer_pos_settings": 7.3761543681586165e-06,
+          "clicked_login_resend_otp": 5.532115776118963e-06,
+          "clicked_nav_drawer_online_payments_history": 1.8440385920396541e-06
+        },
+        "clicked_login_btn": {
+          "viewed_login_page": 0.8501199040767387,
+          "clicked_login_btn": 0.14088729016786572,
+          "clicked_login_send_otp_btn": 0.00539568345323741,
+          "viewed_login/signup_page": 0.0017985611510791368,
+          "viewed_login_otp_verify_page": 0.001199040767386091,
+          "clicked_login_verify_otp": 0.0005995203836930455
+        },
+        "viewed_setting_ticketing_machine_page": {
+          "viewed_setting_ticketing_machine_page": 0.46854906346100084,
+          "viewed_hisab_page": 0.12216941571149008,
+          "clicked_nav_drawer_menu": 0.11126642437797037,
+          "viewed_dashboard_page": 0.1425775789767962,
+          "clicked_nav_drawer_pos_settings": 0.0019569471624266144,
+          "viewed_login/signup_page": 0.012859938495946324,
+          "smart_ticketing_settings_failed": 0.0136986301369863,
+          "clicked_homepage_banner": 0.0019569471624266144,
+          "viewed_online_payment_history_page": 0.011741682974559686,
+          "viewed_offer_discount_page": 0.005591277606933185,
+          "viewed_my_profile_page": 0.005591277606933185,
+          "viewed_cash_settlement_screen": 0.006429969247973162,
+          "home_page_load_error": 0.06653620352250489,
+          "viewed_null_page": 0.003913894324853229,
+          "clicked_hisab_bus_detail_card": 0.0016773832820799553,
+          "viewed_manage_route_and_pricing_page": 0.009505171931786413,
+          "dashboard_clicked_gps_vistar_se_dekhe_bus_card": 0.008386916410399776,
+          "clicked_nav_drawer_cash_settlement": 0.0002795638803466592,
+          "viewed_card_wallet_history_page": 0.0002795638803466592,
+          "clicked_view_route_page_submit_changes": 0.0005591277606933184,
+          "clicked_hisab_coustom_date_btn": 0.0008386916410399776,
+          "clicked_hisab_trip_detail_card": 0.0005591277606933184,
+          "clicked_login_resend_otp": 0.0002795638803466592,
+          "clicked_hisab_trip_detail_card_download_btn": 0.0002795638803466592,
+          "viewed_hisab_bus_detail": 0.0011182555213866368,
+          "clicked_manage_route_and_pricing_view_pricing_btn": 0.0002795638803466592,
+          "clicked_login_verify_otp": 0.0002795638803466592,
+          "clicked_on_video": 0.0002795638803466592,
+          "viewed_machine_name_change_page": 0.0005591277606933184
+        },
+        "clicked_hisab_yestarday_btn": {
+          "clicked_hisab_yestarday_btn": 0.19695346899916696,
+          "clicked_hisab_bus_detail_card": 0.12328930143996192,
+          "clicked_hisab_download_btn": 0.011781506604784006,
+          "viewed_dashboard_page": 0.185290967511603,
+          "clicked_hisab_coustom_date_btn": 0.050577174818517194,
+          "viewed_hisab_page": 0.21516125193383315,
+          "clicked_hisab_today_btn": 0.1699393073902178,
+          "clicked_nav_drawer_menu": 0.009044388908723075,
+          "viewed_setting_ticketing_machine_page": 0.001785076758300607,
+          "viewed_online_payment_history_page": 0.005355230274901821,
+          "viewed_null_page": 0.0024991074616208496,
+          "viewed_hisab_bus_detail": 0.008211353088182792,
+          "dashboard_clicked_gps_vistar_se_dekhe_bus_card": 0.006426276329882185,
+          "viewed_manage_route_and_pricing_page": 0.0013090562894204451,
+          "home_page_load_error": 0.005474235392121861,
+          "clicked_hisab_trip_detail_card": 0.0010710460549803642,
+          "viewed_login/signup_page": 0.0022610972271807687,
+          "clicked_hisab_bus_detail_today_btn": 0.00023801023444008093,
+          "clicked_manage_route_and_pricing_view_route_btn": 0.00011900511722004047,
+          "clicked_homepage_banner": 0.00023801023444008093,
+          "clicked_hisab_bus_detail_yeaterday_btn": 0.00023801023444008093,
+          "clicked_cash_settlement_settled_btn": 0.00011900511722004047,
+          "viewed_cash_settlement_screen": 0.0011900511722004047,
+          "viewed_offer_discount_page": 0.0003570153516601214,
+          "viewed_my_profile_page": 0.0005950255861002023,
+          "viewed_card_wallet_history_page": 0.00011900511722004047,
+          "clicked_hisab_bus_detail_download_btn": 0.00011900511722004047,
+          "login_verify_otp_success": 0.00011900511722004047,
+          "clicked_login_verify_otp": 0.00011900511722004047
+        },
+        "clicked_hisab_bus_detail_card": {
+          "clicked_hisab_bus_detail_card": 0.09811362261453005,
+          "viewed_hisab_bus_detail": 0.8536545124566903,
+          "clicked_hisab_trip_detail_card": 0.014024088434251774,
+          "viewed_hisab_page": 0.03276412033217841,
+          "clicked_hisab_bus_detail_yeaterday_btn": 0.00017873838200516967,
+          "viewed_hisab_trip_detail": 0.00046746961447505914,
+          "viewed_dashboard_page": 0.0006187097838640488,
+          "clicked_hisab_coustom_date_btn": 4.124731892426992e-05,
+          "clicked_hisab_bus_detail_download_btn": 2.749821261617995e-05,
+          "clicked_hisab_download_btn": 1.3749106308089974e-05,
+          "clicked_hisab_today_btn": 2.749821261617995e-05,
+          "clicked_hisab_bus_detail_today_btn": 2.749821261617995e-05,
+          "clicked_hisab_yestarday_btn": 4.124731892426992e-05
+        },
+        "viewed_hisab_bus_detail": {
+          "viewed_hisab_bus_detail": 0.359731594510577,
+          "viewed_hisab_page": 0.585521604704257,
+          "viewed_dashboard_page": 0.025189341286088577,
+          "clicked_hisab_bus_detail_card": 0.010164194067446779,
+          "viewed_hisab_trip_detail": 0.006343670230242374,
+          "home_page_load_error": 0.0002443113368884845,
+          "clicked_hisab_trip_detail_card_download_btn": 0.0015543255743422548,
+          "clicked_hisab_trip_detail_card": 0.008710962839403206,
+          "clicked_hisab_bus_detail_yeaterday_btn": 0.00010951887515690685,
+          "clicked_hisab_coustom_date_btn": 8.424528858223603e-05,
+          "clicked_hisab_bus_detail_download_btn": 8.003302415312424e-05,
+          "clicked_reports_delete_trip_confirmation_btn": 0.0017186038870776151,
+          "clicked_login_btn": 8.424528858223605e-06,
+          "clicked_hisab_yestarday_btn": 2.9485851003782613e-05,
+          "dashboard_clicked_gps_vistar_se_dekhe_bus_card": 3.791037986200622e-05,
+          "viewed_setting_ticketing_machine_page": 3.369811543289442e-05,
+          "viewed_login/signup_page": 0.00016006604830624848,
+          "viewed_null_page": 4.212264429111802e-06,
+          "viewed_online_payment_history_page": 2.106132214555901e-05,
+          "clicked_nav_drawer_menu": 8.424528858223603e-05,
+          "clicked_hisab_bus_detail_today_btn": 4.212264429111802e-05,
+          "clicked_hisab_today_btn": 3.369811543289442e-05,
+          "clicked_manage_route_and_pricing_view_pricing_btn": 4.212264429111802e-06,
+          "clicked_view_route_page_submit_changes": 8.424528858223605e-06,
+          "clicked_hisab_download_btn": 8.424528858223605e-06,
+          "viewed_card_wallet_history_page": 8.424528858223605e-06,
+          "clicked_login_send_otp_btn": 2.106132214555901e-05,
+          "viewed_view_route_page_back_btn": 8.424528858223605e-06,
+          "clicked_login_verify_otp": 4.212264429111802e-06,
+          "login_verify_otp_success": 8.424528858223605e-06,
+          "clicked_nav_drawer_reports": 4.212264429111802e-06,
+          "viewed_cash_settlement_screen": 8.424528858223605e-06,
+          "clicked_cash_settlement_bus_card": 4.212264429111802e-06,
+          "viewed_offer_discount_page": 4.212264429111802e-06
+        },
+        "clicked_hisab_trip_detail_card": {
+          "clicked_hisab_trip_detail_card": 0.0944496396941526,
+          "viewed_hisab_trip_detail": 0.8634825898014192,
+          "viewed_hisab_bus_detail": 0.01754771989658397,
+          "viewed_hisab_page": 0.023956213213048024,
+          "clicked_hisab_bus_detail_card": 0.0002475383684471093,
+          "viewed_dashboard_page": 0.0002475383684471093,
+          "clicked_hisab_trip_detail_card_download_btn": 4.125639474118488e-05,
+          "clicked_hisab_bus_detail_yeaterday_btn": 1.3752131580394961e-05,
+          "home_page_load_error": 1.3752131580394961e-05
+        },
+        "viewed_hisab_trip_detail": {
+          "viewed_hisab_trip_detail": 0.09355039514994046,
+          "viewed_hisab_page": 0.8501136732705424,
+          "viewed_dashboard_page": 0.015021110750243585,
+          "viewed_hisab_bus_detail": 0.016550286889682797,
+          "clicked_hisab_trip_detail_card": 0.024561545956479375,
+          "clicked_hisab_trip_detail_card_download_btn": 2.7065064414853306e-05,
+          "clicked_hisab_bus_detail_card": 2.7065064414853306e-05,
+          "home_page_load_error": 0.00013532532207426653,
+          "clicked_hisab_bus_detail_yeaterday_btn": 1.3532532207426653e-05
+        },
+        "clicked_hisab_bus_detail_yeaterday_btn": {
+          "clicked_hisab_bus_detail_yeaterday_btn": 0.2081534772182254,
+          "clicked_hisab_coustom_date_btn": 0.039328537170263786,
+          "clicked_hisab_trip_detail_card": 0.1314148681055156,
+          "viewed_hisab_page": 0.3774580335731415,
+          "viewed_dashboard_page": 0.04124700239808154,
+          "viewed_hisab_bus_detail": 0.023501199040767386,
+          "clicked_hisab_bus_detail_today_btn": 0.16115107913669063,
+          "viewed_hisab_trip_detail": 0.0028776978417266188,
+          "clicked_hisab_bus_detail_download_btn": 0.008633093525179856,
+          "clicked_hisab_yestarday_btn": 0.00047961630695443646,
+          "clicked_hisab_today_btn": 0.00047961630695443646,
+          "clicked_hisab_bus_detail_card": 0.0028776978417266188,
+          "viewed_cash_settlement_screen": 0.00047961630695443646,
+          "viewed_manage_route_and_pricing_page": 0.00047961630695443646,
+          "viewed_login/signup_page": 0.00047961630695443646,
+          "home_page_load_error": 0.00047961630695443646,
+          "clicked_view_route_page_submit_changes": 0.00047961630695443646
+        },
+        "clicked_hisab_coustom_date_btn": {
+          "clicked_hisab_coustom_date_btn": 0.5817184643510055,
+          "clicked_hisab_trip_detail_card": 0.03016453382084095,
+          "viewed_dashboard_page": 0.08628884826325411,
+          "clicked_hisab_bus_detail_card": 0.07422303473491773,
+          "viewed_hisab_page": 0.1563071297989031,
+          "dashboard_clicked_gps_vistar_se_dekhe_bus_card": 0.0016453382084095063,
+          "viewed_hisab_bus_detail": 0.006946983546617916,
+          "viewed_online_payment_history_page": 0.002742230347349177,
+          "clicked_hisab_bus_detail_today_btn": 0.0007312614259597807,
+          "clicked_hisab_yestarday_btn": 0.0170018281535649,
+          "clicked_hisab_bus_detail_yeaterday_btn": 0.0029250457038391227,
+          "clicked_hisab_today_btn": 0.007129798903107861,
+          "clicked_nav_drawer_menu": 0.0032906764168190127,
+          "home_page_load_error": 0.0021937842778793418,
+          "viewed_setting_ticketing_machine_page": 0.0018281535648994515,
+          "clicked_hisab_download_btn": 0.002376599634369287,
+          "clicked_hisab_bus_detail_download_btn": 0.0005484460694698354,
+          "viewed_manage_route_and_pricing_page": 0.0005484460694698354,
+          "viewed_cash_settlement_screen": 0.0029250457038391227,
+          "clicked_cash_settlement_bus_card": 0.010786106032906764,
+          "clicked_cash_settlement_settle_btn": 0.003473491773308958,
+          "clicked_cash_settlement_non_settled_btn": 0.0009140767824497258,
+          "clicked_cash_settlement_settled_btn": 0.001279707495429616,
+          "viewed_login/signup_page": 0.001279707495429616,
+          "viewed_hisab_trip_detail": 0.0005484460694698354,
+          "viewed_my_profile_page": 0.00018281535648994517
+        },
+        "home_page_load_error": {
+          "home_page_load_error": 0.7472460961142718,
+          "viewed_dashboard_page": 0.1493765887907033,
+          "viewed_hisab_page": 0.05114392930637937,
+          "dashboard_clicked_gps_vistar_se_dekhe_bus_card": 0.001210507202517855,
+          "clicked_nav_drawer_menu": 0.03153371262559012,
+          "viewed_setting_ticketing_machine_page": 0.012952427066941049,
+          "viewed_login/signup_page": 0.0025420651252874953,
+          "dashboard_page_pay_btn": 0.00018157608037767825,
+          "clicked_nav_drawer_my_profile": 0.0001210507202517855,
+          "clicked_login_send_otp_btn": 6.052536012589275e-05,
+          "clicked_homepage_banner": 0.0003631521607553565,
+          "clicked_hisab_yestarday_btn": 6.052536012589275e-05,
+          "clicked_hisab_bus_detail_card": 0.000726304321510713,
+          "viewed_hisab_bus_detail": 0.0007868296816366057,
+          "login_verify_otp_success": 6.052536012589275e-05,
+          "clicked_nav_drawer_logout": 6.052536012589275e-05,
+          "viewed_manage_route_and_pricing_page": 0.00018157608037767825,
+          "viewed_cash_settlement_screen": 0.0001210507202517855,
+          "clicked_hisab_trip_detail_card": 0.000242101440503571,
+          "viewed_online_payment_history_page": 0.000242101440503571,
+          "clicked_login_btn": 0.00018157608037767825,
+          "viewed_hisab_trip_detail": 6.052536012589275e-05,
+          "clicked_nav_drawer_cash_settlement": 6.052536012589275e-05,
+          "clicked_login_verify_otp": 6.052536012589275e-05,
+          "viewed_null_page": 0.0001210507202517855,
+          "clicked_nav_drawer_reports": 6.052536012589275e-05,
+          "clicked_hisab_today_btn": 6.052536012589275e-05,
+          "viewed_my_profile_page": 6.052536012589275e-05,
+          "clicked_nav_drawer_manage_route_pricing": 6.052536012589275e-05,
+          "viewed_login_otp_verify_page": 6.052536012589275e-05
+        },
+        "clicked_nav_drawer_cash_settlement": {
+          "clicked_nav_drawer_cash_settlement": 0.10480349344978165,
+          "viewed_cash_settlement_screen": 0.8646288209606987,
+          "clicked_nav_drawer_menu": 0.013100436681222707,
+          "clicked_cash_settlement_bus_card": 0.004366812227074236,
+          "viewed_hisab_page": 0.004366812227074236,
+          "viewed_setting_ticketing_machine_page": 0.004366812227074236,
+          "viewed_dashboard_page": 0.004366812227074236
+        },
+        "viewed_cash_settlement_screen": {
+          "viewed_cash_settlement_screen": 0.23564356435643563,
+          "clicked_cash_settlement_bus_card": 0.09207920792079208,
+          "clicked_nav_drawer_menu": 0.08217821782178218,
+          "viewed_dashboard_page": 0.13465346534653466,
+          "viewed_hisab_page": 0.12673267326732673,
+          "viewed_manage_route_and_pricing_page": 0.01881188118811881,
+          "viewed_setting_ticketing_machine_page": 0.03564356435643564,
+          "home_page_load_error": 0.02574257425742574,
+          "viewed_login/signup_page": 0.0029702970297029703,
+          "viewed_cash_settlement_bus_tickets_detail_page": 0.006930693069306931,
+          "viewed_online_payment_history_page": 0.011881188118811881,
+          "clicked_hisab_coustom_date_btn": 0.048514851485148516,
+          "dashboard_clicked_gps_vistar_se_dekhe_bus_card": 0.013861386138613862,
+          "clicked_hisab_yestarday_btn": 0.0019801980198019802,
+          "clicked_nav_drawer_cash_settlement": 0.006930693069306931,
+          "clicked_cash_settlement_settled_btn": 0.11683168316831684,
+          "viewed_login_page": 0.0009900990099009901,
+          "viewed_offer_discount_page": 0.00891089108910891,
+          "clicked_on_video": 0.0009900990099009901,
+          "viewed_my_profile_page": 0.006930693069306931,
+          "clicked_cash_settlement_settle_btn": 0.01782178217821782,
+          "clicked_nav_drawer_dsn_mapping": 0.0009900990099009901,
+          "clicked_manage_route_and_pricing_view_pricing_btn": 0.0009900990099009901,
+          "clicked_hisab_bus_detail_card": 0.0009900990099009901
+        },
+        "clicked_cash_settlement_bus_card": {
+          "clicked_cash_settlement_bus_card": 0.3219178082191781,
+          "viewed_cash_settlement_bus_tickets_detail_page": 0.6712328767123288,
+          "clicked_cash_settlement_tickets_detail_back_btn": 0.00684931506849315
+        },
+        "viewed_cash_settlement_bus_tickets_detail_page": {
+          "viewed_cash_settlement_bus_tickets_detail_page": 0.3197969543147208,
+          "clicked_cash_settlement_tickets_detail_back_btn": 0.6125211505922166,
+          "viewed_cash_settlement_screen": 0.00676818950930626,
+          "viewed_dashboard_page": 0.01692047377326565,
+          "clicked_cash_settlement_bus_card": 0.008460236886632826,
+          "clicked_cash_settlement_trip_setlle_btn": 0.0338409475465313,
+          "viewed_hisab_page": 0.001692047377326565
+        },
+        "clicked_cash_settlement_tickets_detail_back_btn": {
+          "clicked_cash_settlement_tickets_detail_back_btn": 0.3235294117647059,
+          "clicked_cash_settlement_bus_card": 0.34256055363321797,
+          "viewed_setting_ticketing_machine_page": 0.00865051903114187,
+          "viewed_manage_route_and_pricing_page": 0.006920415224913495,
+          "viewed_hisab_page": 0.04152249134948097,
+          "viewed_dashboard_page": 0.05190311418685121,
+          "clicked_cash_settlement_settle_btn": 0.14705882352941177,
+          "viewed_cash_settlement_bus_tickets_detail_page": 0.005190311418685121,
+          "clicked_on_video": 0.0017301038062283738,
+          "clicked_nav_drawer_menu": 0.00865051903114187,
+          "clicked_cash_settlement_settled_btn": 0.012110726643598616,
+          "viewed_cash_settlement_screen": 0.02422145328719723,
+          "viewed_offer_discount_page": 0.0017301038062283738,
+          "clicked_hisab_coustom_date_btn": 0.006920415224913495,
+          "clicked_cash_settlement_non_settled_btn": 0.00865051903114187,
+          "viewed_my_profile_page": 0.0017301038062283738,
+          "viewed_null_page": 0.0017301038062283738,
+          "viewed_online_payment_history_page": 0.0034602076124567475,
+          "dashboard_clicked_gps_vistar_se_dekhe_bus_card": 0.0017301038062283738
+        },
+        "clicked_nav_drawer_dsn_mapping": {
+          "viewed_machine_name_change_page": 0.8552036199095022,
+          "clicked_nav_drawer_dsn_mapping": 0.12669683257918551,
+          "clicked_nav_drawer_menu": 0.01809954751131222
+        },
+        "viewed_machine_name_change_page": {
+          "clicked_nav_drawer_menu": 0.5515695067264574,
+          "viewed_machine_name_change_page": 0.13004484304932734,
+          "viewed_dashboard_page": 0.09417040358744394,
+          "viewed_hisab_page": 0.07174887892376682,
+          "viewed_online_payment_history_page": 0.03587443946188341,
+          "viewed_login/signup_page": 0.008968609865470852,
+          "home_page_load_error": 0.03139013452914798,
+          "viewed_setting_ticketing_machine_page": 0.03139013452914798,
+          "viewed_cash_settlement_screen": 0.004484304932735426,
+          "clicked_nav_drawer_dsn_mapping": 0.017937219730941704,
+          "dashboard_clicked_gps_vistar_se_dekhe_bus_card": 0.008968609865470852,
+          "viewed_null_page": 0.008968609865470852,
+          "viewed_hisab_bus_detail": 0.004484304932735426
+        },
+        "clicked_nav_drawer_recharge": {
+          "viewed_recharge_page": 0.9206349206349206,
+          "clicked_nav_drawer_recharge": 0.07142857142857142,
+          "clicked_nav_drawer_menu": 0.007936507936507936
+        },
+        "clicked_nav_drawer_reports": {
+          "clicked_nav_drawer_menu": 0.31189710610932475,
+          "clicked_nav_drawer_reports": 0.17041800643086816,
+          "viewed_dashboard_page": 0.2090032154340836,
+          "viewed_hisab_page": 0.21221864951768488,
+          "viewed_setting_ticketing_machine_page": 0.012861736334405145,
+          "home_page_load_error": 0.03858520900321544,
+          "dashboard_clicked_gps_vistar_se_dekhe_bus_card": 0.00964630225080386,
+          "clicked_home_banner_app": 0.003215434083601286,
+          "clicked_login_send_otp_btn": 0.003215434083601286,
+          "viewed_manage_route_and_pricing_page": 0.003215434083601286,
+          "viewed_online_payment_history_page": 0.00964630225080386,
+          "viewed_hisab_bus_detail": 0.003215434083601286,
+          "viewed_login/signup_page": 0.006430868167202572,
+          "viewed_cash_settlement_screen": 0.006430868167202572
+        },
+        "clicked_nav_drawer_my_profile": {
+          "viewed_my_profile_page": 0.88,
+          "viewed_hisab_page": 0.007272727272727273,
+          "clicked_nav_drawer_my_profile": 0.09818181818181818,
+          "clicked_nav_drawer_menu": 0.007272727272727273,
+          "viewed_dashboard_page": 0.0036363636363636364,
+          "viewed_login_page": 0.0036363636363636364
+        },
+        "viewed_my_profile_page": {
+          "clicked_nav_drawer_menu": 0.2119205298013245,
+          "home_page_load_error": 0.06622516556291391,
+          "viewed_dashboard_page": 0.1986754966887417,
+          "viewed_my_profile_page": 0.1479028697571744,
+          "viewed_offer_discount_page": 0.02207505518763797,
+          "viewed_setting_ticketing_machine_page": 0.09713024282560706,
+          "clicked_nav_drawer_my_profile": 0.011037527593818985,
+          "viewed_hisab_page": 0.11479028697571744,
+          "clicked_login_send_otp_btn": 0.011037527593818985,
+          "viewed_cash_settlement_screen": 0.03090507726269316,
+          "viewed_online_payment_history_page": 0.02869757174392936,
+          "clicked_on_video": 0.006622516556291391,
+          "clicked_login_resend_otp": 0.002207505518763797,
+          "viewed_manage_route_and_pricing_page": 0.006622516556291391,
+          "clicked_hisab_bus_detail_card": 0.004415011037527594,
+          "clicked_homepage_banner": 0.002207505518763797,
+          "viewed_null_page": 0.002207505518763797,
+          "dashboard_clicked_gps_vistar_se_dekhe_bus_card": 0.017660044150110375,
+          "viewed_login/signup_page": 0.017660044150110375
+        },
+        "clicked_nav_drawer_online_payments_history": {
+          "viewed_online_payment_history_page": 0.8584070796460177,
+          "clicked_login_btn": 0.008849557522123894,
+          "clicked_nav_drawer_online_payments_history": 0.13274336283185842
+        },
+        "clicked_nav_drawer_pos_settings": {
+          "viewed_setting_ticketing_machine_page": 0.8601941747572815,
+          "clicked_nav_drawer_pos_settings": 0.13009708737864079,
+          "clicked_nav_drawer_menu": 0.003883495145631068,
+          "viewed_dashboard_page": 0.003883495145631068,
+          "viewed_hisab_page": 0.001941747572815534
+        },
+        "login_send_otp_failed": {
+          "clicked_login_send_otp_btn": 0.7372372372372372,
+          "viewed_login/signup_page": 0.08408408408408409,
+          "login_send_otp_failed": 0.10810810810810811,
+          "clicked_login_btn": 0.03453453453453453,
+          "viewed_hisab_page": 0.0075075075075075074,
+          "viewed_login_page": 0.006006006006006006,
+          "viewed_dashboard_page": 0.012012012012012012,
+          "clicked_nav_drawer_menu": 0.006006006006006006,
+          "home_page_load_error": 0.0045045045045045045
+        },
+        "clicked_hisab_download_btn": {
+          "viewed_hisab_page": 0.8503401360544217,
+          "clicked_hisab_download_btn": 0.07397959183673469,
+          "viewed_setting_ticketing_machine_page": 0.002551020408163265,
+          "viewed_login/signup_page": 0.002551020408163265,
+          "viewed_dashboard_page": 0.03231292517006803,
+          "clicked_hisab_today_btn": 0.006802721088435374,
+          "clicked_hisab_bus_detail_card": 0.003401360544217687,
+          "viewed_hisab_bus_detail": 0.002551020408163265,
+          "clicked_nav_drawer_menu": 0.004251700680272109,
+          "viewed_online_payment_history_page": 0.002551020408163265,
+          "viewed_my_profile_page": 0.0008503401360544217,
+          "viewed_null_page": 0.007653061224489796,
+          "dashboard_clicked_gps_vistar_se_dekhe_bus_card": 0.0008503401360544217,
+          "clicked_homepage_banner": 0.0008503401360544217,
+          "clicked_hisab_yestarday_btn": 0.007653061224489796,
+          "clicked_nav_drawer_logout": 0.0008503401360544217
+        },
+        "clicked_nav_drawer_logout": {
+          "viewed_dashboard_page": 0.38881987577639754,
+          "viewed_login/signup_page": 0.29316770186335406,
+          "clicked_nav_drawer_logout": 0.1658385093167702,
+          "viewed_hisab_page": 0.04906832298136646,
+          "clicked_nav_drawer_menu": 0.04161490683229813,
+          "viewed_online_payment_history_page": 0.0037267080745341614,
+          "home_page_load_error": 0.02857142857142857,
+          "clicked_login_verify_otp": 0.002484472049689441,
+          "clicked_login_btn": 0.0006211180124223603,
+          "viewed_hisab_bus_detail": 0.006211180124223602,
+          "dashboard_clicked_gps_vistar_se_dekhe_bus_card": 0.0012422360248447205,
+          "viewed_t&c_page": 0.0006211180124223603,
+          "clicked_hisab_bus_detail_card": 0.003105590062111801,
+          "clicked_nav_drawer_dsn_mapping": 0.0012422360248447205,
+          "clicked_nav_drawer_offer_discount": 0.0006211180124223603,
+          "clicked_login_send_otp_btn": 0.002484472049689441,
+          "clicked_homepage_banner": 0.0012422360248447205,
+          "viewed_cash_settlement_screen": 0.0012422360248447205,
+          "viewed_setting_ticketing_machine_page": 0.0018633540372670807,
+          "clicked_hisab_trip_detail_card": 0.0012422360248447205,
+          "clicked_nav_drawer_my_profile": 0.0012422360248447205,
+          "clicked_hisab_bus_detail_download_btn": 0.0006211180124223603,
+          "viewed_manage_route_and_pricing_page": 0.0006211180124223603,
+          "clicked_nav_drawer_recharge": 0.0006211180124223603,
+          "viewed_login_page": 0.0006211180124223603,
+          "login_verify_otp_success": 0.0006211180124223603,
+          "viewed_view_route_page_back_btn": 0.0006211180124223603
+        },
+        "date_change_on_bus_list": {
+          "date_select": 0.8333333333333334,
+          "_bus-search_user-bus-search": 0.16666666666666666
+        },
+        "date_select": {
+          "_bus-search_user-bus-search": 0.6666666666666666,
+          "date_change_on_bus_list": 0.16666666666666666,
+          "Buslist_date change": 0.16666666666666666
+        },
+        "Buslist_bus_selection": {
+          "bus_detail": 0.717391304347826,
+          "SeatSelection_Click On Back": 0.06521739130434782,
+          "select_seat": 0.043478260869565216,
+          "pageview_seat_selection": 0.10869565217391304,
+          "_profile": 0.06521739130434782
+        },
+        "bus_detail": {
+          "pageview_seat_selection": 0.6304347826086957,
+          "Buslist_bus_selection": 0.08695652173913043,
+          "_profile": 0.06521739130434782,
+          "SeatSelection_Click On Back": 0.21739130434782608
+        },
+        "pageview_seat_selection": {
+          "SeatSelection_Click On Back": 0.6666666666666666,
+          "_profile": 0.125,
+          "bus_detail": 0.125,
+          "select_seat": 0.041666666666666664,
+          "Buslist_bus_selection": 0.041666666666666664
+        },
+        "SeatSelection_Click On Back": {
+          "_profile": 0.5833333333333334,
+          "_bus-search_v2_layout": 0.125,
+          "select_seat": 0.0625,
+          "pageview_seat_selection": 0.125,
+          "bus_detail": 0.0625,
+          "Buslist_bus_selection": 0.020833333333333332,
+          "Buslist_date change": 0.020833333333333332
+        },
+        "_bus-search_v2_layout": {
+          "Buslist_date change": 0.18181818181818182,
+          "_profile": 0.13636363636363635,
+          "_location_from-town": 0.045454545454545456,
+          "select_seat": 0.3409090909090909,
+          "_bus-search_user-bus-search": 0.11363636363636363,
+          "_location_special-town-search": 0.045454545454545456,
+          "_user_suggestion": 0.022727272727272728,
+          "_bus-search_list": 0.022727272727272728,
+          "error": 0.045454545454545456,
+          "Route_Selected": 0.022727272727272728,
+          "_history_recommended-journey": 0.022727272727272728
+        },
+        "select_seat": {
+          "Buslist_bus_selection": 0.19469026548672566,
+          "select_seat": 0.5575221238938053,
+          "boarding_change_pickup": 0.05309734513274336,
+          "pageview_seat_selection": 0.061946902654867256,
+          "Buslist_date change": 0.04424778761061947,
+          "bus_detail": 0.02654867256637168,
+          "backpress": 0.008849557522123894,
+          "_bus-search_list": 0.008849557522123894,
+          "to_town_select": 0.008849557522123894,
+          "SeatSelection_Click On Back": 0.017699115044247787,
+          "_user": 0.017699115044247787
+        },
+        "boarding_change_pickup": {
+          "seats_finalized": 0.6666666666666666,
+          "Boarding_drop_locations": 0.3333333333333333
+        },
+        "seats_finalized": {
+          "Boarding_drop_locations": 0.8,
+          "pageview_booking_details": 0.2
+        },
+        "Boarding_drop_locations": {
+          "pageview_booking_details": 0.5,
+          "_ticket": 0.16666666666666666,
+          "select_seat": 0.16666666666666666,
+          "seats_finalized": 0.16666666666666666
+        },
+        "pageview_booking_details": {
+          "auto_apply_coupon": 0.6,
+          "_coupon": 0.2,
+          "_ticket": 0.2
+        },
+        "auto_apply_coupon": {
+          "_profile": 0.5,
+          "_coupon": 0.25,
+          "pageview_booking_details": 0.25
+        },
+        "_coupon": {
+          "_bus-search_get-distance": 0.6,
+          "PaymentPage_DiscountApplied": 0.2,
+          "_ticket": 0.2
+        },
+        "_bus-search_get-distance": {
+          "_ticket": 0.4,
+          "_coupon": 0.2,
+          "PaymentPage_DiscountApplied": 0.2,
+          "RemoveCoupon": 0.2
+        },
+        "PaymentPage_DiscountApplied": {
+          "passenger_card_clicked": 0.5,
+          "_profile": 0.25,
+          "PaymentPage_Click On Back": 0.25
+        },
+        "passenger_card_clicked": {
+          "passenger_card_clicked": 0.7272727272727273,
+          "passenger_finalized": 0.2727272727272727
+        },
+        "passenger_finalized": {
+          "PaymentPage_payment initiated": 1.0
+        },
+        "PaymentPage_payment initiated": {
+          "_ticket_v2": 1.0
+        },
+        "checkout_backpress": {
+          "backpress": 0.75,
+          "booking_dropoff_popup": 0.25
+        },
+        "backpress": {
+          "select_seat": 0.75,
+          "checkout_backpress": 0.25
+        },
+        "viewed_null_page": {
+          "viewed_online_payment_history_page": 0.02245508982035928,
+          "viewed_dashboard_page": 0.18263473053892215,
+          "viewed_hisab_page": 0.36976047904191617,
+          "viewed_null_page": 0.19011976047904192,
+          "clicked_hisab_yestarday_btn": 0.08532934131736528,
+          "clicked_hisab_today_btn": 0.025449101796407185,
+          "clicked_hisab_download_btn": 0.025449101796407185,
+          "clicked_nav_drawer_menu": 0.023952095808383235,
+          "dashboard_clicked_gps_vistar_se_dekhe_bus_card": 0.019461077844311378,
+          "viewed_setting_ticketing_machine_page": 0.011976047904191617,
+          "viewed_my_profile_page": 0.0014970059880239522,
+          "viewed_manage_route_and_pricing_page": 0.005988023952095809,
+          "home_page_load_error": 0.004491017964071856,
+          "viewed_cash_settlement_screen": 0.008982035928143712,
+          "viewed_login/signup_page": 0.005988023952095809,
+          "clicked_hisab_coustom_date_btn": 0.0074850299401197605,
+          "clicked_hisab_bus_detail_download_btn": 0.0014970059880239522,
+          "viewed_card_wallet_history_page": 0.0014970059880239522,
+          "clicked_homepage_banner": 0.0014970059880239522,
+          "clicked_hisab_bus_detail_yeaterday_btn": 0.0029940119760479044,
+          "clicked_hisab_trip_detail_card": 0.0014970059880239522
+        },
+        "dashboard_clicked_gps_vistar_se_dekhe_bus_card": {
+          "clicked_home_banner_app": 0.0002158894645941278,
+          "viewed_dashboard_page": 0.40565630397236613,
+          "home_page_load_error": 0.01273747841105354,
+          "viewed_hisab_page": 0.3018134715025907,
+          "dashboard_clicked_gps_vistar_se_dekhe_bus_card": 0.21610535405872194,
+          "clicked_nav_drawer_menu": 0.025259067357512953,
+          "clicked_homepage_banner": 0.001079447322970639,
+          "viewed_online_payment_history_page": 0.0075561312607944735,
+          "viewed_login/signup_page": 0.008419689119170985,
+          "viewed_setting_ticketing_machine_page": 0.008419689119170985,
+          "clicked_hisab_bus_detail_card": 0.0025906735751295338,
+          "viewed_hisab_bus_detail": 0.0015112262521588947,
+          "viewed_cash_settlement_screen": 0.0034542314335060447,
+          "viewed_my_profile_page": 0.0008635578583765112,
+          "viewed_null_page": 0.0012953367875647669,
+          "clicked_hisab_trip_detail_card": 0.0004317789291882556,
+          "viewed_manage_route_and_pricing_page": 0.0017271157167530224,
+          "clicked_hisab_yestarday_btn": 0.0002158894645941278,
+          "viewed_view_route_page_back_btn": 0.0002158894645941278,
+          "clicked_nav_drawer_logout": 0.0002158894645941278,
+          "clicked_login_send_otp_btn": 0.0002158894645941278
+        },
+        "clicked_home_banner_app": {
+          "viewed_dashboard_page": 0.4,
+          "clicked_home_banner_app": 0.2,
+          "home_page_load_error": 0.1,
+          "clicked_login_send_otp_btn": 0.1,
+          "viewed_hisab_page": 0.1,
+          "viewed_setting_ticketing_machine_page": 0.1
+        },
+        "login_verify_otp_failed": {
+          "clicked_login_verify_otp": 0.450199203187251,
+          "viewed_login/signup_page": 0.08366533864541832,
+          "viewed_login_page": 0.12749003984063745,
+          "login_verify_otp_failed": 0.16334661354581673,
+          "clicked_login_resend_otp": 0.04780876494023904,
+          "viewed_dashboard_page": 0.0398406374501992,
+          "clicked_hisab_yestarday_btn": 0.00398406374501992,
+          "clicked_login_btn": 0.043824701195219126,
+          "viewed_online_payment_history_page": 0.00398406374501992,
+          "home_page_load_error": 0.00398406374501992,
+          "clicked_hisab_bus_detail_card": 0.00398406374501992,
+          "clicked_login_send_otp_btn": 0.02390438247011952,
+          "viewed_hisab_page": 0.00398406374501992
+        },
+        "smart_ticketing_settings_failed": {
+          "clicked_homepage_banner": 0.0547945205479452,
+          "viewed_dashboard_page": 0.1780821917808219,
+          "clicked_nav_drawer_menu": 0.1917808219178082,
+          "smart_ticketing_settings_failed": 0.3287671232876712,
+          "viewed_setting_ticketing_machine_page": 0.0547945205479452,
+          "home_page_load_error": 0.0136986301369863,
+          "viewed_hisab_page": 0.1095890410958904,
+          "dashboard_clicked_gps_vistar_se_dekhe_bus_card": 0.0547945205479452,
+          "viewed_login/signup_page": 0.0136986301369863
+        },
+        "clicked_homepage_banner": {
+          "clicked_homepage_banner": 0.24846625766871167,
+          "viewed_dashboard_page": 0.35276073619631904,
+          "viewed_setting_ticketing_machine_page": 0.03374233128834356,
+          "viewed_hisab_page": 0.17177914110429449,
+          "viewed_login/signup_page": 0.03680981595092025,
+          "dashboard_clicked_gps_vistar_se_dekhe_bus_card": 0.027607361963190184,
+          "home_page_load_error": 0.012269938650306749,
+          "clicked_nav_drawer_menu": 0.07668711656441718,
+          "clicked_login_send_otp_btn": 0.003067484662576687,
+          "viewed_null_page": 0.009202453987730062,
+          "viewed_hisab_bus_detail": 0.006134969325153374,
+          "viewed_manage_route_and_pricing_page": 0.006134969325153374,
+          "viewed_my_profile_page": 0.006134969325153374,
+          "viewed_online_payment_history_page": 0.006134969325153374,
+          "viewed_card_wallet_history_page": 0.003067484662576687
+        },
+        "dashboard_page_pay_btn": {
+          "viewed_pending_payment_page": 1.0
+        },
+        "viewed_pending_payment_page": {
+          "clicked_homepage_banner": 0.25,
+          "viewed_setting_ticketing_machine_page": 0.25,
+          "home_page_load_error": 0.25,
+          "clicked_nav_drawer_menu": 0.125,
+          "viewed_hisab_page": 0.125
+        },
+        "clicked_nav_drawer_manage_route_pricing": {
+          "viewed_manage_route_and_pricing_page": 0.8683431952662722,
+          "clicked_nav_drawer_manage_route_pricing": 0.11982248520710059,
+          "clicked_manage_route_and_pricing_bus_card": 0.0014792899408284023,
+          "clicked_manage_route_and_pricing_view_route_btn": 0.0014792899408284023,
+          "clicked_nav_drawer_menu": 0.005917159763313609,
+          "home_page_load_error": 0.0014792899408284023,
+          "clicked_manage_route_and_pricing_view_pricing_btn": 0.0014792899408284023
+        },
+        "viewed_manage_route_and_pricing_page": {
+          "clicked_manage_route_and_pricing_view_route_btn": 0.10353378797272164,
+          "viewed_setting_ticketing_machine_page": 0.011159330440173589,
+          "clicked_manage_route_and_pricing_view_pricing_btn": 0.34035957842529446,
+          "viewed_manage_route_and_pricing_page": 0.15995040297582144,
+          "clicked_nav_drawer_menu": 0.08121512709237445,
+          "viewed_online_payment_history_page": 0.013019218846869188,
+          "viewed_cash_settlement_screen": 0.02169869807811531,
+          "viewed_hisab_page": 0.044637321760694355,
+          "clicked_manage_route_and_pricing_bus_card": 0.08617482951022938,
+          "dashboard_clicked_gps_vistar_se_dekhe_bus_card": 0.006199628022318661,
+          "viewed_dashboard_page": 0.08989460632362058,
+          "viewed_view_pricing_page ": 0.006199628022318661,
+          "home_page_load_error": 0.014879107253564786,
+          "clicked_hisab_yestarday_btn": 0.0006199628022318661,
+          "clicked_hisab_bus_detail_card": 0.0012399256044637321,
+          "clicked_nav_drawer_manage_route_pricing": 0.0043397396156230625,
+          "viewed_card_wallet_history_page": 0.0006199628022318661,
+          "viewed_view_route_page": 0.0024798512089274642,
+          "clicked_view_pricing_page_prices_download": 0.0006199628022318661,
+          "viewed_view_route_page_back_btn": 0.0012399256044637321,
+          "viewed_my_profile_page": 0.0037197768133911966,
+          "clicked_view_route_page_submit_changes": 0.0012399256044637321,
+          "viewed_login/signup_page": 0.0030998140111593306,
+          "viewed_offer_discount_page": 0.0006199628022318661,
+          "clicked_on_video": 0.0006199628022318661,
+          "viewed_hisab_bus_detail": 0.0006199628022318661
+        },
+        "clicked_manage_route_and_pricing_view_route_btn": {
+          "viewed_view_route_page": 0.8602150537634409,
+          "clicked_manage_route_and_pricing_view_route_btn": 0.12365591397849462,
+          "viewed_manage_route_and_pricing_page": 0.002688172043010753,
+          "clicked_view_route_page_contact_us_btn": 0.002688172043010753,
+          "viewed_view_route_page_back_btn": 0.008064516129032258,
+          "clicked_manage_route_and_pricing_bus_card": 0.002688172043010753
+        },
+        "viewed_view_route_page": {
+          "viewed_view_route_page_back_btn": 0.3136729222520107,
+          "clicked_manage_route_and_pricing_view_pricing_btn": 0.05361930294906166,
+          "viewed_view_route_page": 0.4736371760500447,
+          "clicked_manage_route_and_pricing_view_route_btn": 0.03663985701519214,
+          "viewed_dashboard_page": 0.01966041108132261,
+          "clicked_nav_drawer_menu": 0.014298480786416443,
+          "viewed_hisab_page": 0.013404825737265416,
+          "clicked_view_route_page_contact_us_btn": 0.035746201966041107,
+          "viewed_setting_ticketing_machine_page": 0.004468275245755138,
+          "clicked_manage_route_and_pricing_bus_card": 0.0160857908847185,
+          "viewed_null_page": 0.0008936550491510277,
+          "clicked_hisab_yestarday_btn": 0.0008936550491510277,
+          "viewed_manage_route_and_pricing_page": 0.004468275245755138,
+          "viewed_cash_settlement_screen": 0.002680965147453083,
+          "viewed_view_pricing_page ": 0.0017873100983020554,
+          "clicked_view_route_page_feedback": 0.005361930294906166,
+          "viewed_online_payment_history_page": 0.0017873100983020554,
+          "viewed_login/signup_page": 0.0008936550491510277
+        },
+        "viewed_view_route_page_back_btn": {
+          "clicked_nav_drawer_menu": 0.04718543046357616,
+          "viewed_hisab_page": 0.09768211920529801,
+          "clicked_manage_route_and_pricing_view_pricing_btn": 0.3890728476821192,
+          "clicked_manage_route_and_pricing_bus_card": 0.06374172185430464,
+          "viewed_dashboard_page": 0.13327814569536423,
+          "clicked_manage_route_and_pricing_view_route_btn": 0.0802980132450331,
+          "viewed_setting_ticketing_machine_page": 0.0173841059602649,
+          "viewed_my_profile_page": 0.0024834437086092716,
+          "home_page_load_error": 0.006622516556291391,
+          "viewed_manage_route_and_pricing_page": 0.048013245033112585,
+          "viewed_online_payment_history_page": 0.013245033112582781,
+          "viewed_view_pricing_page ": 0.009933774834437087,
+          "viewed_offer_discount_page": 0.0033112582781456954,
+          "clicked_hisab_trip_detail_card": 0.0008278145695364238,
+          "viewed_cash_settlement_screen": 0.009933774834437087,
+          "viewed_view_route_page": 0.004966887417218543,
+          "dashboard_clicked_gps_vistar_se_dekhe_bus_card": 0.005794701986754967,
+          "viewed_card_wallet_history_page": 0.0016556291390728477,
+          "clicked_view_route_page_submit_changes": 0.004966887417218543,
+          "clicked_hisab_bus_detail_card": 0.0008278145695364238,
+          "viewed_hisab_bus_detail": 0.0008278145695364238,
+          "viewed_view_route_page_back_btn": 0.04552980132450331,
+          "viewed_login/signup_page": 0.0041390728476821195,
+          "view_pricing_page_prices_upload_success": 0.005794701986754967,
+          "clicked_view_route_page_submit_changes_confirmed": 0.0008278145695364238,
+          "clicked_hisab_yestarday_btn": 0.0008278145695364238,
+          "viewed_null_page": 0.0008278145695364238
+        },
+        "clicked_manage_route_and_pricing_view_pricing_btn": {
+          "viewed_view_pricing_page ": 0.8434343434343434,
+          "clicked_view_route_page_submit_changes": 0.007575757575757576,
+          "clicked_manage_route_and_pricing_view_pricing_btn": 0.13257575757575757,
+          "viewed_view_route_page_back_btn": 0.010101010101010102,
+          "view_pricing_page_prices_upload_success": 0.0006313131313131314,
+          "viewed_view_route_page": 0.0006313131313131314,
+          "clicked_view_route_page_submit_changes_confirmed": 0.0012626262626262627,
+          "viewed_manage_route_and_pricing_page": 0.001893939393939394,
+          "viewed_dashboard_page": 0.0012626262626262627,
+          "viewed_hisab_page": 0.0006313131313131314
+        },
+        "viewed_view_pricing_page ": {
+          "clicked_manage_route_and_pricing_view_pricing_btn": 0.10296904611497157,
+          "viewed_view_route_page_back_btn": 0.2880606443461781,
+          "clicked_view_pricing_page_prices_upload": 0.011370814908401769,
+          "clicked_view_pricing_page_seat_type_selection": 0.007580543272267846,
+          "clicked_view_pricing_page_prices_download": 0.027795325331648767,
+          "viewed_dashboard_page": 0.05811749842072015,
+          "viewed_hisab_page": 0.020846493998736577,
+          "clicked_view_route_page_submit_changes": 0.28553379658875555,
+          "viewed_view_pricing_page ": 0.13455464308275428,
+          "clicked_manage_route_and_pricing_view_route_btn": 0.006317119393556538,
+          "viewed_manage_route_and_pricing_page": 0.013897662665824383,
+          "home_page_load_error": 0.0012634238787113076,
+          "viewed_hisab_bus_detail": 0.0018951358180669614,
+          "clicked_hisab_bus_detail_card": 0.002526847757422615,
+          "clicked_nav_drawer_menu": 0.01831964624131396,
+          "clicked_manage_route_and_pricing_bus_card": 0.004421983575489577,
+          "viewed_cash_settlement_screen": 0.003790271636133923,
+          "view_pricing_page_prices_upload_success": 0.0018951358180669614,
+          "clicked_view_route_page_submit_changes_confirmed": 0.0018951358180669614,
+          "viewed_login/signup_page": 0.003158559696778269,
+          "viewed_online_payment_history_page": 0.0012634238787113076,
+          "viewed_setting_ticketing_machine_page": 0.0012634238787113076,
+          "view_pricing_page_prices_download_success": 0.0006317119393556538,
+          "viewed_null_page": 0.0006317119393556538
+        },
+        "clicked_view_pricing_page_prices_upload": {
+          "viewed_view_route_page_back_btn": 0.25,
+          "clicked_manage_route_and_pricing_view_pricing_btn": 0.07692307692307693,
+          "clicked_view_pricing_page_prices_download": 0.11538461538461539,
+          "clicked_view_route_page_submit_changes": 0.19230769230769232,
+          "clicked_view_pricing_page_seat_type_selection": 0.038461538461538464,
+          "view_pricing_page_prices_upload_success": 0.1346153846153846,
+          "clicked_view_pricing_page_prices_upload": 0.11538461538461539,
+          "clicked_view_pricing_page_feedback": 0.019230769230769232,
+          "viewed_dashboard_page": 0.019230769230769232,
+          "viewed_my_profile_page": 0.019230769230769232,
+          "clicked_nav_drawer_menu": 0.019230769230769232
+        },
+        "clicked_hisab_today_btn": {
+          "clicked_hisab_bus_detail_card": 0.12351816443594646,
+          "clicked_hisab_today_btn": 0.25697896749521987,
+          "viewed_hisab_page": 0.22332695984703632,
+          "clicked_hisab_download_btn": 0.01606118546845124,
+          "clicked_hisab_yestarday_btn": 0.1751434034416826,
+          "viewed_dashboard_page": 0.13881453154875717,
+          "clicked_hisab_coustom_date_btn": 0.011472275334608031,
+          "viewed_online_payment_history_page": 0.0076481835564053535,
+          "clicked_nav_drawer_menu": 0.012237093690248566,
+          "viewed_login/signup_page": 0.0038240917782026767,
+          "dashboard_clicked_gps_vistar_se_dekhe_bus_card": 0.008413001912045888,
+          "clicked_manage_route_and_pricing_view_pricing_btn": 0.0003824091778202677,
+          "viewed_card_wallet_history_page": 0.0007648183556405354,
+          "viewed_hisab_bus_detail": 0.0038240917782026767,
+          "viewed_null_page": 0.004588910133843212,
+          "viewed_setting_ticketing_machine_page": 0.0038240917782026767,
+          "viewed_offer_discount_page": 0.0003824091778202677,
+          "home_page_load_error": 0.004206500956022944,
+          "clicked_hisab_trip_detail_card": 0.0007648183556405354,
+          "viewed_cash_settlement_screen": 0.0015296367112810707,
+          "viewed_my_profile_page": 0.0003824091778202677,
+          "viewed_manage_route_and_pricing_page": 0.0007648183556405354,
+          "clicked_homepage_banner": 0.0003824091778202677,
+          "clicked_login_send_otp_btn": 0.0003824091778202677,
+          "clicked_hisab_bus_detail_yeaterday_btn": 0.0003824091778202677
+        },
+        "clicked_hisab_trip_detail_card_download_btn": {
+          "clicked_hisab_trip_detail_card_download_btn": 0.1452991452991453,
+          "viewed_hisab_page": 0.8269230769230769,
+          "viewed_hisab_bus_detail": 0.027777777777777776
+        },
+        "clicked_hisab_bus_detail_today_btn": {
+          "clicked_hisab_bus_detail_today_btn": 0.16775244299674266,
+          "clicked_hisab_bus_detail_download_btn": 0.03745928338762215,
+          "viewed_hisab_page": 0.3550488599348534,
+          "clicked_hisab_trip_detail_card": 0.19381107491856678,
+          "viewed_hisab_bus_detail": 0.02280130293159609,
+          "clicked_hisab_bus_detail_yeaterday_btn": 0.10749185667752444,
+          "clicked_hisab_coustom_date_btn": 0.019543973941368076,
+          "viewed_dashboard_page": 0.08631921824104234,
+          "viewed_camera_list_page": 0.0016286644951140066,
+          "clicked_hisab_bus_detail_card": 0.003257328990228013,
+          "viewed_hisab_trip_detail": 0.0016286644951140066,
+          "clicked_nav_drawer_menu": 0.0016286644951140066,
+          "viewed_login/signup_page": 0.0016286644951140066
+        },
+        "clicked_hisab_bus_detail_download_btn": {
+          "clicked_hisab_bus_detail_download_btn": 0.10129310344827586,
+          "viewed_hisab_page": 0.8663793103448276,
+          "viewed_hisab_bus_detail": 0.023706896551724137,
+          "viewed_dashboard_page": 0.004310344827586207,
+          "clicked_hisab_bus_detail_yeaterday_btn": 0.0021551724137931034,
+          "clicked_hisab_bus_detail_today_btn": 0.0021551724137931034
+        },
+        "clicked_on_video": {
+          "clicked_on_video": 0.4883720930232558,
+          "viewed_dashboard_page": 0.06976744186046512,
+          "viewed_setting_ticketing_machine_page": 0.05813953488372093,
+          "clicked_nav_drawer_menu": 0.20930232558139536,
+          "dashboard_clicked_gps_vistar_se_dekhe_bus_card": 0.023255813953488372,
+          "viewed_cash_settlement_screen": 0.023255813953488372,
+          "viewed_manage_route_and_pricing_page": 0.011627906976744186,
+          "viewed_my_profile_page": 0.023255813953488372,
+          "viewed_hisab_page": 0.023255813953488372,
+          "viewed_offer_discount_page": 0.011627906976744186,
+          "home_page_load_error": 0.023255813953488372,
+          "viewed_online_payment_history_page": 0.011627906976744186,
+          "clicked_nav_drawer_training_videos": 0.011627906976744186,
+          "viewed_hisab_bus_detail": 0.011627906976744186
+        },
+        "viewed_t&c_page": {
+          "clicked_nav_drawer_t&c": 0.7808219178082192,
+          "viewed_t&c_page": 0.1506849315068493,
+          "clicked_nav_drawer_menu": 0.0684931506849315
+        },
+        "clicked_nav_drawer_t&c": {
+          "clicked_nav_drawer_menu": 0.5205479452054794,
+          "clicked_login_send_otp_btn": 0.0136986301369863,
+          "clicked_nav_drawer_t&c": 0.136986301369863,
+          "viewed_dashboard_page": 0.1095890410958904,
+          "viewed_online_payment_history_page": 0.0136986301369863,
+          "viewed_hisab_page": 0.0410958904109589,
+          "viewed_setting_ticketing_machine_page": 0.0547945205479452,
+          "viewed_t&c_page": 0.0821917808219178,
+          "clicked_homepage_banner": 0.0136986301369863,
+          "home_page_load_error": 0.0136986301369863
+        },
+        "clicked_manage_route_and_pricing_bus_card": {
+          "viewed_view_route_page": 0.8689655172413793,
+          "clicked_manage_route_and_pricing_bus_card": 0.1206896551724138,
+          "clicked_manage_route_and_pricing_view_pricing_btn": 0.0034482758620689655,
+          "viewed_view_route_page_back_btn": 0.006896551724137931
+        },
+        "clicked_recharge_page_recaharge_history_btn": {
+          "viewed_null_page": 0.05357142857142857,
+          "clicked_nav_drawer_menu": 0.375,
+          "viewed_online_payment_history_page": 0.07142857142857142,
+          "dashboard_clicked_gps_vistar_se_dekhe_bus_card": 0.03571428571428571,
+          "viewed_hisab_page": 0.08928571428571429,
+          "clicked_recharge_page_my_subscription": 0.05357142857142857,
+          "home_page_load_error": 0.017857142857142856,
+          "viewed_dashboard_page": 0.14285714285714285,
+          "viewed_recharge_page": 0.017857142857142856,
+          "clicked_recharge_page_recaharge_history_btn": 0.125,
+          "clicked_on_video": 0.017857142857142856
+        },
+        "clicked_nav_drawer_change_language": {
+          "viewed_nav_drawer_change_language": 0.8524590163934426,
+          "clicked_nav_drawer_change_language": 0.13114754098360656,
+          "viewed_nav_drawer_change_language_save_btn": 0.00819672131147541,
+          "viewed_setting_ticketing_machine_page": 0.00819672131147541
+        },
+        "viewed_nav_drawer_change_language": {
+          "clicked_nav_drawer_menu": 0.3106060606060606,
+          "viewed_nav_drawer_change_language_save_btn": 0.3712121212121212,
+          "home_page_load_error": 0.07575757575757576,
+          "viewed_nav_drawer_change_language": 0.16666666666666666,
+          "clicked_homepage_banner": 0.007575757575757576,
+          "change_language_api_failed": 0.007575757575757576,
+          "viewed_hisab_page": 0.022727272727272728,
+          "viewed_online_payment_history_page": 0.007575757575757576,
+          "viewed_setting_ticketing_machine_page": 0.022727272727272728,
+          "viewed_dashboard_page": 0.007575757575757576
+        },
+        "viewed_offer_discount_page": {
+          "viewed_setting_ticketing_machine_page": 0.07109004739336493,
+          "viewed_offer_discount_page": 0.17535545023696683,
+          "viewed_my_profile_page": 0.037914691943127965,
+          "viewed_dashboard_page": 0.14691943127962084,
+          "viewed_hisab_page": 0.10900473933649289,
+          "dashboard_clicked_gps_vistar_se_dekhe_bus_card": 0.009478672985781991,
+          "clicked_offer_discount_edit": 0.17535545023696683,
+          "clicked_nav_drawer_menu": 0.1848341232227488,
+          "home_page_load_error": 0.014218009478672985,
+          "viewed_online_payment_history_page": 0.023696682464454975,
+          "viewed_login/signup_page": 0.009478672985781991,
+          "viewed_manage_route_and_pricing_page": 0.014218009478672985,
+          "clicked_offer_discount_chat_us": 0.009478672985781991,
+          "clicked_on_video": 0.004739336492890996,
+          "viewed_card_wallet_history_page": 0.004739336492890996,
+          "clicked_homepage_banner": 0.004739336492890996,
+          "clicked_nav_drawer_offer_discount": 0.004739336492890996
+        },
+        "viewed_nav_drawer_change_language_save_btn": {
+          "clicked_nav_drawer_menu": 0.27419354838709675,
+          "viewed_cash_settlement_screen": 0.016129032258064516,
+          "viewed_dashboard_page": 0.08064516129032258,
+          "clicked_homepage_banner": 0.04838709677419355,
+          "viewed_nav_drawer_change_language_save_btn": 0.1935483870967742,
+          "viewed_nav_drawer_change_language": 0.0967741935483871,
+          "viewed_online_payment_history_page": 0.03225806451612903,
+          "viewed_hisab_page": 0.0967741935483871,
+          "clicked_nav_drawer_change_language": 0.016129032258064516,
+          "viewed_setting_ticketing_machine_page": 0.04838709677419355,
+          "dashboard_clicked_gps_vistar_se_dekhe_bus_card": 0.04838709677419355,
+          "viewed_manage_route_and_pricing_page": 0.016129032258064516,
+          "viewed_null_page": 0.03225806451612903
+        },
+        "clicked_reports_delete_trip_confirmation_btn": {
+          "viewed_hisab_bus_detail": 0.6602972399150743,
+          "clicked_reports_delete_trip_confirmation_btn": 0.11040339702760085,
+          "viewed_hisab_page": 0.22929936305732485
+        },
+        "clicked_view_pricing_page_seat_type_selection": {
+          "clicked_view_pricing_page_seat_type_selection": 0.62,
+          "clicked_view_route_page_submit_changes": 0.08,
+          "clicked_manage_route_and_pricing_view_pricing_btn": 0.04,
+          "viewed_view_route_page_back_btn": 0.14,
+          "viewed_dashboard_page": 0.02,
+          "clicked_view_pricing_page_prices_upload": 0.02,
+          "clicked_view_pricing_page_prices_download": 0.02,
+          "viewed_login_page": 0.02,
+          "viewed_hisab_page": 0.02,
+          "clicked_nav_drawer_menu": 0.02
+        },
+        "clicked_view_route_page_submit_changes": {
+          "viewed_view_route_page_back_btn": 0.0326530612244898,
+          "clicked_view_route_page_submit_changes_confirmed": 0.7459183673469387,
+          "clicked_view_route_page_submit_changes": 0.16224489795918368,
+          "clicked_manage_route_and_pricing_view_pricing_btn": 0.00816326530612245,
+          "viewed_dashboard_page": 0.01020408163265306,
+          "clicked_view_pricing_page_prices_upload": 0.0020408163265306124,
+          "clicked_view_pricing_page_feedback": 0.0020408163265306124,
+          "viewed_setting_ticketing_machine_page": 0.0010204081632653062,
+          "viewed_manage_route_and_pricing_page": 0.003061224489795918,
+          "clicked_view_pricing_page_prices_download": 0.0020408163265306124,
+          "viewed_view_pricing_page ": 0.003061224489795918,
+          "view_pricing_page_prices_upload_success": 0.02142857142857143,
+          "clicked_hisab_bus_detail_card": 0.0010204081632653062,
+          "clicked_view_pricing_page_seat_type_selection": 0.003061224489795918,
+          "viewed_hisab_page": 0.0010204081632653062,
+          "clicked_hisab_bus_detail_today_btn": 0.0010204081632653062
+        },
+        "clicked_view_pricing_page_prices_download": {
+          "view_pricing_page_prices_download_success": 0.9577464788732394,
+          "clicked_manage_route_and_pricing_view_route_btn": 0.014084507042253521,
+          "clicked_view_pricing_page_prices_download": 0.014084507042253521,
+          "viewed_manage_route_and_pricing_page": 0.014084507042253521
+        },
+        "view_pricing_page_prices_download_success": {
+          "viewed_view_route_page_back_btn": 0.2714285714285714,
+          "clicked_manage_route_and_pricing_view_pricing_btn": 0.02857142857142857,
+          "clicked_view_pricing_page_prices_download": 0.07142857142857142,
+          "viewed_dashboard_page": 0.2571428571428571,
+          "viewed_hisab_page": 0.07142857142857142,
+          "clicked_hisab_bus_detail_card": 0.014285714285714285,
+          "viewed_manage_route_and_pricing_page": 0.04285714285714286,
+          "clicked_view_pricing_page_prices_upload": 0.1,
+          "clicked_view_route_page_submit_changes": 0.05714285714285714,
+          "viewed_view_pricing_page ": 0.014285714285714285,
+          "view_pricing_page_prices_download_success": 0.014285714285714285,
+          "clicked_nav_drawer_menu": 0.014285714285714285,
+          "clicked_view_pricing_page_feedback": 0.014285714285714285,
+          "viewed_login/signup_page": 0.014285714285714285,
+          "clicked_login_send_otp_btn": 0.014285714285714285
+        },
+        "clicked_view_route_page_submit_changes_confirmed": {
+          "view_pricing_page_prices_upload_success": 0.8514150943396226,
+          "clicked_view_route_page_submit_changes_confirmed": 0.09905660377358491,
+          "clicked_view_pricing_page_feedback": 0.0011792452830188679,
+          "viewed_manage_route_and_pricing_page": 0.0023584905660377358,
+          "clicked_view_route_page_submit_changes": 0.030660377358490566,
+          "viewed_view_route_page_back_btn": 0.00589622641509434,
+          "viewed_view_pricing_page ": 0.0011792452830188679,
+          "clicked_manage_route_and_pricing_view_pricing_btn": 0.0023584905660377358,
+          "viewed_dashboard_page": 0.003537735849056604,
+          "viewed_hisab_page": 0.0011792452830188679,
+          "clicked_view_pricing_page_prices_upload": 0.0011792452830188679
+        },
+        "view_pricing_page_prices_upload_success": {
+          "viewed_dashboard_page": 0.08382526564344746,
+          "viewed_view_route_page_back_btn": 0.2502951593860685,
+          "view_pricing_page_prices_upload_success": 0.10035419126328217,
+          "clicked_manage_route_and_pricing_view_pricing_btn": 0.0885478158205431,
+          "clicked_view_route_page_submit_changes": 0.3305785123966942,
+          "viewed_setting_ticketing_machine_page": 0.0023612750885478157,
+          "clicked_manage_route_and_pricing_bus_card": 0.009445100354191263,
+          "viewed_view_pricing_page ": 0.0035419126328217238,
+          "clicked_view_pricing_page_prices_upload": 0.01770956316410862,
+          "clicked_view_pricing_page_prices_download": 0.012987012987012988,
+          "viewed_login/signup_page": 0.0023612750885478157,
+          "viewed_hisab_page": 0.020070838252656435,
+          "viewed_hisab_bus_detail": 0.0035419126328217238,
+          "clicked_manage_route_and_pricing_view_route_btn": 0.0035419126328217238,
+          "clicked_hisab_bus_detail_card": 0.0011806375442739079,
+          "clicked_nav_drawer_menu": 0.018890200708382526,
+          "clicked_view_route_page_submit_changes_confirmed": 0.030696576151121605,
+          "viewed_manage_route_and_pricing_page": 0.012987012987012988,
+          "home_page_load_error": 0.0011806375442739079,
+          "clicked_view_pricing_page_feedback": 0.0011806375442739079,
+          "clicked_hisab_trip_detail_card": 0.0011806375442739079,
+          "dashboard_clicked_gps_vistar_se_dekhe_bus_card": 0.0011806375442739079,
+          "clicked_view_pricing_page_seat_type_selection": 0.0023612750885478157
+        },
+        "clicked_nav_drawer_offer_discount": {
+          "viewed_offer_discount_page": 0.8214285714285714,
+          "clicked_nav_drawer_offer_discount": 0.16666666666666666,
+          "clicked_offer_discount_edit": 0.011904761904761904
+        },
+        "clicked_offer_discount_edit": {
+          "clicked_offer_discount_edit": 0.3161764705882353,
+          "clicked_offer_discount_delete_btn": 0.3161764705882353,
+          "clicked_offer_discount_student_discount": 0.10294117647058823,
+          "clicked_offer_discount_ladies_discount": 0.11764705882352941,
+          "clicked_nav_drawer_menu": 0.051470588235294115,
+          "viewed_manage_route_and_pricing_page": 0.014705882352941176,
+          "viewed_dashboard_page": 0.014705882352941176,
+          "viewed_my_profile_page": 0.014705882352941176,
+          "viewed_hisab_page": 0.022058823529411766,
+          "viewed_offer_discount_page": 0.007352941176470588,
+          "viewed_setting_ticketing_machine_page": 0.007352941176470588,
+          "viewed_login/signup_page": 0.007352941176470588,
+          "clicked_offer_discount_chat_us": 0.007352941176470588
+        },
+        "clicked_offer_discount_delete_btn": {
+          "clicked_offer_discount_delete_confirm_btn": 0.9411764705882353,
+          "clicked_offer_discount_edit": 0.0196078431372549,
+          "clicked_offer_discount_delete_Back": 0.0392156862745098
+        },
+        "clicked_offer_discount_delete_confirm_btn": {
+          "clicked_offer_discount_delete_confirm": 0.9791666666666666,
+          "clicked_offer_discount_edit": 0.020833333333333332
+        },
+        "clicked_offer_discount_delete_confirm": {
+          "clicked_offer_discount_edit": 0.72,
+          "viewed_offer_discount_page": 0.12,
+          "viewed_dashboard_page": 0.08,
+          "viewed_hisab_page": 0.04,
+          "clicked_offer_discount_delete_confirm": 0.04
+        },
+        "clicked_offer_discount_student_discount": {
+          "clicked_offer_discount_edit": 0.5714285714285714,
+          "clicked_nav_drawer_menu": 0.07142857142857142,
+          "clicked_offer_discount_delete_btn": 0.21428571428571427,
+          "viewed_hisab_page": 0.14285714285714285
+        },
+        "clicked_offer_discount_ladies_discount": {
+          "clicked_offer_discount_delete_btn": 0.3125,
+          "clicked_offer_discount_edit": 0.5625,
+          "clicked_offer_discount_delete_confirm": 0.0625,
+          "viewed_dashboard_page": 0.0625
+        },
+        "clicked_view_pricing_page_feedback": {
+          "view_pricing_page_prices_upload_success": 0.14285714285714285,
+          "clicked_view_route_page_submit_changes": 0.14285714285714285,
+          "viewed_view_route_page_back_btn": 0.2857142857142857,
+          "clicked_view_pricing_page_feedback_submit": 0.14285714285714285,
+          "clicked_view_pricing_page_feedback": 0.14285714285714285,
+          "clicked_view_pricing_page_prices_upload": 0.14285714285714285
+        },
+        "clicked_login_resend_otp": {
+          "clicked_login_resend_otp": 0.248,
+          "viewed_login_otp_verify_page": 0.752
+        },
+        "chat_now_failed": {
+          "chat_now_failed": 0.75,
+          "viewed_dashboard_page": 0.25
+        },
+        "clicked_view_route_page_contact_us_btn": {
+          "clicked_view_route_page_contact_us_btn": 0.35384615384615387,
+          "viewed_view_route_page_back_btn": 0.26153846153846155,
+          "viewed_online_payment_history_page": 0.015384615384615385,
+          "clicked_manage_route_and_pricing_view_route_btn": 0.06153846153846154,
+          "clicked_manage_route_and_pricing_bus_card": 0.046153846153846156,
+          "viewed_view_route_page": 0.07692307692307693,
+          "viewed_setting_ticketing_machine_page": 0.015384615384615385,
+          "viewed_dashboard_page": 0.046153846153846156,
+          "clicked_nav_drawer_menu": 0.046153846153846156,
+          "clicked_view_route_page_feedback": 0.015384615384615385,
+          "clicked_manage_route_and_pricing_view_pricing_btn": 0.03076923076923077,
+          "viewed_hisab_page": 0.03076923076923077
+        },
+        "clicked_cash_settlement_settle_btn": {
+          "clicked_cash_settlement_bus_card": 0.08837209302325581,
+          "clicked_nav_drawer_menu": 0.023255813953488372,
+          "viewed_online_payment_history_page": 0.018604651162790697,
+          "clicked_cash_settlement_settle_btn": 0.4186046511627907,
+          "clicked_hisab_coustom_date_btn": 0.26976744186046514,
+          "viewed_dashboard_page": 0.023255813953488372,
+          "viewed_cash_settlement_screen": 0.05116279069767442,
+          "viewed_hisab_page": 0.037209302325581395,
+          "clicked_cash_settlement_settled_btn": 0.05581395348837209,
+          "viewed_setting_ticketing_machine_page": 0.013953488372093023
+        },
+        "clicked_cash_settlement_settled_btn": {
+          "clicked_cash_settlement_non_settled_btn": 0.2536764705882353,
+          "clicked_nav_drawer_menu": 0.051470588235294115,
+          "viewed_my_profile_page": 0.003676470588235294,
+          "clicked_cash_settlement_settled_btn": 0.39705882352941174,
+          "viewed_dashboard_page": 0.04779411764705882,
+          "clicked_homepage_banner": 0.003676470588235294,
+          "clicked_hisab_coustom_date_btn": 0.06985294117647059,
+          "viewed_setting_ticketing_machine_page": 0.022058823529411766,
+          "viewed_cash_settlement_screen": 0.051470588235294115,
+          "viewed_hisab_page": 0.03308823529411765,
+          "viewed_online_payment_history_page": 0.007352941176470588,
+          "viewed_manage_route_and_pricing_page": 0.007352941176470588,
+          "viewed_hisab_bus_detail": 0.003676470588235294,
+          "clicked_cash_settlement_bus_card": 0.04411764705882353,
+          "home_page_load_error": 0.003676470588235294
+        },
+        "clicked_cash_settlement_non_settled_btn": {
+          "clicked_cash_settlement_settled_btn": 0.13533834586466165,
+          "viewed_setting_ticketing_machine_page": 0.03759398496240601,
+          "clicked_cash_settlement_non_settled_btn": 0.39849624060150374,
+          "clicked_nav_drawer_menu": 0.07518796992481203,
+          "clicked_cash_settlement_settle_btn": 0.022556390977443608,
+          "clicked_hisab_coustom_date_btn": 0.09022556390977443,
+          "viewed_cash_settlement_screen": 0.007518796992481203,
+          "clicked_cash_settlement_bus_card": 0.05263157894736842,
+          "viewed_dashboard_page": 0.09022556390977443,
+          "viewed_online_payment_history_page": 0.015037593984962405,
+          "clicked_on_video": 0.015037593984962405,
+          "viewed_hisab_page": 0.03007518796992481,
+          "viewed_null_page": 0.007518796992481203,
+          "viewed_manage_route_and_pricing_page": 0.007518796992481203,
+          "viewed_my_profile_page": 0.007518796992481203,
+          "home_page_load_error": 0.007518796992481203
+        },
+        "viewed_camera_list_page": {
+          "camera_embedded_player_opened": 0.5555555555555556,
+          "viewed_hisab_page": 0.3333333333333333,
+          "viewed_camera_list_page": 0.1111111111111111
+        },
+        "camera_embedded_player_opened": {
+          "viewed_dashboard_page": 0.14285714285714285,
+          "camera_embedded_player_channel_switched": 0.14285714285714285,
+          "camera_embedded_player_closed": 0.5714285714285714,
+          "camera_embedded_player_opened": 0.14285714285714285
+        },
+        "viewed_card_wallet_history_page": {
+          "viewed_login/signup_page": 0.013605442176870748,
+          "viewed_hisab_page": 0.32653061224489793,
+          "viewed_card_wallet_history_page": 0.2108843537414966,
+          "clicked_nav_drawer_menu": 0.061224489795918366,
+          "viewed_dashboard_page": 0.3129251700680272,
+          "viewed_online_payment_history_page": 0.027210884353741496,
+          "viewed_hisab_bus_detail": 0.013605442176870748,
+          "viewed_setting_ticketing_machine_page": 0.006802721088435374,
+          "clicked_card_wallet_history_date_selection": 0.006802721088435374,
+          "clicked_homepage_banner": 0.013605442176870748,
+          "home_page_load_error": 0.006802721088435374
+        },
+        "camera_embedded_player_channel_switched": {
+          "camera_embedded_player_channel_switched": 0.5,
+          "viewed_null_page": 0.5
+        },
+        "dashboard_online_booking_detail_clicked_dashboard_": {
+          "online_booking_detail_clicked_back_btn": 0.3333333333333333,
+          "viewed_manage_route_and_pricing_page": 0.3333333333333333,
+          "viewed_hisab_page": 0.3333333333333333
+        },
+        "online_booking_detail_clicked_back_btn": {
+          "online_booking_detail_clicked_back_btn": 0.8333333333333334,
+          "viewed_dashboard_page": 0.16666666666666666
+        },
+        "viewed_training_videos_page": {
+          "clicked_nav_drawer_training_videos": 0.8043478260869565,
+          "viewed_training_videos_page": 0.08695652173913043,
+          "clicked_nav_drawer_menu": 0.043478260869565216,
+          "viewed_dashboard_page": 0.021739130434782608,
+          "clicked_on_video": 0.043478260869565216
+        },
+        "clicked_nav_drawer_training_videos": {
+          "clicked_on_video": 0.5434782608695652,
+          "clicked_nav_drawer_menu": 0.13043478260869565,
+          "home_page_load_error": 0.021739130434782608,
+          "viewed_setting_ticketing_machine_page": 0.043478260869565216,
+          "clicked_nav_drawer_training_videos": 0.06521739130434782,
+          "viewed_training_videos_page": 0.13043478260869565,
+          "viewed_dashboard_page": 0.06521739130434782
+        },
+        "resend_otp": {
+          "_auth_generate-otp": 1.0
+        },
+        "_user_suggestion": {
+          "_user": 1.0
+        },
+        "Home_Faq": {
+          "Home_Faq": 0.5,
+          "pageview_bus_list": 0.5
+        },
+        "PaymentPage_Click On Back": {
+          "booking_page_dropoff": 1.0
+        },
+        "booking_page_dropoff": {
+          "PaymentPage_Click On Back": 0.6666666666666666,
+          "booking_dropoff_popup": 0.16666666666666666,
+          "select_seat": 0.16666666666666666
+        },
+        "booking_dropoff_popup": {
+          "booking_page_dropoff": 0.5,
+          "_user": 0.5
+        },
+        "logout": {
+          "logout": 0.6666666666666666,
+          "_profile": 0.3333333333333333
+        },
+        "clicked_cash_settlement_trip_setlle_btn": {
+          "clicked_cash_settlement_tickets_detail_back_btn": 0.5882352941176471,
+          "clicked_cash_settlement_trip_setlle_btn": 0.4117647058823529
+        },
+        "camera_embedded_player_closed": {
+          "camera_embedded_player_opened": 0.2,
+          "viewed_online_payment_history_page": 0.2,
+          "camera_embedded_player_closed": 0.2,
+          "home_page_load_error": 0.2,
+          "dashboard_clicked_gps_vistar_se_dekhe_bus_card": 0.2
+        },
+        "clicked_card_wallet_history_date_selection": {
+          "clicked_card_wallet_history_date_selection": 0.5,
+          "viewed_card_wallet_history_page": 0.5
+        },
+        "change_language_api_failed": {
+          "home_page_load_error": 1.0
+        },
+        "clicked_offer_discount_delete_Back": {
+          "clicked_nav_drawer_menu": 0.5,
+          "clicked_offer_discount_edit": 0.5
+        },
+        "clicked_offer_discount_chat_us": {
+          "clicked_nav_drawer_menu": 0.75,
+          "clicked_offer_discount_chat_us": 0.25
+        },
+        "clicked_view_route_page_feedback": {
+          "clicked_view_route_page_feedback": 0.2222222222222222,
+          "viewed_view_route_page_back_btn": 0.2222222222222222,
+          "clicked_manage_route_and_pricing_view_pricing_btn": 0.3333333333333333,
+          "clicked_view_route_page_feedback_submit": 0.1111111111111111,
+          "clicked_view_route_page_contact_us_btn": 0.1111111111111111
+        },
+        "clicked_view_pricing_page_feedback_submit": {
+          "clicked_view_route_page_submit_changes": 1.0
+        },
+        "from_town_select": {
+          "to_town_select": 0.5416666666666666,
+          "Buslist_date change": 0.125,
+          "Route_Selected": 0.3333333333333333
+        },
+        "to_town_select": {
+          "Route_Selected": 0.5833333333333334,
+          "from_town_select": 0.2916666666666667,
+          "Buslist_date change": 0.125
+        },
+        "Route_Selected": {
+          "Buslist_date change": 0.75,
+          "to_town_select": 0.125,
+          "from_town_select": 0.041666666666666664,
+          "_bus-search_user-bus-search": 0.08333333333333333
+        },
+        "apply_filter": {
+          "sort_bus": 0.7,
+          "_rewards_best-V2": 0.1,
+          "bus_search": 0.15,
+          "_bus-search_list": 0.05
+        },
+        "sort_bus": {
+          "bus_search": 0.6,
+          "_rewards_best-V2": 0.05,
+          "apply_filter": 0.2,
+          "_ticket": 0.05,
+          "bus_result": 0.1
+        },
+        "_notification_send_generic-notification": {
+          "_bus-search_v2_layout": 1.0
+        },
+        "error": {
+          "Buslist_date change": 0.3333333333333333,
+          "_bus-search_user-bus-search": 0.5,
+          "_bus-search_v2_layout": 0.16666666666666666
+        },
+        "RemoveCoupon": {
+          "remove_apnibus_pass": 1.0
+        },
+        "remove_apnibus_pass": {
+          "Buslist_date change": 1.0
+        },
+        "clicked_recharge_page_pay_now_btn": {
+          "viewed_dashboard_page": 1.0
+        },
+        "clicked_online_payment_history_page_date_selection": {
+          "viewed_hisab_page": 0.6,
+          "clicked_online_payment_history_page_date_selection": 0.2,
+          "viewed_cash_settlement_screen": 0.2
+        },
+        "clicked_view_route_page_feedback_submit": {
+          "viewed_view_route_page_back_btn": 1.0
+        }
+      },
+      "most_common_transitions": [
         [
-          "viewed_hisab_page",
-          1.0
+          [
+            "viewed_hisab_page",
+            "viewed_hisab_page"
+          ],
+          264172
         ],
         [
-          "viewed_hisab_bus_detail",
-          1.0
+          [
+            "viewed_hisab_bus_detail",
+            "viewed_hisab_page"
+          ],
+          139004
         ],
         [
-          "viewed_dashboard_page",
-          1.0
+          [
+            "viewed_hisab_page",
+            "viewed_hisab_bus_detail"
+          ],
+          85703
         ],
         [
-          "viewed_hisab_trip_detail",
-          1.0
+          [
+            "viewed_hisab_bus_detail",
+            "viewed_hisab_bus_detail"
+          ],
+          85401
         ],
         [
-          "clicked_hisab_trip_detail_card",
-          1.0
+          [
+            "viewed_hisab_trip_detail",
+            "viewed_hisab_page"
+          ],
+          62820
         ],
         [
-          "clicked_hisab_bus_detail_card",
-          1.0
+          [
+            "clicked_hisab_trip_detail_card",
+            "viewed_hisab_trip_detail"
+          ],
+          62789
         ],
         [
-          "home_page_load_error",
-          1.0
+          [
+            "clicked_hisab_bus_detail_card",
+            "viewed_hisab_bus_detail"
+          ],
+          62088
         ],
         [
-          "clicked_hisab_yestarday_btn",
-          1.0
+          [
+            "viewed_dashboard_page",
+            "viewed_hisab_page"
+          ],
+          61323
         ],
         [
-          "clicked_nav_drawer_menu",
-          1.0
+          [
+            "viewed_hisab_page",
+            "clicked_hisab_trip_detail_card"
+          ],
+          60280
         ],
         [
-          "clicked_hisab_coustom_date_btn",
-          1.0
+          [
+            "viewed_hisab_page",
+            "clicked_hisab_bus_detail_card"
+          ],
+          59969
+        ],
+        [
+          [
+            "viewed_hisab_page",
+            "viewed_dashboard_page"
+          ],
+          52135
+        ],
+        [
+          [
+            "viewed_dashboard_page",
+            "viewed_dashboard_page"
+          ],
+          29119
+        ],
+        [
+          [
+            "home_page_load_error",
+            "home_page_load_error"
+          ],
+          12346
+        ],
+        [
+          [
+            "clicked_hisab_bus_detail_card",
+            "clicked_hisab_bus_detail_card"
+          ],
+          7136
+        ],
+        [
+          [
+            "viewed_hisab_trip_detail",
+            "viewed_hisab_trip_detail"
+          ],
+          6913
+        ],
+        [
+          [
+            "clicked_hisab_trip_detail_card",
+            "clicked_hisab_trip_detail_card"
+          ],
+          6868
+        ],
+        [
+          [
+            "viewed_hisab_bus_detail",
+            "viewed_dashboard_page"
+          ],
+          5980
+        ],
+        [
+          [
+            "viewed_hisab_page",
+            "clicked_hisab_yestarday_btn"
+          ],
+          5974
+        ],
+        [
+          [
+            "clicked_hisab_coustom_date_btn",
+            "clicked_hisab_coustom_date_btn"
+          ],
+          3182
+        ],
+        [
+          [
+            "viewed_hisab_page",
+            "viewed_hisab_trip_detail"
+          ],
+          2630
         ]
-      ]
+      ],
+      "high_exit_events": []
     },
     "event_classification": {
       "authentication": {
-        "event_count": 17872,
+        "event_count": 18790,
         "unique_events": 20,
         "examples": [
           "login_verify_otp_success",
@@ -165,7 +2295,7 @@
         ]
       },
       "search": {
-        "event_count": 1733,
+        "event_count": 1736,
         "unique_events": 9,
         "examples": [
           "_location_special-town-search",
@@ -187,7 +2317,7 @@
         ]
       },
       "transaction": {
-        "event_count": 7061,
+        "event_count": 7214,
         "unique_events": 17,
         "examples": [
           "viewed_setting_ticketing_machine_page",
@@ -198,7 +2328,7 @@
         ]
       },
       "navigation": {
-        "event_count": 186392,
+        "event_count": 191930,
         "unique_events": 62,
         "examples": [
           "clicked_hisab_download_btn",
@@ -218,7 +2348,7 @@
         ]
       },
       "api_calls": {
-        "event_count": 1082,
+        "event_count": 1094,
         "unique_events": 11,
         "examples": [
           "_location_from-town",
@@ -229,7 +2359,7 @@
         ]
       },
       "other": {
-        "event_count": 951480,
+        "event_count": 980566,
         "unique_events": 46,
         "examples": [
           "viewed_hisab_page",
@@ -243,19 +2373,19 @@
   },
   "system": {
     "push_notifications": {
-      "total_sent": 14013,
-      "delivery_rate": 0.7490901305930208,
-      "click_rate": 0.02553110412498809,
-      "failure_rate": 0.06101477199743096,
+      "total_sent": 14372,
+      "delivery_rate": 0.7488867241859171,
+      "click_rate": 0.025364675276409922,
+      "failure_rate": 0.06116059003618146,
       "event_breakdown": {
-        "Push Sent": 14013,
-        "Push Delivered": 10497,
-        "Push Impression": 10342,
-        "Push Dismiss": 8243,
-        "Push Subscribe Process - Device Registered (Push)": 3479,
-        "Push Failure": 855,
-        "Push Click": 268,
-        "Push Notification Failed": 217,
+        "Push Sent": 14372,
+        "Push Delivered": 10763,
+        "Push Impression": 10596,
+        "Push Dismiss": 8428,
+        "Push Subscribe Process - Device Registered (Push)": 3593,
+        "Push Failure": 879,
+        "Push Click": 273,
+        "Push Notification Failed": 230,
         "Push Registered (Mobile)": 26,
         "Push Impression (Mobile & Web)": 18,
         "Push Dismiss (Mobile & Web)": 13,
@@ -263,9 +2393,9 @@
       }
     },
     "app_lifecycle": {
-      "total_installs": 509,
-      "total_uninstalls": 116,
-      "churn_rate": 0.22789783889980353
+      "total_installs": 529,
+      "total_uninstalls": 121,
+      "churn_rate": 0.22873345935727787
     }
   },
   "interactions": {

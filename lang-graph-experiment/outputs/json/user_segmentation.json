@@ -5,20 +5,20 @@
     {
       "label": "Outliers",
       "id": -1,
-      "size": 34,
-      "pct": 6.8,
-      "avg_events": 361.8,
-      "booking_rate": 35.3
+      "size": 19,
+      "pct": 5.0,
+      "avg_events": 333.7,
+      "booking_rate": 0.0
     },
     {
       "label": "Segment 0",
       "id": 0,
-      "size": 465,
-      "pct": 93.2,
-      "avg_events": 68.2,
-      "booking_rate": 4.7
+      "size": 362,
+      "pct": 95.0,
+      "avg_events": 23.8,
+      "booking_rate": 0.0
     }
   ],
-  "insights": "<h4>Dataset Summary</h4>\n<p>The dataset contains a total of <strong>44,031 events</strong> recorded from <strong>499 users</strong> over a period from <strong>December 24, 2025</strong> to <strong>January 20, 2026</strong>. There are <strong>80 unique event types</strong> within the application category.</p>\n\n<h4>User Segmentation Findings</h4>\n\n<h4>Segment: Outliers</h4>\n<p><strong>PERSONA NAME:</strong> \"Occasional Users\"</p>\n<p><strong>PROFILE:</strong> This segment consists of <strong>34 users</strong>, representing <strong>6.8%</strong> of the total user base. They have an average of <strong>361.8 events</strong> and a booking rate of <strong>35.3%</strong>.</p>\n<p><strong>TARGETING RECOMMENDATION:</strong> Implement personalized follow-up emails to encourage these users to book again, highlighting their past activity and offering incentives.</p>\n\n<h4>Segment: Main User Group</h4>\n<p><strong>PERSONA NAME:</strong> \"Casual Users\"</p>\n<p><strong>PROFILE:</strong> This segment includes <strong>465 users</strong>, making up <strong>93.2%</strong> of the total users. They average <strong>68.2 events</strong> per user, with a booking rate of <strong>4.7%</strong>.</p>\n<p><strong>TARGETING RECOMMENDATION:</strong> Send push notifications with special offers or reminders to encourage bookings, as this segment shows low engagement despite high event counts.</p>\n\n<h4>Overall Assessment</h4>\n<p>The user base appears to have a healthy distribution with a significant majority (93.2%) being casual users. However, the low booking rate of 4.7% among the main user group indicates a need for improved engagement strategies. The ratio of high-value users (Occasional Users with a 35.3% booking rate) to low-engagement users (Casual Users with a 4.7% booking rate) suggests that while there are some valuable users, the majority are not converting effectively. This indicates an opportunity for targeted marketing efforts to enhance user engagement and conversion rates.</p>",
+  "insights": "<h4>Dataset Summary</h4>\n<p>The dataset contains a total of <strong>14,952 events</strong> recorded from <strong>381 users</strong> over the period from <strong>November 27, 2025</strong> to <strong>February 22, 2026</strong>. There are <strong>109 unique event types</strong> within the application category.</p>\n\n<h4>User Segmentation Analysis</h4>\n<p>Using DBSCAN for clustering, two segments were identified, along with a group of outliers:</p>\n\n<h4>Segment: Outliers</h4>\n<p><strong>Persona Name:</strong> \"Outliers\"</p>\n<ul>\n    <li><strong>Profile:</strong> This segment consists of <strong>19 users</strong>, representing <strong>5.0%</strong> of the total user base. These users have an average of <strong>333.7 events</strong> but a <strong>booking rate of 0.0%</strong>, indicating they did not complete any bookings.</li>\n    <li><strong>Targeting Recommendation:</strong> Consider analyzing their behavior to understand why they engage heavily without converting. Tailor specific engagement strategies or surveys to gather insights.</li>\n</ul>\n\n<h4>Segment: Segment 0</h4>\n<p><strong>Persona Name:</strong> \"Casual Users\"</p>\n<ul>\n    <li><strong>Profile:</strong> This segment includes <strong>362 users</strong>, making up <strong>95.0%</strong> of the user base. They have an average of <strong>23.8 events</strong> and also a <strong>booking rate of 0.0%</strong>, indicating no completed bookings.</li>\n    <li><strong>Targeting Recommendation:</strong> Implement a campaign to encourage bookings, such as sending personalized offers or reminders based on their event interactions.</li>\n</ul>\n\n<h4>Overall Assessment</h4>\n<p>The user base appears to be struggling with engagement, as both identified segments show a <strong>0.0% booking rate</strong>. The ratio of high-value users (those who complete bookings) to low-engagement users (those who do not complete bookings) is currently <strong>0:381</strong>, indicating a significant opportunity for improvement in converting users into paying customers.</p>",
   "iterations": 2
 }

@@ -4,103 +4,103 @@
     {
       "event_name": "viewed_hisab_page",
       "next_event": "viewed_hisab_page",
-      "count": 1310
+      "count": 1271
     },
     {
       "event_name": "viewed_hisab_bus_detail",
       "next_event": "viewed_hisab_page",
-      "count": 798
+      "count": 793
     },
     {
       "event_name": "viewed_hisab_page",
       "next_event": "viewed_hisab_bus_detail",
-      "count": 750
+      "count": 742
     },
     {
       "event_name": "viewed_hisab_bus_detail",
       "next_event": "viewed_hisab_bus_detail",
-      "count": 472
+      "count": 468
     },
     {
       "event_name": "viewed_dashboard_page",
       "next_event": "viewed_hisab_page",
-      "count": 326
-    },
-    {
-      "event_name": "viewed_hisab_page",
-      "next_event": "viewed_hisab_trip_detail",
-      "count": 318
+      "count": 327
     },
     {
       "event_name": "viewed_hisab_trip_detail",
       "next_event": "viewed_hisab_page",
-      "count": 309
+      "count": 313
+    },
+    {
+      "event_name": "viewed_hisab_page",
+      "next_event": "viewed_hisab_trip_detail",
+      "count": 307
     },
     {
       "event_name": "clicked_hisab_trip_detail_card",
       "next_event": "viewed_hisab_page",
-      "count": 301
-    },
-    {
-      "event_name": "viewed_hisab_page",
-      "next_event": "clicked_hisab_trip_detail_card",
-      "count": 293
+      "count": 295
     },
     {
       "event_name": "viewed_hisab_page",
       "next_event": "viewed_dashboard_page",
-      "count": 282
+      "count": 288
+    },
+    {
+      "event_name": "viewed_hisab_page",
+      "next_event": "clicked_hisab_trip_detail_card",
+      "count": 284
     },
     {
       "event_name": "viewed_hisab_page",
       "next_event": "clicked_hisab_bus_detail_card",
-      "count": 261
+      "count": 248
     },
     {
       "event_name": "clicked_hisab_bus_detail_card",
       "next_event": "viewed_hisab_page",
-      "count": 259
+      "count": 244
     },
     {
       "event_name": "clicked_hisab_trip_detail_card",
       "next_event": "viewed_hisab_bus_detail",
-      "count": 212
-    },
-    {
-      "event_name": "viewed_hisab_trip_detail",
-      "next_event": "viewed_hisab_bus_detail",
-      "count": 202
-    },
-    {
-      "event_name": "viewed_hisab_bus_detail",
-      "next_event": "viewed_hisab_trip_detail",
-      "count": 201
-    },
-    {
-      "event_name": "clicked_hisab_bus_detail_card",
-      "next_event": "viewed_hisab_bus_detail",
-      "count": 198
+      "count": 210
     },
     {
       "event_name": "viewed_hisab_bus_detail",
       "next_event": "clicked_hisab_trip_detail_card",
+      "count": 198
+    },
+    {
+      "event_name": "viewed_hisab_bus_detail",
+      "next_event": "viewed_hisab_trip_detail",
+      "count": 197
+    },
+    {
+      "event_name": "viewed_hisab_trip_detail",
+      "next_event": "viewed_hisab_bus_detail",
+      "count": 196
+    },
+    {
+      "event_name": "clicked_hisab_bus_detail_card",
+      "next_event": "viewed_hisab_bus_detail",
       "count": 191
     },
     {
       "event_name": "viewed_hisab_bus_detail",
       "next_event": "viewed_dashboard_page",
-      "count": 190
+      "count": 184
     },
     {
       "event_name": "viewed_dashboard_page",
       "next_event": "viewed_hisab_bus_detail",
-      "count": 179
+      "count": 175
     },
     {
       "event_name": "viewed_hisab_bus_detail",
       "next_event": "clicked_hisab_bus_detail_card",
-      "count": 147
+      "count": 141
     }
   ],
-  "insights": "<h4>Analysis of Bus Operator Management App Event Flow</h4>\n\n<p>The dataset encompasses a total of <strong>14,985 events</strong> recorded between <strong>November 27, 2025</strong> and <strong>February 19, 2026</strong>. There are <strong>109 unique event types</strong> within this aggregate data.</p>\n\n<h4>Findings</h4>\n\n<h4>a) DOMINANT PATHWAYS</h4>\n<p>The top 5 transitions represent the most frequent consecutive actions taken by users:</p>\n<ul>\n    <li><strong>viewed_hisab_page</strong> \u2192 <strong>viewed_hisab_page</strong> (1310 counts)</li>\n    <li><strong>viewed_hisab_bus_detail</strong> \u2192 <strong>viewed_hisab_page</strong> (798 counts)</li>\n    <li><strong>viewed_hisab_page</strong> \u2192 <strong>viewed_hisab_bus_detail</strong> (750 counts)</li>\n    <li><strong>viewed_hisab_bus_detail</strong> \u2192 <strong>viewed_hisab_bus_detail</strong> (472 counts)</li>\n    <li><strong>viewed_dashboard_page</strong> \u2192 <strong>viewed_hisab_page</strong> (326 counts)</li>\n</ul>\n<p>These transitions indicate that users frequently navigate back to the \"hisab\" page, suggesting it is a central hub for further actions.</p>\n\n<h4>b) DEAD ENDS</h4>\n<p>There are no specific transitions leading to \"error\" or \"failure\" events identified in the top transitions. However, it is essential to monitor any transitions that may lead to such outcomes in future analyses.</p>\n\n<h4>c) UNEXPECTED JUMPS</h4>\n<p>Transitions between unrelated workflows were not explicitly identified in the top transitions. However, the frequent navigation between \"hisab\" pages and bus details suggests potential confusion or friction in the user experience.</p>\n\n<h4>d) LOOPING</h4>\n<p>Several events show transitions back into themselves, indicating repetition:</p>\n<ul>\n    <li><strong>viewed_hisab_page</strong> \u2192 <strong>viewed_hisab_page</strong> (1310 counts)</li>\n    <li><strong>viewed_hisab_bus_detail</strong> \u2192 <strong>viewed_hisab_bus_detail</strong> (472 counts)</li>\n</ul>\n<p>This self-looping behavior may indicate that users are unsure how to proceed or are revisiting information multiple times.</p>\n\n<p>In conclusion, while the data reveals strong pathways and some looping behaviors, further investigation into dead ends and unexpected jumps may provide deeper insights into user navigation and potential areas for improvement in the app's design.</p>"
+  "insights": "<h4>Dataset Summary</h4>\n<p>The dataset contains a total of <strong>14,952 events</strong> recorded from <strong>381 unique users</strong> over a period from <strong>November 27, 2025</strong> to <strong>February 22, 2026</strong>. There are <strong>109 different event types</strong> categorized under the application.</p>\n\n<h4>Top Transitions Analysis</h4>\n<p>Here are the most frequent event-to-event transitions:</p>\n<ul>\n<li><strong>viewed_hisab_page</strong> -> <strong>viewed_hisab_page</strong>: 1271 transitions</li>\n<li><strong>viewed_hisab_bus_detail</strong> -> <strong>viewed_hisab_page</strong>: 793 transitions</li>\n<li><strong>viewed_hisab_page</strong> -> <strong>viewed_hisab_bus_detail</strong>: 742 transitions</li>\n<li><strong>viewed_hisab_bus_detail</strong> -> <strong>viewed_hisab_bus_detail</strong>: 468 transitions</li>\n<li><strong>viewed_dashboard_page</strong> -> <strong>viewed_hisab_page</strong>: 327 transitions</li>\n</ul>\n\n<h4>Analysis Findings</h4>\n\n<h4>a) Dominant Pathways</h4>\n<p>The top 5 transitions represent the following task sequences:</p>\n<ul>\n<li><strong>viewed_hisab_page</strong> to <strong>viewed_hisab_page</strong>: Users frequently revisit the hisab page, indicating it is a central hub for navigation.</li>\n<li><strong>viewed_hisab_bus_detail</strong> to <strong>viewed_hisab_page</strong>: Users often return to the hisab page after viewing bus details, suggesting they may be comparing options or seeking additional information.</li>\n<li><strong>viewed_hisab_page</strong> to <strong>viewed_hisab_bus_detail</strong>: This transition shows users are actively exploring bus details after landing on the hisab page.</li>\n<li><strong>viewed_hisab_bus_detail</strong> to <strong>viewed_hisab_bus_detail</strong>: Users frequently recheck bus details, which may indicate a need for confirmation or repeated evaluation of options.</li>\n<li><strong>viewed_dashboard_page</strong> to <strong>viewed_hisab_page</strong>: Users navigate from the dashboard back to the hisab page, suggesting the dashboard serves as a starting point for further exploration.</li>\n</ul>\n\n<h4>b) Dead Ends</h4>\n<p>To identify dead ends, we look for transitions leading to \"error\" or \"failure\" events. However, the provided data does not include specific transitions to such events, indicating a potential area for further investigation.</p>\n\n<h4>c) Looping</h4>\n<p>Looping events that transition back into themselves include:</p>\n<ul>\n<li><strong>viewed_hisab_page</strong> -> <strong>viewed_hisab_page</strong>: 1271 transitions</li>\n<li><strong>viewed_hisab_bus_detail</strong> -> <strong>viewed_hisab_bus_detail</strong>: 468 transitions</li>\n</ul>\n<p>This indicates potential UI confusion or data entry friction, as users may be stuck in a loop of revisiting the same pages without progressing to a new task.</p>"
 }

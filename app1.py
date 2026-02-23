@@ -84,7 +84,7 @@ def render_data_tab(app_user_df, app_user_rep_df, tab_prefix="user"):
 
 def render_analysis_tab(app_user_df, app_user_rep_df, selected_user, journey_data, tab_prefix="user", is_business=False):
     """Render the Analysis tab — journey, AI interpretation, AI insights."""
-    st.header("Journey Analysis")
+    st.header(f"Journey Analysis")
 
     analysis_tab1, analysis_tab2, analysis_tab3 = st.tabs([
         "User Journey" if not is_business else "Event Flow",
@@ -147,7 +147,7 @@ def render_analysis_tab(app_user_df, app_user_rep_df, selected_user, journey_dat
 
 
 
-top_tab_user, top_tab_business = st.tabs(["User", " Operator"])
+top_tab_user, top_tab_business = st.tabs(["User", "Operator"])
 
 with top_tab_user:
     df, rep_df, users_df = load_pipeline_data(USER_BASE_DIR)
@@ -159,6 +159,8 @@ with top_tab_user:
     g1.metric("Total Unique Users", total_users)
     g2.metric("Total Cleaned Events", total_events)
 
+    st.divider()
+    st.info("💡 **Analysis Scope**: All dashboards below use the full **ground truth** dataset (469,268 events, 3,961 users). The 'Global AI Report' tab uses an optimized **12% sample** (56,276 events) for high-speed AI reasoning.")
     st.divider()
 
     user_ids = users_df["user_uuid"].sort_values().tolist()
@@ -200,16 +202,25 @@ with top_tab_user:
         render_analysis_tab(app_user_df, app_user_rep_df, selected_user, journey_data, tab_prefix="user", is_business=False)
 
     with main_tab3:
-        app3_session_analysis.render_session_analysis(events_csv=os.path.join(USER_BASE_DIR, "cleaned_events.csv"))
+        app3_session_analysis.render_session_analysis(
+            events_csv=os.path.join(USER_BASE_DIR, "cleaned_events.csv"),
+            key_suffix='user',
+            selected_user=selected_user
+        )
 
     with main_tab4:
-        app4_pattern_discovery.render_pattern_discovery()
+        app4_pattern_discovery.render_pattern_discovery(
+            key_suffix='user',
+            selected_user=selected_user
+        )
 
     with main_tab5:
         st.header("Global AI Report")
         
         report_path = "lang-graph-experiment/outputs/analytics_report.html"
         if os.path.exists(report_path):
+            st.warning("⚠️ **Analysis Scale Note**: This Global AI Report is based on a **sampled subset** of 56,276 events (~12% of total traffic) for performance and cost efficiency. Other tabs show the full ground truth (469,268 events).")
+            
             with open(report_path, "r", encoding="utf-8") as f:
                 html_content = f.read()
             
@@ -232,56 +243,64 @@ with top_tab_user:
 
 with top_tab_business:
     biz_df, biz_rep_df, biz_users_df = load_pipeline_data(BUSINESS_BASE_DIR)
+    biz_app_df = biz_df[biz_df["category"].str.lower() == "application"]
+    biz_app_rep_df = biz_rep_df[
+        biz_rep_df["category"].str.lower() == "application"] if "category" in biz_rep_df.columns else biz_rep_df
 
     total_biz_ids = biz_users_df["user_uuid"].nunique()
     total_biz_events = len(biz_df)
 
     g1, g2 = st.columns(2)
-    g1.metric("Total Event Records", total_biz_events)
-    g2.metric("Unique Event Types", biz_df["event_name"].nunique())
+    g1.metric("Total Unique Operators", total_biz_ids)
+    g2.metric("Total Cleaned Events", total_biz_events)
 
     st.divider()
+    st.info("💡 **Operation Scope**: Dashboards below use the full **ground truth** dataset (816,694 events, 507 operators). The 'Global AI Report' tab uses a **1.8% sample** (14,952 events) to process complex business logic efficiently.")
+    st.divider()
 
-    # For business data, instead of a user selector (since IDs are row-level),
-    # we provide an event-type filter and date filter for aggregate analysis.
-    st.subheader("🔍 Filter Events")
+    user_ids = biz_users_df["user_uuid"].sort_values().tolist()
+    selected_user = st.selectbox("Select Operator ID", ["All Operators"] + user_ids, key="biz_user_selector")
 
-    biz_app_df = biz_df[biz_df["category"].str.lower() == "application"]
-    biz_app_rep_df = biz_rep_df[
-        biz_rep_df["category"].str.lower() == "application"] if "category" in biz_rep_df.columns else biz_rep_df
+    if selected_user == "All Operators":
+        view_biz_app_df = biz_app_df
+        view_biz_app_rep_df = biz_app_rep_df
+    else:
+        view_biz_app_df = biz_app_df[biz_app_df["user_uuid"] == selected_user]
+        view_biz_app_rep_df = biz_app_rep_df[biz_app_rep_df["user_uuid"] == selected_user]
 
-    # Date range filter
-    if "event_date" in biz_app_df.columns:
-        all_dates = sorted(biz_app_df["event_date"].dropna().unique())
-        if len(all_dates) > 1:
-            date_range = st.select_slider(
-                "Date Range",
-                options=all_dates,
-                value=(all_dates[0], all_dates[-1]),
-                key="biz_date_range"
-            )
-            biz_app_df = biz_app_df[
-                (biz_app_df["event_date"] >= date_range[0]) &
-                (biz_app_df["event_date"] <= date_range[1])
-            ]
+    biz_journey_data = build_user_journey(view_biz_app_df)
 
     b1, b2, b3 = st.columns(3)
-    b1.metric("Application Events", len(biz_app_df))
-    b2.metric("Unique Event Types", biz_app_df["event_name"].nunique())
-    if "event_date" in biz_app_df.columns:
-        b3.metric("Date Span", f"{biz_app_df['event_date'].nunique()} days")
+    events_label = "Application Events" if selected_user == "All Operators" else f"Events for {selected_user}"
+    b1.metric(events_label, len(view_biz_app_df))
+    b2.metric("Unique Event Types", view_biz_app_df["event_name"].nunique())
+    
+    if selected_user == "All Operators":
+        b3.metric("Total Operators", f"{biz_users_df['user_uuid'].nunique()}")
+        
+        st.subheader("👥 Operator Activity Summary")
+        # Create summary dataframe
+        biz_summary = biz_app_df.groupby("user_uuid").agg(
+            total_activities=("event_name", "count"),
+            unique_events=("event_name", "nunique"),
+            active_days=("event_date", "nunique"),
+            last_activity=("event_time", "max")
+        ).reset_index().sort_values("total_activities", ascending=False).head(50)
+        st.dataframe(biz_summary, width="stretch", hide_index=True)
+    else:
+        b3.metric(f"Activity Span ({selected_user})", f"{biz_journey_data['metadata']['date_range']['span_days']} Days" if biz_journey_data["total_events"] > 0 else "0 Days")
 
     st.divider()
 
     # Event distribution chart
     st.subheader("📊 Event Distribution")
-    event_counts = biz_app_df["event_name"].value_counts().head(20)
+    event_counts = view_biz_app_df["event_name"].value_counts().head(20)
     fig = px.bar(
-        x=event_counts.index,
-        y=event_counts.values,
+        x=list(event_counts.index),
+        y=list(event_counts.values),
         labels={"x": "Event Name", "y": "Count"},
-        title="Top 20 Business Events",
-        color=event_counts.values,
+        title=f"Top 20 Events for {selected_user}",
+        color=list(event_counts.values),
         color_continuous_scale="Blues"
     )
     fig.update_layout(height=450, showlegend=False, xaxis_tickangle=-45)
@@ -289,70 +308,63 @@ with top_tab_business:
 
     st.divider()
 
-    biz_tab1, biz_tab2, biz_tab3, biz_tab4, biz_tab5 = st.tabs([
-        "Data", 
-        "AI Analysis", 
-        "📊 Operations Analytics", 
-        "🔍 Pattern Analysis",
-        "Global AI Report"
-    ])
+    biz_tab_labels = ["Data", "Analysis", "Session Analysis", "Pattern Discovery", "Operational Analytics", "Global AI Report"]
+    biz_tabs = st.tabs(biz_tab_labels)
+    
+    with biz_tabs[0]:
+        render_data_tab(view_biz_app_df, view_biz_app_rep_df, tab_prefix="biz")
+    
+    with biz_tabs[1]:
+        if selected_user == "All Operators":
+            st.info("Select a specific Operator ID to view detailed journey analysis and AI insights.")
+            # Still show aggregate distribution if user wants
+            event_counts = view_biz_app_df["event_name"].value_counts().head(20)
+            plot_df = pd.DataFrame({
+                "Event": list(event_counts.index),
+                "Count": list(event_counts.values)
+            })
+            fig = px.bar(
+                plot_df,
+                x="Event", 
+                y="Count", 
+                title="Top 20 Events (Aggregate)",
+                color="Count",
+                color_continuous_scale="Blues"
+            )
+            st.plotly_chart(fig, use_container_width=True)
+        else:
+            render_analysis_tab(view_biz_app_df, view_biz_app_rep_df, selected_user, biz_journey_data, tab_prefix="biz", is_business=True)
 
-    with biz_tab1:
-        render_data_tab(biz_app_df, biz_app_rep_df, tab_prefix="biz")
+    with biz_tabs[2]:
+        app3_session_analysis.render_session_analysis(
+            profile_json='business_data_profile_report.json', 
+            events_csv=os.path.join(BUSINESS_BASE_DIR, "cleaned_events.csv"),
+            key_suffix='biz',
+            selected_user=selected_user
+        )
+            
+    with biz_tabs[3]:
+        app4_pattern_discovery.render_pattern_discovery(
+            pattern_json='business_pattern_discovery_report.json',
+            key_suffix='biz',
+            selected_user=selected_user
+        )
 
-    with biz_tab2:
-        # For business AI analysis, we sample a subset of recent events due to the
-        # aggregate nature (no per-user grouping). Build a payload from filtered data.
-        st.header("AI Business Insights")
+    with biz_tabs[4]:
+        st.header("📊 Operations Analytics")
+        app3_business_analysis.render_business_session_analysis(
+            csv_path=os.path.join(BUSINESS_BASE_DIR, "cleaned_events.csv"),
+            selected_user=selected_user,
+            key_suffix='biz'
+        )
 
-        sample_size = st.slider("Event sample size for AI analysis", 50, 500, 200, key="biz_sample")
-
-        biz_sample = biz_app_df.sort_values("event_time", ascending=False).head(sample_size)
-
-        journey_data = build_user_journey(biz_sample)
-
-        analysis_tab1, analysis_tab2 = st.tabs([
-            "AI Event Interpretation",
-            "AI Insights"
-        ])
-
-        with analysis_tab1:
-            st.subheader("AI Event Interpretation")
-
-            if st.button("Generate AI Interpretation", key="btn_ai_journey_biz"):
-                with st.spinner("Analyzing business events..."):
-                    payload = build_ai_payload(biz_sample, biz_app_rep_df, "business_aggregate")
-                    result = business_interpret_journey_safe(payload)
-
-                if result["success"]:
-                    if result.get("is_structured") and result.get("parsed"):
-                        render_ai_session_cards(result["parsed"], height=450)
-                    else:
-                        st.warning("AI did not return structured data. Showing text response:")
-                        st.markdown(result["content"])
-                else:
-                    st.error(result["error"])
-
-        with analysis_tab2:
-            st.subheader("AI-Generated Business Insights")
-
-            if st.button("Generate AI Insights", key="btn_ai_insights_biz"):
-                payload = build_ai_payload(biz_sample, biz_app_rep_df, "business_aggregate")
-                st.write_stream(business_generate_insights_stream(payload))
-
-    with biz_tab3:
-        # Business-specific operations analytics
-        app3_business_analysis.render_business_session_analysis(csv_path=os.path.join(BUSINESS_BASE_DIR, "cleaned_events.csv"))
-
-    with biz_tab4:
-        # Business-specific event pattern analysis
-        app4_business_patterns.render_business_pattern_discovery(csv_path=os.path.join(BUSINESS_BASE_DIR, "cleaned_events.csv"))
-
-    with biz_tab5:
+    with biz_tabs[5]:
         st.header("Global AI Report")
         
         report_path = "lang-graph-experiment/outputs/business_report.html"
         if os.path.exists(report_path):
+            st.warning("⚠️ **Analysis Scale Note**: The Global AI Report is based on a **sampled subset** of 14,952 events (~1.8% of total traffic) for performance and cost efficiency. The dashboards above show the full ground truth (816,694 events).")
+            
             with open(report_path, "r", encoding="utf-8") as f:
                 html_content = f.read()
             

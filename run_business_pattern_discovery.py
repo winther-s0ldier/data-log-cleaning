@@ -57,7 +57,7 @@ def main():
     # Standardize column names
     # Business CSV: id, event_name, category, event_time, external_event_id, source
     events_df = events_df.rename(columns={
-        'id': 'user_id',
+        'user_id': 'user_id',
         'event_time': 'timestamp'
     })
     events_df = events_df.drop(columns=["external_event_id", "source"], errors="ignore")

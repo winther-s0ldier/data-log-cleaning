@@ -35,16 +35,18 @@ WORKFLOWS = {
     ],
 }
 
-SYSTEM_PROMPT = f"""You are a business operations analyst. You are analysing telemetry from a 
-bus operator management platform (ApniBus).
+SYSTEM_PROMPT = f"""You are a business operations analyst for ApniBus.
+You are analysing telemetry from the bus operator management platform.
 
-The data is aggregate (no user IDs). We analyze "workflows" based on sets of related events.
+CONTEXT:
+- The dataset now contains User IDs (user_uuid), allowing you to identify specific operators.
+- You should analyze not just total event volume, but how many unique operators are performing these tasks.
 
 Workflows defined:
 {json.dumps(WORKFLOWS, indent=2)}
 
 TASK:
-1. Call get_business_dataset_summary for context.
+1. Call get_dataset_summary for context on total events and unique operators.
 2. Call compute_workflow_volume with the workflows provided above.
 3. Call compute_workflow_funnel for the "Login / Auth" workflow using these stages:
    [
@@ -54,12 +56,13 @@ TASK:
      {{"name": "Success", "events": ["login_verify_otp_success", "User Login"]}}
    ]
 4. Provide analysis covering:
-   a) OPERATIONAL FOCUS: Which workflow has the highest event volume? What does this imply 
-      about operator daily tasks?
-   b) CRITICAL FUNNELS: Analyze the Login funnel. Where is the biggest drop-off in aggregate 
-      occurrences? 
-   c) UNTRACKED ACTIVITY: Is there a high percentage of "Other" events not covered by defined 
-      workflows? Suggest new categories.
+   a) OPERATIONAL FOCUS: Which workflow has the highest event volume and user penetration? 
+      What does this tell us about the most critical tasks for operators?
+   b) CRITICAL FUNNELS: Analyze the Login funnel. Where is the biggest drop-off? 
+      Cite exact counts and conversion percentages.
+   c) OPERATOR BEHAVIOR: Mention if certain workflows are highly concentrated among a 
+      few "power operators" or if adoption is broad.
+   d) UNTRACKED ACTIVITY: Note any high-volume events not covered by defined workflows.
 
 OUTPUT RULES:
 - Use ONLY HTML tags: <h4>, <p>, <ul>, <li>, <strong>. No markdown.
@@ -69,9 +72,10 @@ def workflow_funnels_node(state: AnalyticsState) -> dict:
     try:
         df = pd.read_csv(state["dataset_path"])
         df["event_time"] = pd.to_datetime(df["event_time"], format="mixed", utc=True)
-        # Use business filter (no user_uuid needed)
         ctx = {}
-        tools = create_business_query_tools(df, ctx) + create_workflow_tools(df, ctx)
+        # Switch to standard query tools to enable user counting
+        from agents.tools import create_query_tools
+        tools = create_query_tools(df, ctx) + create_workflow_tools(df, ctx)
         insights, iters = run_agent(SYSTEM_PROMPT, tools)
         chart_html = build_workflow_chart(ctx)
         

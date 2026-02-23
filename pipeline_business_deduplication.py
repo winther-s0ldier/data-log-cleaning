@@ -26,8 +26,8 @@ before_filter = len(df)
 df = df[df["category"] == "application"].copy()
 print(f"Filtered out {before_filter - len(df)} system events, kept {len(df)} application events")
 
-# Rename 'id' -> 'user_uuid' for downstream compatibility
-df = df.rename(columns={"id": "user_uuid"})
+# Rename 'user_id' -> 'user_uuid' for downstream compatibility
+df = df.rename(columns={"user_id": "user_uuid"})
 
 # Drop columns not needed downstream
 df = df.drop(columns=["external_event_id", "source"], errors="ignore")

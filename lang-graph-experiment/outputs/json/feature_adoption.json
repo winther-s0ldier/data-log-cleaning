@@ -3,18 +3,18 @@
   "data": [
     {
       "workflow": "Hisab",
-      "events": 9291,
-      "pct": 62.0
+      "events": 0,
+      "pct": 0.0
     },
     {
       "workflow": "Dashboard",
-      "events": 1493,
-      "pct": 10.0
+      "events": 0,
+      "pct": 0.0
     },
     {
-      "workflow": "Pricing",
-      "events": 96,
-      "pct": 0.6
+      "workflow": "Workflow3",
+      "events": 0,
+      "pct": 0.0
     }
   ],
   "insights": "Analysis complete."

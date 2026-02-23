@@ -25,6 +25,8 @@ WORKFLOWS = {
         "clicked_hisab_trip_detail_card", "clicked_hisab_bus_detail_card",
         "clicked_hisab_yestarday_btn", "clicked_hisab_coustom_date_btn",
         "clicked_hisab_today_btn", "clicked_hisab_bus_detail_yeaterday_btn",
+        "clicked_hisab_download_btn", "clicked_hisab_bus_detail_today_btn",
+        "clicked_hisab_bus_detail_download_btn",
     ],
     "Dashboard": [
         "viewed_dashboard_page", "dashboard_clicked_gps_vistar_se_dekhe_bus_card",
@@ -34,7 +36,7 @@ WORKFLOWS = {
         "viewed_login_page", "viewed_login/signup_page", "viewed_login_otp_verify_page",
         "clicked_login_send_otp_btn", "clicked_login_verify_otp",
         "login_verify_otp_success", "login_verify_otp_failed",
-        "User Login", "clicked_login_resend_otp",
+        "User Login", "clicked_login_resend_otp", "clicked_login_btn",
     ],
     "Push Notifications": [
         "Push Sent", "Push Delivered", "Push Impression",
@@ -50,7 +52,8 @@ WORKFLOWS = {
     ],
     "Cash Settlement": [
         "clicked_cash_settlement_settle_btn", "clicked_cash_settlement_non_settled_btn",
-        "clicked_cash_settlement_trip_setlle_btn",
+        "clicked_cash_settlement_trip_setlle_btn", "viewed_cash_settlement_screen",
+        "clicked_cash_settlement_settled_btn", "clicked_cash_settlement_bus_card",
     ],
     "Pricing & Offers": [
         "viewed_offer_discount_page", "clicked_offer_discount_edit",
@@ -59,6 +62,14 @@ WORKFLOWS = {
         "clicked_offer_discount_ladies_discount", "clicked_offer_discount_student_discount",
         "clicked_view_pricing_page_prices_download", "view_pricing_page_prices_download_success",
         "clicked_view_pricing_page_prices_upload", "clicked_view_pricing_page_seat_type_selection",
+        "viewed_manage_route_and_pricing_page", "clicked_manage_route_and_pricing_view_pricing_btn",
+        "viewed_view_pricing_page", "view_pricing_page_prices_upload_success",
+        "clicked_manage_route_and_pricing_bus_card",
+    ],
+    "Route Management": [
+        "clicked_view_route_page_submit_changes", "clicked_view_route_page_submit_changes_confirmed",
+        "viewed_view_route_page_back_btn", "clicked_manage_route_and_pricing_view_route_btn",
+        "viewed_view_route_page",
     ],
     "Settings & Ticketing": [
         "viewed_setting_ticketing_machine_page", "viewed_machine_name_change_page",
@@ -95,32 +106,39 @@ def load_business_data(csv_path: str = "Business Events data.csv"):
         return None
 
 
-def render_business_session_analysis(csv_path: str = "Business Events data.csv"):
+def render_business_session_analysis(csv_path: str = "Business Events data.csv", selected_user: str = "All Operators", key_suffix=''):
     """Render business-specific analytics replacing session analysis."""
     df = load_business_data(csv_path)
     if df is None:
         return
 
+    if selected_user != "All Operators":
+        df = df[df['user_uuid'] == selected_user]
+
     app_df = df[df['category'] == 'application']
     sys_df = df[df['category'] == 'system']
 
-    st.title("📊 Business Operations Analytics")
-    st.markdown("*Aggregate event analysis for bus operator platform — workflows, trends, and funnels*")
+    st.header(f"📊 Business Operations Analytics {'- ' + str(selected_user) if selected_user != 'All Operators' else ''}")
+    st.markdown(f"*Aggregate behavior analysis for bus operator platform — context: {str(selected_user)}*")
 
     # ---- Top-level metrics ----
-    c1, c2, c3, c4, c5 = st.columns(5)
-    c1.metric("Total Events", f"{len(df):,}")
-    c2.metric("App Events", f"{len(app_df):,}")
-    c3.metric("System Events", f"{len(sys_df):,}")
-    c4.metric("Event Types", f"{df['event_name'].nunique()}")
-    c5.metric("Days of Data", f"{df['date'].nunique()}")
+    b1, b2, b3 = st.columns(3)
+    with b1:
+        st.metric(f"Total Events ({str(selected_user)})", f"{len(app_df):,}")
+    with b2:
+        st.metric(f"Event Types ({str(selected_user)})", f"{app_df['event_name'].nunique()}")
+    with b3:
+        # Safely calculate span
+        span = 0
+        if not app_df.empty:
+            span = (app_df['event_time'].max() - app_df['event_time'].min()).days + 1
+        st.metric(f"Span (Days) ({str(selected_user)})", f"{span}")
 
     st.divider()
 
-    tab1, tab2, tab3, tab4, tab5 = st.tabs([
+    tab1, tab2, tab3, tab4 = st.tabs([
         "🔧 Workflow Breakdown",
         "📈 Trends & Heatmap",
-        "📣 Push Funnel",
         "🔐 Login Funnel",
         "🚀 Feature Adoption",
     ])
@@ -141,7 +159,7 @@ def render_business_session_analysis(csv_path: str = "Business Events data.csv")
             fig = px.pie(
                 names=workflow_counts.index,
                 values=workflow_counts.values,
-                title="Event Distribution by Workflow",
+                title=f"Event Distribution by Workflow ({selected_user})",
                 hole=0.45,
                 color_discrete_sequence=px.colors.qualitative.Set2,
             )
@@ -177,20 +195,25 @@ def render_business_session_analysis(csv_path: str = "Business Events data.csv")
         selected_wf = st.selectbox(
             "Select Workflow",
             [wf for wf in workflow_counts.index if wf != "Other"],
-            key="biz_wf_select"
+            key=f"biz_wf_select_{key_suffix}"
         )
 
         wf_events = app_df[app_df['workflow'] == selected_wf]['event_name'].value_counts()
+        wf_plot_df = pd.DataFrame({
+            "Event": list(wf_events.index),
+            "Count": list(wf_events.values)
+        })
         fig = px.bar(
-            x=wf_events.index,
-            y=wf_events.values,
-            labels={"x": "Event", "y": "Count"},
-            title=f"Events in: {selected_wf}",
-            color=wf_events.values,
+            wf_plot_df,
+            x="Event",
+            y="Count",
+            labels={"index_col": "Event", "value_col": "Count"},
+            title=f"Top Events: {selected_wf} ({str(selected_user)})",
+            color="Count",
             color_continuous_scale="Teal",
         )
         fig.update_layout(height=400, xaxis_tickangle=-30, showlegend=False)
-        st.plotly_chart(fig, width="stretch")
+        st.plotly_chart(fig, use_container_width=True, key=f"wf_events_bar_{key_suffix}")
 
     # ========================================================================
     # TAB 2: DAILY / HOURLY TRENDS
@@ -217,19 +240,21 @@ def render_business_session_analysis(csv_path: str = "Business Events data.csv")
         ))
         fig.update_layout(height=400, xaxis_title="Date", yaxis_title="Events",
                           hovermode='x unified')
-        st.plotly_chart(fig, width="stretch")
+        st.plotly_chart(fig, width="stretch", key=f"daily_vol_scatter_{key_suffix}")
 
         col1, col2 = st.columns(2)
 
         with col1:
             # Hourly distribution
             st.subheader("Hourly Activity Pattern")
-            hourly = app_df.groupby('hour').size().reset_index(name='events')
+            hourly_counts = df.groupby('hour').size().reset_index(name='events')
             fig = px.bar(
-                hourly, x='hour', y='events',
-                title="Application Events by Hour of Day",
-                labels={"hour": "Hour", "events": "Total Events"},
-                color='events', color_continuous_scale='YlOrRd',
+                x=list(hourly_counts['hour']),
+                y=list(hourly_counts['events']),
+                title=f"Hourly Activity Distribution ({selected_user})",
+                labels={"x": "Hour of Day", "y": "Number of Events"},
+                color=list(hourly_counts['events']),
+                color_continuous_scale="Viridis",
             )
             fig.update_layout(height=350, showlegend=False)
             st.plotly_chart(fig, width="stretch")
@@ -242,103 +267,38 @@ def render_business_session_analysis(csv_path: str = "Business Events data.csv")
             dow.columns = ['day', 'events']
             fig = px.bar(
                 dow, x='day', y='events',
-                title="Application Events by Day of Week",
+                title=f"Application Events by Day of Week ({selected_user})",
                 color='events', color_continuous_scale='Viridis',
             )
             fig.update_layout(height=350, showlegend=False)
             st.plotly_chart(fig, width="stretch")
 
-        # Hour x Day-of-week heatmap
-        st.subheader("Activity Heatmap (Hour × Day)")
-        heatmap_data = app_df.groupby(['day_of_week', 'hour']).size().unstack(fill_value=0)
-        heatmap_data = heatmap_data.reindex(day_order)
+        if app_df.empty:
+            st.info(f"No activity data available for {str(selected_user)}.")
+        else:
+            # Hour x Day-of-week heatmap
+            st.subheader("Activity Heatmap (Hour × Day)")
+            
+            # Ensure all days and hours are present to avoid px.imshow dimension mismatch
+            heatmap_data = app_df.groupby(['day_of_week', 'hour']).size().unstack(fill_value=0)
+            heatmap_data = heatmap_data.reindex(index=day_order, columns=range(24), fill_value=0)
 
-        fig = px.imshow(
-            heatmap_data.values,
-            x=[f"{h:02d}:00" for h in range(24)],
-            y=day_order,
-            color_continuous_scale='YlOrRd',
-            labels=dict(x="Hour", y="Day", color="Events"),
-            title="Application Events: Hour × Day of Week",
-            aspect="auto"
-        )
-        fig.update_layout(height=350)
-        st.plotly_chart(fig, width="stretch")
-
-    # ========================================================================
-    # TAB 3: PUSH NOTIFICATION FUNNEL
-    # ========================================================================
-    with tab3:
-        st.header("📣 Push Notification Funnel")
-        st.markdown("*Delivery and engagement pipeline for push notifications*")
-
-        push_events = {
-            "Sent": df[df['event_name'] == 'Push Sent'].shape[0],
-            "Delivered": df[df['event_name'] == 'Push Delivered'].shape[0],
-            "Impression": df[df['event_name'] == 'Push Impression'].shape[0],
-            "Clicked": df[df['event_name'] == 'Push Click'].shape[0],
-            "Dismissed": df[df['event_name'] == 'Push Dismiss'].shape[0],
-            "Failed": df[df['event_name'] == 'Push Notification Failed'].shape[0],
-        }
-
-        # Metrics row
-        cols = st.columns(6)
-        for i, (label, val) in enumerate(push_events.items()):
-            cols[i].metric(label, f"{val:,}")
-
-        col1, col2 = st.columns([2, 1])
-
-        with col1:
-            # Funnel chart
-            funnel_stages = ["Sent", "Delivered", "Impression", "Clicked"]
-            funnel_values = [push_events[s] for s in funnel_stages]
-
-            fig = go.Figure(go.Funnel(
-                y=funnel_stages,
-                x=funnel_values,
-                textinfo="value+percent initial+percent previous",
-                marker=dict(color=['#4B9EFF', '#00CC66', '#FFA500', '#FF4B4B']),
-            ))
-            fig.update_layout(title="Push Notification Funnel", height=400)
-            st.plotly_chart(fig, width="stretch")
-
-        with col2:
-            st.subheader("📊 Key Rates")
-            if push_events["Sent"] > 0:
-                delivery_rate = push_events["Delivered"] / push_events["Sent"]
-                st.metric("Delivery Rate", f"{delivery_rate:.1%}")
-
-                if push_events["Delivered"] > 0:
-                    impression_rate = push_events["Impression"] / push_events["Delivered"]
-                    st.metric("Impression Rate", f"{impression_rate:.1%}")
-
-                    click_rate = push_events["Clicked"] / push_events["Delivered"]
-                    st.metric("Click Rate", f"{click_rate:.1%}")
-
-                    dismiss_rate = push_events["Dismissed"] / push_events["Delivered"]
-                    st.metric("Dismiss Rate", f"{dismiss_rate:.1%}")
-
-                failure_rate = push_events["Failed"] / push_events["Sent"]
-                st.metric("Failure Rate", f"{failure_rate:.1%}")
-            else:
-                st.info("No push notification data available.")
-
-        # Push trend over time
-        st.subheader("Push Activity Over Time")
-        push_df = df[df['event_name'].str.startswith('Push')].copy()
-        if not push_df.empty:
-            push_daily = push_df.groupby(['date', 'event_name']).size().reset_index(name='count')
-            fig = px.line(
-                push_daily, x='date', y='count', color='event_name',
-                title="Daily Push Notification Events",
+            fig = px.imshow(
+                heatmap_data.values,
+                x=[f"{h:02d}:00" for h in range(24)],
+                y=list(heatmap_data.index),
+                color_continuous_scale='YlOrRd',
+                labels=dict(x="Hour", y="Day", color="Events"),
+                title=f"Application Events: Hour × Day of Week ({str(selected_user)})",
+                aspect="auto"
             )
             fig.update_layout(height=350)
-            st.plotly_chart(fig, width="stretch")
+            st.plotly_chart(fig, width="stretch", key=f"activity_heatmap_{key_suffix}")
 
     # ========================================================================
-    # TAB 4: LOGIN / AUTH FUNNEL
+    # TAB 3: LOGIN / AUTH FUNNEL
     # ========================================================================
-    with tab4:
+    with tab3:
         st.header("🔐 Login / Authentication Funnel")
         st.markdown("*Operator login pipeline — from page view to successful authentication*")
 
@@ -367,8 +327,8 @@ def render_business_session_analysis(csv_path: str = "Business Events data.csv")
                 textinfo="value+percent initial+percent previous",
                 marker=dict(color=['#636EFA', '#EF553B', '#00CC96', '#AB63FA', '#FFA15A', '#19D3F3']),
             ))
-            fig.update_layout(title="Login Funnel", height=450)
-            st.plotly_chart(fig, width="stretch")
+            fig.update_layout(title=f"Login Funnel ({selected_user})", height=450)
+            st.plotly_chart(fig, width="stretch", key=f"login_funnel_chart_{key_suffix}")
 
         with col2:
             st.subheader("📊 Conversion Rates")
@@ -392,9 +352,9 @@ def render_business_session_analysis(csv_path: str = "Business Events data.csv")
                 st.caption(f"Failure rate: {otp_failed / login_events['Verify OTP']:.1%}")
 
     # ========================================================================
-    # TAB 5: FEATURE ADOPTION OVER TIME
+    # TAB 4: FEATURE ADOPTION OVER TIME
     # ========================================================================
-    with tab5:
+    with tab4:
         st.header("🚀 Feature Adoption Trends")
         st.markdown("*How are different features being used over time?*")
 
@@ -407,11 +367,11 @@ def render_business_session_analysis(csv_path: str = "Business Events data.csv")
 
         fig = px.line(
             wf_filtered, x='date', y='events', color='workflow',
-            title="Daily Event Volume by Workflow",
+            title=f"Daily Event Volume by Workflow ({selected_user})",
             labels={"date": "Date", "events": "Events", "workflow": "Workflow"},
         )
         fig.update_layout(height=450, hovermode='x unified')
-        st.plotly_chart(fig, width="stretch")
+        st.plotly_chart(fig, width="stretch", key=f"wf_daily_line_{key_suffix}")
 
         st.divider()
 
@@ -432,12 +392,12 @@ def render_business_session_analysis(csv_path: str = "Business Events data.csv")
 
         fig = px.bar(
             weekly_wf, x='week', y='events', color='workflow',
-            title="Weekly Workflow Volume",
+            title=f"Weekly Workflow Volume ({selected_user})",
             barmode='stack',
             category_orders={"week": weekly_wf['week'].unique().tolist()}
         )
         fig.update_layout(height=450, xaxis_title="Week (Year)", xaxis={'type': 'category'})
-        st.plotly_chart(fig, width="stretch")
+        st.plotly_chart(fig, width="stretch", key=f"weekly_wf_bar_{key_suffix}")
 
     # ---- Footer ----
     st.divider()

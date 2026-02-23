@@ -102,16 +102,23 @@ def compute_daily_trends(df: pd.DataFrame, top_n: int = 10):
     return daily, top_events
 
 
-def render_business_pattern_discovery(csv_path: str = "Business Events data.csv"):
+def render_business_pattern_discovery(csv_path: str = "Business Events data.csv", selected_user: str = "All Operators"):
     """Render business-specific pattern analysis."""
     df = load_business_events(csv_path)
     if df is None:
         return
 
+    if selected_user != "All Operators":
+        df = df[df['user_uuid'] == selected_user]
+
     app_df = df[df['category'] == 'application']
 
-    st.title("🔍 Business Event Pattern Analysis")
-    st.markdown("*Event-level patterns, transitions, and friction analysis for aggregate operator data*")
+    st.header(f"🔍 Business Event Pattern Analysis {'- ' + str(selected_user) if str(selected_user) != 'All Operators' else ''}")
+    st.markdown(f"*Event-level patterns, transitions, and friction analysis — context: {str(selected_user)}*")
+
+    if app_df.empty:
+        st.warning(f"No application events found for {str(selected_user)}.")
+        return
 
     # Top metrics
     c1, c2, c3, c4 = st.columns(4)
@@ -133,7 +140,7 @@ def render_business_pattern_discovery(csv_path: str = "Business Events data.csv"
     # TAB 1: EVENT TRANSITIONS
     # ========================================================================
     with tab1:
-        st.header("🔀 Event Transition Analysis")
+        st.subheader("🔀 Event Transition Analysis")
         st.markdown("*What events typically follow other events? (within 60-second window)*")
 
         transitions = compute_transitions(df)
@@ -205,7 +212,7 @@ def render_business_pattern_discovery(csv_path: str = "Business Events data.csv"
     # TAB 2: FRICTION DETECTION
     # ========================================================================
     with tab2:
-        st.header("🔥 Friction Detection")
+        st.subheader("🔥 Friction Detection")
         st.markdown("*Events that repeat in close succession (within 30 seconds) indicate user friction or errors*")
 
         friction_df = compute_friction(df)
@@ -254,7 +261,7 @@ def render_business_pattern_discovery(csv_path: str = "Business Events data.csv"
     # TAB 3: DAILY TRENDS
     # ========================================================================
     with tab3:
-        st.header("📈 Event Trend Analysis")
+        st.subheader("📈 Event Trend Analysis")
         st.markdown("*How are key events trending over time? Identify growth or decline.*")
 
         n_events = st.slider("Number of top events to show", 5, 20, 10, key="trend_n")
@@ -328,7 +335,7 @@ def render_business_pattern_discovery(csv_path: str = "Business Events data.csv"
     # TAB 4: CO-OCCURRENCE
     # ========================================================================
     with tab4:
-        st.header("🔗 Event Co-occurrence Analysis")
+        st.subheader("🔗 Event Co-occurrence Analysis")
         st.markdown("*Which events frequently appear together within short time windows?*")
 
         st.markdown("""

@@ -2,25 +2,25 @@
   "metric": "user_journey_insights",
   "title": "User Journey & Persona Analysis",
   "data": {
-    "total_analyzed_users": 499,
+    "total_analyzed_users": 252,
     "funnel_counts": {
-      "searched": 384,
-      "selected": 206,
-      "pay_init": 36,
-      "booked": 9
+      "searched": 3,
+      "selected": 1,
+      "pay_init": 0,
+      "booked": 0
     },
     "user_types": {
-      "browsers": 178,
-      "shoppers": 170,
-      "attempters": 27,
-      "bookers": 9
+      "browsers": 2,
+      "shoppers": 1,
+      "attempters": 0,
+      "bookers": 0
     },
     "friction_counts": {
-      "faced_payment_failure": 17,
+      "faced_payment_failure": 0,
       "faced_app_error": 0
     },
-    "conversion_rate": 1.8
+    "conversion_rate": 0.0
   },
-  "insights": "<h4>USER JOURNEY ANALYSIS OF BUS TICKET BOOKING APP</h4>\n\n<p>The dataset comprises a total of 44,031 events from 499 users over a period from December 24, 2025, to January 20, 2026. The analysis focuses on user interactions within the app, particularly around key milestones in the ticket booking process.</p>\n\n<h4>USER TYPE BREAKDOWN</h4>\n<p>The breakdown of user types is as follows:</p>\n<ul>\n  <li><strong>Browsers:</strong> 178 users (35.7%)</li>\n  <li><strong>Shoppers:</strong> 170 users (34.1%)</li>\n  <li><strong>Attempters:</strong> 27 users (5.4%)</li>\n  <li><strong>Bookers:</strong> 9 users (1.8%)</li>\n</ul>\n<p>This funnel shape indicates a significant drop-off at each stage of the user journey, suggesting that while many users show initial intent to search for tickets, a much smaller percentage proceed to complete a booking. The conversion rate from search to booking is notably low at 1.8%, highlighting potential barriers in the selection and payment processes.</p>\n\n<h4>FRICTION IMPACT</h4>\n<p>Out of the users analyzed:</p>\n<ul>\n  <li><strong>Users who faced payment failures:</strong> 17 (3.4%)</li>\n  <li><strong>Users who faced app errors:</strong> 0 (0%)</li>\n</ul>\n<p>The presence of payment failures indicates a significant churn driver, as 3.4% of users encountered issues that likely deterred them from completing their bookings. This suggests that improving the payment process could enhance overall conversion rates.</p>\n\n<h4>POWER USERS VS CASUALS</h4>\n<p>Based on the stats, a \"high-intent\" user can be defined as one who progresses beyond the initial search stage and engages with the seat selection and payment initiation. Specifically, users who select a seat (Shoppers) or attempt payment (Attempters) exhibit higher intent compared to Browsers. The distinction is clear: Browsers show interest but do not commit, while Shoppers and Attempters demonstrate a willingness to engage further in the booking process.</p>\n\n<h4>PERSONALIZATION SUGGESTIONS FOR BROWSERS</h4>\n<p>To convert Browsers into Shoppers, the following strategies could be implemented:</p>\n<ul>\n  <li><strong>Enhanced Seat Selection Experience:</strong> Introduce a feature that allows Browsers to view seat availability and pricing more dynamically, perhaps with visual aids or recommendations based on their previous searches.</li>\n  <li><strong>Incentives for Engagement:</strong> Offer limited-time discounts or promotional codes to Browsers who return to the app after their initial search, encouraging them to select a seat and proceed to payment.</li>\n</ul>",
+  "insights": "<h4>USER JOURNEY ANALYSIS FOR BUS TICKET BOOKING APP</h4>\n\n<p>The analysis is based on a dataset containing 14,952 events from 381 users, covering the period from November 27, 2025, to February 22, 2026. A total of 252 users were analyzed for their journey through the app.</p>\n\n<h4>USER TYPE BREAKDOWN</h4>\n<p>Based on the journey statistics:</p>\n<ul>\n  <li><strong>Browsers:</strong> 2 users (0.79%)</li>\n  <li><strong>Shoppers:</strong> 1 user (0.40%)</li>\n  <li><strong>Attempters:</strong> 0 users (0.00%)</li>\n  <li><strong>Bookers:</strong> 0 users (0.00%)</li>\n</ul>\n<p>The funnel shape indicates a significant drop-off from Browsers to Shoppers, suggesting that while users are interested in searching for tickets, very few are progressing to seat selection and payment initiation. This indicates low intent to complete the booking process.</p>\n\n<h4>FRICTION IMPACT</h4>\n<p>No users faced payment failures or app errors during their journey. This indicates that friction related to payment processing is not currently a churn driver in this dataset.</p>\n\n<h4>POWER USERS VS CASUALS</h4>\n<p>Given the statistics, a \"high-intent\" user can be defined as someone who not only searches for tickets but also selects a seat and initiates payment. In this dataset, there are no users who have reached the payment initiation stage, highlighting a lack of high-intent users.</p>\n\n<h4>PERSONALIZATION SUGGESTIONS FOR BROWSERS</h4>\n<p>To convert Browsers into Shoppers, consider the following strategies:</p>\n<ul>\n  <li><strong>Enhanced Seat Selection Experience:</strong> Implement features that allow Browsers to visualize available seats better, such as a dynamic seating chart or highlighting popular seats based on user preferences.</li>\n  <li><strong>Incentives for Seat Selection:</strong> Offer limited-time discounts or rewards for users who select a seat within a specific timeframe after searching, encouraging them to take the next step in the booking process.</li>\n</ul>",
   "iterations": 2
 }

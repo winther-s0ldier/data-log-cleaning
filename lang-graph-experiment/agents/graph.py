@@ -50,6 +50,9 @@ BUSINESS_NODES = {
     "business_friction_points": business_friction_points_node,
     "event_frequency": event_frequency_node,
     "temporal_patterns": temporal_patterns_node,
+    "retention_analysis": retention_analysis_node,
+    "user_segmentation": user_segmentation_node,
+    "user_journey_insights": user_journey_insights_node,
 }
 
 

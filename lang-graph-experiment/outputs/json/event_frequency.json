@@ -5,68 +5,63 @@
     "top_events": [
       {
         "event": "viewed_hisab_page",
-        "count": 5361,
-        "pct": 35.78
+        "count": 5335,
+        "pct": 35.68
       },
       {
         "event": "viewed_hisab_bus_detail",
-        "count": 3159,
-        "pct": 21.08
+        "count": 3162,
+        "pct": 21.15
       },
       {
         "event": "viewed_dashboard_page",
-        "count": 1403,
-        "pct": 9.36
+        "count": 1419,
+        "pct": 9.49
       },
       {
         "event": "viewed_hisab_trip_detail",
-        "count": 1275,
-        "pct": 8.51
+        "count": 1266,
+        "pct": 8.47
       },
       {
         "event": "clicked_hisab_trip_detail_card",
-        "count": 1205,
-        "pct": 8.04
+        "count": 1206,
+        "pct": 8.07
       },
       {
         "event": "clicked_hisab_bus_detail_card",
-        "count": 1141,
-        "pct": 7.61
+        "count": 1131,
+        "pct": 7.56
       },
       {
         "event": "clicked_nav_drawer_menu",
-        "count": 131,
-        "pct": 0.87
+        "count": 133,
+        "pct": 0.89
       },
       {
         "event": "clicked_hisab_yestarday_btn",
-        "count": 125,
+        "count": 124,
         "pct": 0.83
       },
       {
         "event": "dashboard_clicked_gps_vistar_se_dekhe_bus_card",
-        "count": 90,
-        "pct": 0.6
-      },
-      {
-        "event": "home_page_load_error",
         "count": 88,
         "pct": 0.59
       },
       {
-        "event": "clicked_hisab_coustom_date_btn",
+        "event": "home_page_load_error",
+        "count": 85,
+        "pct": 0.57
+      },
+      {
+        "event": "clicked_login_send_otp_btn",
         "count": 60,
         "pct": 0.4
       },
       {
-        "event": "clicked_login_send_otp_btn",
-        "count": 58,
+        "event": "clicked_hisab_coustom_date_btn",
+        "count": 59,
         "pct": 0.39
-      },
-      {
-        "event": "clicked_login_verify_otp",
-        "count": 43,
-        "pct": 0.29
       },
       {
         "event": "clicked_hisab_today_btn",
@@ -75,46 +70,51 @@
       },
       {
         "event": "viewed_login_page",
-        "count": 40,
-        "pct": 0.27
+        "count": 42,
+        "pct": 0.28
+      },
+      {
+        "event": "clicked_login_verify_otp",
+        "count": 42,
+        "pct": 0.28
       },
       {
         "event": "viewed_online_payment_history_page",
-        "count": 40,
+        "count": 41,
         "pct": 0.27
       },
       {
         "event": "viewed_login/signup_page",
-        "count": 36,
-        "pct": 0.24
+        "count": 37,
+        "pct": 0.25
       },
       {
         "event": "clicked_hisab_download_btn",
-        "count": 36,
-        "pct": 0.24
-      },
-      {
-        "event": "viewed_login_otp_verify_page",
-        "count": 36,
-        "pct": 0.24
+        "count": 37,
+        "pct": 0.25
       },
       {
         "event": "clicked_manage_route_and_pricing_view_pricing_btn",
         "count": 35,
         "pct": 0.23
+      },
+      {
+        "event": "viewed_login_otp_verify_page",
+        "count": 34,
+        "pct": 0.23
       }
     ],
     "categories": {
-      "application": 14985
+      "application": 14952
     },
     "power": {
-      "median": 1,
-      "p90": 1,
-      "p99": 1,
-      "max": 1,
-      "above_200": 0
+      "median": 11,
+      "p90": 105,
+      "p99": 467,
+      "max": 663,
+      "above_200": 15
     }
   },
-  "insights": "<h4>Analysis of Bus Ticket Booking App Dataset</h4>\n\n<p>The dataset contains a total of <strong>14,985 events</strong> triggered by <strong>14,985 users</strong> over a period from <strong>November 27, 2025</strong> to <strong>February 19, 2026</strong>. There are <strong>109 unique event types</strong> recorded.</p>\n\n<h4>Event Frequency Distribution</h4>\n<p>The top 20 events by frequency are as follows:</p>\n<ul>\n<li><strong>viewed_hisab_page</strong>: 5,361 events (35.78%)</li>\n<li><strong>viewed_hisab_bus_detail</strong>: 3,159 events (21.08%)</li>\n<li><strong>viewed_dashboard_page</strong>: 1,403 events (9.36%)</li>\n<li><strong>viewed_hisab_trip_detail</strong>: 1,275 events (8.51%)</li>\n<li><strong>clicked_hisab_trip_detail_card</strong>: 1,205 events (8.04%)</li>\n<li><strong>clicked_hisab_bus_detail_card</strong>: 1,141 events (7.61%)</li>\n<li><strong>clicked_nav_drawer_menu</strong>: 131 events (0.87%)</li>\n<li><strong>clicked_hisab_yestarday_btn</strong>: 125 events (0.83%)</li>\n<li><strong>dashboard_clicked_gps_vistar_se_dekhe_bus_card</strong>: 90 events (0.60%)</li>\n<li><strong>home_page_load_error</strong>: 88 events (0.59%)</li>\n<li><strong>clicked_hisab_coustom_date_btn</strong>: 60 events (0.40%)</li>\n<li><strong>clicked_login_send_otp_btn</strong>: 58 events (0.39%)</li>\n<li><strong>clicked_login_verify_otp</strong>: 43 events (0.29%)</li>\n<li><strong>clicked_hisab_today_btn</strong>: 43 events (0.29%)</li>\n<li><strong>viewed_login_page</strong>: 40 events (0.27%)</li>\n<li><strong>viewed_online_payment_history_page</strong>: 40 events (0.27%)</li>\n<li><strong>viewed_login/signup_page</strong>: 36 events (0.24%)</li>\n<li><strong>clicked_hisab_download_btn</strong>: 36 events (0.24%)</li>\n<li><strong>viewed_login_otp_verify_page</strong>: 36 events (0.24%)</li>\n<li><strong>clicked_manage_route_and_pricing_view_pricing_btn</strong>: 35 events (0.23%)</li>\n</ul>\n\n<h4>Analysis Findings</h4>\n\n<h4>DOMINANT PATTERNS</h4>\n<p>The events that dominate the dataset are <strong>viewed_hisab_page</strong> and <strong>viewed_hisab_bus_detail</strong>, which together account for <strong>56.86%</strong> of all events. This indicates that users primarily engage with the bus details and their account information. The high frequency of these events suggests that users are actively seeking information about their trips and bus options.</p>\n\n<h4>EVENT NOISE</h4>\n<p>There are no events that appear suspiciously often that would indicate a logging bug. However, several events have very low counts, such as <strong>viewed_login/signup_page</strong> and <strong>clicked_manage_route_and_pricing_view_pricing_btn</strong>, each with <strong>36</strong> and <strong>35</strong> occurrences respectively. These low counts may suggest that these features are either broken or not utilized by users, warranting further investigation.</p>\n\n<h4>POWER USERS</h4>\n<p>Power users, defined as those in the 90th percentile (P90+), show a median event count of <strong>1</strong>, with both P90 and P99 also at <strong>1</strong>. This indicates that even among the most engaged users, there is a low level of interaction with the app, suggesting a lack of deep engagement or a ceiling effect in user activity.</p>\n\n<h4>CONSOLIDATION</h4>\n<p>There are several event names that could potentially be consolidated, particularly those related to viewing bus details and trip details, such as <strong>viewed_hisab_trip_detail</strong> and <strong>viewed_hisab_bus_detail</strong>. Streamlining these events could simplify the dataset and provide clearer insights into user interactions.</p>",
+  "insights": "<h4>Analysis of Bus Ticket Booking App Dataset</h4>\n\n<p>The dataset contains a total of <strong>14,952</strong> application-level events generated by <strong>381</strong> users over a period from <strong>November 27, 2025</strong> to <strong>February 22, 2026</strong>. There are <strong>109</strong> unique event types recorded.</p>\n\n<h4>Dominant Patterns</h4>\n<p>The following events dominate user interactions:</p>\n<ul>\n    <li><strong>viewed_hisab_page:</strong> 5,335 events (35.68%)</li>\n    <li><strong>viewed_hisab_bus_detail:</strong> 3,162 events (21.15%)</li>\n    <li><strong>viewed_dashboard_page:</strong> 1,419 events (9.49%)</li>\n    <li><strong>viewed_hisab_trip_detail:</strong> 1,266 events (8.47%)</li>\n    <li><strong>clicked_hisab_trip_detail_card:</strong> 1,206 events (8.07%)</li>\n    <li><strong>clicked_hisab_bus_detail_card:</strong> 1,131 events (7.56%)</li>\n</ul>\n<p>These dominant events indicate that users primarily engage with the \"hisab\" feature of the app, focusing on viewing bus details and trip information. The high frequency of these events suggests that users are actively exploring bus options and trip specifics, indicating a strong interest in these features.</p>\n\n<h4>Event Noise</h4>\n<p>Upon reviewing the frequency distribution, the following observations were made:</p>\n<ul>\n    <li>Events such as <strong>clicked_nav_drawer_menu</strong> (133 events, 0.89%) and <strong>home_page_load_error</strong> (85 events, 0.57%) appear to be relatively low in frequency, suggesting potential issues or underutilization.</li>\n    <li>There are no events that dominate suspiciously often, which indicates no apparent logging bugs or event spam in the dataset.</li>\n</ul>\n\n<h4>Power Users</h4>\n<p>Power users, defined as those in the 90th percentile (P90+) of event counts, exhibit significantly higher engagement levels compared to casual users:</p>\n<ul>\n    <li><strong>Median event count:</strong> 11</li>\n    <li><strong>P90 event count:</strong> 105</li>\n    <li><strong>P99 event count:</strong> 467</li>\n    <li><strong>Maximum event count:</strong> 663</li>\n</ul>\n<p>This data reveals that while the median user engages minimally, power users are highly active, with the top 10% of users generating over 105 events. This indicates a substantial engagement ceiling and suggests that a small segment of users is driving a significant portion of the app's activity.</p>\n\n<h4>Consolidation</h4>\n<p>There are potential redundancies in event naming that could be consolidated for clarity:</p>\n<ul>\n    <li>Events related to bus details (e.g., <strong>viewed_hisab_bus_detail</strong> and <strong>clicked_hisab_bus_detail_card</strong>) could be grouped under a single category to streamline event tracking.</li>\n    <li>Similar naming conventions for events related to trip details could also be reviewed for consolidation.</li>\n</ul>\n\n<p>In summary, the analysis indicates a strong focus on the \"hisab\" feature, with a healthy distribution of events overall. However, attention should be given to low-frequency events that may indicate broken features, and consideration should be made for consolidating event names for better clarity and tracking efficiency.</p>",
   "iterations": 2
 }

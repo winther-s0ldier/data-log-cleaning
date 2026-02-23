@@ -4,68 +4,63 @@
     "top_events": [
       {
         "event": "viewed_hisab_page",
-        "count": 5361,
-        "pct": 35.78
+        "count": 5335,
+        "pct": 35.68
       },
       {
         "event": "viewed_hisab_bus_detail",
-        "count": 3159,
-        "pct": 21.08
+        "count": 3162,
+        "pct": 21.15
       },
       {
         "event": "viewed_dashboard_page",
-        "count": 1403,
-        "pct": 9.36
+        "count": 1419,
+        "pct": 9.49
       },
       {
         "event": "viewed_hisab_trip_detail",
-        "count": 1275,
-        "pct": 8.51
+        "count": 1266,
+        "pct": 8.47
       },
       {
         "event": "clicked_hisab_trip_detail_card",
-        "count": 1205,
-        "pct": 8.04
+        "count": 1206,
+        "pct": 8.07
       },
       {
         "event": "clicked_hisab_bus_detail_card",
-        "count": 1141,
-        "pct": 7.61
+        "count": 1131,
+        "pct": 7.56
       },
       {
         "event": "clicked_nav_drawer_menu",
-        "count": 131,
-        "pct": 0.87
+        "count": 133,
+        "pct": 0.89
       },
       {
         "event": "clicked_hisab_yestarday_btn",
-        "count": 125,
+        "count": 124,
         "pct": 0.83
       },
       {
         "event": "dashboard_clicked_gps_vistar_se_dekhe_bus_card",
-        "count": 90,
-        "pct": 0.6
-      },
-      {
-        "event": "home_page_load_error",
         "count": 88,
         "pct": 0.59
       },
       {
-        "event": "clicked_hisab_coustom_date_btn",
+        "event": "home_page_load_error",
+        "count": 85,
+        "pct": 0.57
+      },
+      {
+        "event": "clicked_login_send_otp_btn",
         "count": 60,
         "pct": 0.4
       },
       {
-        "event": "clicked_login_send_otp_btn",
-        "count": 58,
+        "event": "clicked_hisab_coustom_date_btn",
+        "count": 59,
         "pct": 0.39
-      },
-      {
-        "event": "clicked_login_verify_otp",
-        "count": 43,
-        "pct": 0.29
       },
       {
         "event": "clicked_hisab_today_btn",
@@ -74,45 +69,50 @@
       },
       {
         "event": "viewed_login_page",
-        "count": 40,
-        "pct": 0.27
+        "count": 42,
+        "pct": 0.28
+      },
+      {
+        "event": "clicked_login_verify_otp",
+        "count": 42,
+        "pct": 0.28
       },
       {
         "event": "viewed_online_payment_history_page",
-        "count": 40,
+        "count": 41,
         "pct": 0.27
       },
       {
         "event": "viewed_login/signup_page",
-        "count": 36,
-        "pct": 0.24
+        "count": 37,
+        "pct": 0.25
       },
       {
         "event": "clicked_hisab_download_btn",
-        "count": 36,
-        "pct": 0.24
-      },
-      {
-        "event": "viewed_login_otp_verify_page",
-        "count": 36,
-        "pct": 0.24
+        "count": 37,
+        "pct": 0.25
       },
       {
         "event": "clicked_manage_route_and_pricing_view_pricing_btn",
         "count": 35,
         "pct": 0.23
+      },
+      {
+        "event": "viewed_login_otp_verify_page",
+        "count": 34,
+        "pct": 0.23
       }
     ],
     "categories": {
-      "application": 14985
+      "application": 14952
     },
     "power": {
-      "median": 1,
-      "p90": 1,
-      "p99": 1,
-      "max": 1,
-      "above_200": 0
+      "median": 11,
+      "p90": 105,
+      "p99": 467,
+      "max": 663,
+      "above_200": 15
     }
   },
-  "insights": "<h4>Analysis of Bus Operator Platform Operational Load</h4>\n\n<p>This analysis evaluates the operational load on the bus operator platform based on the dataset gathered from business events. The dataset spans from November 27, 2025, to February 19, 2026, encompassing a total of 14,985 events across 109 different event types.</p>\n\n<h4>1. VOLUME PROFILE</h4>\n<p>The total volume of events recorded is entirely application-driven, with all 14,985 events categorized under the \"application\" category. This indicates that user interactions with the application are the sole contributors to the operational load, with no system-driven events (such as push or sync events) recorded in this dataset.</p>\n\n<h4>2. CRITICAL LOAD</h4>\n<p>Identifying the specific events that generate the most traffic reveals the following counts:</p>\n<ul>\n    <li><strong>viewed_hisab_page:</strong> 5,361 events (35.78%)</li>\n    <li><strong>viewed_hisab_bus_detail:</strong> 3,159 events (21.08%)</li>\n    <li><strong>viewed_dashboard_page:</strong> 1,403 events (9.36%)</li>\n    <li><strong>viewed_hisab_trip_detail:</strong> 1,275 events (8.51%)</li>\n    <li><strong>clicked_hisab_trip_detail_card:</strong> 1,205 events (8.04%)</li>\n    <li><strong>clicked_hisab_bus_detail_card:</strong> 1,141 events (7.61%)</li>\n    <li><strong>clicked_nav_drawer_menu:</strong> 131 events (0.87%)</li>\n    <li><strong>clicked_hisab_yestarday_btn:</strong> 125 events (0.83%)</li>\n    <li><strong>dashboard_clicked_gps_vistar_se_dekhe_bus_card:</strong> 90 events (0.60%)</li>\n    <li><strong>home_page_load_error:</strong> 88 events (0.59%)</li>\n</ul>\n<p>These top events account for a significant portion of the total traffic, with the \"viewed_hisab_page\" alone constituting over one-third of all events.</p>\n\n<h4>3. INFRASTRUCTURE IMPACT</h4>\n<p>The analysis of peaks and total volume indicates that the system is heavily reliant on user interactions with the application. Given the high volume of events, particularly during peak usage times, the system must be capable of handling substantial traffic efficiently. The current data suggests that scalability needs are critical, especially if user engagement continues to grow. The absence of system-driven events implies that there may be opportunities to optimize backend processes to better manage load, such as implementing efficient caching strategies or enhancing server capacity to accommodate spikes in user activity.</p>"
+  "insights": "<h4>Analysis of Dataset</h4>\n\n<p>The dataset provides insights into user engagement and operational load on the ApniBus operator platform. Below are the findings based on the data retrieved.</p>\n\n<h4>1. VOLUME PROFILE</h4>\n<p>The total number of events recorded is <strong>14,952</strong>, all of which are categorized under <strong>application</strong>. This indicates that the volume is primarily application-driven, as there are no system-driven events (like push or sync) reported in the dataset.</p>\n\n<h4>2. USER CONCENTRATION</h4>\n<p>There are <strong>381</strong> unique users interacting with the platform. The average event count per operator can be analyzed through the following statistics:</p>\n<ul>\n  <li><strong>Median:</strong> 11 events per operator</li>\n  <li><strong>P90:</strong> 105 events per operator</li>\n</ul>\n<p>This indicates that while most users engage with the platform minimally, a small percentage of users are highly active, contributing significantly to the overall event count.</p>\n\n<h4>3. CRITICAL LOAD</h4>\n<p>Specific events that generate the most traffic are as follows:</p>\n<ul>\n  <li><strong>viewed_hisab_page:</strong> 5,335 events (35.68%)</li>\n  <li><strong>viewed_hisab_bus_detail:</strong> 3,162 events (21.15%)</li>\n  <li><strong>viewed_dashboard_page:</strong> 1,419 events (9.49%)</li>\n  <li><strong>viewed_hisab_trip_detail:</strong> 1,266 events (8.47%)</li>\n  <li><strong>clicked_hisab_trip_detail_card:</strong> 1,206 events (8.07%)</li>\n  <li><strong>clicked_hisab_bus_detail_card:</strong> 1,131 events (7.56%)</li>\n</ul>\n<p>These events are critical as they account for a significant portion of the total traffic, indicating where user engagement is highest.</p>\n\n<h4>4. INFRASTRUCTURE IMPACT</h4>\n<p>Given the total volume of <strong>14,952</strong> events and <strong>381</strong> unique users, the data suggests that the system needs to accommodate a range of user behaviors. The high P90 event count indicates that while most users are low-frequency users, there are power users whose activity can spike demand on the system. This suggests a need for scalable infrastructure to handle peak loads, especially during high-traffic events.</p>\n\n<p>In conclusion, the dataset reveals a strong application-driven engagement with significant variation in user activity, highlighting areas for potential optimization in both user experience and system performance.</p>"
 }

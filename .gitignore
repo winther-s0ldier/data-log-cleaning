@@ -11,5 +11,6 @@ __pycache__/
 .env.*
 
 # Large Raw Data (Kept locally)
-Business Events data.csv
-Commuter Users Event data.csv
+*.csv
+audit_data.py
+pipeline_output.txt

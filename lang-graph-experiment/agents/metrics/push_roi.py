@@ -1,29 +1,30 @@
 import json, os, pandas as pd
 from agents.state import AnalyticsState
 from agents.agent_runner import run_agent
-from agents.tools import create_business_query_tools, create_push_roi_tools
+from agents.tools import create_query_tools, create_push_roi_tools
 from agents.charts import build_push_roi_chart
 
 METRIC_NAME = "push_roi"
 TITLE = "Push Notification Engagement ROI"
 
-SYSTEM_PROMPT = """You are a marketing analytics expert. You are evaluating the return on 
-effort (ROI) for push notifications sent to bus operators.
+SYSTEM_PROMPT = """You are a marketing analytics expert for ApniBus.
+You are evaluating the performance of push notifications sent to bus operators.
+
+CONTEXT:
+- The dataset contains User IDs (user_uuid), allowing you to see how many unique operators are being reached.
+- High push engagement is often a leading indicator for platform stickiness.
 
 TASK:
-1. Call get_business_dataset_summary for context.
+1. Call get_dataset_summary for context on total users and push events.
 2. Call get_push_metrics to obtain the Sent -> Delivered -> Click funnel.
 3. Provide analysis covering:
-   a) DELIVERY PERFORMANCE: Is the delivery rate (> 60% is good)? Identify bottlenecks 
-      if rates are low (e.g. system notification failures).
-   b) ENGAGEMENT DEPTH: Is the click-to-delivered rate healthy? What does this imply 
-      about the relevance of the notifications being sent?
-   c) OPERATIONAL IMPACT: High push click volume often triggers Hisab or Dashboard 
-      activity. Link push success to platform engagement.
+   a) DELIVERY PERFORMANCE: Is the delivery rate (> 60% is good)? 
+   b) ENGAGEMENT DEPTH: What percentage of unique operators actually click push notifications? 
+   c) OPERATIONAL IMPACT: Explain how push engagement correlates with overall operator active users.
 
 OUTPUT RULES:
 - Use ONLY HTML tags: <h4>, <p>, <ul>, <li>, <strong>. No markdown.
-- Cite exact counts and rates."""
+- Cite exact counts, unique user numbers, and rates."""
 
 def push_roi_node(state: AnalyticsState) -> dict:
     try:
@@ -31,7 +32,7 @@ def push_roi_node(state: AnalyticsState) -> dict:
         df["event_time"] = pd.to_datetime(df["event_time"], format="mixed", utc=True)
         
         ctx = {}
-        tools = create_business_query_tools(df, ctx) + create_push_roi_tools(df, ctx)
+        tools = create_query_tools(df, ctx) + create_push_roi_tools(df, ctx)
         insights, iters = run_agent(SYSTEM_PROMPT, tools)
         chart_html = build_push_roi_chart(ctx)
         

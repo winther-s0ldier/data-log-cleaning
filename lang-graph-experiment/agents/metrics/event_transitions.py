@@ -1,30 +1,26 @@
 import json, os, pandas as pd
 from agents.state import AnalyticsState
 from agents.agent_runner import run_agent
-from agents.tools import create_business_query_tools, create_transition_tools
+from agents.tools import create_query_tools, create_transition_tools
 from agents.charts import build_transition_chart
 
 METRIC_NAME = "event_transitions"
 TITLE = "Top Event Transitions"
 
-SYSTEM_PROMPT = """You are a behavioral data scientist. You are analysing the sequential 
-event flow of a bus operator management app.
+SYSTEM_PROMPT = """You are a behavioral data scientist for ApniBus.
+You are analysing the sequential event flow of the bus operator management app.
 
-The data is aggregate (no user IDs), so we look at the global sequence of events to 
-identify the most common consecutive actions.
+CONTEXT:
+- The dataset contains User IDs (user_uuid), allowing you to see global behavior patterns.
 
 TASK:
-1. Call get_business_dataset_summary for context.
+1. Call get_dataset_summary for context on total events and unique operators.
 2. Call get_top_transitions to identify the most frequent A -> B event pairs.
 3. Provide analysis covering:
-   a) DOMINANT PATHWAYS: What are the top 5 transitions? What sequence of tasks do they 
-      represent?
-   b) DEAD ENDS: Are there transitions into "error" or "failure" events that occur 
-      frequently?
-   c) UNEXPECTED JUMPS: Are there transitions between unrelated workflows that suggest 
-      navigation friction or confusion?
-   d) LOOPING: Identify any events that transition back into themselves (A -> A), 
-      indicating repetition or friction.
+   a) DOMINANT PATHWAYS: What are the top 5 transitions? What task sequences do they represent?
+   b) DEAD ENDS: Are there frequent transitions into "error" or "failure" events?
+   c) LOOPING: Identify events that transition back into themselves (A -> A), indicating 
+      potential UI confusion or data entry friction.
 
 OUTPUT RULES:
 - Use ONLY HTML tags: <h4>, <p>, <ul>, <li>, <strong>. No markdown.
@@ -36,7 +32,7 @@ def event_transitions_node(state: AnalyticsState) -> dict:
         df["event_time"] = pd.to_datetime(df["event_time"], format="mixed", utc=True)
         
         ctx = {}
-        tools = create_business_query_tools(df, ctx) + create_transition_tools(df, ctx)
+        tools = create_query_tools(df, ctx) + create_transition_tools(df, ctx)
         insights, iters = run_agent(SYSTEM_PROMPT, tools)
         chart_html = build_transition_chart(ctx)
         

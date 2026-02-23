@@ -30,7 +30,7 @@ def load_session_data(profile_json='data_profile_report.json', events_csv='Commu
         st.error(f"Required file not found: {e}")
         return None, None
 
-def render_session_analysis(profile_json='data_profile_report.json', events_csv='Commuter Users Event data.csv'):
+def render_session_analysis(profile_json='data_profile_report.json', events_csv='Commuter Users Event data.csv', key_suffix='', selected_user='All'):
     profile, events_df = load_session_data(profile_json, events_csv)
     
     if profile is None:
@@ -40,7 +40,7 @@ def render_session_analysis(profile_json='data_profile_report.json', events_csv=
     stats = profile['basic_stats']
 
     # Header
-    st.title("🎯 Session Analysis Dashboard")
+    st.header(f"🎯 Session Analysis Dashboard")
     st.markdown("*Based on system-event-marked sessions (ground truth)*")
     st.markdown(f"**Detection Method**: {sessions['session_detection_method'].replace('_', ' ').title()}")
 
@@ -49,7 +49,7 @@ def render_session_analysis(profile_json='data_profile_report.json', events_csv=
     # ============================================================================
     # OVERVIEW METRICS
     # ============================================================================
-    st.header("📊 Session Overview")
+    st.subheader("📊 Session Overview")
 
     col1, col2, col3, col4, col5 = st.columns(5)
 
@@ -88,7 +88,7 @@ def render_session_analysis(profile_json='data_profile_report.json', events_csv=
     # ============================================================================
     # SESSION TYPES
     # ============================================================================
-    st.header("🚀 Session Types Distribution")
+    st.subheader("🚀 Session Types Distribution")
 
     # System markers data
     system_markers = {
@@ -116,14 +116,14 @@ def render_session_analysis(profile_json='data_profile_report.json', events_csv=
             color_discrete_sequence=px.colors.qualitative.Set3
         )
         fig.update_traces(textposition='inside', textinfo='percent+label')
-        st.plotly_chart(fig, width="stretch")
+        st.plotly_chart(fig, width="stretch", key=f"session_start_dist_{key_suffix}")
 
     st.divider()
 
     # ============================================================================
     # DROP-OFF ANALYSIS
     # ============================================================================
-    st.header("⚠️ Drop-off Analysis")
+    st.subheader("⚠️ Drop-off Analysis")
 
     st.markdown("""
     **Critical insight**: These are the last events before users end their session.
@@ -154,7 +154,7 @@ def render_session_analysis(profile_json='data_profile_report.json', events_csv=
             labels={'Sessions': 'Number of Sessions Ending Here'}
         )
         fig.update_layout(height=500, showlegend=False)
-        st.plotly_chart(fig, width="stretch")
+        st.plotly_chart(fig, width="stretch", key=f"exit_events_bar_{key_suffix}")
 
     with col2:
         st.markdown("### 🎯 Critical Drop-offs")
@@ -180,7 +180,7 @@ def render_session_analysis(profile_json='data_profile_report.json', events_csv=
     # ============================================================================
     # SESSION START PATTERNS
     # ============================================================================
-    st.header("🔍 Session Start Patterns")
+    st.subheader("🔍 Session Start Patterns")
 
     st.markdown("""
     **First application events** after system markers reveal user intent and journey start patterns.
@@ -205,14 +205,14 @@ def render_session_analysis(profile_json='data_profile_report.json', events_csv=
         color_continuous_scale='Blues'
     )
     fig.update_layout(height=400, showlegend=False, xaxis_tickangle=-45)
-    st.plotly_chart(fig, width="stretch")
+    st.plotly_chart(fig, width="stretch", key=f"start_events_bar_{key_suffix}")
 
     st.divider()
 
     # ============================================================================
     # SESSION LENGTH DISTRIBUTION
     # ============================================================================
-    st.header("📏 Session Length Distribution")
+    st.subheader("📏 Session Length Distribution")
 
     col1, col2 = st.columns(2)
 
@@ -238,7 +238,7 @@ def render_session_analysis(profile_json='data_profile_report.json', events_csv=
         )
         fig.update_traces(texttemplate='%{text:.0f}', textposition='outside')
         fig.update_layout(showlegend=False)
-        st.plotly_chart(fig, width="stretch")
+        st.plotly_chart(fig, width="stretch", key=f"session_percentiles_{key_suffix}")
 
     with col2:
         st.markdown("### 💡 Session Length Insights")
@@ -261,7 +261,7 @@ def render_session_analysis(profile_json='data_profile_report.json', events_csv=
     # ============================================================================
     # EVENT CLASSIFICATION
     # ============================================================================
-    st.header("🏷️ Event Classification by Category")
+    st.subheader("🏷️ Event Classification by Category")
 
     classification = profile['event_classification']
     class_df = pd.DataFrame([
@@ -288,7 +288,7 @@ def render_session_analysis(profile_json='data_profile_report.json', events_csv=
         )
         fig.update_traces(texttemplate='%{text:,}', textposition='outside')
         fig.update_layout(height=450, showlegend=False, xaxis_tickangle=-45)
-        st.plotly_chart(fig, width="stretch")
+        st.plotly_chart(fig, width="stretch", key=f"category_dist_{key_suffix}")
 
     with col2:
         st.markdown("### Category Breakdown")
@@ -303,46 +303,51 @@ def render_session_analysis(profile_json='data_profile_report.json', events_csv=
     # ============================================================================
     # ACTIONABLE RECOMMENDATIONS
     # ============================================================================
-    st.header("💡 Actionable Recommendations")
+    st.subheader("💡 Actionable Recommendations")
 
     st.markdown("""
     Based on session analysis, here are the **highest-impact interventions** you can make:
     """)
 
-    recommendations = [
-        {
-            'priority': 'HIGH',
-            'issue': 'Seat Selection Drop-off',
-            'sessions': exit_events.get('select_seat', 0),
-            'pct': (exit_events.get('select_seat', 0)/sessions['total_sessions'])*100,
-            'intervention': '• Simplify seat selection UI\\n• Show real-time seat availability\\n• Add "Best seats" recommendation',
-            'impact': '⬆️ +12-15% conversion'
-        },
-        {
-            'priority': 'HIGH',
-            'issue': 'Login/Authentication Friction',
-            'sessions': exit_events.get('login', 0),
-            'pct': (exit_events.get('login', 0)/sessions['total_sessions'])*100,
-            'intervention': '• Add social login (Google/Facebook)\\n• Implement guest checkout\\n• Reduce OTP timeout',
-            'impact': '⬆️ +8-10% completion'
-        },
-        {
-            'priority': 'MEDIUM',
-            'issue': 'User Profile Abandonment',
-            'sessions': exit_events.get('_profile', 0),
-            'pct': (exit_events.get('_profile', 0)/sessions['total_sessions'])*100,
-            'intervention': '• Make profile setup optional\\n• Show value proposition\\n• Allow skip for first booking',
-            'impact': '⬆️ +5-7% retention'
-        },
-        {
-            'priority': 'LOW',
-            'issue': 'Language Selection',
-            'sessions': exit_events.get('choose_language', 0),
-            'pct': (exit_events.get('choose_language', 0)/sessions['total_sessions'])*100,
-            'intervention': '• Auto-detect language\\n• Remember user preference\\n• Skip if already selected',
-            'impact': '⬆️ +3-5% onboarding'
-        }
+    # Define core target events to look for
+    target_recommendations = [
+        ('select_seat', 'Seat Selection Drop-off', '• Simplify seat selection UI\n• Show real-time seat availability\n• Add "Best seats" recommendation'),
+        ('login', 'Login/Authentication Friction', '• Add social login (Google/Facebook)\n• Implement guest checkout\n• Reduce OTP timeout'),
+        ('_profile', 'User Profile Abandonment', '• Make profile setup optional\n• Show value proposition\n• Allow skip for first booking'),
+        ('choose_language', 'Language Selection', '• Auto-detect language\n• Remember user preference\n• Skip if already selected')
     ]
+
+    # Support Operator/Business specific events if the above are missing
+    if 'viewed_hisab_page' in exit_events or 'viewed_dashboard_page' in exit_events:
+        target_recommendations = [
+            ('viewed_hisab_page', 'Hisab Page Exit', '• Audit Hisab page loading times\n• Simplify complex tables\n• Add clear "Next Step" buttons'),
+            ('viewed_dashboard_page', 'Dashboard Abandonment', '• Personalize dashboard metrics\n• Highlighting critical alerts\n• Improve navigation links'),
+            ('viewed_login/signup_page', 'Login Page Drop-off', '• Check OTP delivery stability\n• Decrease login steps\n• Support persistent sessions'),
+            ('home_page_load_error', 'System Load Errors', '• Optimize API response times\n• Implement better error handling\n• Add offline local caching')
+        ]
+
+    recommendations = []
+    total_sessions = sessions['total_sessions'] if sessions['total_sessions'] > 0 else 1
+
+    for event_key, issue_name, intervention in target_recommendations:
+        count = exit_events.get(event_key, 0)
+        pct = (count / total_sessions) * 100
+        
+        priority = 'LOW'
+        if pct > 10: priority = 'HIGH'
+        elif pct > 5: priority = 'MEDIUM'
+        
+        impact = '⬆️ +8-12% engagement'
+        if priority == 'HIGH': impact = '⬆️ +15-20% retention'
+        
+        recommendations.append({
+            'priority': priority,
+            'issue': issue_name,
+            'sessions': count,
+            'pct': pct,
+            'intervention': intervention,
+            'impact': impact
+        })
 
     for rec in recommendations:
         priority_emoji = "🔴" if rec['priority'] == "HIGH" else "🟡" if rec['priority'] == "MEDIUM" else "🟢"

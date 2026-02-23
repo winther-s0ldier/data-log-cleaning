@@ -19,7 +19,7 @@ def main():
     # Standardize columns to match what DataProfiler expects
     # Business CSV: id, event_name, category, event_time, external_event_id, source
     # DataProfiler expects: user_uuid, event_name, category, event_time
-    df = df.rename(columns={"id": "user_uuid"})
+    df = df.rename(columns={"user_id": "user_uuid"})
     df = df.drop(columns=["external_event_id", "source"], errors="ignore")
 
     print(f"✓ Loaded {len(df):,} events")

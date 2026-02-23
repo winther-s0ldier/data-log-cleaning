@@ -127,7 +127,8 @@ def _build_consolidated_html(exec_insights, results, errors, summary, pipeline_t
     BUSINESS_ORDER = [
         "workflow_funnels", "event_transitions", "operational_volume", 
         "growth_trends", "feature_adoption", "push_roi", "business_friction_points",
-        "event_frequency", "temporal_patterns"
+        "event_frequency", "temporal_patterns",
+        "retention_analysis", "user_segmentation", "user_journey_insights"
     ]
     COMMUTER_ORDER = [
         "funnel_analysis", "dropoff_analysis", "friction_points", "session_metrics",

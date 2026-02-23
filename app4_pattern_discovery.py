@@ -20,11 +20,11 @@ def load_pattern_data(pattern_json='pattern_discovery_report.json'):
         st.error(f"Pattern discovery report not found: {pattern_json}")
         st.stop()
 
-def render_pattern_discovery(pattern_json='pattern_discovery_report.json'):
+def render_pattern_discovery(pattern_json='pattern_discovery_report.json', key_suffix='', selected_user='All'):
     patterns = load_pattern_data(pattern_json)
 
     # Header
-    st.title("🔍 Pattern Discovery Dashboard")
+    st.header(f"🔍 Pattern Discovery & Behavioral Insights")
     st.markdown("*Behavioral patterns discovered through machine learning algorithms*")
 
     metadata = patterns.get('metadata', {})
@@ -46,7 +46,7 @@ def render_pattern_discovery(pattern_json='pattern_discovery_report.json'):
     ])
 
     with tab1:
-        st.header("🔄 Sequential Patterns")
+        st.subheader("🔄 Sequential Patterns")
         st.markdown("**Most frequent event sequences** - reveals common user journeys and stuck loops")
 
         seq_patterns = patterns.get('sequential_patterns', {})
@@ -76,7 +76,7 @@ def render_pattern_discovery(pattern_json='pattern_discovery_report.json'):
                 labels={'Frequency': 'Number of Occurrences', 'Pattern_Length': 'Sequence Length'}
             )
             fig.update_layout(height=600, showlegend=True, yaxis={'categoryorder':'total ascending'})
-            st.plotly_chart(fig, width="stretch")
+            st.plotly_chart(fig, width="stretch", key=f"freq_seq_bar_{key_suffix}")
 
             # Insights
             with st.expander("📊 Pattern Insights"):
@@ -125,7 +125,7 @@ def render_pattern_discovery(pattern_json='pattern_discovery_report.json'):
                     st.markdown("---")
 
     with tab2:
-        st.header("👥 User Segments")
+        st.subheader("👥 User Segments")
         st.markdown("**Behavioral clustering** - distinct user groups with different needs")
 
         segments = patterns.get('user_segments', {}).get('segments', {})
@@ -169,7 +169,7 @@ def render_pattern_discovery(pattern_json='pattern_discovery_report.json'):
                 }
             )
             fig.update_traces(textposition='inside', textinfo='percent+label')
-            st.plotly_chart(fig, width="stretch")
+            st.plotly_chart(fig, width="stretch", key=f"segment_pie_{key_suffix}")
 
         with col2:
             st.subheader("Segment Characteristics")
@@ -200,7 +200,7 @@ def render_pattern_discovery(pattern_json='pattern_discovery_report.json'):
                 showlegend=True,
                 title="Segment Comparison"
             )
-            st.plotly_chart(fig, width="stretch")
+            st.plotly_chart(fig, width="stretch", key=f"segment_radar_{key_suffix}")
 
         # Detailed segment cards
         st.subheader("Segment Profiles")
@@ -235,7 +235,7 @@ def render_pattern_discovery(pattern_json='pattern_discovery_report.json'):
                 st.markdown(patterns['user_segments']['llm_insights'])
 
     with tab3:
-        st.header("🔥 Friction Analysis")
+        st.subheader("🔥 Friction Analysis")
         st.markdown("**Events causing user hesitation** - where users get stuck")
 
         friction = patterns.get('friction_points', {})
@@ -272,7 +272,7 @@ def render_pattern_discovery(pattern_json='pattern_discovery_report.json'):
                     labels={'Friction Score': 'Friction Score (Repetition Rate * 100)'}
                 )
                 fig.update_layout(height=500, yaxis={'categoryorder':'total ascending'})
-                st.plotly_chart(fig, width="stretch")
+                st.plotly_chart(fig, width="stretch", key=f"friction_heatmap_{key_suffix}")
 
         with col2:
             st.subheader("🎯 Priority Fixes")
@@ -303,7 +303,7 @@ def render_pattern_discovery(pattern_json='pattern_discovery_report.json'):
                 st.markdown(friction_summary)
 
     with tab4:
-        st.header("📉 Survival Analysis")
+        st.subheader("📉 Survival Analysis")
         st.markdown("**Session survival probability** - likelihood of continuing at each step")
 
         survival = patterns.get('survival_analysis', {})
@@ -353,7 +353,7 @@ def render_pattern_discovery(pattern_json='pattern_discovery_report.json'):
                     hovermode='x unified'
                 )
 
-                st.plotly_chart(fig, width="stretch")
+                st.plotly_chart(fig, width="stretch", key=f"survival_curve_{key_suffix}")
 
             with col2:
                 st.subheader("⚠️ Critical Drop-offs")
@@ -378,7 +378,7 @@ def render_pattern_discovery(pattern_json='pattern_discovery_report.json'):
                 st.metric("Reach Step 20", f"{int(survival.get('sessions_reaching_step_20', 0)):,}")
 
     with tab5:
-        st.header("🎯 Intervention Triggers")
+        st.subheader("🎯 Intervention Triggers")
         st.markdown("**Automated rules** - conditions that predict user drop-off")
 
         rules = patterns.get('intervention_rules', {})
@@ -432,7 +432,7 @@ def render_pattern_discovery(pattern_json='pattern_discovery_report.json'):
                         st.markdown(trigger['recommendation'])
 
                         if confidence > 0.8:
-                            st.button(f"🚀 Setup Alert", key=f"alert_{trigger['condition']}")
+                            st.button(f"🚀 Setup Alert", key=f"alert_{trigger['condition']}_{key_suffix}")
 
         else:
             st.info("No intervention triggers discovered. Run pattern discovery with more data.")
